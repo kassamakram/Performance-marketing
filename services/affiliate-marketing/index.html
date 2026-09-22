@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Affiliate Marketing Agency — Page Sections</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --ink: #0B0B0B;
+            --ink-2: #141414;
+            --paper: #FFFFFF;
+            --panel: #F6F5F2;
+            --panel-dark: #111111;
+            --accent: #F4501B;
+            --accent-hover: #D83E0C;
+            --accent-2: #FF7A3D;
+            --muted: #6A6A6A;
+            --muted-2: #999999;
+            --line: #E4E1DB;
+            --line-dark: #242424;
+            --max: 1320px;
+            --pad: 28px;
+            --font-display: 'Bebas Neue', Impact, sans-serif;
+            --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-hand: 'Caveat', cursive;
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+            color-scheme: light;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-body);
+            color: var(--ink);
+            background: var(--paper);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            /* background: var(--panel); */
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .wrap {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 0 var(--pad);
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: .2em;
+            margin-bottom: 18px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 35px;
+            height: 2px;
+            background: var(--accent);
+            display: inline-block;
+        }
+
+        .eyebrow.light {
+            color: var(--panel);
+        }
+
+        .eyebrow.dark {
+            color: #494949;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 15px;
+            padding: 15px 26px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        .btn-solid {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .btn-solid:hover {
+            background: var(--accent-hover);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border-color: rgba(255, 255, 255, .4);
+        }
+
+        .btn img {
+            width: 12px;
+            height: 12px;
+            background: transparent;
+        }
+
+        /* ============ SECTION 1 — HERO (text + companies only) ============ */
+        .hero {
+            position: relative;
+            background: var(--ink);
+            color: #fff;
+            overflow: hidden;
+            min-height: 680px;
+            display: flex;
+            align-items: flex-end;
+            padding: 60px 0 70px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .55;
+        }
+
+        .hero-scrim {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(11, 11, 11, .35) 0%, rgba(11, 11, 11, .55) 45%, rgba(11, 11, 11, .92) 100%);
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .hero-text {
+            max-width: 680px;
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(34px, 5vw, 56px);
+            line-height: 1.08;
+            letter-spacing: -.01em;
+            margin: 0 0 30px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 56px;
+            flex-wrap: wrap;
+        }
+
+        .hero-logos {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            flex-wrap: wrap;
+        }
+
+        .hero-logos img {
+            height: 22px;
+            width: 80px;
+        }
+
+        /* ============ SECTION 2 — INTRO ============ */
+        .intro {
+            background: var(--paper);
+            padding: 70px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .intro .eyebrow {
+            color: #494949;
+            ;
+        }
+
+        .intro p {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(22px, 3vw, 32px);
+            line-height: 1.4;
+            max-width: 920px;
+            margin: 0 0 34px;
+            color: var(--ink);
+        }
+
+        .intro p.bold {
+            font-weight: 800;
+            color: var(--ink);
+        }
+
+        /* ============ SECTION 3 — OPPORTUNITY ============ */
+        .opportunity {
+            /* background: var(--panel); */
+            padding: 30px 0;
+            position: relative;
+        }
+
+        .opportunity .wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .opp-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            /* gap: 40px; */
+            align-items: start;
+            /* margin-bottom: 60px; */
+        }
+
+        .opp-title {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(28px, 3.6vw, 35px);
+            line-height: 1.12;
+            margin: 0 0 20px;
+        }
+
+        .opp-copy p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--muted);
+            margin: 0 0 14px;
+        }
+
+        .img-cont {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+        }
+
+        .process {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--paper);
+            /* border: 1px solid var(--line); */
+            border-radius: 20px;
+            padding: 26px 30px;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .process-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .process-step img {
+            width: 44px;
+            height: 44px;
+            /* border-radius: 50%; */
+        }
+
+        .process-arrow {
+            color: var(--muted-2);
+            font-size: 18px;
+        }
+
+        /* ============ SECTION 4 — APPROACH ============ */
+        .approach {
+            position: relative;
+            background: var(--ink);
+            color: #fff;
+            padding: 70px 0;
+            overflow: hidden;
+        }
+
+        .approach-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .28;
+        }
+
+        .approach-scrim {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(100deg, rgba(11, 11, 11, .96) 30%, rgba(11, 11, 11, .7) 100%);
+        }
+
+        .approach-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: .9fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .approach .eyebrow {
+            color: var(--accent-2);
+        }
+
+        .approach-title {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(34px, 4.6vw, 64px);
+            line-height: 1.05;
+            margin: 0 0 26px;
+        }
+
+        .approach-title .accent {
+            color: var(--accent);
+        }
+
+        .approach-copy {
+            color: var(--muted-2);
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 420px;
+            margin-bottom: 24px;
+        }
+
+        .approach-foot {
+            font-size: 12px;
+            letter-spacing: .5em;
+            color: var(--muted-2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .approach-foot::before {
+            content: "";
+            width: 40px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .approach-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .approach-card {
+            background: rgba(20, 20, 20, .7);
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 16px;
+            padding: 18px 24px;
+            display: grid;
+    grid-template-columns: .1fr 1fr;
+            gap: 18px;
+        }
+        .approach-icon-cont{
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--accent-hover);
+        }
+
+        .approach-card img {
+            width: 34px;
+            height: 34px;
+            flex-shrink: 0;
+        }
+
+        .approach-card h3 {
+            font-family: var(--font-heading);
+            font-size: 17px;
+            font-weight: 700;
+            margin: 0 0 8px;
+        }
+
+        .approach-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--muted-2);
+            margin: 0;
+        }
+
+        .approach-card ul {
+            margin: 8px 0 0;
+            padding-left: 18px;
+            color: var(--muted-2);
+            font-size: 13.5px;
+            line-height: 1.8;
+            columns: 2;
+        }
+
+        /* ============ SECTION 5 — MEASUREMENT ============ */
+        .measure {
+            background: var(--paper);
+            padding: 70px 0;
+        }
+
+        .measure-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .measure .eyebrow {
+            color: #494949;
+        }
+
+        .measure-title {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(28px, 3.6vw, 38px);
+            line-height: 1.15;
+            margin: 0 0 20px;
+        }
+
+        .measure-copy {
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 0 0 28px;
+            max-width: 480px;
+        }
+
+        .metric-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            
+            gap: 8px;
+        }
+
+        .metric-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 14px 16px 14px;
+            border: 1px solid var(--line);
+            font-size: 14.5px;
+            font-weight: 600;
+            border-radius: 8px;
+        }
+
+        .metric-item img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .measure-image {
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+        }
+
+        .measure-image img {
+            width: 100%;
+            aspect-ratio: 7/6;
+            display: block;
+        }
+
+        /* ============ SECTION 6 — CHANNEL SYNERGY ============ */
+        .synergy {
+            position: relative;
+            /* background: var(--panel); */
+            padding: 70px 0;
+            overflow: hidden;
+        }
+
+        .synergy-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .08;
+        }
+
+        .synergy-scrim {
+            position: absolute;
+            inset: 0;
+            /* background: linear-gradient(180deg, rgba(246, 245, 242, .85), rgba(246, 245, 242, .97)); */
+        }
+
+        .synergy-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .synergy .eyebrow {
+            color: #242424;
+        }
+
+        .synergy-title {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(28px, 3.6vw, 40px);
+            line-height: 1.15;
+            margin: 0 0 20px;
+        }
+
+        .synergy-copy p {
+            color: var(--muted);
+            font-size: 15.5px;
+            line-height: 1.7;
+            margin: 0 0 14px;
+            /* max-width: 460px; */
+        }
+
+        .hub {
+            position: relative;
+            width: 100%;
+            max-width: 440px;
+            aspect-ratio: 1/1;
+            margin: 0 auto;
+        }
+
+        .hub-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: var(--ink);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 15px;
+            z-index: 3;
+        }
+
+        .hub-node {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 9px 14px;
+            font-size: 12.5px;
+            font-weight: 700;
+            white-space: nowrap;
+            z-index: 2;
+        }
+
+        .hub-node img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .hub-node.n1 {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .hub-node.n2 {
+            top: 16%;
+            right: 0;
+        }
+
+        .hub-node.n3 {
+            bottom: 16%;
+            right: 0;
+        }
+
+        .hub-node.n4 {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .hub-node.n5 {
+            bottom: 16%;
+            left: 0;
+        }
+
+        .hub-node.n6 {
+            top: 16%;
+            left: 0;
+        }
+
+        /* ============ SECTION 7 — CONTINUOUS OPTIMIZATION ============ */
+        .optimize {
+            position: relative;
+            background: var(--ink);
+            color: #fff;
+            padding: 70px 0;
+            overflow: hidden;
+        }
+
+        .optimize-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .5;
+        }
+
+        .optimize-scrim {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(11, 11, 11, .95) 25%, rgba(11, 11, 11, .35) 75%);
+        }
+
+        .optimize-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 1320px;
+            display: grid;
+    grid-template-columns: 1fr .5fr;
+        }
+
+        .optimize .eyebrow {
+            color: #E4E1DB;
+        }
+
+        .optimize-title {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(28px, 3.6vw, 42px);
+            line-height: 1.15;
+            margin: 0 0 20px;
+        }
+
+        .optimize-copy {
+            color: #dcdbdb;;
+            font-size: 15.5px;
+            line-height: 1.7;
+            margin: 0 0 30px;
+        }
+
+        .optimize-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .optimize-card {
+            background: rgba(255, 255, 255);
+            border: 1px solid rgba(255, 255, 255, .16);
+            border-radius: 14px;
+            padding: 16px;
+        }
+
+        .optimize-card img {
+            width: 45px;
+            height: 45px;
+            margin-bottom: 12px;
+            /* background: transparent; */
+        }
+
+        .optimize-card b {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #141414;
+        }
+
+        .optimize-card span {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 20px;
+            color: var(--muted-2);
+            margin-top: 10px;
+        }
+
+        .optimize-note {
+            color: #dcdbdb;
+            font-size: 13.5px;
+        }
+
+        /* ============ SECTION 8 — PHILOSOPHY ============ */
+        .philosophy {
+            background: var(--paper);
+            padding: 70px 0;
+        }
+
+        .phi-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center;
+        }
+
+        .philosophy .eyebrow {
+            color: var(--accent);
+        }
+
+        .phi-title {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(28px, 3.6vw, 40px);
+            line-height: 1.15;
+            margin: 0 0 20px;
+        }
+
+        .phi-copy {
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 0 0 26px;
+            max-width: 480px;
+        }
+
+        .phi-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .phi-list li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 14.5px;
+        }
+
+        .phi-list img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .phi-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .phi-image img {
+            width: 100%;
+             height: 100%;
+            display: block;
+        }
+
+        .phi-float {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            background: #fff;
+            border-radius: 14px;
+            padding: 16px 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .phi-float b {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 22px;
+            color: var(--accent);
+        }
+
+        .phi-float span {
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .phi-float img {
+            width: 40px;
+            height: 24px;
+            background: var(--panel);
+        }
+
+        /* ============ SECTION 9 — WORK TOGETHER (CTA BANNER) ============ */
+        .cta-wrapper{
+            padding: 40px;
+        }
+        .cta-banner {
+            position: relative;
+            background: var(--ink);
+            color: #fff;
+            padding: 50px 0;
+            overflow: hidden;
+            border-radius:60px;
+        }
+
+        .cta-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .4;
+        }
+
+        .cta-scrim {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(11, 11, 11, .95) 40%, rgba(11, 11, 11, .55) 100%);
+        }
+
+        .cta-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .cta-banner .eyebrow {
+            color: var(--accent-2);
+        }
+
+        .cta-title {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(30px, 4vw, 46px);
+            line-height: 1.12;
+            margin: 0 0 20px;
+        }
+
+        .cta-title .accent {
+            color: var(--accent);
+        }
+
+        .cta-copy {
+            color: var(--muted-2);
+            font-size: 15.5px;
+            line-height: 1.7;
+            margin: 0 0 30px;
+            max-width: 480px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 34px;
+            flex-wrap: wrap;
+        }
+
+        .cta-mini {
+            display: flex;
+            gap: 26px;
+            flex-wrap: wrap;
+        }
+
+        .cta-mini-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12.5px;
+            color: var(--muted-2);
+            font-weight: 600;
+        }
+
+        .cta-mini-item img {
+            width: 16px;
+            height: 16px;
+        }
+
+        @media (max-width:900px) {
+
+            .approach-inner,
+            .measure-grid,
+            .synergy-inner,
+            .phi-grid,
+            .cta-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .optimize-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .approach-card ul {
+                columns: 1;
+            }
+
+            .metric-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============ SECTION 1 — HERO (hero text + companies only) ============ -->
+    <section class="hero">
+        <img class="hero-bg" src="" alt="">
+        <div class="hero-scrim"></div>
+        <div class="wrap hero-inner">
+            <div class="hero-text">
+                <div class="eyebrow light">FUELING SMART GROWTH</div>
+                <h1 class="hero-title">Affiliate Marketing Agency That Turns Partnerships Into Performance.</h1>
+                <div class="hero-cta">
+                    <a class="btn btn-solid" href="#">Let's Scale Your Next <img src="" alt=""></a>
+                    <a class="btn btn-outline" href="#">See It In Action <img src="" alt=""></a>
+                </div>
+            </div>
+
+            <div class="hero-logos">
+                <img src="" alt="Shopify">
+                <img src="" alt="Google Ads">
+                <img src="" alt="Meta">
+                <img src="" alt="YouTube">
+                <img src="" alt="Canva">
+                <img src="" alt="HubSpot">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 2 — INTRO ============ -->
+    <section class="intro">
+        <div class="wrap">
+            <div class="eyebrow">More partners. More relevant traffic. More measurable growth.</div>
+            <p>Affiliate marketing shouldn't be a collection of random referral links and commission payouts. <b>[Brand
+                    Name]</b> is a performance-driven affiliate marketing agency helping businesses build, manage, and
+                optimize affiliate programs designed around measurable outcomes.</p>
+            <p class="bold">You don't pay for promises. You build around performance.</p>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 3 — OPPORTUNITY ============ -->
+    <section class="opportunity">
+        <div class="wrap">
+            <div class="opp-grid">
+                <div>
+                    <div class="eyebrow dark">THE OPPORTUNITY</div>
+                    <h2 class="opp-title">Your Next Growth Channel Might Already Have an Audience</h2>
+                </div>
+                <div class="opp-copy">
+                    <p style="font-weight:700;color:var(--ink);">That's the opportunity behind affiliate marketing.</p>
+                    <p>[Brand Name] helps businesses identify valuable partnership opportunities and create affiliate
+                        programs that encourage partners to promote products or services in ways that feel relevant —
+                        not forced.</p>
+                </div>
+            </div>
+
+            <div class="process">
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="" alt="Recruit icon">
+                    </div>
+                    Recruit
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="" alt="Recruit icon">
+                    </div>
+                    Activate
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="" alt="Recruit icon">
+                    </div>
+                    Track
+                </div>
+                <div class="process-arrow">→</div>
+                
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="" alt="Recruit icon">
+                    </div>
+                    Optimize
+                </div>
+                <div class="process-arrow">→</div>
+                
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="" alt="Recruit icon">
+                    </div>
+                    Scale
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 4 — OUR APPROACH (background image) ============ -->
+    <section class="approach">
+        <img class="approach-bg" src="" alt="">
+        <div class="approach-scrim"></div>
+        <div class="wrap approach-inner">
+            <div>
+                <div class="eyebrow light">OUR APPROACH</div>
+                <h2 class="approach-title">From <span class="accent">'</span>Who Can Promote Us?<span class="accent">'</span>to <span
+                        class="accent">'</span>Who Can Actually Sell?<span class="accent">'</span></h2>
+                <p class="approach-copy">Recruitment is only the beginning. [Brand Name] can help structure an affiliate
+                    program around the full partner lifecycle, from initial outreach through ongoing performance
+                    management.</p>
+                <div class="approach-foot">PARTNERSHIPS THAT PERFORM</div>
+            </div>
+
+            <div class="approach-cards">
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                    <img src="" alt="Recruitment icon">
+                    </div>
+
+                    <div>
+                        <h3>Affiliate Partner Recruitment</h3>
+                        <p>The objective isn't simply to increase your affiliate count. It's to develop a partner base
+                            capable of generating meaningful traffic, leads, customers, or revenue.</p>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                    <img src="" alt="Recruitment icon">
+                    </div>
+                    <div>
+                        <h3>Affiliate Program Setup</h3>
+                        <p>A strong program needs structure. We help define important elements such as:</p>
+                        <ul>
+                            <li>Commission models</li>
+                            <li>Partner eligibility</li>
+                            <li>Promotional guidelines</li>
+                            <li>Tracking requirements</li>
+                            <li>Attribution rules</li>
+                            <li>Campaign offers</li>
+                            <li>Creative resources</li>
+                            <li>Performance benchmarks</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                    <img src="" alt="Recruitment icon">
+                    </div>
+                    <div>
+                        <h3>Affiliate Activation</h3>
+                        <p>Signing up doesn't mean promoting. We help create partner activation strategies that give
+                            affiliates practical reasons and resources to start marketing your offer.</p>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                    <img src="" alt="Recruitment icon">
+                    </div>
+                    <div>
+                        <h3>Affiliate Campaign Management</h3>
+                        <p>Affiliate programs need attention. Strong affiliates can receive additional support and
+                            opportunities, while underperforming activity can be reviewed and refined.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 5 — MEASUREMENT (graph is an image) ============ -->
+    <section class="measure">
+        <div class="wrap measure-grid">
+            <div>
+                <div class="eyebrow dark">MEASUREMENT</div>
+                <h2 class="measure-title">ROI-Driven Affiliate Marketing, Without the Mystery Math</h2>
+                <p class="measure-copy">Affiliate marketing is naturally performance-oriented, but that doesn't mean
+                    every affiliate produces equal value.
+                </p>
+
+                <div class="metric-list">
+                    <div class="metric-item"><img src="" alt="">Revenue generated</div>
+                    <div class="metric-item"><img src="" alt="">Commission expense</div>
+                    <div class="metric-item"><img src="" alt="">Conversion rate</div>
+                    <div class="metric-item"><img src="" alt="">Return on ad spend</div>
+                    <div class="metric-item"><img src="" alt="">Cost per acquisition</div>
+                    <div class="metric-item"><img src="" alt="">Customer lifetime value</div>
+                    <div class="metric-item"><img src="" alt="">Customer acquisition cost</div>
+                    <div class="metric-item"><img src="" alt="">Partner-level performance</div>
+                    <div class="metric-item"><img src="" alt="">Average order value</div>
+                    <div class="metric-item"><img src="" alt="">New customer acquisition</div>
+                </div>
+                
+            </div>
+
+            <div class="measure-image">
+                <img src="" alt="Performance overview dashboard">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 6 — CHANNEL SYNERGY (full width banner image) ============ -->
+    <section class="synergy">
+        <img class="synergy-bg" src="" alt="">
+        <div class="synergy-scrim"></div>
+        <div class="wrap synergy-inner">
+            <div>
+                <div class="eyebrow dark">CHANNEL SYNERGY</div>
+                <h2 class="synergy-title">Affiliate Marketing + Your Wider Performance Strategy</h2>
+                <div class="synergy-copy">
+                    <h3>Affiliate marketing doesn't have to operate in isolation.</h3>
+                    <p>Your affiliate program can complement
+                        other acquisition channels, including paid social, Google Ads, Meta Ads, influencer marketing,
+                        content marketing, remarketing, and digital advertising.</p>
+                    <p>The best affiliate strategies consider these connections instead of treating every channel like
+                        its own little island.</p>
+                </div>
+            </div>
+
+            <div>
+              
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 7 — CONTINUOUS OPTIMIZATION (full width banner image) ============ -->
+    <section class="optimize">
+        <img class="optimize-bg" src="" alt="">
+        <div class="optimize-scrim"></div>
+        <div class="wrap optimize-inner">
+            <div class="opt-1">
+            <div class="eyebrow light">CONTINUOUS OPTIMIZATION</div>
+            <h2 class="optimize-title">Smarter Partners. Stronger Offers. Better Performance.</h2>
+            <p class="optimize-copy">The affiliate ecosystem is constantly changing. New creators appear. Search
+                behavior shifts. Consumer expectations evolve. Competitors change their offers. Certain partners grow
+                while others lose momentum. That's why we use a continuous optimization mindset.</p>
+
+            <div class="optimize-grid">
+                <div class="optimize-card">
+                    <img src="" alt="">
+
+                    <div class="text">
+                    <b>Test the Offer</b>
+                    <span>01</span>
+                    </div>
+                </div>
+                <div class="optimize-card">
+                    <img src="" alt="">
+
+                    <b>Test the Message</b>
+                    <span>02</span>
+                </div>
+                <div class="optimize-card">
+                    <img src="" alt="">
+                    <b>Test the Partner Mix</b>
+                    <span>03</span>
+                </div>
+                <div class="optimize-card">
+                    <img src="" alt="">
+                    <b>Test the Customer Journey</b>
+                    <span>04</span>
+                </div>
+            </div>
+            <p class="optimize-note">Small improvements across these areas can create meaningful differences at scale.
+            </p>
+        </div>
+        <div class="opt-2"></div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 8 — OUR PHILOSOPHY (image on right) ============ -->
+    <section class="philosophy">
+        <div class="wrap phi-grid">
+            <div>
+                <div class="eyebrow dark">OUR PHILOSOPHY</div>
+                <h2 class="phi-title">Built for Performance, Not Vanity Partner Counts</h2>
+                <h4>It's measured by what the program contributes to the business. </h4>
+                <p class="phi-copy">[Brand Name] helps
+                    turn affiliate marketing into a more accountable acquisition channel by connecting partner strategy,
+                    tracking, conversion optimization, analytics, and ongoing campaign management.</p>
+                <h4 style="margin-top:-14px;">More relevant partners. Better measurement. Smarter
+                    optimization. Stronger acquisition.</h4>
+                
+            </div>
+
+            <div class="phi-image">
+                <img src="" alt="Working on partner growth analytics">
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 9 — WORK TOGETHER (full width banner image) ============ -->
+     <div class="cta-wrapper">
+    <section class="cta-banner">
+        <img class="cta-bg" src="" alt="">
+        <div class="cta-scrim"></div>
+        <div class="wrap cta-inner">
+            <div>
+                <div class="eyebrow light">LET'S WORK TOGETHER</div>
+                <h2 class="cta-title">Ready to Turn Partnerships <span class="accent">Into a Growth Engine?</span></h2>
+                <p class="cta-copy">Your next customer could already be part of someone else's audience. [Brand Name]
+                    builds affiliate marketing strategies designed around performance, partnership quality, and ROI—so
+                    your program can grow with purpose instead of simply growing in size.</p>
+                <div class="cta-buttons">
+                    <a class="btn btn-solid" href="#">Book a Consultation <img src="" alt=""></a>
+                    <a class="btn btn-outline" href="#">Get in Touch</a>
+                </div>
+                <div class="cta-mini">
+                    <div class="cta-mini-item"><img src="" alt="">Strategy First</div>
+                    <div class="cta-mini-item"><img src="" alt="">Performance Focused</div>
+                    <div class="cta-mini-item"><img src="" alt="">Long-Term Growth</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+</body>
+
+</html>
