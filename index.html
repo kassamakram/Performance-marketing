@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nexus — Performance Marketing Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+
+  /* ================================
+   SERVICES CARD - DESKTOP
+================================ */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 38px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-height: 330px;
+
+  padding: 0;
+  margin: 0;
+
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,.04);
+}
+
+
+/* LEFT CONTENT */
+.card > div:first-child {
+  padding: 25px 22px 22px 26px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: #fff;
+}
+
+.card .num {
+  margin-bottom: 15px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+.card .num b {
+  color: #F4501B;
+}
+
+.card h4 {
+  margin: 0 0 14px;
+
+  font-family: var(--font-heading);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.035em;
+
+  color: #0B0B0B;
+}
+
+.card p {
+  margin: 0 0 20px;
+
+  font-size: 12px;
+  line-height: 1.55;
+
+  color: #666;
+}
+
+.card .btn {
+  margin-top: auto;
+
+  padding: 12px 18px;
+
+  background: #F4501B;
+  color: #fff;
+
+  border-radius: 3px;
+
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.card .btn:hover {
+  background: #D83E0C;
+}
+
+.card .foot {
+  margin-top: 15px;
+
+  font-size: 8.5px;
+  line-height: 1.7;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+
+  color: #999;
+}
+.btn .ar {
+    font-size: 14px;
+    line-height: 1;
+    transition: transform .2s ease;
+    position: relative;
+    padding-left: 18px;
+}
+
+.btn .ar::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 45px;
+    background: #fff;
+}
+
+/* ================================
+   RIGHT IMAGE
+================================ */
+
+.card .shot {
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: #F3F1ED;
+
+  overflow: hidden;
+
+  display: block;
+
+  position: relative;
+}
+
+.card .shot img {
+  width: 100% !important;
+  height: 100% !important;
+
+  max-width: none !important;
+
+  display: block !important;
+
+  object-fit: cover !important;
+  object-position: center right !important;
+}
+
+
+/* SVG MOCKUPS */
+.card .shot svg {
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+
+  display: block;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 760px) {
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .card > div:first-child {
+    padding: 24px 20px;
+  }
+
+  .card h4 {
+    font-size: 20px;
+  }
+
+  .card .shot {
+    height: 260px;
+    min-height: 260px;
+  }
+
+  .card .shot img {
+    height: 260px !important;
+    object-fit: cover !important;
+  }
+
+  .card .shot svg {
+    height: 260px;
+    min-height: 260px;
+  }
+}
+
+
+
+/* ============ DESIGN TOKENS ============ */
+:root{
+  --ink:#0B0B0B;
+  --ink-2:#141414;
+  --paper:#FFFFFF;
+  --panel:#F6F5F2;
+  --panel-dark:#111111;
+  --accent:#F4501B;
+  --accent-hover:#D83E0C;
+  --accent-2:#FF7A3D;
+  --muted:#6A6A6A;
+  --muted-2:#999999;
+  --line:#E4E1DB;
+  --line-dark:#242424;
+  --max:1240px;
+  --pad:28px;
+  --font-display:'Bebas Neue', Impact, sans-serif;
+  --font-heading:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-hand:'Caveat', cursive;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(85px + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font-body);
+  font-size:15.5px;line-height:1.55;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.display{font-family:var(--font-display);font-weight:400;text-transform:uppercase;letter-spacing:.02em;line-height:.9}
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.eyebrow::before{content:"";width:26px;height:2.5px;background:var(--accent)}
+
+.btn{display:inline-flex;align-items:center;gap:22px;justify-content:space-between;
+  background:var(--accent);color:#fff;border:0;border-radius:2px;padding:14px 20px;
+  font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;
+  transition:background .2s ease, transform .2s ease}
+.btn:hover{background:var(--accent-hover);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--ink)}
+.btn.sm{padding:10px 16px;gap:16px;font-size:10.5px}
+.btn .ar{font-size:14px;line-height:1;transition:transform .2s ease}
+.btn:hover .ar{transform:translateX(3px)}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;
+  background:#070707;
+  color:#fff;
+  overflow:hidden;
+  min-height:760px;
+  display:flex;
+  flex-direction:column;
+}
+.hero-banner-img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center right;
+  z-index:1;
+}
+.hero-gradient{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg, rgba(7,7,7,.85) 0%, rgba(7,7,7,.62) 38%, rgba(7,7,7,.08) 65%, rgba(7,7,7,.25) 100%);
+  z-index:2;
+  pointer-events:none;
+}
+
+/* Nav */
+.nav{position:relative;z-index:10;padding:22px 0}
+.nav-in{display:flex;align-items:center;gap:30px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:var(--font-heading);font-weight:800;font-size:20px;letter-spacing:.22em;color:#fff}
+.logo span{font-size:7.5px;letter-spacing:.24em;color:#8B8B8B;margin-top:5px;text-transform:uppercase;font-weight:600}
+.nav-links{display:flex;gap:28px;margin-left:auto;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#D4D4D4}
+.nav-links a{transition:color .2s ease}
+.nav-links a:hover{color:#fff}
+.nav-cta{margin-left:auto;display:flex;align-items:center;gap:14px}
+.nav-cta .pill{
+  border:1px solid #FFFFFF;
+  border-radius:999px;
+  padding:9px 18px;
+  font-size:10.5px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-weight:700;
+  background:#FFFFFF;
+  color:#0B0B0B;
+  transition:all .2s ease;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.nav-cta .pill:hover{background:#E6E6E6;border-color:#E6E6E6;transform:translateY(-1px)}
+.burger{display:none;background:none;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:2px;padding:8px 10px;cursor:pointer}
+
+/* Hero Content */
+.hero-body{
+  position:relative;
+  z-index:5;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding-bottom:34px;
+}
+.hero-headline-wrap{
+  max-width:650px;
+  margin-top:auto;
+}
+.hero-h1{
+  font-family:var(--font-heading);
+  font-size:clamp(46px, 6.4vw, 69px);
+  font-weight:800;
+  line-height:.94;
+  letter-spacing:-.035em;
+  color:#FFFFFF;
+  margin:0 0 26px;
+  text-shadow:0 6px 24px rgba(0,0,0,.6);
+}
+.hero-subbar{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  font-size:10px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#A8A8A8;
+  font-weight:600;
+  border-top:1px solid rgba(255,255,255,.18);
+  /* padding-top:16px; */
+}
+.hero-subbar .sep{color:var(--accent)}
+.hero-lede{
+  font-size:14px;line-height:1.65;color:#D6D6D6;max-width:480px;margin:0 0 22px;font-weight:400;
+}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0 20px}
+.btn.ghost-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
+.btn.ghost-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+
+/* Hotspot for banner button */
+.hero-banner-btn-link{
+  position:absolute;
+  right:6%;
+  top:59%;
+  width:200px;
+  height:48px;
+  z-index:6;
+  border-radius:3px;
+  cursor:pointer;
+  background:transparent;
+}
+
+/* ============ LOGOS BAR ============ */
+.logos{background:#0A0A0A;border-top:1px solid #1C1C1C;border-bottom:1px solid #1C1C1C}
+.logos-in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;overflow-x:auto;scrollbar-width:none}
+.logos-in::-webkit-scrollbar{display:none}
+.logo-item{
+  display:flex;align-items:center;gap:8px;color:#A8A8A8;opacity:.88;flex:none;
+  font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;
+  transition:color .2s ease, opacity .2s ease;
+}
+.logo-item:hover{color:#fff;opacity:1}
+.logo-item svg{flex:none}
+
+/* ============ INTRO ============ */
+.intro{padding:72px 0 28px}
+.intro-accent-bar{width:36px;height:3.5px;background:var(--accent);margin-bottom:24px}
+.intro-eyebrow{
+  display:block;
+  font-size:11.5px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:22px;
+}
+.intro-heading{
+  font-family:var(--font-heading);
+  font-size:clamp(23px, 2.7vw, 44px);
+  font-weight:800;
+  line-height:1.32;
+  letter-spacing:-.02em;
+  color:#D5D2CB;
+  margin:0 0 28px;
+  max-width:44ch;
+}
+.intro-sub{
+  font-family:var(--font-heading);
+  font-size:clamp(20px, 2.4vw, 36px);
+  font-weight:500;
+  line-height:1.4;
+  letter-spacing:-.015em;
+  color:#D5D2CB;
+  margin:0;
+  max-width:46ch;
+}
+.intro-heading .word,
+.intro-sub .word {
+  color:#D5D2CB;
+  display:inline-block;
+  margin-right:0.10em;
+  will-change:color;
+  transition:color 0.08s ease;
+}
+/* ============ SERVICES GRID ============ */
+.svc{padding:54px 0 34px}
+.svc-top{border-top:2.5px solid var(--accent);padding-top:18px;display:grid;grid-template-columns:1fr .9fr;gap:40px;align-items:start}
+.svc-top h3{margin:8px 0 0;font-family:var(--font-heading);font-size:clamp(26px, 3.1vw, 35px);font-weight:800;letter-spacing:-.025em;line-height:1.15}
+.svc-top h3 span{color:var(--muted-2)}
+.svc-top .meta{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.svc-top .meta b{color:var(--ink)}
+.svc-top p{font-size:13px;line-height:1.6;color:var(--muted);margin:0;max-width:48ch}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:38px}
+.card{display:grid;grid-template-columns:1fr 1.06fr;gap:20px;border-top:1px solid var(--line);transition:transform .25s ease, box-shadow .25s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(0,0,0,.07)}
+.card .num{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;font-weight:700}
+.card .num b{color:var(--accent)}
+.card h4{font-family:var(--font-heading);font-size:25.5px;font-weight:800;letter-spacing:-.02em;line-height:1.22;margin:0 0 10px}
+.card p{font-size:12.5px;line-height:1.55;color:var(--muted);margin:0 0 18px}
+.card .foot{margin-top:16px;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);line-height:1.8;font-weight:600}
+
+/* Mockup display cards */
+.shot{
+  background:#F3F1ED;
+  border-radius:4px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:220px;
+  border:1px solid var(--line);
+  position:relative;
+  box-shadow:0 4px 14px rgba(0,0,0,.03);
+}
+.shot svg{width:100%;height:auto;display:block}
+
+/* Service Tabs */
+.svc-tabs{
+  display:flex;flex-wrap:wrap;gap:28px;align-items:center;
+  border-top:1px solid var(--line);margin-top:36px;padding-top:18px;
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--muted-2);
+}
+.svc-tabs button{background:none;border:0;padding:0;cursor:pointer;color:inherit;font:inherit;letter-spacing:inherit;transition:color .2s ease}
+.svc-tabs button:hover{color:var(--ink)}
+.svc-tabs button.on{color:var(--accent)}
+.svc-tabs .more{margin-left:auto;color:var(--ink);display:flex;gap:10px;align-items:center;font-weight:700;transition:transform .2s ease}
+.svc-tabs .more:hover{transform:translateX(3px)}
+
+/* ============ DARK PARTNER SECTION ============ */
+.partner{background:#0B0B0B;color:#fff;padding:76px 0;margin-top:20px}
+.partner-in{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:start}
+.partner .eyebrow{color:#8A8A8A}
+.partner-title{
+  font-family:var(--font-display);
+  font-size:clamp(52px, 7vw, 90px);
+  line-height:.88;
+  letter-spacing:.02em;
+  margin:22px 0 26px;
+  text-transform:uppercase;
+  color:#FFFFFF;
+}
+.partner .tags{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:#7A7A7A;font-weight:600}
+.partner-heading{
+  font-family:var(--font-heading);
+  font-size:clamp(22px, 2.5vw, 29px);
+  font-weight:800;
+  letter-spacing:-.02em;
+  line-height:1.24;
+  margin:0 0 16px;
+}
+.partner-heading em{font-style:normal;color:var(--accent)}
+.partner .lede{font-size:13.5px;line-height:1.6;color:#A6A6A6;margin:0 0 28px;max-width:52ch}
+.flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.step{display:flex;flex-direction:column;align-items:center;gap:9px;width:66px}
+.step .dot{
+  width:42px;height:42px;
+  border:1px solid #2B2B2B;display:grid;place-items:center;
+  background:#141414;transition:all .2s ease;
+}
+.step:hover .dot{border-color:var(--accent);background:#1E1410}
+.step span{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#B4B4B4;font-weight:600}
+.flow .ar{color:#555555;font-size:13px}
+
+/* ============ SERVICE STEPS ============ */
+.steps{padding:72px 0;background:#FFFFFF;overflow:hidden}
+.steps-in{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start}
+.steps-in > div:last-child{overflow:hidden;padding:4px}
+.steps h2{
+  font-family:var(--font-heading);
+  font-size:clamp(32px, 4.3vw, 48px);
+  font-weight:800;
+  letter-spacing:-.03em;
+  line-height:1.06;
+  margin:20px 0 26px;
+}
+.steps .copy p{font-size:21px;line-height:1.65;color:#444444;max-width:44ch;font-weight:900}
+.step-card{
+  /* background:#F7F6F3; */
+  border:1px solid var(--line);
+  border-radius:3px;
+  padding:20px 22px;
+  margin-bottom:14px;
+  transition:all .2s ease;
+}
+.step-card:hover{border-color:#D0CCC3;transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.04)}
+.step-card .hd{
+  display:flex;gap:14px;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:black;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:13px;font-weight:700;
+}
+.step-card .hd .n{margin-left:auto;color:var(--ink)}
+.step-card h4{font-family:var(--font-heading);margin:0 0 8px;font-size:33.5px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.step-card p{margin:0;font-size:15px;line-height:1.55;color:var(--muted)}
+
+/* ============ BUILT FOR BRANDS ============ */
+.built{background:var(--panel);padding:68px 0 76px;border-top:1px solid var(--line)}
+.built-in{display:grid;grid-template-columns:1fr 1.05fr;gap:54px;align-items:center;margin-top:24px}
+.built h2{
+  font-family:var(--font-heading);
+  font-size:clamp(30px, 4vw, 50px);
+  font-weight:800;
+  letter-spacing:-.03em;
+  line-height:1.08;
+  margin:0 0 20px;
+}
+.built p{font-size:16px;line-height:1.65;color:#4A4A4A;max-width:46ch}
+.built .lbl{font-size:12px;font-weight:700;margin:24px 0 12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.pill-tag{border:1px solid var(--line);background:#fff;border-radius:17px;padding:7px 14px;font-size:15px;color:#3D3D3D;font-weight:500;transition:transform .18s ease, border-color .18s ease, background .18s ease}
+.pill-tag:hover{transform:translateY(-2px);border-color:var(--accent);background:#FFF6F2}
+.built .closing{margin-top:26px;font-size:16px;color:#4A4A4A;max-width:58ch}
+
+/* Floating interactive cards */
+.float{position:relative;height:462px}
+.fcard{
+  position:absolute;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;
+  display:flex;gap:11px;align-items:flex-start;box-shadow:0 14px 34px rgba(0,0,0,.07);width:200px;
+  transition:transform .2s ease;z-index:2;
+}
+.fcard:hover{transform:translateY(-3px)}
+.fcard .ic{width:34px;height:34px;border-radius:9px;background:#FBE4D8;display:grid;place-items:center;flex:none}
+.fcard .txt{display:flex;flex-direction:column;gap:3px;padding-right:16px}
+.fcard b{display:block;font-size:14.5px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+.fcard span{font-size:10.5px;color:var(--muted);line-height:1.4;display:block}
+.fcard i{position:absolute;top:13px;right:13px;font-style:normal;font-size:10px;color:var(--muted-2);font-weight:700}
+.f1{top:8px;left:24%;width:270px}
+.f2{top:100px;left:0;width:265px;flex-direction:column;padding-bottom:12px}
+.f2 .row{display:flex;gap:11px;align-items:flex-start;width:100%}
+.f2 .chart{position:relative;width:100%;margin-top:12px;height:68px}
+.f2 .chart svg{width:100%;height:100%;display:block}
+.f2 .badge{
+  position:absolute;top:4px;right:4px;background:#fff;border:1px solid var(--line);border-radius:20px;
+  padding:2px 9px;font-size:10.5px;font-weight:800;color:var(--ink);box-shadow:0 6px 14px rgba(0,0,0,.08);
+}
+.f2 .cfoot{margin-top:8px;font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2);font-weight:700}
+.f3{top:160px;right:0;width:225px}
+.f4{top:322px;left:2%;width:255px}
+.float .note{
+  position:absolute;right:2%;top:52px;font-family:var(--font-hand);font-size:21px;
+  color:var(--accent);transform:rotate(-7deg);letter-spacing:.02em;font-weight:700;line-height:1.05;text-align:center;z-index:2;
+}
+.float .note svg{display:block;margin:4px auto 0}
+.float .dashbox{
+  position:absolute;right:0;top:272px;width:182px;border:0;border-radius:10px;padding:15px 14px;
+  background:#EEEAE4;display:flex;gap:10px;align-items:center;box-shadow:0 10px 26px rgba(0,0,0,.05);z-index:2;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.float .dashbox:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,.09)}
+.float .dashbox .bars{display:flex;align-items:flex-end;gap:5px;height:30px;flex:none}
+.float .dashbox .bars i{display:block;width:5px;border-radius:2px 2px 0 0;background:var(--accent)}
+.float .dashbox .lbl{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);line-height:1.85;font-weight:700}
+.float .dashbox .lbl b{display:block;color:var(--accent);font-weight:800}
+.float .curve{position:absolute;inset:0;pointer-events:none;z-index:1}
+.float .dots-bg{position:absolute;top:0;left:8%;width:120px;height:85px;
+  background-image:radial-gradient(#D9D5CC 1.6px, transparent 1.6px);background-size:14px 14px;
+  opacity:.85;z-index:0;pointer-events:none;
+}
+
+/* ============ WHY LIST ============ */
+.why{background:#000000;color:#fff;padding:68px 0 74px}
+.why .hd{text-align:center;font-size:18.5px;letter-spacing:.24em;text-transform:uppercase;color:#8E8E8E;font-weight:700;margin-bottom:38px}
+.why-row{display:grid;grid-template-columns:1.2fr 1fr;gap:0px;padding:28px 0;border-top:1px solid orangered;align-items:center}
+.why-row:first-of-type{border-top:2px solid var(--accent)}
+.why-row h3{
+  font-family:var(--font-display);
+  font-size:clamp(34px, 4.8vw, 65px);
+  line-height:.95;
+  letter-spacing:.03em;
+  margin:0;
+  text-transform:uppercase;
+  color:#FFFFFF;
+}
+.why-row p{margin:0;font-size:19px;font-weight:500;color:#CCCCCC;line-height:1.6;max-width:44ch}
+
+/* ============ CTA ============ */
+.cta{background:#F3F2EE;padding:56px 0 0;overflow:hidden;border-radius:28px;margin:40px 24px 0;box-shadow:0 2px 12px rgba(0,0,0,.03)}
+@media (max-width:760px){.cta{margin:24px 14px 0;border-radius:18px}}
+.cta .eyebrow{color:var(--muted-2)}
+.cta-in{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:start;margin-top:20px}
+.cta h2{
+  font-family:var(--font-heading);
+  font-size:clamp(26px, 3.4vw, 55px);
+  font-weight:800;
+  letter-spacing:-.025em;
+  line-height:1.15;
+  margin:0 0 18px;
+}
+.cta p{font-size:16.5px;line-height:1.6;color:#4D4D4D;margin:0 0 9px;max-width:56ch}
+.cta p.strong{font-weight:800;color:var(--ink);margin-top:14px}
+.cta .acts{display:flex;flex-direction:column;gap:12px;max-width:270px;margin-left:auto;width:100%}
+.ghost-type{
+  font-family:var(--font-display);
+  text-transform:uppercase;
+  font-size:clamp(54px, 13.5vw, 160px);
+  line-height:.82;
+  color:transparent;
+  -webkit-text-stroke:1.5px #D1CEC8;
+  text-align:center;
+  margin:38px 0 0;
+  white-space:nowrap;
+  letter-spacing:.02em;
+  user-select:none;
+  pointer-events:none;
+}
+
+/* ============ FOOTER ============ */
+footer{background:#070707;color:#fff;padding:60px 0 0;position:relative;overflow:hidden}
+.f-grid{display:grid;grid-template-columns:1.3fr .7fr .7fr .7fr 1.1fr;gap:36px;position:relative;z-index:2}
+.f-grid h5{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#8A8A8A;margin:0 0 16px;font-weight:700}
+.f-grid ul{list-style:none;margin:0;padding:0;font-size:12px;color:#C4C4C4;line-height:2.15}
+.f-grid ul a{transition:color .2s ease}
+.f-grid ul a:hover{color:var(--accent-2)}
+.f-brand .logo b{font-size:22px}
+.f-brand h4{
+  font-family:var(--font-display);
+  font-weight:400;
+  text-transform:uppercase;
+  font-size:clamp(26px, 3.2vw, 36px);
+  line-height:.95;
+  letter-spacing:.02em;
+  margin:24px 0 14px;
+}
+.f-brand p{font-size:11.5px;color:#9A9A9A;margin:0;line-height:1.6}
+.socials{display:flex;gap:10px;margin-top:22px}
+.socials a{width:30px;height:30px;border:1px solid #2B2B2B;border-radius:3px;display:grid;place-items:center;font-size:11px;color:#BDBDBD;transition:all .2s ease}
+.socials a:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-1px)}
+.sub{display:flex;gap:0;margin:16px 0 8px}
+.sub input{flex:1;min-width:0;background:#141414;border:1px solid #292929;border-right:0;color:#fff;padding:11px 13px;font-size:11.5px;border-radius:2px 0 0 2px}
+.sub input::placeholder{color:#666666}
+.sub input:focus{outline:none;border-color:var(--accent)}
+.sub button{background:var(--accent);color:#fff;border:0;padding:0 16px;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-radius:0 2px 2px 0;transition:background .2s ease}
+.sub button:hover{background:var(--accent-hover)}
+.sub-note{font-size:10.5px;color:#787878;line-height:1.5}
+.f-bottom{
+  position:relative;z-index:2;margin-top:40px;border-top:1px solid #1F1F1F;padding:18px 0 28px;
+  display:flex;flex-wrap:wrap;gap:18px;align-items:center;font-size:11px;color:#858585;
+}
+.f-bottom nav{display:flex;gap:24px;margin-left:auto}
+.f-bottom nav a:hover{color:#fff}
+.top-btn{width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;border:0;cursor:pointer;display:grid;place-items:center;font-size:14px;transition:background .2s ease, transform .2s ease}
+.top-btn:hover{background:var(--accent-hover);transform:translateY(-2px)}
+.f-ghost{
+  position:absolute;left:0;right:0;bottom:-18px;font-family:var(--font-display);text-transform:uppercase;
+  font-size:clamp(64px, 15vw, 190px);line-height:.8;color:#111111;text-align:center;z-index:1;pointer-events:none;white-space:nowrap;letter-spacing:.02em;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1040px){
+  .hero-headline-wrap{max-width:100%}
+  .cards{grid-template-columns:1fr}
+  .partner-in,.steps-in,.built-in,.svc-top,.cta-in{grid-template-columns:1fr;gap:34px}
+  .f-grid{grid-template-columns:1fr 1fr 1fr}
+  .f-brand{grid-column:1/-1}
+  .f-news{grid-column:1/-1}
+  .cta .acts{margin-left:0;max-width:320px}
+}
+@media (max-width:760px){
+  :root{--pad:18px}
+  .nav-links{display:none}
+  .nav-links.open{
+    display:flex;position:absolute;top:68px;left:18px;right:18px;flex-direction:column;gap:16px;
+    background:#111111;border:1px solid #262626;padding:22px;z-index:30;border-radius:4px;box-shadow:0 12px 36px rgba(0,0,0,.8);
+  }
+  .burger{display:block;margin-left:auto;order:3}
+  .nav-cta .pill{display:none}
+  .hero{min-height:580px}
+  .card{grid-template-columns:1fr}
+  .why-row{grid-template-columns:1fr;gap:12px}
+  .float{min-height:auto}
+  .f1,.f2,.f3,.f4{position:static;width:100%;margin-bottom:12px}
+  .float .note,.float .curve,.float .dots-bg{display:none}
+  .float .dashbox{position:static;width:100%}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <!-- Banner Graphic Background -->
+<video class="hero-banner-img" autoplay muted loop playsinline>
+    <source src="assets/Person_running_in_animated_banner_20260922014054.mp4" type="video/mp4">
+</video>  <div class="hero-gradient"></div>
+
+  <!-- Top Navigation -->
+  <div class="nav">
+    <div class="wrap nav-in">
+      <a class="logo" href="#top">
+        <b>NEXUS</b>
+        <span>Performance Marketing Agency</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#results">Results</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
+        <a href="#insights">Insights</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="pill" href="#contact">Get a strategy call &rarr;</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </div>
+
+  <!-- Hero Content Overlaid on Bottom-Left -->
+  <div class="wrap hero-body">
+    <div class="hero-headline-wrap">
+      <h1 class="hero-h1">Nexus Performance<br>Marketing That Turns<br>Spend Into Growth</h1>
+      <!-- <p class="hero-lede">Nexus is a performance marketing agency helping brands drive customer acquisition, revenue, and scalable growth through paid social, programmatic advertising, media buying, app marketing, influencer marketing, and data-driven digital strategies.</p> -->
+      <div class="hero-subbar">
+        <span>Data-led campaigns</span>
+        <span class="sep">/</span>
+        <span>Smarter media</span>
+        <span class="sep">/</span>
+        <span>Measurable results</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn" href="#contact">Let's Talk Growth <span class="ar">&rarr;</span></a>
+        <a class="btn ghost-light" href="#services">Explore Our Services <span class="ar">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Clickable overlay on the pre-rendered button in the graphic -->
+  <a href="#contact" class="hero-banner-btn-link" aria-label="Start your growth"></a>
+</header>
+
+<!-- ================= LOGOS BAR ================= -->
+<section class="logos">
+  <div class="wrap logos-in">
+    <span class="logo-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="#A8A8A8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      Bodega
+    </span>
+    <span class="logo-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="#A8A8A8"><circle cx="12" cy="12" r="9"></circle></svg>
+      Aurum
+    </span>
+    <span class="logo-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="#A8A8A8"><path d="M12 2l8 4.5v9l-8 4.5-8-4.5v-9L12 2z"></path></svg>
+      Vertex
+    </span>
+    <span class="logo-item">
+      <span style="color:var(--accent);margin-right:2px">&#10022;</span> LA GALAXY
+    </span>
+    <span class="logo-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" stroke="#A8A8A8" stroke-width="2.5" fill="none"><line x1="12" y1="2" x2="12" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><circle cx="12" cy="12" r="3" fill="#A8A8A8"></circle></svg>
+      Northpoint
+    </span>
+    <span class="logo-item">Tennis Canada</span>
+    <span class="logo-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="#A8A8A8"><path d="M2 19h20v2H2zM4 17l3-10 5 6 5-6 3 10H4z"></path></svg>
+      Crown
+    </span>
+    <span class="logo-item">Ridgeway</span>
+    <span class="logo-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" stroke="#A8A8A8" stroke-width="2" fill="none"><circle cx="12" cy="12" r="9"></circle><path d="M12 3v18"></path><path d="M3 12h18"></path></svg>
+      Meridian
+    </span>
+  </div>
+</section>
+
+<!-- ================= INTRO ================= -->
+<section class="wrap intro" id="about">
+  <div class="intro-accent-bar"></div>
+  <span class="intro-eyebrow">One Growth Strategy. Multiple Channels.</span>
+  <h2 class="intro-heading" id="animHeading">Your customers move across platforms, devices, and digital experiences. Your marketing should work just as seamlessly.</h2>
+  <p class="intro-sub" id="animSub">Our expertise includes Paid Social, Programmatic Advertising, Display Advertising, Media Buying, Customer Acquisition, Remarketing, Influencer Marketing, Affiliate Marketing, App Marketing &amp; ASO, Commerce Media, Mobile Marketing, Streaming TV, Digital Audio, Data Analytics, Market Insights, and Product-Led Growth.</p>
+</section>
+
+<!-- ================= SERVICES CARDS ================= -->
+<section class="wrap svc" id="services">
+  <div class="svc-top">
+    <div>
+      <div class="meta"><span class="eyebrow">Our services</span></div>
+      <h3>Marketing That Moves<br><span>Beyond the Click.</span></h3>
+    </div>
+    <div>
+      <div class="meta"><b>Strategy</b> &#9679; <b>Media</b> &#9679; <b>Creative</b> &#9679; <b>Growth</b></div>
+      <p>A click is just the start. Nexus combines audience insights, data analytics, media buying, testing, and campaign optimization to create performance marketing strategies that improve customer acquisition, conversions, and measurable growth.</p>
+    </div>
+  </div>
+
+  <div class="cards">
+    <!-- Card 01: Paid Social -->
+    <article class="card">
+      <div>
+        <div class="num"><b>01</b><span>/ Paid social</span> </div>
+        <h4>Paid Social That Drives Action</h4>
+        <p>Reach relevant audiences through targeted social campaigns designed for awareness, leads, conversions, and revenue.</p>
+        <a class="btn sm" href="#contact">Explore paid social <span class="ar">&rarr;</span></a>
+        <div class="foot">Awareness. Engagement.<br>Conversions.</div>
+      </div>
+    <div class="shot">
+    <img 
+        src="assets/Banner 3.jpg" 
+        alt="Paid social analytics dashboard"
+        style="width:100%; height:100%; object-fit:cover; display:block;"
+    >
+</div>
+    </article>
+
+    <!-- Card 02: Programmatic -->
+    <article class="card">
+      <div>
+        <div class="num"><b>02</b> / Programmatic</div>
+        <h4>Programmatic Advertising With Precision.</h4>
+        <p>Use audience targeting, automated media buying, and real-time optimization to reach relevant users across digital environments.</p>
+        <a class="btn sm" href="#contact">Explore programmatic <span class="ar">&rarr;</span></a>
+        <div class="foot">Broader reach.<br>Smarter targeting.</div>
+      </div>
+       <div class="shot">
+    <img 
+        src="assets/Banner 4.jpg" 
+        alt="Paid social analytics dashboard"
+        style="width:100%; height:100%; object-fit:cover; display:block;"
+    >
+</div>
+    </article>
+
+    <!-- Card 03: Customer Acquisition -->
+    <article class="card">
+      <div>
+        <div class="num"><b>03</b> / Customer acquisition</div>
+        <h4>Customer Acquisition That Goes Beyond Volume.</h4>
+        <p>Build acquisition strategies focused on attracting valuable customers while aligning campaigns with your business objectives.</p>
+        <a class="btn sm" href="#contact">Explore acquisition <span class="ar">&rarr;</span></a>
+        <div class="foot">Better customers.<br>Stronger growth.</div>
+      </div>
+        <div class="shot">
+    <img 
+        src="assets/Banner 5.jpg" 
+        alt="Paid social analytics dashboard"
+        style="width:100%; height:100%; object-fit:cover; display:block;"
+    >
+</div>
+    </article>
+
+    <!-- Card 04: App Growth -->
+    <article class="card">
+      <div>
+        <div class="num"><b>04</b> / App marketing &amp; ASO</div>
+        <h4>App Marketing &amp; ASO</h4>
+        <p>Improve app visibility, user acquisition, and growth through mobile marketing and App Store Optimization.</p>
+        <a class="btn sm" href="#contact">Explore app marketing <span class="ar">&rarr;</span></a>
+        <div class="foot">More downloads.<br>Higher engagement.</div>
+      </div>
+        <div class="shot">
+    <img 
+        src="assets/Banner 6.jpg" 
+        alt="Paid social analytics dashboard"
+        style="width:100%; height:100%; object-fit:cover; display:block;"
+    >
+</div>
+    </article>
+  </div>
+
+  <div class="svc-tabs" id="tabs">
+    <button class="on" type="button">Paid social</button>
+    <button type="button">Programmatic</button>
+    <button type="button">Acquisition</button>
+    <button type="button">App growth</button>
+    <a class="more" href="#contact">More services <span>&rarr;</span></a>
+  </div>
+</section>
+
+<!-- ================= PARTNER (DARK) ================= -->
+<section class="partner" id="approach">
+  <div class="wrap partner-in">
+    <div>
+      <span class="eyebrow">Why Nexus</span>
+      <h2 class="partner-title">Performance<br>Marketing<br>Partner</h2>
+      <div class="tags">Data-led &nbsp;/&nbsp; Creative &nbsp;/&nbsp; Growth</div>
+    </div>
+    <div>
+      <h3 class="partner-heading">We Don't Just Launch Campaigns.<br><em>We Learn From Them.</em></h3>
+      <p class="lede">Our approach combines research, targeting, creative testing, media buying, conversion tracking, analytics, and optimization to continuously identify what is driving results.</p>
+      <div class="flow">
+        <div class="step">
+          <span class="dot">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F4501B" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          </span>
+          <span>Discover</span>
+        </div>
+        <span class="ar">&rarr;</span>
+        <div class="step">
+          <span class="dot">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F4501B" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+          </span>
+          <span>Build</span>
+        </div>
+        <span class="ar">&rarr;</span>
+        <div class="step">
+          <span class="dot">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F4501B" stroke-width="2"><path d="M5 19l5-2 7-7a3 3 0 10-4-4l-7 7z"/></svg>
+          </span>
+          <span>Launch</span>
+        </div>
+        <span class="ar">&rarr;</span>
+        <div class="step">
+          <span class="dot">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F4501B" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20h-20"/></svg>
+          </span>
+          <span>Optimize</span>
+        </div>
+        <span class="ar">&rarr;</span>
+        <div class="step">
+          <span class="dot">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F4501B" stroke-width="2"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg>
+          </span>
+          <span>Scale</span>
+        </div>
+      </div>
+      <a class="btn" href="#contact">Book a strategy call <span class="ar">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE STEPS ================= -->
+<section class="steps" id="results">
+  <div class="wrap steps-in">
+    <div class="copy">
+      <span class="eyebrow">Our services</span>
+      <h2>Performance<br>Marketing Services<br>Designed for<br>Real Growth</h2>
+      <a class="btn" href="#contact">Book a consultation <span class="ar">&rarr;</span></a>
+      <p style="margin-top:30px">Whether you're launching a new brand, scaling an existing business, or looking to improve your marketing performance, the process is the same: understand first, strategize second, optimize always.</p>
+      <p>It's the approach we use to turn data, creative, and customer insights into campaigns that drive meaningful results — from stronger engagement and qualified leads to sustainable growth and better return.</p>
+    </div>
+    <div>
+      <div class="step-card">
+        <div class="hd"><span>Step</span><span>Paid social</span><span class="n">001</span></div>
+        <h4>Paid Social That Gets Attention—and Action</h4>
+        <p>Reach the right audiences across social platforms with targeted campaigns built around awareness, engagement, lead generation, conversions, and revenue.</p>
+      </div>
+      <div class="step-card">
+        <div class="hd"><span>Step</span><span>Programmatic advertising</span><span class="n">002</span></div>
+        <h4>Programmatic Advertising With Precision</h4>
+        <p>Use audience data, automated media buying, and real-time optimization to reach relevant users across digital environments at scale.</p>
+      </div>
+      <div class="step-card">
+        <div class="hd"><span>Step</span><span>Customer acquisition</span><span class="n">003</span></div>
+        <h4>Customer Acquisition That Goes Beyond Volume</h4>
+        <p>Acquiring more customers is not always the answer. We focus on reaching relevant, valuable audiences and creating acquisition strategies aligned with your business objectives.</p>
+      </div>
+      <div class="step-card">
+        <div class="hd"><span>Step</span><span>App growth</span><span class="n">004</span></div>
+        <h4>App Growth From Discovery to Download</h4>
+        <p>Combine app marketing, mobile advertising, and App Store Optimization to improve visibility, acquisition, and user growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUILT FOR BRANDS ================= -->
+<section class="built">
+  <div class="wrap">
+
+    <span class="eyebrow">Built for what's next</span>
+
+    <div class="built-in">
+
+      <!-- LEFT CONTENT -->
+      <div class="built-content">
+        <h2>Built for Brands<br>Ready to Grow Smarter</h2>
+
+        <p>
+          Whether you're launching a product, scaling an eCommerce business,
+          growing an app, entering a new market, or improving an established
+          acquisition engine, Nexus brings the strategy and performance
+          expertise to help you move forward.
+        </p>
+
+        <div class="lbl">We work across:</div>
+
+        <div class="pills">
+          <span class="pill-tag">Ecommerce</span>
+          <span class="pill-tag">Technology</span>
+          <span class="pill-tag">Apps</span>
+          <span class="pill-tag">Consumer brands</span>
+          <span class="pill-tag">B2B</span>
+          <span class="pill-tag">Retail</span>
+          <span class="pill-tag">Startups</span>
+          <span class="pill-tag">Growth-stage businesses</span>
+        </div>
+
+        <p class="closing">
+          Our approach is flexible because every business has different
+          customers, economics, competitive pressures, and growth opportunities.
+        </p>
+      </div>
+
+      <!-- RIGHT: FLOATING CARDS -->
+      <div class="float">
+        <div class="dots-bg"></div>
+
+        <svg class="curve" viewBox="0 0 600 640" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 590 C 90 560, 130 500, 175 460 C 230 410, 220 320, 270 270 C 310 230, 300 190, 250 160" fill="none" stroke="var(--accent)" stroke-width="1.4" opacity=".4"/>
+        </svg>
+
+        <!-- 01 Launch -->
+        <div class="fcard f1">
+          <div class="ic">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4501B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+              <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 19 2c0 2.52-.6 6.6-4 9a22.35 22.35 0 0 1-3 2z"/>
+              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+            </svg>
+          </div>
+          <div class="txt"><b>Launch</b><span>Turn ideas into traction</span></div>
+          <i>01</i>
+        </div>
+
+        <!-- 02 Scale (with chart) -->
+        <div class="fcard f2">
+          <div class="row">
+            <div class="ic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4501B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>
+              </svg>
+            </div>
+            <div class="txt"><b>Scale</b><span>Drive efficient growth</span></div>
+          </div>
+          <i>02</i>
+          <div class="chart">
+            <svg viewBox="0 0 240 88" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="scaleFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#F4501B" stop-opacity=".22"/>
+                  <stop offset="100%" stop-color="#F4501B" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0 66 C 30 70, 45 40, 70 46 C 95 52, 105 30, 135 32 C 165 34, 175 14, 205 12 L205 88 L0 88 Z" fill="url(#scaleFill)"/>
+              <path d="M0 66 C 30 70, 45 40, 70 46 C 95 52, 105 30, 135 32 C 165 34, 175 14, 205 12" fill="none" stroke="#F4501B" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="205" cy="12" r="4" fill="#F4501B"/>
+            </svg>
+            <div class="badge">+147%</div>
+          </div>
+          <div class="cfoot">Higher performance</div>
+        </div>
+
+        <!-- 03 Acquire -->
+        <div class="fcard f3">
+          <div class="ic">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4501B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="txt"><b>Acquire</b><span>Find your next customers</span></div>
+          <i>03</i>
+        </div>
+
+        <!-- 04 Expand -->
+        <div class="fcard f4">
+          <div class="ic">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4501B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/>
+            </svg>
+          </div>
+          <div class="txt"><b>Expand</b><span>Reach new markets</span></div>
+          <i>04</i>
+        </div>
+
+        <!-- Dark stat card -->
+        <div class="dashbox">
+          <div class="bars">
+            <i style="height:40%"></i><i style="height:65%"></i><i style="height:100%"></i>
+          </div>
+          <div class="lbl"><b>Strategy</b>Media<br>Creative<br>Measurement</div>
+        </div>
+
+        <!-- Handwritten note -->
+        <div class="note">
+          More<br>Growth
+          <svg width="46" height="34" viewBox="0 0 46 34" fill="none" aria-hidden="true">
+            <path d="M4 4C10 16 22 26 40 24" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M31 18L41 25L33 31" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY LIST ================= -->
+<section class="why">
+  <div class="wrap">
+    <div class="hd">Why Nexus?</div>
+    <div class="why-row"><h3>Strategy Before <br>Spend</h3><p>We start by understanding your business and customers before deciding where your budget should go.</p></div>
+    <div class="why-row"><h3>Performance at <br> the Core</h3><p>Campaign activity is connected to measurable objectives rather than vanity metrics.</p></div>
+    <div class="why-row"><h3>Data-Informed <br>Decisions</h3><p>We use performance data and market insights to identify opportunities and guide optimization.</p></div>
+    <div class="why-row"><h3>Continuous<br>Learning</h3><p>Audiences, creative, messaging, placements, and campaigns can all provide opportunities to learn and improve.</p></div>
+    <div class="why-row"><h3>Full-Funnel<br> Thinking</h3><p>From awareness and consideration to acquisition, conversion, and retention, we look at the bigger customer journey.</p></div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Strategy / Media / Measurable growth</span>
+    <div class="cta-in">
+      <div>
+        <h2>Ready to Put Your<br>Marketing Budget to Work?</h2>
+        <p>Growth doesn't come from doing more marketing.</p>
+        <p>It comes from knowing where your audience is, understanding what makes them act, and continuously improving what happens next.</p>
+        <p>Nexus helps you turn marketing data into decisions, media investment into measurable activity, and campaigns into scalable growth.</p>
+        <p class="strong">Let's build your next growth move.</p>
+      </div>
+      <div class="acts">
+        <a class="btn" href="#contact">Start a conversation <span class="ar">&rarr;</span></a>
+        <a class="btn ghost" href="#services">See what we do <span class="ar">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="ghost-type">Next Growth Move</div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="insights">
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="logo" href="#top"><b>NEXUS</b><span>Performance Marketing Agency</span></a>
+        <h4>Turn ambitions<br>into results.</h4>
+        <p>Strategy, creative, data, growth. A full-service performance partner.</p>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="X">X</a>
+          <a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="YouTube">&#9654;</a><a href="#" aria-label="Dribbble">&#9679;</a>
+        </div>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Paid media</a></li>
+          <li><a href="#services">Performance strategy</a></li>
+          <li><a href="#services">Creative &amp; content</a></li>
+          <li><a href="#services">Analytics &amp; tracking</a></li>
+          <li><a href="#services">Conversion optimization</a></li>
+          <li><a href="#services">CRO audits</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#approach">Our process</a></li>
+          <li><a href="#results">Case studies</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#">Guides</a></li>
+          <li><a href="#">Templates</a></li>
+          <li><a href="#">Industry insights</a></li>
+          <li><a href="#">Webinars</a></li>
+          <li><a href="#">Tools</a></li>
+          <li><a href="#">Help center</a></li>
+        </ul>
+      </div>
+      <div class="f-news">
+        <h5>Stay ahead</h5>
+        <div style="font-size:13.5px;font-weight:700;margin-bottom:6px">Get performance insights in your inbox.</div>
+        <p class="sub-note">Actionable strategies, case studies and growth insights — no spam, just value.</p>
+        <form class="sub" id="subForm">
+          <input type="email" id="subEmail" placeholder="Your email address" aria-label="Email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="sub-note" id="subMsg">Built for brands that move forward.</p>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>&copy; 2026 Nexus. All rights reserved.</span>
+      <nav>
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of service</a>
+        <a href="#">Cookie settings</a>
+      </nav>
+      <button class="top-btn" id="toTop" aria-label="Back to top">&uarr;</button>
+    </div>
+  </div>
+  <div class="f-ghost" aria-hidden="true">Grow Further</div>
+</footer>
+
+<script>
+// mobile nav
+var burger = document.getElementById('burger');
+var links = document.getElementById('navLinks');
+burger.addEventListener('click', function() {
+  var open = links.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  burger.textContent = open ? '✕' : '☰';
+});
+links.addEventListener('click', function(e) {
+  if (e.target.tagName === 'A') {
+    links.classList.remove('open');
+    burger.textContent = '☰';
+  }
+});
+
+// service tabs
+document.getElementById('tabs').addEventListener('click', function(e) {
+  var b = e.target.closest('button');
+  if (!b) return;
+  this.querySelectorAll('button').forEach(function(x) { x.classList.remove('on'); });
+  b.classList.add('on');
+  var cards = document.querySelectorAll('.cards .card');
+  var i = [].indexOf.call(this.querySelectorAll('button'), b);
+  cards.forEach(function(c, n) {
+    c.style.opacity = (n === i) ? '1' : '0.42';
+    c.style.transition = 'opacity 0.25s ease';
+  });
+});
+
+// newsletter form
+document.getElementById('subForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var email = document.getElementById('subEmail').value.trim();
+  var msg = document.getElementById('subMsg');
+  msg.textContent = email ? 'Subscribed! Your first insight lands next Tuesday.' : 'Enter an email address to subscribe.';
+  msg.style.color = '#F4501B';
+  if (email) this.reset();
+});
+
+// back to top
+document.getElementById('toTop').addEventListener('click', function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+<!-- GSAP Core & ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+// GSAP Scroll Animation: Text color light to black on scroll
+window.addEventListener('DOMContentLoaded', function() {
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Split text into word spans for smooth word-by-word reveal
+  function splitIntoWords(element) {
+    if (!element) return [];
+    var words = element.innerText.trim().split(/\s+/);
+    element.innerHTML = words.map(function(w) {
+      return '<span class="word">' + w + '</span>';
+    }).join(' ');
+    return element.querySelectorAll('.word');
+  }
+
+  var headingWords = splitIntoWords(document.getElementById('animHeading'));
+  var subWords = splitIntoWords(document.getElementById('animSub'));
+
+  // Main scroll-driven timeline scrubbed directly to scroll position
+  var tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.intro',
+      start: 'top 80%',       // starts when intro top hits 80% of viewport
+      end: 'bottom 40%',      // completes when intro bottom reaches 40%
+      scrub: 0.8,             // smooth scrub tied to scrolling speed
+    }
+  });
+
+  // 1. Heading words transition from light gray to rich black (#0B0B0B)
+  if (headingWords.length) {
+    tl.to(headingWords, {
+      color: '#0B0B0B',
+      stagger: 0.04,
+      ease: 'power1.out'
+    });
+  }
+
+  // 2. Subtitle words transition from light gray to dark (#141414)
+  if (subWords.length) {
+    tl.to(subWords, {
+      color: '#141414',
+      stagger: 0.04,
+      ease: 'power1.out'
+    }, '-=0.1');
+  }
+
+  // Accent bar animation
+  gsap.from('.intro-accent-bar', {
+    scaleX: 0,
+    transformOrigin: 'left center',
+    duration: 0.8,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.intro',
+      start: 'top 88%',
+      toggleActions: 'play none none reverse'
+    }
+  });
+
+  // Eyebrow fade
+  gsap.from('.intro-eyebrow', {
+    opacity: 0,
+    y: 10,
+    duration: 0.6,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.intro',
+      start: 'top 88%',
+      toggleActions: 'play none none reverse'
+    }
+  });
+
+  // ===== SERVICE STEPS: one card reveals per scroll step (scrub-tied) =====
+  var stepsList  = document.querySelector('.steps-in > div:last-child'); // wrapper holding the 4 step-cards
+  var stepCards  = gsap.utils.toArray('.steps .step-card');
+  var STAGGER    = 0.6; // relative spacing between each card's reveal along the scroll
+
+  if (stepsList && stepCards.length) {
+    var stepsTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: stepsList,
+        start: 'top 78%',   // animation begins once the card list nears the viewport
+        end: 'bottom 45%',  // animation fully completes once the list is scrolled past
+        scrub: 0.7,          // <- tied to scroll position: scroll = reveal, no auto-play
+        // markers: true,   // uncomment while testing to see the start/end trigger lines
+      }
+    });
+
+    stepCards.forEach(function (card, i) {
+      var h = card.querySelector('h4');
+
+      // each card only reveals once the user has scrolled far enough to reach its slot
+      stepsTl.fromTo(card,
+        { x: 170, opacity: 0, scale: 0.93, rotate: 3, filter: 'blur(6px)' },
+        { x: 0, opacity: 1, scale: 1, rotate: 0, filter: 'blur(0px)', duration: 0.6, ease: 'power2.out' },
+        i * STAGGER
+      );
+
+      if (h) {
+        stepsTl.fromTo(h,
+          { x: 50, opacity: 0 },
+          { x: 0, opacity: 1, duration: 0.45, ease: 'power2.out' },
+          i * STAGGER + 0.12
+        );
+      }
+    });
+
+    // pad the timeline so the last card doesn't rush to finish at the very end
+    stepsTl.to({}, { duration: 0.4 });
+  }
+
+  // ===== SERVICES CARDS: left-to-right cascading reveal =====
+  var serviceCards = gsap.utils.toArray('.cards .card');
+
+  if (serviceCards.length) {
+    // start each card off-screen to the left, slightly rotated and blurred
+    gsap.set(serviceCards, {
+      x: -140,
+      opacity: 0,
+      scale: 0.93,
+      rotate: -3,
+      filter: 'blur(10px)'
+    });
+
+    // reveal cards in sequence, left-to-right, as the grid scrolls into view
+    ScrollTrigger.batch(serviceCards, {
+      start: 'top 85%',
+      once: false,
+      onEnter: function (batch) {
+        gsap.to(batch, {
+          x: 0,
+          opacity: 1,
+          scale: 1,
+          rotate: 0,
+          filter: 'blur(0px)',
+          duration: 0.85,
+          ease: 'power3.out',
+          stagger: 0.16,
+          overwrite: true
+        });
+      },
+      onLeaveBack: function (batch) {
+        gsap.to(batch, {
+          x: -140,
+          opacity: 0,
+          scale: 0.93,
+          rotate: -3,
+          filter: 'blur(10px)',
+          duration: 0.45,
+          ease: 'power2.in',
+          stagger: 0.08,
+          overwrite: true
+        });
+      }
+    });
+  }
+
+  // ===== WHY LIST: heading + copy rise up into view, row by row =====
+  var whyRows = gsap.utils.toArray('.why-row');
+
+  whyRows.forEach(function (row) {
+    var heading = row.querySelector('h3');
+    var para = row.querySelector('p');
+    var targets = [heading, para].filter(Boolean);
+
+    if (!targets.length) return;
+
+    // start below their resting position, faded out and blurred
+    gsap.set(heading, { y: 70, opacity: 0, filter: 'blur(12px)', scale: 0.96 });
+    gsap.set(para, { y: 46, opacity: 0, filter: 'blur(8px)' });
+
+    var rowTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: row,
+        start: 'top 88%',
+        toggleActions: 'play none none reverse'
+      }
+    });
+
+    if (heading) {
+      rowTl.to(heading, {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        filter: 'blur(0px)',
+        duration: 1.2,
+        ease: 'power2.out'
+      });
+    }
+    if (para) {
+      rowTl.to(para, {
+        y: 0,
+        opacity: 1,
+        filter: 'blur(0px)',
+        duration: 1.05,
+        ease: 'power2.out'
+      }, heading ? '+=0.25' : 0);
+    }
+  });
+
+  // ===== WHY SECTION TITLE: drops down into place from above =====
+  var whyTitle = document.querySelector('.why .hd');
+
+  if (whyTitle) {
+    gsap.set(whyTitle, {
+      y: -70,
+      opacity: 0,
+      scale: 0.94,
+      filter: 'blur(12px)'
+    });
+
+    gsap.to(whyTitle, {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      filter: 'blur(0px)',
+      duration: 1.1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: whyTitle,
+        start: 'top 85%',
+        toggleActions: 'play none none reverse'
+      }
+    });
+  }
+});
+</script>
+
+</body>
+</html>
