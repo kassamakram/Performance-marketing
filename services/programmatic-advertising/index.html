@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programmatic Advertising Agency — [Brand Name]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/services/services.css">
+    <link rel="stylesheet" href="/components/header-footer.css">
+
+    <!-- New patterns for this page only. Move into /services/services.css if you want them reusable. -->
+    <style>
+        .hero-sub { font-size: 18px; line-height: 1.6; color: #dcdbdb; max-width: 560px; margin: 0 0 30px; }
+        .hero-cta { margin-bottom: 0; }
+
+        .img-cont.num { font-family: var(--font-display); font-size: 24px; color: var(--accent); }
+
+        .approach-card.single { grid-template-columns: 1fr; }
+        .approach-closing { font-family: var(--font-heading); font-weight: 700; font-size: 17px; line-height: 1.5; color: #fff; margin: 8px 0 0; }
+
+        .services { background: var(--paper); padding: 70px 0; }
+        .section-head { max-width: 760px; margin-bottom: 40px; }
+        .section-title { font-family: var(--font-heading); font-weight: 800; font-size: clamp(28px, 3.6vw, 40px); line-height: 1.15; margin: 0; }
+        .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .service-card { border: 1px solid var(--line); border-radius: 16px; padding: 28px; background: var(--paper); }
+        .service-card:hover { border-color: var(--accent); }
+        .service-card h3 { font-family: var(--font-heading); font-weight: 800; font-size: 20px; line-height: 1.25; margin: 0 0 12px; }
+        .service-card p { font-size: 15.5px; line-height: 1.7; color: var(--muted); margin: 0 0 10px; }
+        .service-card p:last-child { margin-bottom: 0; }
+        .service-card .lead { font-weight: 700; color: var(--ink); }
+
+        .retarget { margin-top: 20px; background: var(--ink); color: #fff; border-radius: 20px; padding: 36px 40px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; align-items: center; }
+        .retarget h3 { font-family: var(--font-heading); font-weight: 800; font-size: clamp(22px, 2.6vw, 28px); line-height: 1.2; margin: 0 0 14px; }
+        .retarget p { color: var(--muted-2); font-size: 15.5px; line-height: 1.7; margin: 0; }
+        .flow { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 0; margin: 0; }
+        .flow li { padding: 12px 18px; border: 1px solid rgba(255, 255, 255, .2); border-radius: 999px; font-weight: 700; font-size: 14px; }
+        .flow li:not(:last-child)::after { content: "\2192"; color: var(--accent); margin-left: 10px; }
+
+        .synergy-lead { font-weight: 700; color: var(--ink); }
+        .synergy-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .synergy-card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+        .synergy-card h3 { font-family: var(--font-heading); font-weight: 800; font-size: 17px; margin: 0 0 8px; }
+        .synergy-card p { font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0; }
+
+        .cta-note { font-family: var(--font-heading); font-weight: 700; font-size: 16px; line-height: 1.5; color: #fff; margin: 0; max-width: 480px; }
+
+        @media (max-width: 900px) {
+            .service-grid, .retarget, .synergy-cards { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .retarget { padding: 28px 22px; }
+            .service-card { padding: 22px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="shared-header"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <img class="hero-bg" src="/assets/Affiliate Marketing Banner 1.png" alt="">
+        <div class="hero-scrim"></div>
+        <div class="wrap hero-inner">
+            <div class="hero-text">
+                <div class="eyebrow light">PROGRAMMATIC ADVERTISING</div>
+                <h1 class="hero-title">Programmatic Advertising Agency Built for Smarter Media Buying</h1>
+                <p class="hero-sub">Reach valuable audiences at scale without letting your ad budget run on autopilot.</p>
+                <div class="hero-cta">
+                    <a class="btn btn-solid" href="#">Plan Your Programmatic Campaign</a>
+                    <a class="btn btn-outline" href="#">Talk to Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro">
+        <div class="wrap">
+            <div class="eyebrow">PROGRAMMATIC ADVERTISING SERVICES</div>
+            <p><b>[Brand Name]</b> delivers programmatic advertising services that combine audience intelligence, automated media buying, real-time bidding, data analysis, and campaign optimization to help businesses reach the right people across the digital ecosystem.</p>
+        </div>
+    </section>
+
+    <!-- OPPORTUNITY + PROCESS -->
+    <section class="opportunity">
+        <div class="wrap">
+            <div class="opp-grid">
+                <div>
+                    <div class="eyebrow dark">THE OPPORTUNITY</div>
+                    <h2 class="opp-title">Your Audience Is Everywhere. Your Media Strategy Should Know Where to Find Them.</h2>
+                </div>
+                <div class="opp-copy">
+                    <p>Programmatic advertising can place your brand across thousands of digital environments—but scale alone isn't the goal. [Brand Name] combines technology with strategic media buying to help turn programmatic reach into meaningful business outcomes.</p>
+                    <p style="font-weight:700;color:var(--ink);">Every stage provides data that can help improve the next decision.</p>
+                </div>
+            </div>
+
+            <div class="process">
+                <div class="process-step"><div class="img-cont num">01</div>Target</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><div class="img-cont num">02</div>Bid</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><div class="img-cont num">03</div>Deliver</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><div class="img-cont num">04</div>Measure</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><div class="img-cont num">05</div>Optimize</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPROACH (dark, background image) -->
+    <section class="approach">
+        <img class="approach-bg" src="/assets/Affiliate Marketing Banner 2.png" alt="">
+        <div class="approach-scrim"></div>
+        <div class="wrap approach-inner">
+            <div>
+                <div class="eyebrow light">OUR APPROACH</div>
+                <h2 class="approach-title">Programmatic Media Buying Without the <span class="accent">Black Box</span></h2>
+                <p class="approach-copy">Automated advertising doesn't have to feel complicated.</p>
+                <p class="approach-copy">[Brand Name] makes programmatic campaigns easier to understand by connecting campaign strategy with clear objectives and measurable KPIs.</p>
+            </div>
+
+            <div class="approach-cards">
+                <div class="approach-card single">
+                    <div>
+                        <h3>We focus on:</h3>
+                        <ul>
+                            <li>Audience quality</li>
+                            <li>Inventory selection</li>
+                            <li>Bid efficiency</li>
+                            <li>Ad placement</li>
+                            <li>Creative performance</li>
+                            <li>Frequency management</li>
+                            <li>Conversion tracking</li>
+                            <li>Campaign optimization</li>
+                            <li>Brand safety</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="approach-closing">The technology handles the speed. Strategy determines where that speed should take you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+        <div class="wrap">
+            <div class="section-head">
+                <div class="eyebrow dark">WHAT WE DO</div>
+                <h2 class="section-title">Programmatic Advertising Services That Go Beyond Display</h2>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <h3>Programmatic Display Advertising</h3>
+                    <p>We can support different formats and targeting approaches based on your campaign objectives and available inventory.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Programmatic Video Advertising</h3>
+                    <p>Our programmatic video strategy can help deliver relevant video ads across suitable digital environments while using audience and performance data to refine delivery.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Connected TV &amp; Streaming Advertising</h3>
+                    <p class="lead">Television has changed.</p>
+                    <p>[Brand Name] can help integrate CTV into a broader paid media strategy where it makes sense for your audience and objectives.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Mobile Programmatic Advertising</h3>
+                    <p class="lead">Your audience spends plenty of time on mobile devices.</p>
+                    <p>Programmatic mobile advertising can help reach users across mobile websites, applications, and other digital environments.</p>
+                </article>
+            </div>
+
+            <div class="retarget">
+                <div>
+                    <h3>Retargeting That Brings Interested Audiences Back</h3>
+                    <p>Programmatic retargeting helps reconnect with users who have already visited your website, interacted with your brand, viewed products, or demonstrated relevant interest.</p>
+                </div>
+                <ul class="flow">
+                    <li>Awareness</li>
+                    <li>Consideration</li>
+                    <li>Conversion</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SYNERGY -->
+    <section class="synergy">
+        <!-- <img class="synergy-bg" src="/assets/Affiliate Marketing Banner s3.png" alt=""> -->
+        <div class="synergy-scrim"></div>
+        <div class="wrap synergy-inner">
+            <div>
+                <div class="eyebrow dark">CHANNEL SYNERGY</div>
+                <h2 class="synergy-title">Programmatic + Performance Marketing: A Stronger Combination</h2>
+                <div class="synergy-copy">
+                    <p class="synergy-lead">Programmatic advertising doesn't need to operate by itself.</p>
+                    <p>It can work alongside other performance marketing services to create a broader paid media strategy. Depending on your objectives, programmatic can complement:</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="synergy-cards">
+                    <div class="synergy-card">
+                        <h3>Google Ads</h3>
+                        <p>Capture active search intent while programmatic advertising expands reach beyond search results.</p>
+                    </div>
+                    <div class="synergy-card">
+                        <h3>Meta Ads &amp; Paid Social</h3>
+                        <p>Combine social audience insights and creative testing with broader programmatic media buying.</p>
+                    </div>
+                    <div class="synergy-card">
+                        <h3>Lead Generation</h3>
+                        <p>Use programmatic campaigns to introduce your brand to relevant audiences and support conversion-focused campaigns further down the funnel.</p>
+                    </div>
+                    <div class="synergy-card">
+                        <h3>Remarketing</h3>
+                        <p>Reconnect with users who have already demonstrated interest through your website or other digital touchpoints.</p>
+                    </div>
+                </div>
+                <p class="synergy-copy" style="margin-top:18px;font-size:15.5px;line-height:1.7;color:var(--muted);">A connected strategy can create more consistent messaging across the customer journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="philosophy">
+        <div class="wrap phi-grid">
+            <div>
+                <div class="eyebrow dark">MEASURABLE OBJECTIVES</div>
+                <h2 class="phi-title">Better Targeting. Better Buying. Better Accountability.</h2>
+                <p class="phi-copy">[Brand Name] brings together programmatic media buying, audience targeting, paid advertising, data analytics, creative strategy, and conversion measurement to create campaigns built around measurable objectives.</p>
+            </div>
+
+            <div class="phi-image">
+                <img src="/assets/Affiliate Marketing Banner 4.png" alt="Programmatic advertising performance analytics">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-wrapper">
+        <section class="cta-banner">
+            <img class="cta-bg" src="/assets/Affiliate Marketing Banner 5.png" alt="">
+            <div class="cta-scrim"></div>
+            <div class="wrap cta-inner">
+                <div>
+                    <div class="eyebrow light">PUT YOUR MEDIA BUDGET IN MOTION</div>
+                    <h2 class="cta-title">Ready to Make Programmatic <span class="accent">Work Harder for Your Media Budget?</span></h2>
+                    
+                    <p class="cta-copy">Let's build a programmatic advertising strategy designed around the audiences you want to reach and the results you want to measure.</p>
+                    <div class="cta-buttons">
+                        <a class="btn btn-solid" href="#">Plan Your Programmatic Campaign</a>
+                        <a class="btn btn-outline" href="#">Talk to Our Team</a>
+                    </div>
+                    <p class="cta-note">Smarter media buying starts with knowing where—and why—you buy.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="shared-footer"></div>
+    <script src="/components/components.js"></script>
+</body>
+
+</html>

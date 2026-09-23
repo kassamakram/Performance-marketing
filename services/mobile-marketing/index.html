@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mobile Marketing Agency — [Brand Name]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/services/services.css">
+
+    <style>
+        .processes {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--paper);
+            border-radius: 20px;
+            padding: 26px 30px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .services-section {
+            background: var(--panel);
+            padding: 70px 0;
+        }
+
+        .services-section .eyebrow {
+            color: #494949;
+        }
+
+        .services-title {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(28px, 3.6vw, 38px);
+            line-height: 1.15;
+            margin: 0 0 40px;
+            max-width: 780px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 26px;
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 24px 44px -26px rgba(0, 0, 0, .25);
+        }
+
+        .service-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--line);
+            margin-bottom: 18px;
+        }
+
+        .service-icon img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-heading);
+            font-size: 16.5px;
+            font-weight: 700;
+            margin: 0 0 8px;
+        }
+
+        .service-card p {
+            font-size: 13.5px;
+            line-height: 1.65;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        .mobile-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 24px;
+            margin: 18px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .mobile-list li {
+            font-size: 14.5px;
+            font-weight: 500;
+            color: var(--ink);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .mobile-list li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============ SECTION 1 — HERO ============ -->
+    <section class="hero">
+        <img class="hero-bg" src="/assets/Affiliate Marketing Banner 1.png" alt="">
+        <div class="hero-scrim"></div>
+        <div class="wrap hero-inner">
+            <div class="hero-text">
+                <div class="eyebrow light">MOBILE MARKETING AGENCY</div>
+                <h1 class="hero-title">Mobile Marketing Agency Built to Turn Mobile Attention Into Growth</h1>
+                <div class="hero-cta">
+                    <a class="btn btn-solid" href="#">Turn Mobile Attention Into Growth <img src="" alt=""></a>
+                    <a class="btn btn-outline" href="#">See Our Approach <img src="" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 2 — INTRO ============ -->
+    <section class="intro">
+        <div class="wrap">
+            <div class="eyebrow">REACH PEOPLE WHERE THEY SPEND THEIR TIME</div>
+            <p>Reach people where they spend their time. Give them a reason to act.
+                [Brand Name] is a performance-focused mobile marketing agency helping brands
+                reach, engage, and convert mobile audiences through smarter targeting, paid
+                advertising, app marketing, mobile-first creative, and data-driven optimization.</p>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 3 — GROWTH CYCLE ============ -->
+    <section class="opportunity">
+        <div class="wrap">
+            <div class="opp-grid">
+                <div>
+                    <div class="eyebrow dark">MOBILE ISN'T ANOTHER CHANNEL</div>
+                    <h2 class="opp-title">Mobile Isn't Another Channel. It's Where the Action Happens.</h2>
+                </div>
+                <div class="opp-copy">
+                    <p style="font-weight:700;color:var(--ink);">Your audience is already on their phone.</p>
+                    <p>[Brand Name] creates mobile-first strategies that connect audience insights, creative,
+                        media buying, and conversion optimization to help drive customer acquisition, lead
+                        generation, app installs, sales, and ROI.</p>
+                </div>
+            </div>
+
+            <div class="processes">
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-1.png" alt="Discover icon">
+                    </div>
+                    Discover
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-2.png" alt="Compare icon">
+                    </div>
+                    Compare
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-3.png" alt="Connect icon">
+                    </div>
+                    Connect
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-4.png" alt="Watch icon">
+                    </div>
+                    Watch
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-5.png" alt="Explore icon">
+                    </div>
+                    Explore
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 4 — WHAT MAKES OUR MOBILE STRATEGY DIFFERENT (approach cards, dark) ============ -->
+    <section class="approach">
+        <img class="approach-bg" src="/assets/Affiliate Marketing Banner 2.png" alt="">
+        <div class="approach-scrim"></div>
+        <div class="wrap approach-inner">
+            <div>
+                <div class="eyebrow light">WHAT MAKES OUR MOBILE STRATEGY DIFFERENT?</div>
+                <h2 class="approach-title">What Makes Our Mobile Strategy <span class="accent">Different?</span>
+                </h2>
+                <p class="approach-copy">We combine audience intelligence, mobile-first creative, full-funnel
+                    performance, and business-minded optimization to help you win on small screens.</p>
+                <div class="approach-foot">MOBILE. PERFORMANCE. GROWTH.</div>
+            </div>
+
+            <div class="approach-cards">
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-6.png" alt="Audience targeting icon">
+                    </div>
+                    <div>
+                        <h3>Mobile-First Audience Targeting</h3>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-7.png" alt="Creative icon">
+                    </div>
+                    <div>
+                        <h3>Creative Built for Small Screens</h3>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-8.png" alt="Full funnel icon">
+                    </div>
+                    <div>
+                        <h3>Full-Funnel Performance</h3>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-9.png" alt="Optimization icon">
+                    </div>
+                    <div>
+                        <h3>Optimization With a Business Mindset</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 5 — SERVICES GRID (light) ============ -->
+    <section class="services-section">
+        <div class="wrap">
+            <div class="eyebrow dark">MOBILE MARKETING THAT COVERS MORE THAN ONE SCREEN</div>
+            <h2 class="services-title">Different audiences behave differently across mobile environments. Our
+                strategies can include:</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-10.png" alt=""></div>
+                    <h3>Mobile Paid Advertising</h3>
+                    <p>Reach mobile audiences with paid campaigns designed for awareness, traffic, and conversions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-11.png" alt=""></div>
+                    <h3>App User Acquisition</h3>
+                    <p>Drive app installs and high-value user acquisition with targeted mobile campaigns.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-12.png" alt=""></div>
+                    <h3>Mobile App Marketing</h3>
+                    <p>Promote your app, increase engagement, and retain users with mobile-first strategies.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-13.png" alt=""></div>
+                    <h3>Mobile Search Advertising</h3>
+                    <p>Capture intent with mobile search ads that connect users to your offer instantly.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-14.png" alt=""></div>
+                    <h3>Mobile Paid Social</h3>
+                    <p>Engage mobile audiences across social platforms with thumb-stopping creative and messaging.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-15.png" alt=""></div>
+                    <h3>Mobile Display Advertising</h3>
+                    <p>Reach users across mobile apps and sites with display campaigns built for visibility and action.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-16.png" alt=""></div>
+                    <h3>Mobile Video Advertising</h3>
+                    <p>Use video to capture attention, tell your story, and drive mobile conversions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-17.png" alt=""></div>
+                    <h3>Mobile Remarketing</h3>
+                    <p>Reconnect with mobile users who showed interest but didn't convert, and bring them back.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 6 — MOBILE JOURNEY (reuses opportunity pattern) ============ -->
+    <section class="opportunity">
+        <div class="wrap">
+            <div class="opp-grid">
+                <div>
+                    <div class="eyebrow dark">DON'T JUST DRIVE MOBILE TRAFFIC</div>
+                    <h2 class="opp-title">Don't Just Drive Mobile Traffic. Build a Mobile Journey.</h2>
+                </div>
+                <div class="opp-copy">
+                    <p style="font-weight:700;color:var(--ink);">A successful mobile campaign should make every step
+                        feel connected.</p>
+                    <p>That means your ad, landing page, app experience, offer, and follow-up should work
+                        together. We look for friction throughout the journey and identify opportunities to improve the
+                        experience—from the first mobile impression to the final conversion.</p>
+                </div>
+            </div>
+
+            <div class="processes">
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-18.png" alt="See icon">
+                    </div>
+                    See
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-19.png" alt="Click icon">
+                    </div>
+                    Click
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-20.png" alt="Explore icon">
+                    </div>
+                    Explore
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-21.png" alt="Engage icon">
+                    </div>
+                    Engage
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-22.png" alt="Convert icon">
+                    </div>
+                    Convert
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-23.png" alt="Return icon">
+                    </div>
+                    Return
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 7 — TEST FAST, LEARN FASTER (reuses optimize pattern, dark) ============ -->
+    <section class="optimize">
+        <img class="optimize-bg" src="/assets/Affiliate Marketing Banner 5.png" alt="">
+        <div class="optimize-scrim"></div>
+        <div class="wrap optimize-inner">
+            <div class="opt-1">
+                <div class="eyebrow light">TEST FAST. LEARN FASTER. SCALE SMARTER.</div>
+                <h2 class="optimize-title">Mobile audiences change quickly, so your strategy shouldn't sit untouched for months.</h2>
+                <p class="optimize-copy">We test audience segments, ad formats, creative concepts, hooks and messaging,
+                    offers, CTAs, landing pages, app store experiences, placements, and bidding strategies. When a
+                    campaign element shows stronger performance, we explore opportunities to scale it. When something
+                    underperforms, we use the data to understand what needs to change.</p>
+
+                <div class="optimize-grid">
+
+                    <div class="optimize-card">
+                        <img src="/assets/icon-24.png" alt="">
+                        <div class="text">
+                            <b>Launch</b>
+                            <span>01</span>
+                        </div>
+                    </div>
+
+                    <div class="optimize-card">
+                        <img src="/assets/icon-26.png" alt="">
+                        <div class="text">
+                            <b>Measure</b>
+                            <span>02</span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="optimize-card">
+                        <img src="/assets/icon-30.png" alt="">
+                        <div class="text">
+                            <b>Learn</b>
+                            <span>03</span>
+                        </div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/icon-31.png" alt="">
+                        <div class="text">
+                            <b>Optimize</b>
+                            <span>04</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="optimize-note">When a campaign element shows stronger performance, we explore opportunities to
+                    scale it. When something underperforms, we use the data to understand what needs to change.</p>
+            </div>
+            <div class="opt-2"></div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 8 — MOBILE MEETS PERFORMANCE (simplified) ============ -->
+    <section class="measure">
+        <div class="wrap measure-grid">
+            <div>
+                <div class="eyebrow dark">MOBILE MARKETING MEETS PERFORMANCE MARKETING</div>
+                <h2 class="measure-title">Mobile campaigns become more powerful when connected to the wider marketing ecosystem.</h2>
+                <p class="measure-copy">[Brand Name] can combine mobile marketing with Performance Marketing, Google Ads,
+                    Meta Ads, Paid Social, Programmatic Advertising, Display Advertising, Remarketing, Lead Generation,
+                    Customer Acquisition, Conversion Rate Optimization, and Analytics &amp; Performance Tracking.</p>
+                <p class="measure-copy">This creates a connected strategy instead of isolated campaigns competing for
+                    attention.</p>
+                <p class="measure-copy">ROI Is the Destination. Data Shows the Route. At [Brand Name], we take an
+                    ROI-driven marketing approach to mobile advertising. We look at what your campaigns are producing,
+                    where users are dropping off, which audiences are responding, and which channels or creatives deserve
+                    more investment.</p>
+                <a class="btn btn-solid" href="">Turn Mobile Attention Into Measurable Growth →</a>
+
+            </div>
+
+            <div class="measure-image">
+                <img src="/assets/Digital Media Advertising Banner 3.png" alt="Mobile performance dashboard">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 10 — CTA BANNER ============ -->
+    <div class="cta-wrapper">
+        <section class="cta-banner">
+            <img class="cta-bg" src="/assets/Affiliate Marketing Banner 7.png" alt="">
+            <div class="cta-scrim"></div>
+            <div class="wrap cta-inner">
+                <div>
+                    <div class="eyebrow light">YOUR AUDIENCE IS ALREADY MOBILE. ARE YOUR CAMPAIGNS READY?</div>
+                    <h2 class="cta-title">Turn Mobile Attention Into <span class="accent">Measurable Growth</span></h2>
+                    <p class="cta-copy">[Brand Name] helps you meet them there with mobile marketing strategies built
+                        around paid ads, audience targeting, creative testing, customer acquisition, and
+                        measurable ROI.</p>
+
+                    <h4>Turn Mobile Attention Into Measurable Growth →</h4>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

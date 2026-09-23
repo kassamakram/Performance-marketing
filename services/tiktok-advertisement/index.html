@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TikTok Advertising Agency — Page Sections</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/services/services.css">
+    <link rel="stylesheet" href="/components/header-footer.css">
+    <style>
+        /* New rules needed for this page only:
+           1) hero-sub — the reference hero has no body-copy slot.
+           2) .services / .services-grid — a light-background section housing
+              the 7 detailed TikTok service cards. It reuses .approach-card
+              (a self-contained dark card component) rather than inventing a
+              new card style; only the section wrapper and grid are new. */
+        .hero-sub {
+            font-family: var(--font-body);
+            color: rgba(255, 255, 255, .82);
+            font-size: 17px;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 0 34px;
+        }
+        .approach-card{
+            background-color: var(--panel);
+            border: 1px solid var(--line);
+
+        }
+
+        .services {
+            background: var(--panel);
+            padding: 70px 0;
+        }
+
+        .services .eyebrow {
+            color: #494949;
+        }
+
+        .services-title {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(28px, 3.6vw, 40px);
+            line-height: 1.15;
+            margin: 0 0 20px;
+            max-width: 760px;
+        }
+
+        .services-copy {
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.7;
+            max-width: 720px;
+            margin: 0 0 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="shared-header"></div>
+
+    <!-- ============ SECTION 1 — HERO ============ -->
+    <section class="hero">
+        <img class="hero-bg" src="/assets/Affiliate Marketing Banner 1.png" alt="">
+        <div class="hero-scrim"></div>
+        <div class="wrap hero-inner">
+            <div class="hero-text">
+                <div class="eyebrow light">ATTENTION, ACTION &amp; ROI</div>
+                <h1 class="hero-title">TikTok Advertising Agency Built for Attention, Action &amp; ROI</h1>
+                <p class="hero-sub">TikTok moves fast. Your advertising strategy should too. [Brand Name] helps
+                    brands turn TikTok's massive attention economy into measurable business results through
+                    performance marketing, paid advertising, creative strategy, audience targeting, and conversion
+                    optimization.</p>
+                <div class="hero-cta">
+                    <a class="btn btn-solid" href="#">Let's Create Campaigns That Perform <img src="" alt=""></a>
+                    <a class="btn btn-outline" href="#">Talk to a Specialist</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 2 — INTRO ============ -->
+    <section class="intro">
+        <div class="wrap">
+            <div class="eyebrow">Stop Chasing Views. Start Building Campaigns That Perform.</div>
+            <p>A viral video can get attention. A well-structured advertising strategy can turn that attention into
+                customers. As a TikTok advertising agency, <b>[Brand Name]</b> combines audience research, paid media
+                strategy, creative testing, campaign optimization, and performance tracking to create campaigns
+                designed for measurable outcomes.</p>
+            <p class="bold">Plan smarter. Create sharper. Test continuously. Optimize relentlessly.</p>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 3 — OUR APPROACH (background image) ============ -->
+    <section class="approach">
+        <img class="approach-bg" src="/assets/Affiliate Marketing Banner 2.png" alt="">
+        <div class="approach-scrim"></div>
+        <div class="wrap approach-inner">
+            <div>
+                <div class="eyebrow light">OUR APPROACH</div>
+                <h2 class="approach-title">Turn TikTok Attention Into <span class="accent">Measurable Growth</span>
+                </h2>
+                <p class="approach-copy">TikTok advertising doesn't behave like traditional advertising. [Brand
+                    Name] develops TikTok paid advertising strategies that balance creativity with performance.</p>
+            </div>
+
+            <div class="approach-cards">
+                <div class="approach-card">
+                    <div class="approach-icon-cont"><img src="/assets/icon-1.png" alt="Audience research icon"></div>
+                    <div>
+                        <h3>Audience Research That Goes Beyond Demographics</h3>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont"><img src="/assets/icon-2.png" alt="Creative icon"></div>
+                    <div>
+                        <h3>Creative Built for the TikTok Feed</h3>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont"><img src="/assets/icon-3.png" alt="Testing icon"></div>
+                    <div>
+                        <h3>Testing That Finds What Works</h3>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont"><img src="/assets/icon-4.png" alt="Optimization icon"></div>
+                    <div>
+                        <h3>Optimization Based on Real Data</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 4 — SERVICES (new section: content required 7 detailed cards) ============ -->
+    <section class="services">
+        <div class="wrap">
+            <div class="eyebrow dark">WHAT WE DO</div>
+            <h2 class="services-title">TikTok Advertising Services That Connect Creativity With Performance</h2>
+            <p class="services-copy">Whether you're launching a new product, generating leads, growing an app, or
+                scaling an established brand, [Brand Name] can build a TikTok advertising strategy around your
+                business objective.</p>
+
+            <div class="services-grid">
+                <div class="approach-card">
+                    <div class="approach-icon-cont"><img src="/assets/icon-5.png" alt="Paid ads strategy icon"></div>
+                    <div>
+                        <h3>TikTok Paid Ads Strategy</h3>
+                        <p>We develop a paid advertising strategy covering objectives, audience segments, messaging,
+                            creative direction, budget allocation, and conversion goals.</p>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont"><img src="/assets/icon-6.png" alt="Campaign management icon">
+                    </div>
+                    <div>
+                        <h3>TikTok Campaign Management</h3>
+                        <p>From campaign setup to ongoing optimization, we manage the moving parts behind your
+                            TikTok advertising campaigns so your media spend has a clear strategic direction.</p>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont"><img src="/assets/icon-7.png" alt="Creative strategy icon"></div>
+                    <div>
+                        <h3>TikTok Creative Strategy</h3>
+                        <p>[Brand Name] develops concepts, hooks, messaging angles, and content directions designed
+                            to capture attention quickly and communicate your value clearly.</p>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont"><img src="/assets/icon-8.png" alt="Lead generation icon"></div>
+                    <div>
+                        <h3>TikTok Lead Generation Campaigns</h3>
+                        <p>[Brand Name] creates TikTok lead generation campaigns designed to move users from
+                            scrolling to submitting their information, booking a consultation, requesting
+                            information, or taking another valuable action.</p>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont"><img src="/assets/icon-9.png" alt="Ecommerce advertising icon">
+                    </div>
+                    <div>
+                        <h3>TikTok Ecommerce Advertising</h3>
+                        <p>For ecommerce brands, we focus on connecting TikTok discovery with measurable purchase
+                            activity. Campaigns can support product discovery, website conversions, retargeting, and
+                            customer acquisition.</p>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont"><img src="/assets/icon-10.png" alt="Retargeting icon"></div>
+                    <div>
+                        <h3>TikTok Retargeting</h3>
+                        <p>Retargeting helps reconnect with users who have already interacted with your brand,
+                            visited your website, engaged with content, or shown buying intent.</p>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont"><img src="/assets/icon-11.png" alt="Performance tracking icon">
+                    </div>
+                    <div>
+                        <h3>TikTok Performance Tracking &amp; Reporting</h3>
+                        <p>Clear reporting matters. We track relevant performance indicators to understand where
+                            your advertising investment is going:</p>
+                        <ul>
+                            <li>CTR</li>
+                            <li>CPC</li>
+                            <li>Conversion rate</li>
+                            <li>CPA</li>
+                            <li>ROAS</li>
+                            <li>Leads</li>
+                            <li>Revenue</li>
+                            <li>Customer acquisition cost</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 5 — CHANNEL SYNERGY (full width banner image) ============ -->
+    <section class="synergy">
+        <img class="synergy-bg" src="/assets/Affiliate Marketing Banner 4.png" alt="">
+        <div class="synergy-scrim"></div>
+        <div class="wrap synergy-inner">
+            <div>
+                <div class="eyebrow dark">CHANNEL SYNERGY</div>
+                <h2 class="synergy-title">TikTok Is One Channel. Your Growth Strategy Should Be Bigger.</h2>
+                <div class="synergy-copy">
+                    <h3>TikTok doesn't have to operate in isolation.</h3>
+                    <p>TikTok can be powerful on its own, but performance marketing works best when channels work
+                        together. Depending on your objectives, [Brand Name] can align TikTok campaigns with
+                        broader paid media and digital advertising strategies, including Meta Ads, Google Ads, paid
+                        social, remarketing, lead generation, and conversion-focused campaigns.</p>
+                </div>
+            </div>
+            <div></div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 6 — OUR PHILOSOPHY (image on right) ============ -->
+    <section class="philosophy">
+        <div class="wrap phi-grid">
+            <div>
+                <div class="eyebrow dark">OUR PHILOSOPHY</div>
+                <h2 class="phi-title">Turn TikTok Reach Into Real Business Results</h2>
+                <p class="phi-copy">Your audience is already scrolling. The opportunity is to give them something
+                    worth stopping for—and a clear reason to take the next step. [Brand Name] helps businesses
+                    build:</p>
+
+                <ul class="phi-list">
+                    <li><img src="/assets/icon-12.png" alt="">TikTok advertising campaigns</li>
+                    <li><img src="/assets/icon-13.png" alt="">Paid social strategies</li>
+                    <li><img src="/assets/icon-14.png" alt="">Lead generation programs</li>
+                    <li><img src="/assets/icon-15.png" alt="">ROI-driven performance marketing campaigns</li>
+                </ul>
+            </div>
+
+            <div class="phi-image">
+                <img src="/assets/Affiliate Marketing Banner 3.png" alt="Turning TikTok reach into measurable business results">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 7 — WORK TOGETHER (full width banner image) ============ -->
+    <div class="cta-wrapper">
+        <section class="cta-banner">
+            <img class="cta-bg" src="/assets/Affiliate Marketing Banner 7.png" alt="">
+            <div class="cta-scrim"></div>
+            <div class="wrap cta-inner">
+                <div>
+                    <div class="eyebrow light">LET'S WORK TOGETHER</div>
+                    <h2 class="cta-title">Let's Make Your Next Campaign <span class="accent">More Than Just Another
+                            Scroll</span></h2>
+                    <p class="cta-copy">Plan smarter. Create sharper. Test continuously. Optimize relentlessly.</p>
+                    <div class="cta-buttons">
+                        <a class="btn btn-solid" href="#">Talk to [Brand Name] About Your TikTok Strategy <img
+                                src="" alt=""></a>
+                        <a class="btn btn-outline" href="#">Get in Touch</a>
+                    </div>
+                    <div class="cta-mini">
+                        <div class="cta-mini-item"><img src="/assets/icon-16.png" alt="">Creative-Led Strategy</div>
+                        <div class="cta-mini-item"><img src="/assets/icon-17.png" alt="">Performance Tracked</div>
+                        <div class="cta-mini-item"><img src="/assets/icon-18.png" alt="">Built to Scale</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="shared-footer"></div>
+    <script src="/components/components.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Performance Marketing Landing Page</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/components/header-footer.css">
+
+  <style>
+    :root {
+      --ink: #0B0B0B;
+      --ink-2: #141414;
+      --paper: #FFFFFF;
+      --panel: #F6F5F2;
+      --panel-dark: #111111;
+      --accent: #F4501B;
+      --accent-hover: #D83E0C;
+      --accent-2: #FF7A3D;
+      --muted: #6A6A6A;
+      --muted-2: #999999;
+      --line: #E4E1DB;
+      --line-dark: #242424;
+      --max: 1320px;
+      --pad: 28px;
+      --font-display: 'Bebas Neue', Impact, sans-serif;
+      --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-hand: 'Caveat', cursive;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background-color: var(--paper);
+      color-scheme: light;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding-left: var(--pad);
+      padding-right: var(--pad);
+      width: 100%;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--accent);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 12px 24px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .icon-placeholder {
+      /* width: 24px; */
+      height: 50px;
+      display: inline-block;
+      object-fit: contain;
+    }
+
+    .badge-icon {
+      width: 60px;
+      height: 60px;
+      background-color: #FFF3EF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: .2em;
+            margin-bottom: 18px;
+            color: #6A6A6A;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 35px;
+            height: 2px;
+            background: var(--accent);
+            display: inline-block;
+        }
+
+    /* Section 1: Hero Banner */
+    .hero-section {
+      position: relative;
+      background-image:  url('/assets/Service/Banner\ 1.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #FFFFFF;
+      padding: 120px 0 100px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .hero-subtitle {
+      color: var(--accent-2);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 28px;
+      text-transform: uppercase;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+    }
+
+    /* Section 2: Logos Bar */
+    .logos-section {
+      padding: 30px 0;
+      background-color: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logos-caption {
+      text-align: center;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .logos-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 18px;
+      filter:invert(100%) ;
+    }
+
+    /* Section 3: Intro Statement */
+    .intro-section {
+      padding: 60px 0;
+      background-color: var(--paper);
+      /* text-align: center; */
+    }
+
+    .intro-text {
+      font-size: clamp(20px, 2.4vw, 36px);
+      font-weight: 700;
+      line-height: 1.4;
+      
+      
+      color: var(--ink);
+    }
+
+    /* Section 4: Value Proposition Grid */
+    .value-section {
+      padding: 80px 0;
+      background-color: #e8e8e830;
+    }
+
+    .value-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .value-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .value-heading {
+      font-size: 46px;
+      font-weight: 800;
+      line-height: 1.15;
+      /* margin-top: 10px; */
+      /* margin-bottom: 20px; */
+    }
+
+    .value-desc {
+      color: var(--ink-2);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      
+    }
+
+    .feature-card {
+      /* background: var(--paper); */
+      padding: 24px 16px;
+      border-radius: 8px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--line);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .feature-num {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted-2);
+      margin-bottom: 6px;
+    }
+
+    .feature-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    /* Section 5: Services Cards */
+    .services-section {
+      padding: 90px 0;
+      background-color: var(--paper);
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-tag {
+      color: var(--accent);
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: block;
+      /* margin-bottom: 8px; */
+    }
+
+    .services-title {
+      font-size: 50px;
+      font-weight: 800;
+    }
+
+    .services-title span {
+      color: var(--accent);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      /* background: var(--panel); */
+      border-radius: 12px;
+      padding: 32px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 260px;
+      border: 1px solid var(--line);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .service-card-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .service-card-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .service-arrow-btn {
+      width: 36px;
+      height: 36px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 24px;
+    }
+    .service-arrow-btn img {
+        width: 20px;
+        height: 20px;
+        object-fit: cover;
+    }
+
+    /* Section 6: Action Stats (Banner 2) */
+    .action-stats-section {
+      background-color: #111111;
+      background-size: cover;
+      background-position: center;
+      color: #FFFFFF;
+      padding: 70px 0;
+    }
+
+    .stats-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .stats-main-title {
+      font-family: var(--font-display);
+      font-size: 56px;
+      letter-spacing: 1px;
+      line-height: 1.0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .stat-box {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--line-dark);
+      padding: 20px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .stat-val {
+      font-size: 28px;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+
+    .stat-lbl {
+      font-size: 12px;
+      color: var(--muted-2);
+    }
+
+    /* Section 7: Social List */
+    .social-section {
+      padding: 90px 0;
+      background-color: var(--paper);
+    }
+
+    .social-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .social-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .social-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid var(--line);
+      padding: 16px 20px;
+      border-radius: 8px;
+    }
+
+    .social-item-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .social-name {
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .social-desc {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* Section 8: Connected Banner (Banner 4) */
+    .connected-section {
+      background-image:  url('/assets/Service/Banner\ 4.png');
+      background-size: cover;
+      background-position: center;
+      color: #FFFFFF;
+      padding: 80px 0;
+    }
+
+    .connected-content {
+      max-width: 500px;
+    }
+
+    .connected-title {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    /* Section 9: Growth Engine (Banner 3 Split) */
+    .growth-section {
+      padding: 70px 0;
+      background-color: var(--paper);
+    }
+
+    .growth-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .growth-img-container {
+      width: 100%;
+      height: 380px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-image: url('/assets/Service/Banner\ 2.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Section 10: Call to Action Banner */
+    .cta-banner-section {
+      padding: 40px 0 70px;
+    }
+
+    .cta-card {
+      background-image:  url('/assets/Service/Banner\ 3.png');
+      background-size: cover;
+      background-position: center;
+      border-radius: 16px;
+      padding: 60px;
+      color: #FFFFFF;
+    }
+
+    .cta-title {
+      font-size: 36px;
+      font-weight: 800;
+      max-width: 500px;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    @media (max-width: 900px) {
+      .value-layout, .stats-layout, .social-layout, .growth-layout {
+        grid-template-columns: 1fr;
+      }
+      .services-grid, .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* Container to hold the elements in a row */
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px; /* Space between the lines and the text */
+  width: 100%;
+}
+
+/* The horizontal lines */
+.section-heading .line {
+  height: 2px; /* Thickness of the line */
+  width: 40px; /* Length of the line. Adjust as needed */
+  background-color: #F4501B; /* The specific color you requested */
+  border-radius: 2px; /* Slight rounding for smooth edges */
+}
+
+/* The actual text */
+.section-tag {
+  color: #F4501B;
+  font-family: sans-serif; /* Replace with your website's font */
+  font-size: 18px;
+  font-weight: 700; /* Bold text */
+  letter-spacing: 2px; /* Spacing out the letters like the image */
+  text-transform: uppercase;
+  margin: 0; /* Resetting default h2 margins */
+  white-space: nowrap; /* Prevents the text from breaking onto two lines */
+}
+.social-item-left img {
+    width: 40px;
+    height: 40px;
+}
+  </style>
+</head>
+<body>
+          <div id="shared-header"></div>
+
+  <!-- 1. Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-subtitle">Data-Driven Performance Agency</span>
+        <h1 class="hero-title">
+          Performance Marketing Services That Make <span> <br>Every Click Work Harder</span>
+        </h1>
+        <a href="#" class="btn">Track Your Growth &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Logos Bar -->
+  <section class="logos-section">
+    <div class="container">
+      <div class="logos-caption">Trusted by Data-Driven Organizations</div>
+      <div class="logos-grid">
+        <div class="logo-item"><img src="/assets/youtube.png" alt="" class="icon-placeholder" /></div>
+        <div class="logo-item"><img src="/assets/g-ads.png" alt="" class="icon-placeholder" /></div>
+        <div class="logo-item"><img src="/assets/shopify.png" alt="" class="icon-placeholder" /></div>
+        <div class="logo-item"><img src="/assets/meta.png" alt="" class="icon-placeholder" /></div>
+        <div class="logo-item"><img src="/assets/canva.png" alt="" class="icon-placeholder" /></div>
+        <div class="logo-item"><img src="/assets/hubspot.png" alt="" class="icon-placeholder" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Statement Section -->
+  <section class="intro-section">
+    <div class="container">
+        <div class="eyebrow">More partners. More relevant traffic. More measurable growth.</div>
+      <p class="intro-text">
+        [Brand Name] delivers performance marketing focused on real business outcomes, not just impressions. From paid social, media buying, affiliate, influencer, programmatic, mobile, and remarketing — we connect you with the right audience, drive demand, and turn your ad spend into measurable growth.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4. Value Proposition Grid -->
+  <section class="value-section">
+    <div class="container">
+      <div class="value-layout">
+        <div class="value-copy">
+          <span class="section-tag">Performance First</span>
+          <h2 class="value-heading">Your Marketing Should Do More Than Get Attention</h2>
+          <p class="value-desc">
+            We build integrated campaigns designed for bottom-line impact. From creative execution to technical tracking, every element is optimized to lower customer acquisition costs and drive sustainable revenue.
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="badge-icon"><img src="/assets/Service/Icon 1.png" alt="" class="icon-placeholder" /></div>
+            <div class="feature-num">01</div>
+            <div class="feature-title">Paid Social Ads</div>
+          </div>
+          <div class="feature-card">
+            <div class="badge-icon"><img src="/assets/Service/Icon 2.png" alt="" class="icon-placeholder" /></div>
+            <div class="feature-num">02</div>
+            <div class="feature-title">Search & Intent</div>
+          </div>
+          <div class="feature-card">
+            <div class="badge-icon"><img src="/assets/Service/Icon 3.png" alt="" class="icon-placeholder" /></div>
+            <div class="feature-num">03</div>
+            <div class="feature-title">Creator / Scale</div>
+          </div>
+          <div class="feature-card">
+            <div class="badge-icon"><img src="/assets/Service/Icon 4.png" alt="" class="icon-placeholder" /></div>
+            <div class="feature-num">04</div>
+            <div class="feature-title">Ott & CTV</div>
+          </div>
+          <div class="feature-card">
+            <div class="badge-icon"><img src="/assets/Service/Icon 5.png" alt="" class="icon-placeholder" /></div>
+            <div class="feature-num">05</div>
+            <div class="feature-title">Programmatic Media</div>
+          </div>
+          <div class="feature-card">
+            <div class="badge-icon"><img src="/assets/Service/Icon 6.png" alt="" class="icon-placeholder" /></div>
+            <div class="feature-num">06</div>
+            <div class="feature-title">Retargeting Engine</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Services Grid -->
+  <section class="services-section">
+    <div class="container">
+      <div class="services-header">
+        <div class="section-heading">
+  <span class="line"></span>
+  <h2 class="section-tag">OUR SERVICES</h2>
+  <span class="line"></span>
+</div>
+        <h2 class="services-title">Marketing Solutions <br> for <span>Real Growth</span></h2>
+        <p>Strategy, creativity, and performance — everything you need to grow your brand in one place.
+
+</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div>
+            <div class="badge-icon"><img src="/assets/Service/Icon 7.png" alt="" class="icon-placeholder" /></div>
+            <h3 class="service-card-title">Affiliate Marketing</h3>
+            <p class="service-card-desc">Scale your partnership channel with targeted outreach, robust attribution, and optimized tracking models.</p>
+          </div>
+          <a href="#" class="service-arrow-btn"><img src="/assets/Service/right-arrow.png" alt="" class="icon-placeholder" /></a>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <div class="badge-icon"><img src="/assets/Service/Icon 8.png" alt="" class="icon-placeholder" /></div>
+            <h3 class="service-card-title">App Marketing</h3>
+            <p class="service-card-desc">Drive high-intent user acquisition and retention with data-driven mobile app performance strategies.</p>
+          </div>
+          <a href="#" class="service-arrow-btn"><img src="/assets/Service/right-arrow.png" alt="" class="icon-placeholder" /></a>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <div class="badge-icon"><img src="/assets/Service/Icon 9.png" alt="" class="icon-placeholder" /></div>
+            <h3 class="service-card-title">Commerce Media</h3>
+            <p class="service-card-desc">Capture shoppers at key buying moments with retail media optimization and shopping campaigns.</p>
+          </div>
+          <a href="#" class="service-arrow-btn"><img src="/assets/Service/right-arrow.png" alt="" class="icon-placeholder" /></a>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <div class="badge-icon"><img src="/assets/Service/Icon 10.png" alt="" class="icon-placeholder" /></div>
+            <h3 class="service-card-title">Digital Audio Advertising</h3>
+            <p class="service-card-desc">Reach engaged listeners across podcast and streaming platforms with precise audience targeting.</p>
+          </div>
+          <a href="#" class="service-arrow-btn"><img src="/assets/Service/right-arrow.png" alt="" class="icon-placeholder" /></a>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <div class="badge-icon"><img src="/assets/Service/Icon 11.png" alt="" class="icon-placeholder" /></div>
+            <h3 class="service-card-title">Digital Media Advertising</h3>
+            <p class="service-card-desc">Execute multi-channel digital strategies designed to maximize cross-channel ROAS.</p>
+          </div>
+          <a href="#" class="service-arrow-btn"><img src="/assets/Service/right-arrow.png" alt="" class="icon-placeholder" /></a>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <div class="badge-icon"><img src="/assets/Service/Icon 12.png" alt="" class="icon-placeholder" /></div>
+            <h3 class="service-card-title">Display Advertising</h3>
+            <p class="service-card-desc">Engage high-value segments through targeted visual ads across premium publisher networks.</p>
+          </div>
+          <a href="#" class="service-arrow-btn"><img src="/assets/Service/right-arrow.png" alt="" class="icon-placeholder" /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Action Stats Banner -->
+  <section class="action-stats-section">
+    <div class="container">
+      <div class="stats-layout">
+        <div>
+          <h2 class="stats-main-title">PERFORMANCE MARKETING IN ACTION.</h2>
+          <p style="color: var(--muted-2); font-size: 13px; margin-top: 8px;">Proven results across channels.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-box">
+            <img src="/assets/Service/Icon 13.png" alt="" class="icon-placeholder" />
+            <div>
+              <div class="stat-val">4.2X</div>
+              <div class="stat-lbl">Average ROAS Return</div>
+            </div>
+          </div>
+          <div class="stat-box">
+            <img src="/assets/Service/Icon 14.png" alt="" class="icon-placeholder" />
+            <div>
+              <div class="stat-val">+156%</div>
+              <div class="stat-lbl">Qualified Lead Growth</div>
+            </div>
+          </div>
+          <div class="stat-box">
+            <img src="/assets/Service/Icon 15.png" alt="" class="icon-placeholder" />
+            <div>
+              <div class="stat-val">3.8X</div>
+              <div class="stat-lbl">E-commerce Revenue</div>
+            </div>
+          </div>
+          <div class="stat-box">
+            <img src="/assets/Service/Icon 16.png" alt="" class="icon-placeholder" />
+            <div>
+              <div class="stat-val">-41%</div>
+              <div class="stat-lbl">Lower Acquisition Cost</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Social Ads List -->
+  <section class="social-section">
+    <div class="container">
+      <div class="social-layout">
+        <div>
+          <span class="section-tag">Paid Social Marketing</span>
+          <h2 style="font-size: 36px; font-weight: 800; line-height: 1.15; margin-bottom: 20px;">
+            Paid Social That Has Something to Say
+          </h2>
+          <p style="color: var(--muted); font-size: 14px; margin-bottom: 28px; line-height: 1.6;">
+            Social advertising should do more than scroll past. We pair thumb-stopping creative with granular audience modeling to turn your paid social channels into high-converting revenue drivers.
+          </p>
+          <a href="#" class="btn">What Next For Your Ads &rarr;</a>
+        </div>
+
+        <div class="social-list">
+          <div class="social-item">
+            <div class="social-item-left">
+              <img src="/assets/Service/meta.png" alt="" class="icon-placeholder" />
+              <div>
+                <div class="social-name">Meta Ads - Facebook & Instagram</div>
+                <div class="social-desc">Scale sales & brand affinity</div>
+              </div>
+            </div>
+            <span style="color: var(--muted-2);">&rsaquo;</span>
+          </div>
+
+          <div class="social-item">
+            <div class="social-item-left">
+              <img src="/assets/Service/youtube.png" alt="" class="icon-placeholder" />
+              <div>
+                <div class="social-name">YouTube Advertising</div>
+                <div class="social-desc">Connect with high-intent video viewers</div>
+              </div>
+            </div>
+            <span style="color: var(--muted-2);">&rsaquo;</span>
+          </div>
+
+          <div class="social-item">
+            <div class="social-item-left">
+              <img src="/assets/Service/twitter.png" alt="" class="icon-placeholder" />
+              <div>
+                <div class="social-name">X (Twitter) Advertising</div>
+                <div class="social-desc">Engage real-time conversations</div>
+              </div>
+            </div>
+            <span style="color: var(--muted-2);">&rsaquo;</span>
+          </div>
+
+          <div class="social-item">
+            <div class="social-item-left">
+              <img src="/assets/Service/tiktok.png" alt="" class="icon-placeholder" />
+              <div>
+                <div class="social-name">TikTok Advertising</div>
+                <div class="social-desc">Drive viral product discovery</div>
+              </div>
+            </div>
+            <span style="color: var(--muted-2);">&rsaquo;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Connected Growth Banner -->
+  <section class="connected-section">
+    <div class="container">
+      <div class="connected-content">
+        <h2 class="connected-title">CONNECTED FOR GREATER GROWTH.</h2>
+        <p style="color: #CCCCCC; font-size: 14px; margin-bottom: 24px; line-height: 1.6;">
+          Multiple channels, one strategy. We connect paid social, affiliate, display, influencer, programmatic, mobile, and remarketing into a coordinated acquisition engine.
+        </p>
+        <a href="#" class="btn">Get the Full Story &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Product Growth Section -->
+  <section class="growth-section">
+    <div class="container">
+      <div class="growth-layout">
+        <div>
+          <span class="section-tag">Performance Marketing</span>
+          <h2 style="font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 20px;">
+            Turn Your Product Into a Growth Engine
+          </h2>
+          <p style="color: var(--muted); font-size: 14px; margin-bottom: 28px; line-height: 1.6;">
+            We bridge product experience and marketing strategy, converting user intent and engagement into revenue-generating campaigns that scale smoothly.
+          </p>
+          <a href="#" class="btn">See Our Execution Model &rarr;</a>
+        </div>
+        <div class="growth-img-container"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Call To Action Card -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-card">
+        <h2 class="cta-title">Let’s Build a Smarter Performance Marketing Strategy.</h2>
+        <p style="color: #CCCCCC; font-size: 14px; margin-bottom: 28px;">More than traffic. Real business impact.</p>
+        <a href="#" class="btn">Get a Customized Audit &rarr;</a>
+      </div>
+    </div>
+  </section>
+  <div id="shared-footer"></div>
+<script src="/components/components.js"></script>
+
+</body>
+</html>

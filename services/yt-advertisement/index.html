@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouTube Advertising Agency — [Brand Name]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/services/services.css">
+    <link rel="stylesheet" href="/components/header-footer.css">
+
+    <!-- New patterns for these pages. Move into /services/services.css to share across service pages. -->
+    <style>
+        .hero-sub { font-size: 18px; line-height: 1.6; color: #dcdbdb; max-width: 600px; margin: 0 0 16px; }
+        .hero-sub + .hero-cta { margin-top: 30px; }
+        .hero-cta { margin-bottom: 0; }
+
+        .approach-card.single { grid-template-columns: 1fr; }
+        .approach-card.single p + p { margin-top: 8px; color: #fff; font-weight: 600; }
+
+        .measure-copy.strong { font-weight: 700; color: var(--ink); }
+
+        .optimize-lead { font-family: var(--font-heading); font-weight: 800; font-size: 20px; color: #fff; margin: 0 0 8px; }
+        .flow { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 0; margin: 0; }
+        .flow li { padding: 12px 18px; border: 1px solid rgba(255, 255, 255, .2); border-radius: 999px; font-weight: 700; font-size: 14px; }
+        .flow li:not(:last-child)::after { content: "\2192"; color: var(--accent); margin-left: 10px; }
+
+        .services { background: var(--paper); padding: 70px 0; }
+        .section-head { max-width: 760px; margin-bottom: 40px; }
+        .section-title { font-family: var(--font-heading); font-weight: 800; font-size: clamp(28px, 3.6vw, 40px); line-height: 1.15; margin: 0; }
+        .section-head p { color: var(--muted); font-size: 16px; line-height: 1.7; margin: 16px 0 0; }
+        .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .service-card { border: 1px solid var(--line); border-radius: 16px; padding: 28px; background: var(--paper); }
+        .service-card:hover { border-color: var(--accent); }
+        .service-card .stage { font-family: var(--font-heading); font-weight: 700; font-size: 13px; color: var(--accent); margin: 0 0 10px; }
+        .service-card h3 { font-family: var(--font-heading); font-weight: 800; font-size: 24px; line-height: 1.2; margin: 0; }
+        .journey-note { max-width: 760px; margin: 28px 0 0; font-size: 16px; line-height: 1.7; color: var(--muted); }
+
+        .intro .section-title { margin-bottom: 20px; }
+        .intro p.plain { font-weight: 500; font-size: 18px; line-height: 1.7; color: var(--muted); max-width: 760px; margin: 0 0 14px; }
+        .intro p.plain strong { color: var(--ink); }
+
+        .cta-note { font-family: var(--font-heading); font-weight: 700; font-size: 16px; line-height: 1.5; color: #fff; margin: 0; max-width: 480px; }
+
+        @media (max-width: 900px) {
+            .service-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .service-card { padding: 22px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="shared-header"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <img class="hero-bg" src="/assets/Affiliate Marketing Banner 1.png" alt="">
+        <div class="hero-scrim"></div>
+        <div class="wrap hero-inner">
+            <div class="hero-text">
+                <div class="eyebrow light">GET DISCOVERED. GET WATCHED. GET RESULTS.</div>
+                <h1 class="hero-title">YouTube Advertising Agency That Turns Video Views Into Real Business Growth</h1>
+                <p class="hero-sub">[Brand Name] helps businesses turn YouTube into a measurable growth channel with strategic video advertising, audience targeting, creative testing, and performance-focused campaign management.</p>
+                <p class="hero-sub">From building awareness to generating qualified leads, we create YouTube advertising campaigns designed around what matters most.</p>
+                <div class="hero-cta">
+                    <a class="btn btn-solid" href="#">Launch Your YouTube Campaign</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPPORTUNITY -->
+    <section class="intro">
+        <div class="wrap">
+            <div class="eyebrow">THE OPPORTUNITY</div>
+            <h2 class="section-title">Your Audience Is Watching. Make Sure Your Brand Shows Up.</h2>
+            <p class="plain">YouTube isn't just a video platform. It's where people research products, compare services, learn new skills, discover brands, and make purchase decisions. [Brand Name] builds YouTube Ads campaigns around your audience, offer, funnel, and business goals.</p>
+            <p class="plain"><strong>The goal isn't to collect impressive view counts. The goal is to turn attention into measurable business outcomes.</strong></p>
+        </div>
+    </section>
+
+    <!-- APPROACH (dark, background image) -->
+    <section class="approach">
+        <img class="approach-bg" src="/assets/Affiliate Marketing Banner 2.png" alt="">
+        <div class="approach-scrim"></div>
+        <div class="wrap approach-inner">
+            <div>
+                <div class="eyebrow light">OUR APPROACH</div>
+                <h2 class="approach-title">From “Nice Video” to <span class="accent">“Now I Want to Know More”</span></h2>
+                <p class="approach-copy">A great YouTube ad needs more than attractive visuals. It needs the right hook, message, audience, timing, offer, and next step.</p>
+                <p class="approach-copy">Our approach focuses on the complete advertising experience.</p>
+            </div>
+
+            <div class="approach-cards">
+                <div class="approach-card single">
+                    <div>
+                        <h3>Audience Research &amp; Targeting</h3>
+                        <p>We identify high-value audiences using interests, behaviors, search intent, demographics, contextual signals, and customer data.</p>
+                        <p>The goal: Put your message in front of people most likely to CARE, CLICK, and CONVERT.</p>
+                    </div>
+                </div>
+                <div class="approach-card single">
+                    <div>
+                        <h3>YouTube Campaign Strategy</h3>
+                        <p>We build campaigns around clear objectives, from awareness and traffic to leads, sales, remarketing, and customer acquisition. Every campaign has a measurable purpose—not just a goal to “get more views.”</p>
+                    </div>
+                </div>
+                <div class="approach-card single">
+                    <div>
+                        <h3>Video Ad Creative Strategy</h3>
+                        <p>We develop stronger hooks, messaging, CTAs, and creative variations designed to capture attention and drive action.</p>
+                    </div>
+                </div>
+                <div class="approach-card single">
+                    <div>
+                        <h3>Campaign Setup &amp; Management</h3>
+                        <p>From targeting and bidding to budgets, placements, tracking, and optimization, [Brand Name] manages your YouTube advertising campaigns from start to finish.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RETARGETING -->
+    <section class="measure">
+        <div class="wrap measure-grid">
+            <div>
+                <div class="eyebrow dark">RETARGETING</div>
+                <h2 class="measure-title">Retargeting That Brings Interested People Back</h2>
+                <p class="measure-copy">We reconnect with people who have watched your videos, visited your website, or interacted with your brand.</p>
+                <p class="measure-copy strong">They showed interest once—let's give them a reason to come back.</p>
+            </div>
+
+            <div class="measure-image">
+                <img src="/assets/Affiliate Marketing Banner 3.png" alt="YouTube retargeting campaign overview">
+            </div>
+        </div>
+    </section>
+
+    <!-- OPTIMIZATION (dark, background image) -->
+    <section class="optimize">
+        <img class="optimize-bg" src="/assets/Affiliate Marketing Banner 4.png" alt="">
+        <div class="optimize-scrim"></div>
+        <div class="wrap optimize-inner">
+            <div>
+                <div class="eyebrow light">CONTINUOUS OPTIMIZATION</div>
+                <h2 class="optimize-title">The Optimization Doesn't Stop When the Campaign Goes Live</h2>
+                <p class="optimize-copy">Launching an ad is only the beginning. Real performance marketing requires ongoing analysis. We review campaign data to identify opportunities, eliminate inefficient spending, test new audiences, refine messaging, and improve conversion performance.</p>
+                <p class="optimize-lead">Test. Learn. Improve. Repeat.</p>
+                <p class="optimize-copy">A strong YouTube advertising strategy evolves with the data. We can test different:</p>
+                <ul class="flow">
+                    <li>Hooks</li>
+                    <li>Creatives</li>
+                    <li>Audiences</li>
+                    <li>Offers</li>
+                    <li>CTAs</li>
+                    <li>Landing Pages</li>
+                    <li>Campaign Structures</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FULL FUNNEL -->
+    <section class="services">
+        <div class="wrap">
+            <div class="section-head">
+                <div class="eyebrow dark">FULL-FUNNEL STRATEGY</div>
+                <h2 class="section-title">YouTube Ads Built to Fit Your Full-Funnel Strategy</h2>
+                <p>YouTube can play different roles depending on where your customer is in the buying journey.</p>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <p class="stage">Top of Funnel</p>
+                    <h3>Get Attention</h3>
+                </article>
+                <article class="service-card">
+                    <p class="stage">Middle of Funnel</p>
+                    <h3>Build Interest</h3>
+                </article>
+                <article class="service-card">
+                    <p class="stage">Bottom of Funnel</p>
+                    <h3>Drive Action</h3>
+                </article>
+            </div>
+            <p class="journey-note">This full-funnel approach allows YouTube Ads to support your wider lead generation and customer acquisition strategy, rather than functioning as a standalone awareness campaign.</p>
+        </div>
+    </section>
+
+    <!-- CHANNEL SYNERGY -->
+    <section class="synergy">
+        <img class="synergy-bg" src="/assets/Affiliate Marketing Banner 4.png" alt="">
+        <div class="synergy-scrim"></div>
+        <div class="wrap synergy-inner">
+            <div>
+                <div class="eyebrow dark">CHANNEL SYNERGY</div>
+                <h2 class="synergy-title">Your YouTube Campaign Shouldn't Live in a Silo</h2>
+                <div class="synergy-copy">
+                    <p style="font-weight:700;color:var(--ink);">The strongest paid advertising strategies connect channels.</p>
+                    <p>Someone might discover your brand on YouTube, search for you on Google, visit your website, see a Meta Ad later, and eventually become a customer.</p>
+                    <p>That's why [Brand Name] can integrate YouTube campaigns with your broader Google Ads, Meta Ads, paid social, remarketing, and conversion marketing strategy.</p>
+                </div>
+            </div>
+<!-- 
+            <div class="hub">
+                <div class="hub-center">YouTube</div>
+                <div class="hub-node n1">Google Ads</div>
+                <div class="hub-node n2">Meta Ads</div>
+                <div class="hub-node n3">Paid Social</div>
+                <div class="hub-node n5">Remarketing</div>
+                <div class="hub-node n6">Conversion Marketing</div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-wrapper">
+        <section class="cta-banner">
+            <img class="cta-bg" src="/assets/Affiliate Marketing Banner 5.png" alt="">
+            <div class="cta-scrim"></div>
+            <div class="wrap cta-inner">
+                <div>
+                    <div class="eyebrow light">YOUR AUDIENCE IS ALREADY WATCHING</div>
+                    <h2 class="cta-title">Ready to Turn YouTube <span class="accent">Attention Into Action?</span></h2>
+                    <p class="cta-copy">[Brand Name] combines YouTube advertising, paid media strategy, audience targeting, creative testing, conversion tracking, and ROI-focused optimization to build campaigns designed for measurable growth.</p>
+                    <div class="cta-buttons">
+                        <a class="btn btn-solid" href="#">Start Your YouTube Advertising Campaign</a>
+                        <a class="btn btn-outline" href="#">Talk to a Performance Marketing Specialist</a>
+                    </div>
+                    <p class="cta-note">Let's Build a YouTube Campaign That Has Something to Prove.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="shared-footer"></div>
+    <script src="/components/components.js"></script>
+</body>
+
+</html>

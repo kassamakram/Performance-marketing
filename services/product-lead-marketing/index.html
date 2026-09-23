@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product-Led Marketing — [Brand Name]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/services/services.css">
+    <link rel="stylesheet" href="/components/header-footer.css">
+
+    <style>
+
+
+.approach-foot {
+    font-size: 10px;
+    letter-spacing: .5em;
+    color: var(--muted-2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+        .process-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 10px;
+        }
+
+        .process {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--paper);
+            border-radius: 20px;
+            padding: 26px 30px;
+            flex-wrap: wrap;
+            gap: 0px;
+        }
+
+        .services-section {
+            background: var(--panel);
+            padding: 70px 0;
+        }
+
+        .services-section .eyebrow {
+            color: #494949;
+        }
+
+        .services-title {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(28px, 3.6vw, 38px);
+            line-height: 1.15;
+            margin: 0 0 40px;
+            max-width: 780px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 26px;
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 24px 44px -26px rgba(0, 0, 0, .25);
+        }
+
+        .service-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--line);
+            margin-bottom: 18px;
+        }
+
+        .service-icon img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-heading);
+            font-size: 16.5px;
+            font-weight: 700;
+            margin: 0 0 8px;
+        }
+
+        .service-card p {
+            font-size: 13.5px;
+            line-height: 1.65;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div id="shared-header"></div>
+
+    <!-- ============ SECTION 1 — HERO ============ -->
+    <section class="hero">
+        <img class="hero-bg" src="/assets/Affiliate Marketing Banner 1.png" alt="">
+        <div class="hero-scrim"></div>
+        <div class="wrap hero-inner">
+            <div class="hero-text">
+                <div class="eyebrow light">PRODUCT-LED MARKETING</div>
+                <h1 class="hero-title">Product-Led Marketing That Turns Product Value Into Customer Action</h1>
+                <div class="hero-cta">
+                    <a class="btn btn-solid" href="#">Build Your Product-Led Strategy <img src="" alt=""></a>
+                    <a class="btn btn-outline" href="#">Talk to Our Team <img src="" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 2 — INTRO ============ -->
+    <section class="intro">
+        <div class="wrap">
+            <div class="eyebrow">YOUR PRODUCT CAN BE YOUR STRONGEST MARKETING ASSET</div>
+            <p>Let your product do the talking—and let your marketing make sure people hear it. [Brand Name] delivers product-led marketing services that turn product value into customer action. We combine performance marketing, paid ads, conversion optimization, audience targeting, and product analytics to attract qualified users, drive adoption, and improve measurable customer value.</p>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 3 — SMART STRATEGY (reuses opportunity pattern) ============ -->
+    <section class="opportunity">
+        <div class="wrap">
+            <div class="opp-grid">
+                <div>
+                    <div class="eyebrow dark">PRODUCT-LED MARKETING CHANGES THAT DYNAMIC</div>
+                    <h2 class="opp-title">Your Product Can Be Your Strongest Marketing Asset</h2>
+                </div>
+                <div class="opp-copy">
+                    <p style="font-weight:700;color:var(--ink);">[Brand Name] connects acquisition campaigns with the actual product experience so marketing doesn't operate separately from what customers receive after conversion.</p>
+                    <p>Each stage gives us useful signals that can improve your marketing strategy and customer journey.</p>
+                </div>
+            </div>
+
+            <div class="process">
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-1.png" alt="Discover icon">
+                    </div>
+                    Discover
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-2.png" alt="Experience icon">
+                    </div>
+                    Experience
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-3.png" alt="Activate icon">
+                    </div>
+                    Activate
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-4.png" alt="Adopt icon">
+                    </div>
+                    Adopt
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-5.png" alt="Convert icon">
+                    </div>
+                    Convert
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-6.png" alt="Retain icon">
+                    </div>
+                    Retain
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 4 — DATA MEETS CREATIVE (approach cards, dark) ============ -->
+    <section class="approach">
+        <img class="approach-bg" src="/assets/Affiliate Marketing Banner 2.png" alt="">
+        <div class="approach-scrim"></div>
+        <div class="wrap approach-inner">
+            <div>
+                <div class="eyebrow light">WHERE PRODUCT EXPERIENCE MEETS PERFORMANCE MARKETING</div>
+                <h2 class="approach-title">Where Product Experience Meets <span class="accent">Performance Marketing.</span></h2>
+                <p class="approach-copy">Product-led marketing works best when your acquisition strategy and product experience are aligned. That's where [Brand Name] brings performance marketing expertise into the picture.</p>
+                <div class="approach-foot">PAID ADS. PRODUCT DEMOS. TRIALS. FREEMIUM. LANDING PAGES. ONBOARDING. LIFECYCLE. RETARGETING. CRO. ANALYTICS.</div>
+            </div>
+
+            <div class="approach-cards">
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-6.png" alt="Testing icon">
+                    </div>
+                    <div>
+                        <h3>Paid Advertising</h3>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-7.png" alt="Optimization icon">
+                    </div>
+                    <div>
+                        <h3>Product Demos & Free Trials</h3>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-8.png" alt="Funnel icon">
+                    </div>
+                    <div>
+                        <h3>Freemium & Onboarding</h3>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-9.png" alt="Data icon">
+                    </div>
+                    <div>
+                        <h3>Lifecycle & Retargeting</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 5 — SERVICES GRID (light) ============ -->
+    <section class="services-section">
+        <div class="wrap">
+            <div class="eyebrow dark">THE PRODUCT-LED MARKETING SERVICES BEHIND THE STRATEGY</div>
+            <h2 class="services-title">Performance Advertising, Lifecycle Marketing & Connected Strategy</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-10.png" alt=""></div>
+                    <h3>Performance Advertising for Product-Led Businesses</h3>
+                    <p>Product-led companies still need acquisition. [Brand Name] can support Google Ads, Meta Ads, paid social advertising, display advertising, remarketing, and other performance marketing channels based on your audience and objectives.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-11.png" alt=""></div>
+                    <h3>Campaigns Built Around Meaningful Actions</h3>
+                    <p>Campaigns can be built around free trials, demos, product signups, feature adoption, subscriptions, or other meaningful actions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-12.png" alt=""></div>
+                    <h3>Lifecycle Marketing That Keeps the Conversation Going</h3>
+                    <p>The relationship shouldn't stop after signup. Strategic lifecycle marketing can help users discover features, return to the product, complete important actions, and understand the value available to them.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-13.png" alt=""></div>
+                    <h3>Welcome Sequences & Activation Messaging</h3>
+                    <p>Depending on your business model, campaigns may include welcome sequences, activation messaging, feature education, usage reminders, trial conversion, and re-engagement. Every message should have a purpose.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-14.png" alt=""></div>
+                    <h3>Bring Marketing and Product Into One Performance Strategy</h3>
+                    <p>One of the biggest opportunities in product-led marketing is connecting teams and data. Our advertising team knows how users arrive. Our product team knows what users do. Our sales team knows why prospects convert—or hesitate.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-15.png" alt=""></div>
+                    <h3>Analytics That Connect the Dots</h3>
+                    <p>[Brand Name] brings these signals together to create a more connected performance marketing strategy where acquisition and product experience support each other.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 6 — SCOREBOARD (reuses opportunity pattern) ============ -->
+    <section class="opportunity">
+        <div class="wrap">
+            <div class="opp-grid">
+                <div>
+                    <div class="eyebrow dark">WHAT MAKES OUR PRODUCT-LED APPROACH DIFFERENT?</div>
+                    <h2 class="opp-title">We Market the Experience, Not Just the Features</h2>
+                </div>
+                <div class="opp-copy">
+                    <p style="font-weight:700;color:var(--ink);">Features matter, but customers ultimately care about what those features help them accomplish.</p>
+                    <p>We connect acquisition with activation, use data to refine the journey, and keep performance at the center. Product-led doesn't mean abandoning paid advertising. It means making paid acquisition more connected to what happens after the click.</p>
+                </div>
+            </div>
+
+            <div class="process">
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-17.png" alt="Experience icon">
+                    </div>
+                    We Market the Experience
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-18.png" alt="Acquisition icon">
+                    </div>
+                    Connect Acquisition With Activation
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-19.png" alt="Data icon">
+                    </div>
+                    Use Data to Refine the Journey
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-20.png" alt="Performance icon">
+                    </div>
+                    Keep Performance at the Center
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-21.png" alt="System icon">
+                    </div>
+                    Build a Marketing System Around Your Product
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 7 — WHO WE SUPPORT (reuses optimize pattern, dark) ============ -->
+    <section class="optimize">
+        <img class="optimize-bg" src="/assets/Affiliate Marketing Banner 5.png" alt="">
+        <div class="optimize-scrim"></div>
+        <div class="wrap optimize-inner">
+            <div class="opt-1">
+                <div class="eyebrow light">READY TO PUT YOUR PRODUCT AT THE CENTER OF YOUR MARKETING?</div>
+                <h2 class="optimize-title">Let's Create a Strategy That Connects Acquisition, Product Experience, Customer Action, and Measurable Commercial Performance</h2>
+                <p class="optimize-copy">Better acquisition starts with a better product experience. [Brand Name] combines product-led marketing, performance advertising, conversion optimization, lifecycle strategy, and analytics to help businesses build that connection.</p>
+
+                <div class="optimize-grid">
+                    <div class="optimize-card">
+                        <img src="/assets/icon-24.png" alt="">
+                        <div class="text">
+                            <b>Product-Led Marketing</b>
+                            <span>01</span>
+                        </div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/icon-26.png" alt="">
+                        <div class="text">
+                            <b>Performance Advertising</b>
+                            <span>02</span>
+                        </div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/icon-30.png" alt="">
+                        <div class="text">
+                            <b>Conversion Optimization</b>
+                            <span>03</span>
+                        </div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/icon-31.png" alt="">
+                        <div class="text">
+                            <b>Lifecycle Strategy</b>
+                            <span>04</span>
+                        </div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/icon-32.png" alt="">
+                        <div class="text">
+                            <b>Product Analytics</b>
+                            <span>05</span>
+                        </div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/icon-33.png" alt="">
+                        <div class="text">
+                            <b>Acquisition & Activation</b>
+                            <span>06</span>
+                        </div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/icon-34.png" alt="">
+                        <div class="text">
+                            <b>Customer Journey</b>
+                            <span>07</span>
+                        </div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/icon-35.png" alt="">
+                        <div class="text">
+                            <b>Measurable Commercial Performance</b>
+                            <span>08</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="optimize-note">Your product already has a story to tell. The job of marketing is to get the right people into the experience, help them understand the value, and create a clear path toward meaningful action.</p>
+            </div>
+            <div class="opt-2"></div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 8 — PHILOSOPHY ============ -->
+    <section class="measure">
+        <div class="wrap measure-grid">
+            <div>
+                <div class="eyebrow dark">BUILD A MARKETING SYSTEM AROUND YOUR PRODUCT</div>
+                <h2 class="measure-title">Your Product Already Has a Story to Tell</h2>
+                <p class="measure-copy">The job of marketing is to get the right people into the experience, help them understand the value, and create a clear path toward meaningful action.</p>
+                <p class="measure-copy">[Brand Name] combines product-led marketing, performance advertising, conversion optimization, lifecycle strategy, and analytics to help businesses build that connection.</p>
+                <a class="btn btn-solid" href="">Let's build your product-led strategy</a>
+
+            </div>
+
+            <div class="measure-image">
+                <img src="/assets/Digital Media Advertising Banner 3.png" alt="Product-led marketing dashboard">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 9 — SCALING ============ -->
+    <section class="synergy">
+        <img class="synergy-bg" src="/assets/Affiliate Marketing Banner 4.png" alt="">
+        <div class="synergy-scrim"></div>
+        <div class="wrap">
+            <div style="max-width:656px;">
+                <div class="eyebrow dark">PRODUCT-LED MARKETING SERVICES</div>
+                <h2 class="synergy-title">Where Product Experience Meets Performance Marketing</h2>
+                <div class="synergy-copy">
+                    <p>Product-led marketing works best when your acquisition strategy and product experience are aligned. That's where [Brand Name] brings performance marketing expertise into the picture.</p>
+                    <p>We can connect paid advertising, product demos, free trials, freemium experiences, landing pages, onboarding, lifecycle marketing, retargeting, conversion optimization, and product analytics. The objective is to create a smoother path between someone discovering your product and becoming a valuable customer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 10 — CTA BANNER ============ -->
+    <div class="cta-wrapper">
+        <section class="cta-banner">
+            <img class="cta-bg" src="/assets/Affiliate Marketing Banner 7.png" alt="">
+            <div class="cta-scrim"></div>
+            <div class="wrap cta-inner">
+                <div>
+                    <div class="eyebrow light">READY TO PUT YOUR PRODUCT AT THE CENTER OF YOUR MARKETING?</div>
+                    <h2 class="cta-title">Let's Create a Strategy That Connects Acquisition, Product Experience, Customer Action, and <span class="accent">Measurable Commercial Performance.</span></h2>
+                    <p class="cta-copy">Better acquisition starts with a better product experience. [Brand Name] delivers product-led marketing services that turn product value into customer action.</p>
+
+                    <h4>Build Your Product-Led Strategy. Talk to Our Team. →</h4>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+    <div id="shared-footer"></div>
+<script src="/components/components.js"></script>
+
+</body>
+
+</html>

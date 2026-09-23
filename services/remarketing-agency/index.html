@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Remarketing Agency — [Brand Name]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/services/services.css">
+    <link rel="stylesheet" href="/components/header-footer.css">
+
+    <!-- New patterns for these pages. Move into /services/services.css to share across service pages. -->
+    <style>
+        .hero-sub { font-size: 18px; line-height: 1.6; color: #dcdbdb; max-width: 600px; margin: 0 0 30px; }
+        .hero-cta { margin-bottom: 0; }
+
+        .img-cont.num { font-family: var(--font-display); font-size: 24px; color: var(--accent); }
+        .approach-card.single { grid-template-columns: 1fr; }
+
+        .services { background: var(--paper); padding: 70px 0; }
+        .section-title { font-family: var(--font-heading); font-weight: 800; font-size: clamp(28px, 3.6vw, 40px); line-height: 1.15; margin: 0; }
+        .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .service-card { border: 1px solid var(--line); border-radius: 16px; padding: 28px; background: var(--paper); }
+        .service-card:hover { border-color: var(--accent); }
+        .service-card h2, .service-card h3 { font-family: var(--font-heading); font-weight: 800; font-size: 22px; line-height: 1.25; margin: 0 0 14px; }
+        .service-card p { font-size: 15.5px; line-height: 1.7; color: var(--muted); margin: 0 0 10px; }
+        .service-card p:last-child { margin-bottom: 0; }
+        .service-card .lead { font-weight: 700; color: var(--ink); }
+
+        .retarget { background: var(--ink); color: #fff; border-radius: 20px; padding: 40px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; align-items: center; }
+        .retarget h2 { font-family: var(--font-heading); font-weight: 800; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; margin: 0 0 14px; }
+        .retarget p { color: var(--muted-2); font-size: 15.5px; line-height: 1.7; margin: 0 0 10px; }
+        .retarget p:last-child { margin-bottom: 0; }
+        .flow { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 0; margin: 0; }
+        .flow li { padding: 12px 18px; border: 1px solid rgba(255, 255, 255, .2); border-radius: 999px; font-weight: 700; font-size: 14px; }
+        .flow li:not(:last-child)::after { content: "\2192"; color: var(--accent); margin-left: 10px; }
+        .journey-note { max-width: 760px; margin: 24px 0 0; font-size: 16px; line-height: 1.7; color: var(--muted); }
+
+        .optimize-grid.three { grid-template-columns: repeat(3, 1fr); }
+        .optimize-card.plain { padding-bottom: 16px; }
+
+        .synergy-lead { font-weight: 700; color: var(--ink); }
+        .synergy-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .synergy-card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+        .synergy-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+        .synergy-card h3 { font-family: var(--font-heading); font-weight: 800; font-size: 17px; margin: 0 0 8px; }
+        .synergy-card p { font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0; }
+        .synergy-note { margin: 18px 0 0; font-size: 15.5px; line-height: 1.7; color: var(--muted); }
+
+        .phi-lead { font-family: var(--font-heading); font-weight: 800; font-size: 18px; margin: 0 0 8px; }
+        .phi-list.dots li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+        .philosophy + .intro { padding-top: 10px; }
+        .intro .section-title { margin-bottom: 20px; }
+        .intro p.plain { font-weight: 500; font-size: 18px; line-height: 1.7; color: var(--muted); max-width: 760px; margin: 0 0 14px; }
+        .intro p.plain strong { color: var(--ink); }
+
+        .cta-note { font-family: var(--font-heading); font-weight: 700; font-size: 16px; line-height: 1.5; color: #fff; margin: 0; max-width: 480px; }
+
+        @media (max-width: 900px) {
+            .service-grid, .retarget, .synergy-cards { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .retarget { padding: 28px 22px; }
+            .service-card { padding: 22px; }
+            .optimize-grid.three { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="shared-header"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <img class="hero-bg" src="/assets/Affiliate Marketing Banner 1.png" alt="">
+        <div class="hero-scrim"></div>
+        <div class="wrap hero-inner">
+            <div class="hero-text">
+                <div class="eyebrow light">REMARKETING</div>
+                <h1 class="hero-title">Remarketing Agency That Brings Interested Customers Back</h1>
+                <p class="hero-sub">[Brand Name] provides remarketing services that help businesses reconnect with people who have already interacted with their brand. From Google remarketing and Meta retargeting to product ads, we help turn previous interactions into valuable next steps.</p>
+                <div class="hero-cta">
+                    <a class="btn btn-solid" href="#">Start Your Remarketing Strategy</a>
+                    <a class="btn btn-outline" href="#">Talk to Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPPORTUNITY + PROCESS -->
+    <section class="opportunity">
+        <div class="wrap">
+            <div class="opp-grid">
+                <div>
+                    <div class="eyebrow dark">THE OPPORTUNITY</div>
+                    <h2 class="opp-title">The First Visit Isn't Always the Final Decision</h2>
+                </div>
+                <div class="opp-copy">
+                    <p style="font-weight:700;color:var(--ink);">Customers rarely move from discovery to conversion in one perfect step.</p>
+                    <p>[Brand Name] uses remarketing to reconnect with these audiences through relevant advertising based on their previous interactions and campaign objectives.</p>
+                </div>
+            </div>
+
+            <div class="process">
+                <div class="process-step"><div class="img-cont num">01</div>Interact</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><div class="img-cont num">02</div>Reconnect</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><div class="img-cont num">03</div>Re-engage</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><div class="img-cont num">04</div>Convert</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEGMENTATION (dark, background image) -->
+    <section class="approach">
+        <img class="approach-bg" src="/assets/Affiliate Marketing Banner 2.png" alt="">
+        <div class="approach-scrim"></div>
+        <div class="wrap approach-inner">
+            <div>
+                <div class="eyebrow light">AUDIENCE SEGMENTATION</div>
+                <h2 class="approach-title">Remarketing That Knows the Difference Between <span class="accent">Interest and Intent</span></h2>
+                <p class="approach-copy">Not every website visitor should receive the same advertisement.</p>
+                <p class="approach-copy">Someone who viewed your homepage is different from someone who added a product to their cart. That's why [Brand Name] builds audience segments around available behavioral signals.</p>
+                <div class="approach-foot">FROM “ALMOST” TO “ACTION”</div>
+            </div>
+            <div class="approach-cards">
+
+            <div class="approach-cards">
+                <div class="approach-card single">
+                    <div>
+                        <h3>Know the Intent</h3>
+                        <p>Identify where visitors are in their journey and respond accordingly.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="approach-cards">
+                <div class="approach-card single">
+                    <div>
+                        <h3>Segment by Behavior</h3>
+                        <p>Build audiences based on actions, interests, and engagement signals.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="approach-cards">
+                <div class="approach-card single">
+                    <div>
+                        <h3>Personalize the Message</h3>
+                        <p>Show relevant ads that match what each audience has actually done.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="approach-cards">
+                <div class="approach-card single">
+                    <div>
+                        <h3>Turn Interest Into Action</h3>
+                        <p>Re-engage high-intent visitors with messaging designed to drive conversions.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GOOGLE + META -->
+    <section class="services">
+        <div class="wrap">
+            <div class="eyebrow dark">GOOGLE &amp; META</div>
+            <div class="service-grid">
+                <article class="service-card">
+                    <h2>Google Remarketing That Keeps Your Brand in the Conversation</h2>
+                    <p>[Brand Name] can develop remarketing campaigns around website behavior, product interest, search activity, and other available signals.</p>
+                    <p class="lead">The objective is to create another relevant opportunity to return and take action.</p>
+                </article>
+                <article class="service-card">
+                    <h2>Meta Retargeting That Picks Up Where the First Ad Left Off</h2>
+                    <p>Our Meta retargeting services can target relevant audiences based on previous website visits, ad interactions, social engagement, or other eligible signals.</p>
+                    <p class="lead">A stronger offer. A different creative. A clearer CTA. A new reason to return.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE LIST -->
+    <section class="measure">
+        <div class="wrap measure-grid">
+            <div>
+                <div class="eyebrow dark">OUR SERVICES</div>
+                <h2 class="measure-title">Remarketing Services Built Around the Customer Journey</h2>
+                <div class="metric-list">
+                    <div class="metric-item">Website Retargeting</div>
+                    <div class="metric-item">Dynamic Product Remarketing</div>
+                    <div class="metric-item">Cart Abandonment Campaigns</div>
+                    <div class="metric-item">Lead Retargeting</div>
+                    <div class="metric-item">Engagement Retargeting</div>
+                    <div class="metric-item">Cross-Channel Remarketing</div>
+                </div>
+            </div>
+
+            <div class="measure-image">
+                <img src="/assets/Affiliate Marketing Banner 3.png" alt="Remarketing campaign overview">
+            </div>
+        </div>
+    </section>
+
+    <!-- REFINE (dark, background image) -->
+    <section class="optimize">
+        <img class="optimize-bg" src="/assets/Affiliate Marketing Banner 5.png" alt="">
+        <div class="optimize-scrim"></div>
+        <div class="wrap optimize-inner">
+            <div>
+                <div class="eyebrow light">STRATEGIC APPROACH</div>
+                <h2 class="optimize-title">We Don't Just Retarget. We Refine.</h2>
+                <p class="optimize-copy">Remarketing can become annoying quickly when brands show the same message repeatedly. [Brand Name] takes a more strategic approach.</p>
+
+                <div class="optimize-grid three">
+                    <div class="optimize-card plain"><b>Frequency Matters</b></div>
+                    <div class="optimize-card plain"><b>Creative Matters</b></div>
+                    <div class="optimize-card plain"><b>Timing Matters</b></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SYNERGY -->
+    <section class="synergy">
+        <!-- <img class="synergy-bg" src="/assets/Affiliate Marketing Banner 4.png" alt=""> -->
+        <div class="synergy-scrim"></div>
+        <div class="wrap synergy-inner">
+            <div>
+                <div class="eyebrow dark">CHANNEL SYNERGY</div>
+                <h2 class="synergy-title">Remarketing Meets Performance Marketing</h2>
+                <div class="synergy-copy">
+                    <p class="synergy-lead">Remarketing works especially well as part of a broader performance marketing strategy.</p>
+                    <p>[Brand Name] can connect retargeting with:</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="synergy-cards">
+                    <div class="synergy-card">
+                        <h3>Google Ads</h3>
+                        <p>Capture search intent while bringing previous visitors back through remarketing campaigns.</p>
+                    </div>
+                    <div class="synergy-card">
+                        <h3>Meta Ads</h3>
+                        <p>Combine prospecting campaigns with Meta retargeting to reconnect with engaged audiences.</p>
+                    </div>
+                    <div class="synergy-card">
+                        <h3>Paid Social</h3>
+                        <p>Use audience interactions across social advertising campaigns to create relevant follow-up opportunities.</p>
+                    </div>
+                    <div class="synergy-card">
+                        <h3>Lead Generation</h3>
+                        <p>Retarget prospects who interacted with your website or campaign but didn't submit an inquiry.</p>
+                    </div>
+                    <div class="synergy-card">
+                        <h3>Programmatic Advertising</h3>
+                        <p>Extend remarketing campaigns across suitable digital inventory with audience and placement strategies.</p>
+                    </div>
+                </div>
+                <p class="synergy-note">The exact mix depends on your audience, sales cycle, budget, and objectives.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOURNEY STAGES -->
+    <section class="services">
+        <div class="wrap">
+            <div class="retarget">
+                <div>
+                    <div class="eyebrow light">THE CUSTOMER JOURNEY</div>
+                    <h2>Turn Previous Interactions Into New Opportunities</h2>
+                    <p>The audience has already demonstrated some level of interest.</p>
+                    <p>[Brand Name] uses that existing interaction to build campaigns that can support different stages of the customer journey:</p>
+                </div>
+                <ul class="flow">
+                    <li>Awareness</li>
+                    <li>Consideration</li>
+                    <li>Evaluation</li>
+                    <li>Conversion</li>
+                    <li>Repeat Purchase</li>
+                </ul>
+            </div>
+            <!-- <p class="journey-note">This can make remarketing particularly useful for businesses with longer buying cycles, higher-consideration products, service businesses, and eCommerce brands.</p> -->
+        </div>
+    </section>
+
+    <!-- WHAT MAKES US DIFFERENT -->
+    <section class="philosophy">
+        <div class="wrap phi-grid">
+            <div>
+                <div class="eyebrow dark">OUR DIFFERENCE</div>
+                <h2 class="phi-title">What Makes Our Remarketing Approach Different?</h2>
+                <h3 class="phi-lead">We Segment Instead of Blasting</h3>
+                <p class="phi-copy">Different behaviors can signal different levels of intent. We build audience strategies around those distinctions.</p>
+                <ul class="phi-list dots">
+                    <li>We Match Messages to Intent</li>
+                    <li>We Watch for Ad Fatigue</li>
+                    <li>We Measure Commercial Outcomes</li>
+                </ul>
+            </div>
+
+            <div class="phi-image">
+                <img src="/assets/Affiliate Marketing Banner 6.png" alt="Remarketing audience and performance analysis">
+            </div>
+        </div>
+    </section>
+
+    <!-- CLOSING STATEMENT -->
+    <section class="intro">
+        <div class="wrap">
+            <div class="eyebrow">OUR PHILOSOPHY</div>
+            <h2 class="section-title">Give Interested Audiences a Better Reason to Return</h2>
+            <p class="plain"><strong>Remarketing isn't about following people around the internet forever.</strong></p>
+            <p class="plain">[Brand Name] combines remarketing, paid advertising, audience segmentation, conversion optimization, analytics, and ROI-driven marketing strategy to help businesses make more of the traffic and attention they've already earned.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-wrapper">
+        <section class="cta-banner">
+            <img class="cta-bg" src="/assets/Affiliate Marketing Banner 7.png" alt="">
+            <div class="cta-scrim"></div>
+            <div class="wrap cta-inner">
+                <div>
+                    <div class="eyebrow light">LET'S WORK TOGETHER</div>
+                    <h2 class="cta-title">Ready to Reconnect With <span class="accent">Your Best Audiences?</span></h2>
+                    <p class="cta-copy">Let's build a remarketing strategy around your audience behavior, customer journey, and commercial objectives.</p>
+                    <div class="cta-buttons">
+                        <a class="btn btn-solid" href="#">Start Your Remarketing Strategy</a>
+                        <a class="btn btn-outline" href="#">Talk to Our Team</a>
+                    </div>
+                    <p class="cta-note">They've already shown interest. Now give them a better reason to take the next step.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="shared-footer"></div>
+    <script src="/components/components.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instagram &amp; Facebook Advertising — [Brand Name]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/services/services.css">
+
+    <!-- Page-specific addition, shared across service pages that need a
+         card grid larger than the 4-card approach layout comfortably fits.
+         Reuses existing tokens (colors, radius, spacing, hover language). -->
+    <style>
+
+        .processes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--paper);
+    /* border: 1px solid var(--line); */
+    border-radius: 20px;
+    padding: 26px 30px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+        .services-section {
+            background: var(--panel);
+            padding: 70px 0;
+        }
+
+        .services-section .eyebrow {
+            color: #494949;
+        }
+
+        .services-title {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(28px, 3.6vw, 38px);
+            line-height: 1.15;
+            margin: 0 0 40px;
+            max-width: 780px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 26px;
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 24px 44px -26px rgba(0, 0, 0, .25);
+        }
+
+        .service-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--line);
+            margin-bottom: 18px;
+        }
+
+        .service-icon img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-heading);
+            font-size: 16.5px;
+            font-weight: 700;
+            margin: 0 0 8px;
+        }
+
+        .service-card p {
+            font-size: 13.5px;
+            line-height: 1.65;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============ SECTION 1 — HERO ============ -->
+    <section class="hero">
+        <img class="hero-bg" src="/assets/Affiliate Marketing Banner 1.png" alt="">
+        <div class="hero-scrim"></div>
+        <div class="wrap hero-inner">
+            <div class="hero-text">
+                <div class="eyebrow light">INSTAGRAM &amp; FACEBOOK ADVERTISING</div>
+                <h1 class="hero-title">Agency Built to Turn Scrolls Into Sales</h1>
+                <div class="hero-cta">
+                    <a class="btn btn-solid" href="#">Build a Meta Ads Strategy <img src="" alt=""></a>
+                    <a class="btn btn-outline" href="#">See Our Approach <img src="" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 2 — INTRO ============ -->
+    <section class="intro">
+        <div class="wrap">
+            <div class="eyebrow">FACEBOOK &amp; INSTAGRAM ARE CROWDED</div>
+            <p>Reach the right audience. Stop the scroll. Turn attention into measurable business growth. Facebook and
+                Instagram are crowded, but your advertising doesn't have to blend in. [Brand Name] builds
+                performance-focused Meta Ads campaigns designed around your audience, offer, funnel, and business
+                goals—not vanity metrics.</p>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 3 — GROWTH CYCLE (reuses opportunity pattern) ============ -->
+    <section class="opportunity">
+        <div class="wrap">
+            <div class="opp-grid">
+                <div>
+                    <div class="eyebrow dark">YOUR AUDIENCE IS SCROLLING</div>
+                    <h2 class="opp-title">Make Your Brand Worth the Pause.</h2>
+                </div>
+                <div class="opp-copy">
+                    <p style="font-weight:700;color:var(--ink);">People don't open Facebook or Instagram because they
+                        want another advertisement.</p>
+                    <p>[Brand Name] develops Instagram and Facebook advertising campaigns that fit
+naturally into the feed while giving users a clear reason to click, engage, inquire, or buy.</p>
+                </div>
+            </div>
+
+            <div class="processes">
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-1.png" alt="Discover icon">
+                    </div>
+                    Discover
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-2.png" alt="Compare icon">
+                    </div>
+                    Compare
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-3.png" alt="Connect icon">
+                    </div>
+                    Connect
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-4.png" alt="Watch icon">
+                    </div>
+                    Watch
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-5.png" alt="Explore icon">
+                    </div>
+                    Explore
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 4 — WE CHASE PROGRESS (approach cards, dark) ============ -->
+    <section class="approach">
+        <img class="approach-bg" src="/assets/Affiliate Marketing Banner 2.png" alt="">
+        <div class="approach-scrim"></div>
+        <div class="wrap approach-inner">
+            <div>
+                <div class="eyebrow light">META ADS BUILT AROUND THE GOAL</div>
+                <h2 class="approach-title">Meta Ads Built Around the Goal Behind <span class="accent">the Click.</span>
+                </h2>
+                <p class="approach-copy">A campaign shouldn't exist simply because a platform offers an ad format.
+                    Every campaign needs a job.</p>
+                <div class="approach-foot">FACEBOOK. INSTAGRAM. META.</div>
+            </div>
+
+            <div class="approach-cards">
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-6.png" alt="Facebook icon">
+                    </div>
+                    <div>
+                        <h3>Facebook Advertising</h3>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-7.png" alt="Instagram icon">
+                    </div>
+                    <div>
+                        <h3>Instagram Advertising</h3>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-8.png" alt="Lead generation icon">
+                    </div>
+                    <div>
+                        <h3>Meta Lead Generation</h3>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-9.png" alt="Retargeting icon">
+                    </div>
+                    <div>
+                        <h3>Meta Retargeting</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 5 — SERVICES GRID (light) ============ -->
+    <section class="services-section">
+        <div class="wrap">
+            <div class="eyebrow dark">THE META ADS ENGINE</div>
+            <h2 class="services-title">Campaigns Built Around Audience, Offer, Funnel &amp; Business Goals</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-10.png" alt=""></div>
+                    <h3>Facebook Advertising</h3>
+                    <p>Reach highly relevant audiences with Facebook paid ads built for awareness, traffic, lead
+                        generation, conversions, and customer acquisition.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-11.png" alt=""></div>
+                    <h3>Instagram Advertising</h3>
+                    <p>Turn visual attention into action with engaging Instagram ads across Feed, Stories, Reels, and
+                        other relevant placements.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-12.png" alt=""></div>
+                    <h3>Meta Lead Generation</h3>
+                    <p>Capture potential customers directly through lead-focused campaigns designed around your offer,
+                        audience, and sales process.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-13.png" alt=""></div>
+                    <h3>Meta Retargeting</h3>
+                    <p>Reconnect with people who visited your website, interacted with your content, viewed products,
+                        or engaged with your brand but didn't convert.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-14.png" alt=""></div>
+                    <h3>Ecommerce &amp; Product Advertising</h3>
+                    <p>Promote products with campaigns built around product discovery, consideration, conversion,
+                        remarketing, and repeat purchases.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-15.png" alt=""></div>
+                    <h3>Lookalike &amp; Custom Audiences</h3>
+                    <p>Use existing customer and engagement signals to build audiences that can help expand your reach
+                        beyond your current customer base.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-16.png" alt=""></div>
+                    <h3>Creative &amp; Ad Copy Testing</h3>
+                    <p>Test different hooks, headlines, visuals, offers, CTAs, formats, and messages to discover which
+                        combinations generate stronger responses.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-17.png" alt=""></div>
+                    <h3>Conversion-Focused Campaigns</h3>
+                    <p>Move beyond traffic by connecting Meta Ads with landing pages, lead forms, tracking, and
+                        conversion optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 6 — FUNNEL (reuses opportunity pattern) ============ -->
+    <section class="opportunity">
+        <div class="wrap">
+            <div class="opp-grid">
+                <div>
+                    <div class="eyebrow dark">FROM FIRST IMPRESSION TO FINAL CONVERSION</div>
+                    <h2 class="opp-title">Great Paid Social Doesn't Stop When Someone Clicks.</h2>
+                </div>
+                <div class="opp-copy">
+                    <p style="font-weight:700;color:var(--ink);">A campaign may generate thousands of impressions and
+                        still fail to create meaningful business value.</p>
+                    <p>This full-funnel approach helps connect <Strong> paid social advertising with
+real business outcomes.</Strong></p>
+                </div>
+            </div>
+
+            <div class="processes">
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-18.png" alt="Awareness icon">
+                    </div>
+                    Awareness
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-19.png" alt="Engagement icon">
+                    </div>
+                    Engagement
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-20.png" alt="Click icon">
+                    </div>
+                    Click
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-21.png" alt="Consideration icon">
+                    </div>
+                    Consideration
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-22.png" alt="Conversion icon">
+                    </div>
+                    Conversion
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-23.png" alt="Retention icon">
+                    </div>
+                    Retention
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 7 — CREATIVE TESTING (reuses optimize pattern, dark) ============ -->
+    <section class="optimize">
+        <img class="optimize-bg" src="/assets/Affiliate Marketing Banner 5.png" alt="">
+        <div class="optimize-scrim"></div>
+        <div class="wrap optimize-inner">
+            <div class="opt-1">
+                <div class="eyebrow light">FROM "LET'S RUN ADS" TO A REAL PERFORMANCE ENGINE</div>
+                <h2 class="optimize-title">A Strong Instagram &amp; Facebook Strategy Isn't Built Around One Campaign
+                    Launch.</h2>
+                <p class="optimize-copy">It's a cycle: Research → Strategy → Creative → Launch → Measure → Learn →
+                    Optimize → Scale. We use performance data to make informed adjustments to audiences, budgets,
+                    creative, placements, offers, and conversion paths.</p>
+
+                <div class="optimize-grid">
+
+                    <div class="optimize-card">
+                        <img src="/assets/icon-24.png" alt="">
+                        <div class="text">
+                            <b>Research</b>
+                            <span>01</span>
+                        </div>
+                    </div>
+
+                    <div class="optimize-card">
+                        <img src="/assets/icon-26.png" alt="">
+                        <div class="text">
+                            <b>Strategy</b>
+                            <span>02</span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="optimize-card">
+                        <img src="/assets/icon-30.png" alt="">
+                        <div class="text">
+                            <b>Creative</b>
+                            <span>03</span>
+                        </div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/icon-31.png" alt="">
+                        <div class="text">
+                            <b>Launch</b>
+                            <span>04</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="optimize-note">We use performance data to make informed adjustments to audiences, budgets,
+creative, placements, offers, and conversion paths.That's how paid ads become a learning system instead of a monthly expense.</p>
+            </div>
+            <div class="opt-2"></div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 8 — PHILOSOPHY (simplified, no image/list supplied) ============ -->
+    <section class="measure">
+        <div class="wrap measure-grid">
+            <div>
+                <div class="eyebrow dark">YOUR ADS SHOULD HAVE A BUSINESS CASE</div>
+                <h2 class="measure-title">Pretty Creative Can Earn Attention. Smart Advertising Should Earn Attention
+                    and Contribute to Growth.</h2>
+                <p class="measure-copy">[Brand Name] brings together Meta Ads, paid social strategy, creative testing,
+                    audience targeting, conversion optimization, and performance analytics to build campaigns around
+                    measurable objectives.</p>
+                <p class="measure-copy">A campaign may generate thousands of impressions and still fail to create
+                    meaningful business value.</p>
+                <p class="measure-copy">[Brand Name] looks at the complete customer journey to connect paid social
+                    advertising with real business outcomes.</p>
+                <a class="btn btn-solid" href="">Turn Social Ad Spend Into Growth →</a>
+
+            </div>
+
+            <div class="measure-image">
+                <img src="/assets/Digital Media Advertising Banner 3.png" alt="Performance metrics dashboard">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 9 — SCALING (reuses synergy pattern, single column) ============ -->
+
+
+    <!-- ============ SECTION 10 — CTA BANNER ============ -->
+    <div class="cta-wrapper">
+        <section class="cta-banner">
+            <img class="cta-bg" src="/assets/Affiliate Marketing Banner 7.png" alt="">
+            <div class="cta-scrim"></div>
+            <div class="wrap cta-inner">
+                <div>
+                    <div class="eyebrow light">READY TO MAKE FACEBOOK &amp; INSTAGRAM WORK HARDER?</div>
+                    <h2 class="cta-title">Turn Your Social Ad Spend Into <span class="accent">Measurable Business
+                            Growth</span></h2>
+                    <p class="cta-copy">Stop boosting posts. Start building campaigns designed for measurable growth.
+                        Partner with [Brand Name] for performance-focused Instagram and Facebook advertising that
+                        combines smarter targeting, stronger creative, continuous testing, and ROI-driven
+                        optimization.</p>
+
+                    <h4>Build a Growth Strategy Designed to Scale →</h4>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+
+</body>
+
+</html>
