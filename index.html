@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/components/header-footer.css">
 <style>
 
   /* ================================
@@ -750,6 +751,7 @@ footer{background:#070707;color:#fff;padding:60px 0 0;position:relative;overflow
 </head>
 <body>
 
+      <div id="shared-header"></div>
 <!-- ================= HERO ================= -->
 <header class="hero" id="top">
   <!-- Banner Graphic Background -->
@@ -758,25 +760,7 @@ footer{background:#070707;color:#fff;padding:60px 0 0;position:relative;overflow
 </video>  <div class="hero-gradient"></div>
 
   <!-- Top Navigation -->
-  <div class="nav">
-    <div class="wrap nav-in">
-      <a class="logo" href="#top">
-        <b>NEXUS</b>
-        <span>Performance Marketing Agency</span>
-      </a>
-      <nav class="nav-links" id="navLinks">
-        <a href="#services">Services</a>
-        <a href="#results">Results</a>
-        <a href="#approach">Approach</a>
-        <a href="#about">About</a>
-        <a href="#insights">Insights</a>
-      </nav>
-      <div class="nav-cta">
-        <a class="pill" href="#contact">Get a strategy call &rarr;</a>
-      </div>
-      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
-    </div>
-  </div>
+
 
   <!-- Hero Content Overlaid on Bottom-Left -->
   <div class="wrap hero-body">
@@ -1197,74 +1181,8 @@ footer{background:#070707;color:#fff;padding:60px 0 0;position:relative;overflow
 </section>
 
 <!-- ================= FOOTER ================= -->
-<footer id="insights">
-  <div class="wrap">
-    <div class="f-grid">
-      <div class="f-brand">
-        <a class="logo" href="#top"><b>NEXUS</b><span>Performance Marketing Agency</span></a>
-        <h4>Turn ambitions<br>into results.</h4>
-        <p>Strategy, creative, data, growth. A full-service performance partner.</p>
-        <div class="socials">
-          <a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="X">X</a>
-          <a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="YouTube">&#9654;</a><a href="#" aria-label="Dribbble">&#9679;</a>
-        </div>
-      </div>
-      <div>
-        <h5>Services</h5>
-        <ul>
-          <li><a href="#services">Paid media</a></li>
-          <li><a href="#services">Performance strategy</a></li>
-          <li><a href="#services">Creative &amp; content</a></li>
-          <li><a href="#services">Analytics &amp; tracking</a></li>
-          <li><a href="#services">Conversion optimization</a></li>
-          <li><a href="#services">CRO audits</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Company</h5>
-        <ul>
-          <li><a href="#about">About us</a></li>
-          <li><a href="#approach">Our process</a></li>
-          <li><a href="#results">Case studies</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Resources</h5>
-        <ul>
-          <li><a href="#">Guides</a></li>
-          <li><a href="#">Templates</a></li>
-          <li><a href="#">Industry insights</a></li>
-          <li><a href="#">Webinars</a></li>
-          <li><a href="#">Tools</a></li>
-          <li><a href="#">Help center</a></li>
-        </ul>
-      </div>
-      <div class="f-news">
-        <h5>Stay ahead</h5>
-        <div style="font-size:13.5px;font-weight:700;margin-bottom:6px">Get performance insights in your inbox.</div>
-        <p class="sub-note">Actionable strategies, case studies and growth insights — no spam, just value.</p>
-        <form class="sub" id="subForm">
-          <input type="email" id="subEmail" placeholder="Your email address" aria-label="Email address" required>
-          <button type="submit">Subscribe</button>
-        </form>
-        <p class="sub-note" id="subMsg">Built for brands that move forward.</p>
-      </div>
-    </div>
-    <div class="f-bottom">
-      <span>&copy; 2026 Nexus. All rights reserved.</span>
-      <nav>
-        <a href="#">Privacy policy</a>
-        <a href="#">Terms of service</a>
-        <a href="#">Cookie settings</a>
-      </nav>
-      <button class="top-btn" id="toTop" aria-label="Back to top">&uarr;</button>
-    </div>
-  </div>
-  <div class="f-ghost" aria-hidden="true">Grow Further</div>
-</footer>
+<div id="shared-footer"></div>
+<script src="/components/components.js"></script>
 
 <script>
 // mobile nav
@@ -1545,6 +1463,8 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
+
 
 </body>
 </html>
