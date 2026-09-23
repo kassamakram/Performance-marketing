@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Digital Audio Advertising Agency That Gets Your Brand Heard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/services/services.css">
+
+    <!-- Additions for this page. Move into /services/services.css when shared across service pages. -->
+    <style>
+        .hero-cta.solo { margin-bottom: 0; }
+        .opportunity.roomy { padding: 70px 0; }
+        .opportunity .process.full { grid-column: 1 / -1; margin-top: 20px; }
+        .metric-list.stack { grid-template-columns: 1fr; }
+        .metric-item div { display: flex; flex-direction: column; gap: 2px; }
+        .metric-item span { font-weight: 500; font-size: 13.5px; color: var(--muted); }
+        .cta-question { color: #fff; font-weight: 700; font-size: 16px; margin: 0 0 20px; }
+
+        /* Services card grid */
+        .services-section { background: var(--panel); padding: 70px 0; }
+        .services-section .eyebrow { color: #494949; }
+        .services-title {
+            font-family: var(--font-heading); font-weight: 800;
+            font-size: clamp(28px, 3.6vw, 38px); line-height: 1.15;
+            margin: 0 0 40px; max-width: 780px;
+        }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .service-card {
+            background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 26px;
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+        }
+        .service-card:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 24px 44px -26px rgba(0, 0, 0, .25); }
+        .service-icon {
+            width: 45px; height: 45px; border-radius: 8px; display: flex;
+            align-items: center; justify-content: center; border: 1px solid var(--line); margin-bottom: 18px;
+        }
+        .service-icon img { width: 22px; height: 22px; }
+        .service-card h3 { font-family: var(--font-heading); font-size: 16.5px; font-weight: 700; margin: 0 0 8px; }
+        .service-card p { font-size: 13.5px; line-height: 1.65; color: var(--muted); margin: 0; }
+        @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+        <img class="hero-bg" src="/assets/Affiliate Marketing Banner 1.png" alt="">
+        <div class="hero-scrim"></div>
+        <div class="wrap hero-inner">
+            <div class="hero-text">
+                <div class="eyebrow light">DIGITAL AUDIO ADVERTISING</div>
+                <h1 class="hero-title">Digital Audio Advertising Agency That Gets Your Brand Heard</h1>
+                <div class="hero-cta solo">
+                    <a class="btn btn-solid" href="#">Build My Audio Advertising Strategy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ INTRO ============ -->
+    <section class="intro">
+        <div class="wrap">
+            <div class="eyebrow">Reach the Right Audience When They're Listening, Not Scrolling</div>
+            <p><b>[Brand Name]</b> helps brands turn those listening moments into measurable marketing opportunities.
+                As a performance marketing agency, we use digital audio advertising to connect your brand with
+                relevant audiences through podcasts, streaming music, digital radio, and other audio environments.</p>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES (6 cards) ============ -->
+    <section class="services-section">
+        <div class="wrap">
+            <div class="eyebrow dark">WHAT WE DO</div>
+            <h2 class="services-title">From Play Button to Performance</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/digital-audio-icon-1.png" alt=""></div>
+                    <h3>Streaming Audio Advertising</h3>
+                    <p>Reach targeted listeners with audio ads built to drive awareness, traffic, and action.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/digital-audio-icon-2.png" alt=""></div>
+                    <h3>Podcast Advertising</h3>
+                    <p>Connect with engaged podcast audiences through relevant, memorable brand messages.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/digital-audio-icon-3.png" alt=""></div>
+                    <h3>Digital Radio Advertising</h3>
+                    <p>Reach listeners at scale with targeted digital radio campaigns that build brand awareness.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/digital-audio-icon-4.png" alt=""></div>
+                    <h3>Audio Retargeting</h3>
+                    <p>Reconnect with interested audiences through timely audio ads that drive them back.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/digital-audio-icon-5.png" alt=""></div>
+                    <h3>Programmatic Audio Advertising</h3>
+                    <p>Automate smarter audio buying with precise targeting and measurable campaign performance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/digital-audio-icon-6.png" alt=""></div>
+                    <h3>Audio Creative Strategy</h3>
+                    <p>Create sharp, engaging audio messages that capture attention and inspire action.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ STRATEGY + PROCESS ============ -->
+    <section class="opportunity roomy">
+        <div class="wrap">
+            <div class="opp-grid">
+                <div>
+                    <div class="eyebrow dark">OUR STRATEGY</div>
+                    <h2 class="opp-title">We Don't Treat Audio Like a Guessing Game</h2>
+                </div>
+            </div>
+            <div class="opp-copy">
+                <p style="font-weight:700;color:var(--ink);">Effective digital audio advertising starts before the
+                    campaign launches.</p>
+                <p>We look at audience data, market conditions, campaign objectives, creative direction, and conversion
+                    goals to build a media strategy with a clear purpose.</p>
+                <p style="font-weight:700;color:var(--ink);">Then we test and refine.</p>
+            </div>
+
+            <div class="process full">
+                <div class="process-step"><div class="img-cont"><img src="/assets/digital-audio-icon-7.png" alt=""></div>Audience</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><div class="img-cont"><img src="/assets/digital-audio-icon-8.png" alt=""></div>Message</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><div class="img-cont"><img src="/assets/digital-audio-icon-9.png" alt=""></div>Placement</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><div class="img-cont"><img src="/assets/digital-audio-icon-10.png" alt=""></div>Action</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><div class="img-cont"><img src="/assets/digital-audio-icon-11.png" alt=""></div>Measurement</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><div class="img-cont"><img src="/assets/digital-audio-icon-12.png" alt=""></div>Optimization</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ DEFINING SUCCESS ============ -->
+    <section class="approach">
+        <img class="approach-bg" src="/assets/Affiliate Marketing Banner 2.png" alt="">
+        <div class="approach-scrim"></div>
+        <div class="wrap approach-inner">
+            <div>
+                <div class="eyebrow light">CLEAR GOALS</div>
+                <h2 class="approach-title">Your Audio Campaign Should Know What Success Looks Like</h2>
+                <p class="approach-copy">Brand awareness matters—but it shouldn't be the only thing you can measure.
+                    Not every campaign should optimize for the same KPI.</p>
+            </div>
+
+            <div class="approach-cards">
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/digital-audio-icon-13.png" alt="">
+                    </div>
+                    <div>
+                        <h3>Awareness</h3>
+                        <p>Build reach and make more people familiar with your brand.</p>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/digital-audio-icon-14.png" alt="">
+                    </div>
+                    <div>
+                        <h3>Leads</h3>
+                        <p>Turn campaign attention into qualified potential customers.</p>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/digital-audio-icon-14.png" alt="">
+                    </div>
+                    <div>
+                        <h3>Conversions</h3>
+                        <p>Focus on actions that directly support business growth.</p>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/digital-audio-icon-14.png" alt="">
+                    </div>
+                    <div>
+                        <h3>ROI</h3>
+                        <p>Measure how effectively your marketing spend generates returns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CREATIVE ============ -->
+    <section class="measure">
+        <div class="wrap measure-grid">
+            <div>
+                <div class="eyebrow dark">AUDIO CREATIVE</div>
+                <h2 class="measure-title">Creative That Sounds Like Your Brand—Not an Ad Factory</h2>
+                <p class="measure-copy"><b>Audio is intimate. The wrong message can be ignored within seconds.</b>
+                    We focus on creative that is:</p>
+
+                <div class="metric-list stack">
+                    <div class="metric-item"><div><b>Clear</b><span>Your audience should understand the offer quickly.</span></div></div>
+                    <div class="metric-item"><div><b>Relevant</b><span>The message should fit the listener and context.</span></div></div>
+                    <div class="metric-item"><div><b>Memorable</b><span>Strong ideas are easier to remember.</span></div></div>
+                    <div class="metric-item"><div><b>Actionable</b><span>Give listeners a clear next step.</span></div></div>
+                    <div class="metric-item"><div><b>On-brand</b><span>Performance shouldn't come at the cost of brand identity.</span></div></div>
+                </div>
+            </div>
+
+            <div class="measure-image">
+                <img src="/assets/Affiliate Marketing Banner 3.png" alt="Audio advertising creative overview">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ROI ============ -->
+    <section class="optimize">
+        <img class="optimize-bg" src="/assets/Affiliate Marketing Banner 5.png" alt="">
+        <div class="optimize-scrim"></div>
+        <div class="wrap optimize-inner">
+            <div class="opt-1">
+                <div class="eyebrow light">MEASURABLE RESULTS</div>
+                <h2 class="optimize-title">ROI-Driven Audio Without the Marketing Theater</h2>
+                <p class="optimize-copy"><b>You don't need a campaign that simply generates a big impression number.</b>
+                    You need to understand what your investment is doing.</p>
+                <p class="optimize-copy" style="margin:0;">[Brand Name] uses campaign data to identify stronger
+                    audiences, placements, creative concepts, and conversion paths.</p>
+            </div>
+            <div class="opt-2"></div>
+        </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+<div class="cta-wrapper">
+    <section class="cta-banner">
+        <img class="cta-bg" src="/assets/Affiliate Marketing Banner 7.png" alt="">
+        <div class="cta-scrim"></div>
+        <div class="wrap cta-inner">
+            <div>
+                <div class="eyebrow light">LET'S WORK TOGETHER</div>
+                <h2 class="cta-title">Ready to Put Your Brand<span class="accent">in the Right Ears?</span></h2>
+                <p class="cta-copy">[Brand Name] can create a digital audio advertising strategy built around your goals. From podcast advertising and streaming audio to programmatic audio, retargeting, paid media, and performance analytics, we turn listening moments into measurable marketing opportunities.</p>
+                
+                <h4>Make Every Listening Moment Count.</h4>
+            </div>
+        </div>
+    </section>
+    </div>
+
+</body>
+
+</html>

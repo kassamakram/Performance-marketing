@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Display Advertising Agency — [Brand Name]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/services/services.css">
+
+    <!-- Page-specific additions: this service needs a services grid that the
+         base design system doesn't define. It reuses the same tokens
+         (colors, radius, spacing, card language) as .approach-card / .metric-item
+         rather than introducing a new visual style. -->
+    <style>
+        .services-section {
+            background: var(--panel);
+            padding: 70px 0;
+        }
+
+        .services-section .eyebrow {
+            color: #494949;
+        }
+
+        .services-title {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(28px, 3.6vw, 38px);
+            line-height: 1.15;
+            margin: 0 0 40px;
+            max-width: 760px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 26px;
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 24px 44px -26px rgba(0, 0, 0, .25);
+        }
+
+        .service-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--line);
+            margin-bottom: 18px;
+        }
+
+        .service-icon img {
+            width: 22px;
+            height: 22px;
+        }
+        .synergy-bg{
+            z-index: -1;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-heading);
+            font-size: 16.5px;
+            font-weight: 700;
+            margin: 0 0 8px;
+        }
+
+        .service-card p {
+            font-size: 13.5px;
+            line-height: 1.65;
+            color: var(--muted);
+            margin: 0;
+        }
+        .measure-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============ SECTION 1 — HERO ============ -->
+    <section class="hero">
+        <img class="hero-bg" src="/assets/Affiliate Marketing Banner 1.png" alt="">
+        <div class="hero-scrim"></div>
+        <div class="wrap hero-inner">
+            <div class="hero-text">
+                <div class="eyebrow light">REACH THE RIGHT AUDIENCE</div>
+                <h1 class="hero-title">Display Advertising Agency That Turns Impressions Into Opportunities</h1>
+                <div class="hero-cta">
+                    <a class="btn btn-solid" href="#">Let's Talk Strategy <img src="" alt=""></a>
+                    <a class="btn btn-outline" href="#">See Our Approach <img src="" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 2 — INTRO ============ -->
+    <section class="intro">
+        <div class="wrap">
+            <div class="eyebrow">Reach the right audience. Turn attention into action.</div>
+            <p>[Brand Name] creates display advertising campaigns designed to do more than generate impressions. From
+                prospecting new audiences to bringing interested visitors back, our approach connects paid advertising
+                with measurable business goals.</p>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 3 — WHAT MAKES US DIFFERENT (approach cards, dark) ============ -->
+    <section class="approach">
+        <img class="approach-bg" src="/assets/Affiliate Marketing Banner 2.png" alt="">
+        <div class="approach-scrim"></div>
+        <div class="wrap approach-inner">
+            <div>
+                <div class="eyebrow light">OUR APPROACH</div>
+                <h2 class="approach-title">What Makes Our Display Strategy <span class="accent">Different?</span></h2>
+                <div class="approach-foot">TARGETING · CREATIVE · MEDIA BUYING</div>
+            </div>
+
+            <div class="approach-cards">
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-1.png" alt="Targeting icon">
+                    </div>
+                    <div>
+                        <h3>Targeting With a Reason</h3>
+                        <p>Broad reach isn't always better reach. We build audience segments around factors such as
+                            interests, demographics, geography, online behavior, browsing activity, purchase intent,
+                            and previous interactions with your brand.</p>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-2.png" alt="Creative icon">
+                    </div>
+                    <div>
+                        <h3>Creative That Earns the Second Look</h3>
+                        <p>People scroll, browse, compare, and move quickly. Your display creative has limited time to
+                            communicate why someone should care. We test different headlines, visuals, offers, calls to
+                            action, formats, and messaging angles to identify what earns attention.</p>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-3.png" alt="Media buying icon">
+                    </div>
+                    <div>
+                        <h3>Media Buying Built Around Performance</h3>
+                        <p>Where your ads appear matters. We evaluate placements, audiences, campaign objectives,
+                            budgets, and performance data to help your advertising dollars move toward stronger
+                            opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 4 — SERVICES GRID (new section, light) ============ -->
+    <section class="services-section">
+        <div class="wrap">
+            <div class="eyebrow dark">FULL-FUNNEL SERVICES</div>
+            <h2 class="services-title">Display Advertising Services Built Around the Full Funnel</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-4.png" alt=""></div>
+                    <h3>Programmatic Display Advertising</h3>
+                    <p>Reach relevant audiences across digital websites and environments using automated,
+                        data-driven media buying and audience targeting.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-5.png" alt=""></div>
+                    <h3>Retargeting Campaigns</h3>
+                    <p>Reconnect with people who visited your website, viewed products, engaged with your brand, or
+                        showed interest without converting.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-6.png" alt=""></div>
+                    <h3>Prospecting Campaigns</h3>
+                    <p>Introduce your brand to new audiences using carefully defined targeting designed to expand your
+                        reach beyond existing customers.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-7.png" alt=""></div>
+                    <h3>Dynamic Display Advertising</h3>
+                    <p>Deliver more relevant creative by using available audience or product signals to personalize
+                        the advertising experience.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-8.png" alt=""></div>
+                    <h3>Contextual Targeting</h3>
+                    <p>Place ads alongside content that aligns with your products, services, or audience interests,
+                        creating a more relevant environment for your message.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-9.png" alt=""></div>
+                    <h3>Display Creative Strategy</h3>
+                    <p>Develop ad concepts, messaging, visual directions, offers, and calls to action designed for
+                        different audiences and campaign stages.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-10.png" alt=""></div>
+                    <h3>Cross-Channel Advertising</h3>
+                    <p>Connect display campaigns with Google Ads, Meta Ads, paid social, video advertising,
+                        remarketing, and other digital media channels for a more unified customer journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 5 — CUSTOMER JOURNEY (reuses opportunity pattern) ============ -->
+    <section class="opportunity">
+        <div class="wrap">
+            <div class="opp-grid">
+                <div>
+                    <div class="eyebrow dark">THE CUSTOMER JOURNEY</div>
+                    <h2 class="opp-title">From First Impression to Final Conversion</h2>
+                </div>
+                <div class="opp-copy">
+                    <p style="font-weight:700;color:var(--ink);">Display advertising can play a role at almost every
+                        stage of the customer journey.</p>
+                    <p>This approach helps ensure your display ads aren't operating in isolation.</p>
+                </div>
+            </div>
+
+            <div class="process">
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-11.png" alt="Discover icon">
+                    </div>
+                    Discover
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-12.png" alt="Engage icon">
+                    </div>
+                    Engage
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-13.png" alt="Return icon">
+                    </div>
+                    Return
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-14.png" alt="Convert icon">
+                    </div>
+                    Convert
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-15.png" alt="Grow icon">
+                    </div>
+                    Grow
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 6 — DISPLAY + DATA (reuses measure pattern, no image supplied) ============ -->
+    <section class="measure">
+        <div class="wrap">
+            <div class="measure-grid">
+                <div class="measure-content">
+            <div class="eyebrow dark">DISPLAY + DATA</div>
+            <h2 class="measure-title">Display + Data = Smarter Optimization</h2>
+            <p class="measure-copy" style="max-width:680px;">Launching a campaign is only the beginning. We monitor
+                campaign performance to identify patterns in audience response, creative performance, placements, and
+                conversion behavior. Those insights help guide ongoing optimization. That can mean:</p>
+
+            <div class="metric-list">
+                <div class="metric-item"><img src="/assets/icon-16.png" alt="">Shifting budget toward stronger
+                    audiences</div>
+                <div class="metric-item"><img src="/assets/icon-17.png" alt="">Testing new creative variations</div>
+                <div class="metric-item"><img src="/assets/icon-18.png" alt="">Adjusting bids or placements</div>
+                <div class="metric-item"><img src="/assets/icon-19.png" alt="">Refining targeting</div>
+                <div class="metric-item"><img src="/assets/icon-20.png" alt="">Improving landing-page alignment</div>
+                <div class="metric-item"><img src="/assets/icon-21.png" alt="">Expanding successful audience
+                    segments</div>
+                <div class="metric-item"><img src="/assets/icon-22.png" alt="">Reducing spend on underperforming
+                    areas</div>
+            </div>
+            </div>
+
+            <div class="measure-img-cont">
+                <img src="/assets/Affiliate Marketing Banner 3.png" alt="" class="measure-img">
+            </div>
+            </div>
+
+
+            <p class="measure-copy" style="max-width:680px; margin-top:30px; margin-bottom:14px;">It's a continuous
+                cycle:</p>
+
+            <div class="process">
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-23.png" alt="Launch icon">
+                    </div>
+                    Launch
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-24.png" alt="Measure icon">
+                    </div>
+                    Measure
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-25.png" alt="Learn icon">
+                    </div>
+                    Learn
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-26.png" alt="Optimize icon">
+                    </div>
+                    Optimize
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-27.png" alt="Scale icon">
+                    </div>
+                    Scale
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 7 — CHANNEL SYNERGY (reuses synergy pattern, single column) ============ -->
+    <section class="synergy">
+        <img class="synergy-bg" src="/assets/Affiliate Marketing Banner 4.png" alt="">
+        <div class="synergy-scrim"></div>
+        <div class="wrap">
+            <div style="max-width:760px;">
+                <div class="eyebrow dark">CHANNEL SYNERGY</div>
+                <h2 class="synergy-title">Where Display Advertising Fits Into Your Growth Engine</h2>
+                <div class="synergy-copy">
+                    <p>Display advertising becomes more powerful when it works alongside other performance marketing
+                        services. That journey doesn't happen in neat little boxes.</p>
+                    <p>That's why [Brand Name] can connect display campaigns with: Google Ads · Meta Ads · Paid Social
+                        · Remarketing · Programmatic Advertising · Lead Generation · Conversion Optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 8 — PHILOSOPHY (simplified, no image/list supplied) ============ -->
+    <!-- <section class="philosophy">
+        <div class="wrap" style="max-width:780px;">
+            <div class="eyebrow dark">OUR PHILOSOPHY</div>
+            <h2 class="phi-title">Pretty Ads Are Nice. Profitable Ads Are Better.</h2>
+            <p class="phi-copy" style="max-width:100%;">A beautiful banner can win attention. But performance
+                marketing asks a bigger question: what did that attention actually create?</p>
+            <p class="phi-copy" style="max-width:100%; margin-bottom:0;">[Brand Name] combines creative thinking with
+                performance data to build ROI-driven marketing campaigns focused on measurable outcomes.</p>
+        </div>
+    </section> -->
+
+    <!-- ============ SECTION 9 — CTA BANNER ============ -->
+  <div class="cta-wrapper">
+    <section class="cta-banner">
+        <img class="cta-bg" src="/assets/Affiliate Marketing Banner 7.png" alt="">
+        <div class="cta-scrim"></div>
+        <div class="wrap cta-inner">
+            <div>
+                <div class="eyebrow light">LET'S WORK TOGETHER</div>
+                <h2 class="cta-title">Ready to Put Your Brand in<span class="accent">More Relevant Places?</span></h2>
+                <p class="cta-copy">Your next customer could already be browsing the web. The opportunity is to show up with the right message at the right moment.</p>
+                
+                <h4>Build a Display Advertising Strategy That Drives Real Results →</h4>
+            </div>
+        </div>
+    </section>
+    </div>
+
+</body>
+
+</html>

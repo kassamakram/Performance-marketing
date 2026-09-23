@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>App Marketing Agency That Turns Installs Into Real Growth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/services/services.css">
+
+    <!-- Small additions for this page. Move into /services/services.css if you reuse them on other service pages. -->
+    <style>
+        .hero-cta.solo { margin-bottom: 0; }
+        .opportunity.roomy { padding: 70px 0; }
+        .optimize-inner.full { grid-template-columns: 1fr; }
+        .optimize-inner.full .optimize-title { max-width: 720px; }
+        .optimize-inner.full .optimize-copy { max-width: 720px; }
+        .metric-list.stack { grid-template-columns: 1fr; }
+        .metric-item div { display: flex; flex-direction: column; gap: 2px; }
+        .metric-item span { font-weight: 500; font-size: 13.5px; color: var(--muted); }
+        .synergy .metric-item { background: #fff; }
+        .synergy-copy h3 { font-family: var(--font-heading); font-weight: 800; font-size: 18px; line-height: 1.4; margin: 24px 0 10px; }
+        .phi-copy.wide { max-width: 520px; }
+        .phi-grid h4 { font-family: var(--font-heading); font-weight: 800; font-size: 18px; line-height: 1.4; margin: 0 0 20px; }
+        .cta-question { color: #fff; font-weight: 700; font-size: 16px; margin: 0 0 20px; }
+        .services-section {
+            background: var(--panel);
+            padding: 70px 0;
+        }
+
+        .services-section .eyebrow {
+            color: #494949;
+        }
+
+        .services-title {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(28px, 3.6vw, 38px);
+            line-height: 1.15;
+            margin: 0 0 40px;
+            max-width: 780px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 26px;
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 24px 44px -26px rgba(0, 0, 0, .25);
+        }
+
+        .service-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--line);
+            margin-bottom: 18px;
+        }
+
+        .service-icon img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-heading);
+            font-size: 16.5px;
+            font-weight: 700;
+            margin: 0 0 8px;
+        }
+
+        .service-card p {
+            font-size: 13.5px;
+            line-height: 1.65;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+        <img class="hero-bg" src="/assets/Affiliate Marketing Banner 1.png" alt="">
+        <div class="hero-scrim"></div>
+        <div class="wrap hero-inner">
+            <div class="hero-text">
+                <div class="eyebrow light">APP MARKETING</div>
+                <h1 class="hero-title">App Marketing Agency That Turns Installs Into Real Growth</h1>
+                <div class="hero-cta solo">
+                    <a class="btn btn-solid" href="#">Grow My App</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ INTRO ============ -->
+    <section class="intro">
+        <div class="wrap">
+            <div class="eyebrow">More Downloads Are NICE. More Valuable Users Are BETTER.</div>
+            <p><b>[Brand Name]</b> creates performance-focused app marketing strategies that cover the full customer
+                journey—from awareness and user acquisition to engagement, retention, and revenue. As a performance
+                marketing agency, we combine paid media, audience targeting, creative testing, analytics, and
+                conversion optimization to attract valuable users and turn ad spend into measurable growth.</p>
+        </div>
+    </section>
+
+    <!-- ============ OPPORTUNITY ============ -->
+    <section class="opportunity roomy">
+        <div class="wrap">
+            <div class="opp-grid">
+                <div>
+                    <div class="eyebrow dark">BETTER ACQUISITION</div>
+                    <h2 class="opp-title">Your App Doesn't Need More Noise. It Needs Better Acquisition.</h2>
+                </div>
+            </div>
+            <div class="opp-copy">
+                <p>App marketing is more than driving downloads. We look at the full user journey—from targeting and
+                    ad clicks to installs, engagement, conversions, and retention—to ensure your acquisition spend
+                    attracts valuable users and delivers measurable returns.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ APPROACH (6 services) ============ -->
+    <section class="services-section">
+        <div class="wrap">
+            <div class="eyebrow dark">THE GROWTH ENGINE</div>
+            <h2 class="services-title">From Downloaded to Actually Used</h2>
+            <p>A successful app marketing campaign should connect acquisition with business performance.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-10.png" alt=""></div>
+                    <h3>Paid App Acquisition</h3>
+                    <p>Reach high-intent audiences through Meta Ads, Google Ads, TikTok Ads, YouTube, and other relevant paid media channels.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-11.png" alt=""></div>
+                    <h3>App Install Campaigns</h3>
+                    <p>Get your app in front of people most likely to install and engage. We build campaigns around creative testing, audience segmentation, targeting, and continuous optimization.p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-12.png" alt=""></div>
+                    <h3>App User Acquisition</h3>
+                    <p>Installs are only the beginning. We focus on acquiring users who have the potential to activate, purchase, subscribe, or complete your desired action.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-13.png" alt=""></div>
+                    <h3>App Store Optimization</h3>
+                    <p>We optimize messaging, positioning, screenshots, descriptions, and other discoverability elements to support stronger conversion.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-14.png" alt=""></div>
+                    <h3>Retargeting & Re-Engagement</h3>
+                    <p>Retargeting campaigns can bring back users who installed, browsed, abandoned, or showed meaningful interest without completing the next step.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-15.png" alt=""></div>
+                    <h3>Analytics &amp; Performance Tracking</h3>
+                    <p>Track CAC, conversion rates, ROAS, revenue, retention, and customer lifetime value to guide
+                        smarter decisions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-16.png" alt=""></div>
+                    <h3>Conversion & Funnel Optimization</h3>
+                    <p>We examine the journey from ad → install → activation → conversion to identify friction and improve the points that matter most.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CREATIVE TESTING ============ -->
+    <section class="measure">
+        <div class="wrap measure-grid">
+            <div>
+                <div class="eyebrow dark">CREATIVE TESTING</div>
+                <h2 class="measure-title">Creative Testing Meets Performance Marketing</h2>
+                <p class="measure-copy"><b>Your audience doesn't owe your ad an extra second.</b> That's why creativity
+                    is treated as a performance variable—not decoration. We test different:</p>
+
+                <div class="metric-list stack">
+                    <div class="metric-item">
+                        <div><b>Hooks</b><span>What earns attention?</span></div>
+                    </div>
+                    <div class="metric-item">
+                        <div><b>Messages</b><span>What makes the value clear?</span></div>
+                    </div>
+                    <div class="metric-item">
+                        <div><b>Formats</b><span>What makes people stop scrolling?</span></div>
+                    </div>
+                    <div class="metric-item">
+                        <div><b>Offers</b><span>What creates action?</span></div>
+                    </div>
+                    <div class="metric-item">
+                        <div><b>Landing experiences</b><span>What removes friction?</span></div>
+                    </div>
+                </div>
+                <p class="measure-copy" style="margin:28px 0 0;">The goal is to discover what works, scale the strongest
+                    combinations, and continuously improve what isn't pulling its weight.</p>
+            </div>
+
+            <div class="measure-image">
+                <img src="/assets/Affiliate Marketing Banner 3.png" alt="Creative testing and performance overview">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PAID MEDIA CHANNELS ============ -->
+    <section class="synergy">
+        <!-- <img class="synergy-bg" src="/assets/Affiliate Marketing Banner 4.png" alt=""> -->
+        <div class="synergy-scrim"></div>
+        <div class="wrap synergy-inner">
+            <div>
+                <div class="eyebrow dark">PAID MEDIA</div>
+                <h2 class="synergy-title">Paid Media Built Around Your Growth Engine</h2>
+                <div class="synergy-copy">
+                    <p>Depending on your audience and goals, [Brand Name] can build campaigns across:</p>
+                    <h3>We don't believe every app needs to advertise everywhere.</h3>
+                    <p>Channel selection should be based on audience behavior, economics, creative fit, and
+                        measurable performance.</p>
+                </div>
+            </div>
+
+            <ul class="metric-list" style="list-style:none;padding:0;margin:0;">
+                <li class="metric-item">Meta Ads</li>
+                <li class="metric-item">Google Ads</li>
+                <li class="metric-item">YouTube Advertising</li>
+                <li class="metric-item">TikTok Advertising</li>
+                <li class="metric-item">Paid Social</li>
+                <li class="metric-item">Display Advertising</li>
+                <li class="metric-item">Programmatic Advertising</li>
+                <li class="metric-item">Remarketing</li>
+                <li class="metric-item">Mobile Marketing</li>
+                <li class="metric-item">Performance Marketing</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============ FULL-FUNNEL JOURNEY (8 sequential stages) ============ -->
+    <section class="optimize">
+        <img class="optimize-bg" src="/assets/Affiliate Marketing Banner 5.png" alt="">
+        <div class="optimize-scrim"></div>
+        <div class="wrap optimize-inner full">
+            <div class="opt-1">
+                <div class="eyebrow light">THE FULL FUNNEL</div>
+                <h2 class="optimize-title">From First Click to Long-Term Customer</h2>
+                <p class="optimize-copy">Great app marketing doesn't stop when someone installs your app. [Brand Name]
+                    connects acquisition with the wider growth funnel:</p>
+
+                <div class="optimize-grid">
+                    <div class="optimize-card">
+                        <img src="/assets/app-marketing-icon-7.png" alt="">
+                        <div class="text"><b>Awareness</b><span>01</span></div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/app-marketing-icon-8.png" alt="">
+                        <div class="text"><b>Click</b><span>02</span></div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/app-marketing-icon-9.png" alt="">
+                        <div class="text"><b>Install</b><span>03</span></div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/app-marketing-icon-10.png" alt="">
+                        <div class="text"><b>Activation</b><span>04</span></div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/app-marketing-icon-11.png" alt="">
+                        <div class="text"><b>Engagement</b><span>05</span></div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/app-marketing-icon-12.png" alt="">
+                        <div class="text"><b>Conversion</b><span>06</span></div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/app-marketing-icon-13.png" alt="">
+                        <div class="text"><b>Retention</b><span>07</span></div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/app-marketing-icon-14.png" alt="">
+                        <div class="text"><b>Revenue</b><span>08</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ROI / ACCOUNTABILITY ============ -->
+    <section class="philosophy">
+        <div class="wrap phi-grid">
+            <div>
+                <div class="eyebrow dark">ACCOUNTABILITY</div>
+                <h2 class="phi-title">Built to Scale What Works—and Cut What Doesn't</h2>
+                <h4>Your budget deserves accountability.</h4>
+                <p class="phi-copy wide">[Brand Name] uses performance data to identify stronger audiences, creative
+                    combinations, channels, and campaigns while finding areas where spend can be reduced, reworked, or
+                    redirected.</p>
+                <p class="phi-copy wide">We focus on ROI-driven marketing, not activity for activity's sake.</p>
+                <h4>It's knowing what deserves more.</h4>
+            </div>
+
+            <div class="phi-image">
+                <img src="/assets/Affiliate Marketing Banner 6.png" alt="App marketing performance analytics">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+     <div class="cta-wrapper">
+    <section class="cta-banner">
+        <img class="cta-bg" src="/assets/Affiliate Marketing Banner 7.png" alt="">
+        <div class="cta-scrim"></div>
+        <div class="wrap cta-inner">
+            <div>
+                <div class="eyebrow light">LET'S WORK TOGETHER</div>
+                <h2 class="cta-title">Your App Has Potential.<span class="accent">Let's Put Performance Behind It.</span></h2>
+                <p class="cta-copy">Whether you're launching a new app, trying to lower acquisition costs, improving paid user acquisition, or looking to scale an existing growth engine, [Brand Name] can build a strategy around your goals.</p>
+               <h4>Ready to Turn More Installs Into Business Growth?</h4>
+            </div>
+        </div>
+    </section>
+    </div>
+
+</body>
+
+</html>

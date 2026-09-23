@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Growth Marketing Agency — [Brand Name]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Caveat:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/services/services.css">
+
+    <!-- Page-specific addition, shared across service pages that need a
+         card grid larger than the 4-card approach layout comfortably fits.
+         Reuses existing tokens (colors, radius, spacing, hover language). -->
+    <style>
+        .services-section {
+            background: var(--panel);
+            padding: 70px 0;
+        }
+
+        .services-section .eyebrow {
+            color: #494949;
+        }
+
+        .services-title {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(28px, 3.6vw, 38px);
+            line-height: 1.15;
+            margin: 0 0 40px;
+            max-width: 780px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 26px;
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 24px 44px -26px rgba(0, 0, 0, .25);
+        }
+
+        .service-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--line);
+            margin-bottom: 18px;
+        }
+
+        .service-icon img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-heading);
+            font-size: 16.5px;
+            font-weight: 700;
+            margin: 0 0 8px;
+        }
+
+        .service-card p {
+            font-size: 13.5px;
+            line-height: 1.65;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============ SECTION 1 — HERO ============ -->
+    <section class="hero">
+        <img class="hero-bg" src="/assets/Affiliate Marketing Banner 1.png" alt="">
+        <div class="hero-scrim"></div>
+        <div class="wrap hero-inner">
+            <div class="hero-text">
+                <div class="eyebrow light">MORE THAN MARKETING</div>
+                <h1 class="hero-title">Growth Marketing Agency for Scalable Customer Acquisition &amp; ROI</h1>
+                <div class="hero-cta">
+                    <a class="btn btn-solid" href="#">Build a Growth Strategy <img src="" alt=""></a>
+                    <a class="btn btn-outline" href="#">See Our Approach <img src="" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 2 — INTRO ============ -->
+    <section class="intro">
+        <div class="wrap">
+            <div class="eyebrow">A growth system built to keep moving.</div>
+            <p>[Brand Name] builds growth marketing strategies that connect customer acquisition, paid media, creative
+                testing, conversion optimization, analytics, and retention. From Google Ads and Meta Ads to content, we
+                focus on the opportunities that can create meaningful business growth.</p>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 3 — GROWTH CYCLE (reuses opportunity pattern) ============ -->
+    <section class="opportunity">
+        <div class="wrap">
+            <div class="opp-grid">
+                <div>
+                    <div class="eyebrow dark">A CONSTANT EXPERIMENT</div>
+                    <h2 class="opp-title">Growth Isn't a Hack. It's a Constant Experiment.</h2>
+                </div>
+                <div class="opp-copy">
+                    <p style="font-weight:700;color:var(--ink);">There is no single campaign that guarantees
+                        sustainable growth.</p>
+                    <p>Instead of relying on assumptions, we use performance data to understand what's working, what's
+                        underperforming, and where the next opportunity may be.</p>
+                </div>
+            </div>
+
+            <div class="process">
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-1.png" alt="Find the opportunity icon">
+                    </div>
+                    Find the Opportunity
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-2.png" alt="Test the idea icon">
+                    </div>
+                    Test the Idea
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-3.png" alt="Measure the result icon">
+                    </div>
+                    Measure the Result
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-4.png" alt="Improve the strategy icon">
+                    </div>
+                    Improve the Strategy
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-5.png" alt="Scale what works icon">
+                    </div>
+                    Scale What Works
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 4 — WE CHASE PROGRESS (approach cards, dark) ============ -->
+    <section class="approach">
+        <img class="approach-bg" src="/assets/Affiliate Marketing Banner 2.png" alt="">
+        <div class="approach-scrim"></div>
+        <div class="wrap approach-inner">
+            <div>
+                <div class="eyebrow light">BEYOND TRAFFIC</div>
+                <h2 class="approach-title">We Don't Just Chase Traffic. We Chase <span class="accent">Progress.</span>
+                </h2>
+                <p class="approach-copy">We connect marketing activity with outcomes such as qualified leads, sales,
+                    customer acquisition, revenue, retention, and lifetime value.</p>
+                <div class="approach-foot">SMARTER. FASTER. FULL-FUNNEL.</div>
+            </div>
+
+            <div class="approach-cards">
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-6.png" alt="Audience icon">
+                    </div>
+                    <div>
+                        <h3>Smarter Audience Decisions</h3>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-7.png" alt="Testing icon">
+                    </div>
+                    <div>
+                        <h3>Faster Testing</h3>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-8.png" alt="Funnel icon">
+                    </div>
+                    <div>
+                        <h3>Full-Funnel Thinking</h3>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon-cont">
+                        <img src="/assets/icon-9.png" alt="Data icon">
+                    </div>
+                    <div>
+                        <h3>Data With Context</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 5 — SERVICES GRID (light) ============ -->
+    <section class="services-section">
+        <div class="wrap">
+            <div class="eyebrow dark">THE GROWTH ENGINE</div>
+            <h2 class="services-title">The Growth Marketing Engine We Build Around Your Business</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-10.png" alt=""></div>
+                    <h3>Customer Acquisition</h3>
+                    <p>Attract qualified prospects through targeted campaigns, paid media, search, social, and
+                        strategic acquisition channels.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-11.png" alt=""></div>
+                    <h3>Paid Advertising</h3>
+                    <p>Reach the right audiences with Google Ads, Meta Ads, paid social, display, programmatic, and
+                        remarketing campaigns.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-12.png" alt=""></div>
+                    <h3>Lead Generation</h3>
+                    <p>Generate qualified leads through campaigns built around audience intent, strong offers, and
+                        measurable business goals.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-13.png" alt=""></div>
+                    <h3>Conversion Rate Optimization</h3>
+                    <p>Improve landing pages, forms, offers, and user journeys to turn more visitors into customers.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-14.png" alt=""></div>
+                    <h3>Retention &amp; Re-Engagement</h3>
+                    <p>Reconnect with existing customers through remarketing, personalized campaigns, lifecycle
+                        strategies, and relevant offers.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-15.png" alt=""></div>
+                    <h3>Analytics &amp; Performance Tracking</h3>
+                    <p>Track CAC, conversion rates, ROAS, revenue, retention, and customer lifetime value to guide
+                        smarter decisions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="/assets/icon-16.png" alt=""></div>
+                    <h3>Product-Led Growth</h3>
+                    <p>Improve activation, onboarding, product adoption, usage, and expansion to turn product
+                        engagement into sustainable growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 6 — FUNNEL (reuses opportunity pattern) ============ -->
+    <section class="opportunity">
+        <div class="wrap">
+            <div class="opp-grid">
+                <div>
+                    <div class="eyebrow dark">THE FULL FUNNEL</div>
+                    <h2 class="opp-title">Your Funnel Has Clues. We Know Where to Look.</h2>
+                </div>
+                <div class="opp-copy">
+                    <p style="font-weight:700;color:var(--ink);">Strong traffic but weak conversions. Great leads but
+                        poor close rates. Good acquisition but weak retention.</p>
+                    <p>We examine the full funnel to help identify where momentum is being lost and where targeted
+                        improvements could have the greatest impact.</p>
+                </div>
+            </div>
+
+            <div class="process">
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-17.png" alt="Awareness icon">
+                    </div>
+                    Awareness
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-18.png" alt="Acquisition icon">
+                    </div>
+                    Acquisition
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-19.png" alt="Engagement icon">
+                    </div>
+                    Engagement
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-20.png" alt="Conversion icon">
+                    </div>
+                    Conversion
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-21.png" alt="Retention icon">
+                    </div>
+                    Retention
+                </div>
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="img-cont">
+                        <img src="/assets/icon-22.png" alt="Expansion icon">
+                    </div>
+                    Expansion
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 7 — CREATIVE TESTING (reuses optimize pattern, dark) ============ -->
+    <section class="optimize">
+        <img class="optimize-bg" src="/assets/Affiliate Marketing Banner 5.png" alt="">
+        <div class="optimize-scrim"></div>
+        <div class="wrap optimize-inner">
+            <div class="opt-1">
+                <div class="eyebrow light">CREATIVE TESTING</div>
+                <h2 class="optimize-title">Because "We Think It Will Work" Isn't a Strategy</h2>
+                <p class="optimize-copy">[Brand Name] tests different variables across campaigns and customer
+                    journeys, including:</p>
+
+                <div class="optimize-grid">
+                   
+                    <div class="optimize-card">
+                        <img src="/assets/icon-24.png" alt="">
+                        <div class="text">
+                            <b>Offers</b>
+                            <span>01</span>
+                        </div>
+                    </div>
+                   
+                    <div class="optimize-card">
+                        <img src="/assets/icon-26.png" alt="">
+                        <div class="text">
+                            <b>Creative Concepts</b>
+                            <span>02</span>
+                        </div>
+                    </div>
+                   
+                    
+                  
+                    <div class="optimize-card">
+                        <img src="/assets/icon-30.png" alt="">
+                        <div class="text">
+                            <b>Messaging Angles</b>
+                            <span>03</span>
+                        </div>
+                    </div>
+                    <div class="optimize-card">
+                        <img src="/assets/icon-31.png" alt="">
+                        <div class="text">
+                            <b>Landing Pages</b>
+                            <span>04</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="optimize-note">The purpose isn't to create endless variations for the sake of testing. It's
+                    to learn why people respond, then use those insights to make smarter marketing decisions.</p>
+            </div>
+            <div class="opt-2"></div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 8 — PHILOSOPHY (simplified, no image/list supplied) ============ -->
+    <section class="measure">
+        <div class="wrap measure-grid">
+            <div>
+                <div class="eyebrow dark"></div>
+                <h2 class="measure-title">ROI Is the Scoreboard. Everything Else Is a Clue.</h2>
+                <p class="measure-copy">Growth marketing should ultimately connect back to business performance.</p>
+                <p class="measure-copy">A campaign generating 10,000 clicks isn't automatically successful.</p>
+                <p class="measure-copy">If those clicks don't create meaningful business outcomes, there's another question to answer.</p>
+                <a class="btn btn-solid" href="">We focus on what happens after the click.</a>
+
+            </div>
+
+            <div class="measure-image">
+                <img src="/assets/Digital Media Advertising Banner 3.png" alt="Performance metrics dashboard">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 9 — SCALING (reuses synergy pattern, single column) ============ -->
+    <section class="synergy">
+        <img class="synergy-bg" src="/assets/Affiliate Marketing Banner 4.png" alt="">
+        <div class="synergy-scrim"></div>
+        <div class="wrap">
+            <div style="max-width:760px;">
+                <div class="eyebrow dark">SCALING WHAT WORKS</div>
+                <h2 class="synergy-title">From Small Wins to Scalable Growth</h2>
+                <div class="synergy-copy">
+                    <p>Not every successful campaign should immediately receive a bigger budget. First, we look for
+                        repeatable signals. When the fundamentals make sense, we can explore opportunities to scale
+                        through: More Reach · New Audiences · New Channels · Stronger Creative · Better Conversion ·
+                        Smarter Retention.</p>
+                    <p>That creates a more sustainable approach to ROI-driven marketing instead of chasing short-term
+                        spikes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SECTION 10 — CTA BANNER ============ -->
+     <div class="cta-wrapper">
+    <section class="cta-banner">
+        <img class="cta-bg" src="/assets/Affiliate Marketing Banner 7.png" alt="">
+        <div class="cta-scrim"></div>
+        <div class="wrap cta-inner">
+            <div>
+                <div class="eyebrow light">LET'S WORK TOGETHER</div>
+                <h2 class="cta-title">Ready to Find Your<span class="accent">Next Growth Opportunity?</span></h2>
+                <p class="cta-copy">[Brand Name] can help uncover it, test it, and turn promising opportunities into measurable growth.</p>
+                
+                <h4>Build a Growth Strategy Designed to Scale →</h4>
+            </div>
+        </div>
+    </section>
+    </div>
+
+</body>
+
+</html>
