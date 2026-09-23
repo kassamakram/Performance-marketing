@@ -31,9 +31,7 @@
     position: relative;
     width: 100%;
     z-index: 1000;
-
-    background: var(--paper);
-    border-bottom: 1px solid var(--line);
+    background: #0B0B0B;
 }
 
 .header-inner {
@@ -90,7 +88,7 @@
 
     padding: 12px 14px;
 
-    color: var(--ink);
+    color: #E4E1DB;
     background: transparent;
 
     border: 0;
