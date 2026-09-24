@@ -31,7 +31,7 @@
     position: relative;
     width: 100%;
     z-index: 1000;
-    background: #0B0B0B;
+    background: transparent;
 }
 
 .header-inner {
@@ -187,7 +187,7 @@
     opacity: 1;
     visibility: visible;
 
-    transform: translate(-50%, 0);
+    /* transform: translate(-50%, 0); */
 }
 
 .nav-dropdown:hover .dropdown-arrow,
@@ -698,6 +698,16 @@
 
         flex-direction: column;
         align-items: flex-start;
+    }
+    .hero{
+        min-height: 50vh;
+        padding-bottom: 0;
+    }
+    .hero-scrim{
+        height: 50vh;
+    }
+    .hero-bg{
+        height: 50vh;
     }
 
     .footer-legal {

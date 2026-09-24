@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>FAQs — Nexus Performance Marketing Agency</title>
+    <meta name="description" content="Real questions about paid advertising, performance marketing, audience targeting, media buying, and campaign optimization. Answered clearly by Nexus.">
+
+    <meta property="og:title" content="FAQs — Nexus Performance Marketing Agency">
+    <meta property="og:description" content="Real questions about paid advertising, performance marketing, audience targeting, media buying, and campaign optimization. Answered clearly by Nexus.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/components/header-footer.css">
+
+    <style>
+        /* ============================================================
+           TOKENS — exact mirror of index.html
+           ============================================================ */
+        :root {
+            --ink: #0B0B0B;
+            --ink-2: #141414;
+            --paper: #FFFFFF;
+            --panel: #F6F5F2;
+            --panel-dark: #111111;
+            --accent: #F4501B;
+            --accent-hover: #D83E0C;
+            --accent-2: #FF7A3D;
+            --muted: #6A6A6A;
+            --muted-2: #999999;
+            --line: #E4E1DB;
+            --line-dark: #242424;
+            --max: 1240px;
+            --pad: 28px;
+            --font-display: 'Bebas Neue', Impact, sans-serif;
+            --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+            color-scheme: light;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 82px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 15.5px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+        button, input { font: inherit; }
+        :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+        }
+
+        /* ============================================================
+           UTILITIES
+           ============================================================ */
+        .wrap {
+            width: 100%;
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 0 var(--pad);
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 11px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 700;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 26px;
+            height: 2.5px;
+            background: var(--accent);
+            flex: none;
+        }
+
+        /* ============================================================
+           BUTTONS — exact match to homepage
+           ============================================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 22px;
+            justify-content: space-between;
+            background: var(--accent);
+            color: #fff;
+            border: 0;
+            border-radius: 2px;
+            padding: 14px 20px;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background .2s ease, transform .2s ease;
+        }
+
+        .btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+        .btn.ghost {
+            background: transparent;
+            color: var(--ink);
+            border: 1px solid var(--line);
+        }
+
+        .btn.ghost:hover { border-color: var(--ink); }
+
+        .btn .ar {
+            font-size: 14px;
+            line-height: 1;
+            transition: transform .2s ease;
+        }
+
+        .btn:hover .ar { transform: translateX(3px); }
+
+        /* ============================================================
+           HERO
+           ============================================================ */
+        .faq-hero {
+            background: #070707;
+            color: #fff;
+            padding: 76px 0 72px;
+            border-bottom: 1px solid #1A1A1A;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq-hero::after {
+            content: "";
+            position: absolute;
+            right: -60px;
+            top: -80px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(244,80,27,.07) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .faq-hero-inner { position: relative; z-index: 2; }
+
+        .faq-hero .eyebrow {
+            color: #6A6A6A;
+            margin-bottom: 28px;
+        }
+
+        .faq-hero .eyebrow::before { background: var(--accent); }
+
+        .faq-hero-h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(40px, 6.5vw, 80px);
+            font-weight: 800;
+            line-height: .94;
+            letter-spacing: -.04em;
+            color: #fff;
+            margin: 0 0 28px;
+            max-width: 820px;
+        }
+
+        .faq-hero-lede {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #ADADAD;
+            max-width: 560px;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .faq-hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 36px;
+            font-size: 10px;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: #5A5A5A;
+            font-weight: 600;
+            border-top: 1px solid rgba(255,255,255,.1);
+            padding-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .faq-hero-meta .sep { color: var(--accent); }
+
+        /* ============================================================
+           INTRO STRIP
+           ============================================================ */
+        .faq-intro {
+            padding: 68px 0 56px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .faq-intro-bar {
+            width: 36px;
+            height: 3.5px;
+            background: var(--accent);
+            margin-bottom: 22px;
+        }
+
+        .faq-intro-inner {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 60px;
+            align-items: start;
+            margin-top: 22px;
+        }
+
+        .faq-intro-label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 14px;
+        }
+
+        .faq-intro-h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(26px, 3.2vw, 40px);
+            font-weight: 800;
+            line-height: 1.12;
+            letter-spacing: -.03em;
+            color: var(--ink);
+            margin: 0;
+        }
+
+        .faq-intro-copy {
+            font-size: 15px;
+            line-height: 1.72;
+            color: #4A4A4A;
+            margin: 0;
+            max-width: 52ch;
+            padding-top: 6px;
+        }
+
+        /* ============================================================
+           CATEGORY NAV
+           ============================================================ */
+        .faq-cat-nav {
+            background: var(--panel);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            overflow-x: auto;
+            scrollbar-width: none;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .faq-cat-nav::-webkit-scrollbar { display: none; }
+
+        .faq-cat-nav-inner {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            white-space: nowrap;
+        }
+
+        .faq-cat-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 15px 22px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--muted-2);
+            border-right: 1px solid var(--line);
+            transition: color .2s ease, background .2s ease;
+            cursor: pointer;
+            background: none;
+            border-top: none;
+            border-bottom: none;
+            border-left: none;
+            text-decoration: none;
+        }
+
+        .faq-cat-link:hover { color: var(--ink); background: rgba(0,0,0,.03); }
+        .faq-cat-link.active { color: var(--accent); }
+
+        /* ============================================================
+           FAQ SECTIONS WRAPPER
+           ============================================================ */
+        .faq-sections { padding: 0 0 0; }
+
+        /* Hidden categories revealed by View More */
+        .faq-more-wrap {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height .7s cubic-bezier(.4,0,.2,1);
+        }
+
+        .faq-more-wrap.open { max-height: 9999px; }
+
+        /* ============================================================
+           SECTION + CATEGORY LAYOUT
+           ============================================================ */
+        .faq-section { border-bottom: 1px solid var(--line); }
+
+        .faq-category {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            align-items: start;
+        }
+
+        /* Left: sticky label */
+        .faq-cat-label {
+            padding: 56px 36px 56px 0;
+            border-right: 1px solid var(--line);
+            position: sticky;
+            top: 49px; /* height of .faq-cat-nav */
+            align-self: start;
+        }
+
+        .faq-cat-num {
+            display: block;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .faq-cat-title {
+            font-family: var(--font-heading);
+            font-size: clamp(18px, 1.9vw, 24px);
+            font-weight: 800;
+            letter-spacing: -.025em;
+            line-height: 1.2;
+            color: var(--ink);
+            margin: 0 0 12px;
+        }
+
+        .faq-cat-desc {
+            font-size: 12px;
+            line-height: 1.65;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        /* Right: accordion */
+        .faq-accordion {
+            padding: 0 0 0 40px;
+        }
+
+        /* ============================================================
+           ACCORDION ITEM
+           ============================================================ */
+        .faq-item { border-bottom: 1px solid var(--line); }
+        .faq-item:last-child { border-bottom: none; }
+
+        .faq-q {
+            display: grid;
+            grid-template-columns: 36px 1fr 28px;
+            gap: 16px;
+            align-items: center;
+            width: 100%;
+            padding: 21px 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .faq-q-num {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .16em;
+            color: var(--muted-2);
+            line-height: 1;
+            flex: none;
+        }
+
+        .faq-q-text {
+            font-family: var(--font-heading);
+            font-size: clamp(14.5px, 1.4vw, 17px);
+            font-weight: 700;
+            letter-spacing: -.015em;
+            line-height: 1.3;
+            color: var(--ink);
+            transition: color .2s ease;
+        }
+
+        .faq-q:hover .faq-q-text { color: var(--accent); }
+
+        .faq-toggle {
+            width: 28px;
+            height: 28px;
+            border: 1px solid var(--line);
+            border-radius: 2px;
+            display: grid;
+            place-items: center;
+            flex: none;
+            transition: background .2s ease, border-color .2s ease;
+            color: var(--ink);
+        }
+
+        .faq-toggle svg { transition: transform .35s cubic-bezier(.4,0,.2,1); }
+
+        .faq-item.open .faq-toggle {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        .faq-item.open .faq-toggle svg { transform: rotate(45deg); }
+        .faq-item.open .faq-q-text { color: var(--accent); }
+
+        /* Smooth CSS-grid height animation */
+        .faq-answer {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows .38s cubic-bezier(.4,0,.2,1);
+        }
+
+        .faq-answer-inner { overflow: hidden; }
+
+        .faq-item.open .faq-answer { grid-template-rows: 1fr; }
+
+        .faq-answer-body {
+            padding: 0 44px 22px;
+            font-size: 14.5px;
+            line-height: 1.72;
+            color: #4A4A4A;
+            max-width: 68ch;
+        }
+
+        .faq-answer-body a {
+            color: var(--accent);
+            font-weight: 600;
+            border-bottom: 1px solid rgba(244,80,27,.25);
+            transition: border-color .2s ease;
+        }
+
+        .faq-answer-body a:hover { border-color: var(--accent); }
+
+        /* ============================================================
+           VIEW MORE BUTTON ROW
+           ============================================================ */
+        .faq-view-more-row {
+            padding: 48px 0 56px;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .faq-view-more-row .line {
+            flex: 1;
+            height: 1px;
+            background: var(--line);
+        }
+
+        .faq-view-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 24px;
+            background: transparent;
+            color: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 2px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: border-color .2s ease, color .2s ease, background .2s ease;
+            flex: none;
+        }
+
+        .faq-view-more-btn:hover {
+            border-color: var(--ink);
+            background: var(--ink);
+            color: #fff;
+        }
+
+        .faq-view-more-btn .vm-count {
+            background: var(--panel);
+            color: var(--muted);
+            border-radius: 30px;
+            padding: 2px 10px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .06em;
+            transition: background .2s ease, color .2s ease;
+        }
+
+        .faq-view-more-btn:hover .vm-count {
+            background: #222;
+            color: #aaa;
+        }
+
+        /* Hide the button row when open */
+        .faq-view-more-row.hidden { display: none; }
+
+        /* ============================================================
+           CLOSING STATEMENT
+           ============================================================ */
+        .faq-closing {
+            background: #0B0B0B;
+            color: #fff;
+            padding: 72px 0 76px;
+            border-top: 1px solid #1C1C1C;
+        }
+
+        .faq-closing-inner {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .faq-closing .eyebrow {
+            color: #7A7A7A;
+            margin-bottom: 22px;
+        }
+
+        .faq-closing .eyebrow::before { background: var(--accent); }
+
+        .faq-closing-h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(28px, 3.6vw, 46px);
+            font-weight: 800;
+            letter-spacing: -.035em;
+            line-height: 1.08;
+            margin: 0 0 20px;
+            color: #fff;
+        }
+
+        .faq-closing-h2 em {
+            font-style: normal;
+            color: var(--accent);
+        }
+
+        .faq-closing-copy {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #A0A0A0;
+            margin: 0;
+            max-width: 50ch;
+        }
+
+        .faq-closing-acts {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding-top: 6px;
+        }
+
+        /* ============================================================
+           CTA — mirror of homepage
+           ============================================================ */
+        .cta {
+            background: #F3F2EE;
+            padding: 56px 0 0;
+            overflow: hidden;
+            border-radius: 28px;
+            margin: 40px 24px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,.03);
+        }
+
+        .cta .eyebrow { color: var(--muted-2); }
+
+        .cta-in {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 44px;
+            align-items: start;
+            margin-top: 20px;
+        }
+
+        .cta h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(26px, 3.4vw, 55px);
+            font-weight: 800;
+            letter-spacing: -.025em;
+            line-height: 1.15;
+            margin: 0 0 18px;
+        }
+
+        .cta p {
+            font-size: 16.5px;
+            line-height: 1.6;
+            color: #4D4D4D;
+            margin: 0 0 9px;
+            max-width: 56ch;
+        }
+
+        .cta p.strong { font-weight: 800; color: var(--ink); margin-top: 14px; }
+
+        .cta .acts {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 270px;
+            margin-left: auto;
+            width: 100%;
+        }
+
+        .ghost-type {
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            font-size: clamp(54px, 13.5vw, 160px);
+            line-height: .82;
+            color: transparent;
+            -webkit-text-stroke: 1.5px #D1CEC8;
+            text-align: center;
+            margin: 38px 0 0;
+            white-space: nowrap;
+            letter-spacing: .02em;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        /* ============================================================
+           REVEAL UTILITY
+           ============================================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ============================================================
+           RESPONSIVE — TABLET ≤ 1040px
+           ============================================================ */
+        @media (max-width: 1040px) {
+            .faq-intro-inner { grid-template-columns: 1fr; gap: 20px; }
+            .cta-in { grid-template-columns: 1fr; gap: 34px; }
+            .cta .acts { margin-left: 0; max-width: 320px; }
+            .faq-closing-inner { grid-template-columns: 1fr; gap: 32px; }
+        }
+
+        @media (max-width: 900px) {
+            .faq-category { grid-template-columns: 1fr; }
+            .faq-cat-label {
+                position: static;
+                padding: 38px 0 18px;
+                border-right: none;
+                border-bottom: 1px solid var(--line);
+            }
+            .faq-accordion { padding: 0; }
+        }
+
+        /* ============================================================
+           RESPONSIVE — MOBILE ≤ 760px
+           ============================================================ */
+        @media (max-width: 760px) {
+            :root { --pad: 18px; }
+
+            .faq-hero { padding: 52px 0 48px; }
+
+            .faq-intro { padding: 50px 0 42px; }
+
+            .cta { margin: 24px 14px 0; border-radius: 18px; }
+            .cta-in { grid-template-columns: 1fr; gap: 28px; }
+            .cta .acts { margin-left: 0; max-width: 100%; }
+
+            .faq-q { grid-template-columns: 28px 1fr 26px; gap: 10px; padding: 19px 0; }
+            .faq-q-text { font-size: 14.5px; }
+            .faq-answer-body { padding: 0 38px 18px; font-size: 14px; }
+
+            .faq-cat-label { padding: 30px 0 16px; }
+            .faq-cat-nav { position: relative; top: 0; }
+
+            .faq-view-more-row { padding: 36px 0 44px; gap: 16px; }
+
+            .faq-closing { padding: 56px 0 60px; }
+        }
+
+        @media (max-width: 480px) {
+            .faq-q { grid-template-columns: 24px 1fr 24px; }
+            .faq-answer-body { padding: 0 28px 16px; }
+            .faq-cat-link { padding: 14px 15px; font-size: 9.5px; }
+            .ghost-type { white-space: normal; }
+            .faq-view-more-btn { flex-direction: column; gap: 8px; text-align: center; }
+        }
+    </style>
+
+    <!-- FAQ Structured Data — FAQPage schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"What is performance marketing, and how can it help my business?","acceptedAnswer":{"@type":"Answer","text":"Performance marketing focuses on measurable actions such as leads, sales, conversions, and customer acquisition. It helps businesses connect advertising spend with trackable results."}},
+        {"@type":"Question","name":"How do you create a performance marketing strategy?","acceptedAnswer":{"@type":"Answer","text":"We start with your business goals, audience, offer, funnel, budget, and existing data. We then select relevant channels, build campaigns, establish tracking, and optimize based on performance."}},
+        {"@type":"Question","name":"What types of businesses can benefit from paid advertising?","acceptedAnswer":{"@type":"Answer","text":"Ecommerce brands, SaaS companies, apps, professional services, B2B businesses, local companies, and many other organizations can use paid advertising to reach relevant audiences and generate measurable actions."}},
+        {"@type":"Question","name":"How do you identify the right audience for an advertising campaign?","acceptedAnswer":{"@type":"Answer","text":"We analyze demographics, interests, behaviors, search intent, customer data, website activity, and funnel signals to develop audience segments aligned with campaign goals."}},
+        {"@type":"Question","name":"Which advertising platforms do you manage?","acceptedAnswer":{"@type":"Answer","text":"Depending on the strategy, campaigns can include Google Ads, Meta Ads, Instagram, Facebook, YouTube, LinkedIn, TikTok, display, programmatic, digital audio, and other relevant paid media channels."}},
+        {"@type":"Question","name":"How do you measure the success of a digital advertising campaign?","acceptedAnswer":{"@type":"Answer","text":"We track metrics such as conversions, cost per lead, CPA, CAC, conversion rate, revenue, ROAS, CTR, and lead quality based on the campaign objective."}},
+        {"@type":"Question","name":"What is the difference between performance marketing and traditional advertising?","acceptedAnswer":{"@type":"Answer","text":"Performance marketing emphasizes measurable actions and ongoing optimization. Instead of focusing primarily on exposure, campaigns are evaluated using data connected to specific business objectives."}},
+        {"@type":"Question","name":"How can paid ads help generate more qualified leads?","acceptedAnswer":{"@type":"Answer","text":"Paid campaigns can target specific audiences, match messaging to their needs, and direct prospects toward conversion-focused landing pages or lead forms."}},
+        {"@type":"Question","name":"How do you improve return on ad spend (ROAS)?","acceptedAnswer":{"@type":"Answer","text":"We analyze audience, creative, placements, offers, bidding, landing pages, and conversion data to identify areas that can improve campaign efficiency and revenue."}},
+        {"@type":"Question","name":"What does your customer acquisition strategy include?","acceptedAnswer":{"@type":"Answer","text":"It can include audience research, paid advertising, creative testing, landing-page optimization, remarketing, conversion tracking, and ongoing performance analysis."}},
+        {"@type":"Question","name":"How do you know which marketing channels are delivering results?","acceptedAnswer":{"@type":"Answer","text":"We use conversion tracking and analytics to compare channels based on relevant metrics such as leads, sales, CPA, CAC, revenue, and ROAS."}},
+        {"@type":"Question","name":"Can you manage campaigns across multiple advertising platforms?","acceptedAnswer":{"@type":"Answer","text":"Yes. A multi-channel strategy can combine platforms such as Google Ads, Meta Ads, LinkedIn, TikTok, YouTube, display, and programmatic advertising when they align with your objectives."}},
+        {"@type":"Question","name":"How do you test different ads and creative concepts?","acceptedAnswer":{"@type":"Answer","text":"We can test hooks, headlines, visuals, video formats, offers, CTAs, messaging, audiences, and placements to identify combinations that generate stronger performance."}},
+        {"@type":"Question","name":"What role does data analytics play in your marketing strategy?","acceptedAnswer":{"@type":"Answer","text":"Analytics helps us understand audience behavior, campaign performance, conversion paths, acquisition costs, and revenue so marketing decisions are based on evidence rather than assumptions."}},
+        {"@type":"Question","name":"What is remarketing, and when should a business use it?","acceptedAnswer":{"@type":"Answer","text":"Remarketing reconnects with people who have previously interacted with your business. It can be useful for bringing back website visitors, engaged users, or potential customers who haven't converted."}},
+        {"@type":"Question","name":"What is programmatic advertising, and how does it work?","acceptedAnswer":{"@type":"Answer","text":"Programmatic advertising uses automated technology to purchase digital ad placements using audience, contextual, behavioral, and other targeting signals."}},
+        {"@type":"Question","name":"How do I get started with a performance-focused advertising strategy?","acceptedAnswer":{"@type":"Answer","text":"Start by defining your business objective, target audience, offer, budget, and desired conversion. From there, a strategy can be built around the channels and campaign structure most relevant to those goals."}}
+      ]
+    }
+    </script>
+</head>
+
+<body>
+
+<div id="shared-header"></div>
+
+<!-- ================================================================
+     HERO
+     ================================================================ -->
+<section class="faq-hero" aria-label="FAQ page hero">
+    <div class="wrap faq-hero-inner">
+
+        <p class="eyebrow">NEXUS / FAQ</p>
+
+        <h1 class="faq-hero-h1">Questions Before You Put<br>Your Ad Budget to Work</h1>
+
+        <p class="faq-hero-lede">Real questions deserve clear answers. Explore practical insights about paid advertising, performance marketing, audience targeting, media buying, and campaign optimization.</p>
+
+        <div class="faq-hero-meta">
+            <span>Performance Marketing</span>
+            <span class="sep">/</span>
+            <span>Audience &amp; Acquisition</span>
+            <span class="sep">/</span>
+            <span>Social &amp; Paid Media</span>
+            <span class="sep">/</span>
+            <span>Programmatic &amp; Display</span>
+            <span class="sep">/</span>
+            <span>Optimization</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================================================================
+     INTRO
+     ================================================================ -->
+<section class="faq-intro" aria-label="Introduction">
+    <div class="wrap">
+        <div class="faq-intro-bar"></div>
+        <span class="faq-intro-label">01 / The Basics</span>
+        <div class="faq-intro-inner">
+            <h2 class="faq-intro-h2 reveal">Start With the Questions That Matter.</h2>
+            <p class="faq-intro-copy reveal">Choosing a performance marketing partner is a serious decision. Here's what to know about our approach, services, measurement, and the way we work — across 50 questions covering the full picture.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================================
+     CATEGORY NAV
+     ================================================================ -->
+<nav class="faq-cat-nav" aria-label="FAQ categories">
+    <div class="wrap faq-cat-nav-inner">
+        <a class="faq-cat-link active" href="#cat-fundamentals">Performance Marketing</a>
+        <a class="faq-cat-link" href="#cat-audience">Audience &amp; Acquisition</a>
+        <a class="faq-cat-link" href="#cat-social">Social &amp; Paid Media</a>
+        <a class="faq-cat-link" href="#cat-programmatic">Programmatic &amp; Beyond</a>
+        <a class="faq-cat-link" href="#cat-optimization">Optimization &amp; Scale</a>
+    </div>
+</nav>
+
+<!-- ================================================================
+     FAQ SECTIONS
+     ================================================================ -->
+<div class="faq-sections">
+
+    <!-- ============================================================
+         CATEGORY 01 — PERFORMANCE MARKETING FUNDAMENTALS  (Q1–7)
+         Always visible
+         ============================================================ -->
+    <section class="faq-section" id="cat-fundamentals" aria-label="Performance marketing fundamentals">
+        <div class="wrap">
+            <div class="faq-category">
+
+                <div class="faq-cat-label reveal">
+                    <span class="faq-cat-num">01 / Performance Marketing</span>
+                    <h2 class="faq-cat-title">The Foundation of Every Campaign</h2>
+                    <p class="faq-cat-desc">What performance marketing is, who it's for, and why it works differently from traditional advertising.</p>
+                </div>
+
+                <div class="faq-accordion" role="list">
+
+                    <!-- Q1 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-1" id="q-1">
+                            <span class="faq-q-num" aria-hidden="true">01</span>
+                            <span class="faq-q-text">What is performance marketing, and how can it help my business?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-1" role="region" aria-labelledby="q-1"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            Performance marketing focuses on measurable actions such as leads, sales, conversions, and customer acquisition. It helps businesses connect advertising spend with trackable results — so you know what's working, what isn't, and where to focus next.
+                        </div></div></div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-2" id="q-2">
+                            <span class="faq-q-num" aria-hidden="true">02</span>
+                            <span class="faq-q-text">How do you create a performance marketing strategy?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-2" role="region" aria-labelledby="q-2"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            We start with your business goals, audience, offer, funnel, budget, and existing data. We then select relevant channels, build campaigns, establish tracking, and optimize based on performance — continuously improving what the data tells us.
+                        </div></div></div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-3" id="q-3">
+                            <span class="faq-q-num" aria-hidden="true">03</span>
+                            <span class="faq-q-text">What types of businesses can benefit from paid advertising?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-3" role="region" aria-labelledby="q-3"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            Ecommerce brands, SaaS companies, apps, professional services, B2B businesses, local companies, and many other organizations can use paid advertising to reach relevant audiences and generate measurable actions. The approach changes by business model — the principle doesn't.
+                        </div></div></div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-4" id="q-4">
+                            <span class="faq-q-num" aria-hidden="true">04</span>
+                            <span class="faq-q-text">How do you identify the right audience for an advertising campaign?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-4" role="region" aria-labelledby="q-4"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            We analyze demographics, interests, behaviors, search intent, customer data, website activity, and funnel signals to develop audience segments aligned with campaign goals. Audience strategy is revisited continuously as performance data comes in.
+                        </div></div></div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-5" id="q-5">
+                            <span class="faq-q-num" aria-hidden="true">05</span>
+                            <span class="faq-q-text">Which advertising platforms do you manage?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-5" role="region" aria-labelledby="q-5"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            Depending on the strategy, campaigns can include Google Ads, Meta Ads, Instagram, Facebook, YouTube, LinkedIn, TikTok, display, <a href="/services/programmatic-advertising/">programmatic</a>, <a href="/services/digital-audio-advertising/">digital audio</a>, and other relevant <a href="/services/">paid media channels</a>. Platform selection follows your audience — not the other way around.
+                        </div></div></div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-6" id="q-6">
+                            <span class="faq-q-num" aria-hidden="true">06</span>
+                            <span class="faq-q-text">How do you measure the success of a digital advertising campaign?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-6" role="region" aria-labelledby="q-6"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            We track metrics such as conversions, cost per lead, CPA, CAC, conversion rate, revenue, ROAS, CTR, and lead quality based on the campaign objective. The right KPIs are defined before launch — not chosen after the fact to tell a flattering story.
+                        </div></div></div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-7" id="q-7">
+                            <span class="faq-q-num" aria-hidden="true">07</span>
+                            <span class="faq-q-text">What is the difference between performance marketing and traditional advertising?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-7" role="region" aria-labelledby="q-7"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            Performance marketing emphasizes measurable actions and ongoing optimization. Instead of focusing primarily on exposure, campaigns are evaluated using data connected to specific business objectives — so every decision has evidence behind it.
+                        </div></div></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CATEGORY 02 — AUDIENCE, LEADS & ACQUISITION  (Q8–17)
+         Always visible
+         ============================================================ -->
+    <section class="faq-section" id="cat-audience" aria-label="Audience and acquisition">
+        <div class="wrap">
+            <div class="faq-category">
+
+                <div class="faq-cat-label reveal">
+                    <span class="faq-cat-num">02 / Audience &amp; Acquisition</span>
+                    <h2 class="faq-cat-title">Getting the Right People to Act</h2>
+                    <p class="faq-cat-desc">How targeting, lead generation, analytics, and customer acquisition all work together in a performance campaign.</p>
+                </div>
+
+                <div class="faq-accordion" role="list">
+
+                    <!-- Q8 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-8" id="q-8">
+                            <span class="faq-q-num" aria-hidden="true">08</span>
+                            <span class="faq-q-text">How can paid ads help generate more qualified leads?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-8" role="region" aria-labelledby="q-8"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            Paid campaigns can target specific audiences, match messaging to their needs, and direct prospects toward conversion-focused landing pages or lead forms. Quality of targeting determines quality of leads — volume alone is never the goal.
+                        </div></div></div>
+                    </div>
+
+                    <!-- Q9 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-9" id="q-9">
+                            <span class="faq-q-num" aria-hidden="true">09</span>
+                            <span class="faq-q-text">How do you improve return on ad spend (ROAS)?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-9" role="region" aria-labelledby="q-9"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            We analyze audience, creative, placements, offers, bidding, landing pages, and conversion data to identify areas that can improve campaign efficiency and revenue. ROAS improvement is rarely a single fix — it's the result of many compounding decisions.
+                        </div></div></div>
+                    </div>
+
+                    <!-- Q10 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-10" id="q-10">
+                            <span class="faq-q-num" aria-hidden="true">10</span>
+                            <span class="faq-q-text">What does your customer acquisition strategy include?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-10" role="region" aria-labelledby="q-10"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            It can include audience research, paid advertising, creative testing, landing-page optimization, <a href="/services/remarketing-agency/">remarketing</a>, conversion tracking, and ongoing performance analysis. Acquisition is a system — every part affects every other part.
+                        </div></div></div>
+                    </div>
+
+                    <!-- Q11 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-11" id="q-11">
+                            <span class="faq-q-num" aria-hidden="true">11</span>
+                            <span class="faq-q-text">How do you know which marketing channels are delivering results?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-11" role="region" aria-labelledby="q-11"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            We use conversion tracking and analytics to compare channels based on relevant metrics such as leads, sales, CPA, CAC, revenue, and ROAS. Attribution isn't always clean — we account for that rather than pretending otherwise.
+                        </div></div></div>
+                    </div>
+
+                    <!-- Q12 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-12" id="q-12">
+                            <span class="faq-q-num" aria-hidden="true">12</span>
+                            <span class="faq-q-text">Can you manage campaigns across multiple advertising platforms?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-12" role="region" aria-labelledby="q-12"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            Yes. A multi-channel strategy can combine platforms such as Google Ads, Meta Ads, LinkedIn, TikTok, YouTube, display, and <a href="/services/programmatic-advertising/">programmatic advertising</a> when they align with your objectives. More channels is only better when each one has a clear role.
+                        </div></div></div>
+                    </div>
+
+                    <!-- Q13 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-13" id="q-13">
+                            <span class="faq-q-num" aria-hidden="true">13</span>
+                            <span class="faq-q-text">How do you test different ads and creative concepts?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-13" role="region" aria-labelledby="q-13"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            We can test hooks, headlines, visuals, video formats, offers, CTAs, messaging, audiences, and placements to identify combinations that generate stronger performance. The first creative is rarely the strongest — structured testing is how you find what works.
+                        </div></div></div>
+                    </div>
+
+                    <!-- Q14 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-14" id="q-14">
+                            <span class="faq-q-num" aria-hidden="true">14</span>
+                            <span class="faq-q-text">What role does data analytics play in your marketing strategy?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-14" role="region" aria-labelledby="q-14"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            Analytics helps us understand audience behavior, campaign performance, conversion paths, acquisition costs, and revenue so marketing decisions are based on evidence rather than assumptions. Data is most useful when it informs the next action — not just explains the last one.
+                        </div></div></div>
+                    </div>
+
+                    <!-- Q15 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-15" id="q-15">
+                            <span class="faq-q-num" aria-hidden="true">15</span>
+                            <span class="faq-q-text">How does audience targeting improve paid advertising performance?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-15" role="region" aria-labelledby="q-15"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            Relevant targeting helps put ads in front of audiences that better match your customer profile, interests, behaviors, or demonstrated intent. Better audience fit means lower waste and higher signal from every impression spent.
+                        </div></div></div>
+                    </div>
+
+                    <!-- Q16 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-16" id="q-16">
+                            <span class="faq-q-num" aria-hidden="true">16</span>
+                            <span class="faq-q-text">Can you help reduce customer acquisition costs?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-16" role="region" aria-labelledby="q-16"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            We analyze campaign and funnel performance to identify opportunities for improving targeting, creative, conversion rates, bidding, and budget allocation. Reducing CAC is a compounding effort — small gains across multiple variables add up significantly over time.
+                        </div></div></div>
+                    </div>
+
+                    <!-- Q17 -->
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-q" aria-expanded="false" aria-controls="a-17" id="q-17">
+                            <span class="faq-q-num" aria-hidden="true">17</span>
+                            <span class="faq-q-text">How do you approach media buying and budget allocation?</span>
+                            <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        </button>
+                        <div class="faq-answer" id="a-17" role="region" aria-labelledby="q-17"><div class="faq-answer-inner"><div class="faq-answer-body">
+                            Budgets are allocated according to campaign objectives, audience opportunities, channel performance, testing requirements, and available conversion data. Allocation is a living decision — it follows evidence, not a set-and-forget plan.
+                        </div></div></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         VIEW MORE BUTTON — reveals Q18–50
+         ============================================================ -->
+    <div class="wrap faq-view-more-row" id="faq-view-more-row" aria-live="polite">
+        <span class="line" aria-hidden="true"></span>
+        <button
+            class="faq-view-more-btn"
+            id="faq-view-more-btn"
+            aria-expanded="false"
+            aria-controls="faq-more-content"
+            type="button"
+        >
+            View More Questions
+            <span class="vm-count" aria-label="33 more questions">33 More</span>
+        </button>
+        <span class="line" aria-hidden="true"></span>
+    </div>
+
+    <!-- ============================================================
+         CATEGORIES 03–05 — hidden until View More is clicked
+         ============================================================ -->
+    <div class="faq-more-wrap" id="faq-more-content" aria-hidden="true">
+
+        <!-- ============================================================
+             CATEGORY 03 — REMARKETING & SOCIAL  (Q18–33)
+             ============================================================ -->
+        <section class="faq-section" id="cat-social" aria-label="Remarketing and social advertising">
+            <div class="wrap">
+                <div class="faq-category">
+
+                    <div class="faq-cat-label reveal">
+                        <span class="faq-cat-num">03 / Social &amp; Paid Media</span>
+                        <h2 class="faq-cat-title">Remarketing, Social, and Platform Strategy</h2>
+                        <p class="faq-cat-desc">How we use remarketing, Meta Ads, Instagram, YouTube, LinkedIn, TikTok, and short-form video to reach and convert audiences.</p>
+                    </div>
+
+                    <div class="faq-accordion" role="list">
+
+                        <!-- Q18 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-18" id="q-18">
+                                <span class="faq-q-num" aria-hidden="true">18</span>
+                                <span class="faq-q-text">What is remarketing, and when should a business use it?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-18" role="region" aria-labelledby="q-18"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                <a href="/services/remarketing-agency/">Remarketing</a> reconnects with people who have previously interacted with your business. It can be useful for bringing back website visitors, engaged users, or potential customers who haven't converted — at a moment when they're already familiar with your brand.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q19 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-19" id="q-19">
+                                <span class="faq-q-num" aria-hidden="true">19</span>
+                                <span class="faq-q-text">How can remarketing bring previous website visitors back?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-19" role="region" aria-labelledby="q-19"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                Relevant follow-up ads can remind visitors about your products, services, benefits, or offers and guide them back to a conversion opportunity. Timing, audience segmentation, and message relevance all affect how effective a remarketing campaign becomes.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q20 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-20" id="q-20">
+                                <span class="faq-q-num" aria-hidden="true">20</span>
+                                <span class="faq-q-text">Can you create campaigns for both new and returning customers?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-20" role="region" aria-labelledby="q-20"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                Yes. Campaigns can use different audiences and messaging for prospects, existing customers, website visitors, and previously engaged users. New customer acquisition and retention can run simultaneously with separate strategies for each.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q21 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-21" id="q-21">
+                                <span class="faq-q-num" aria-hidden="true">21</span>
+                                <span class="faq-q-text">How can advertising help promote a mobile app?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-21" role="region" aria-labelledby="q-21"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                App advertising can generate awareness, installs, registrations, purchases, and other valuable in-app actions through targeted acquisition campaigns. See our <a href="/services/app-marketing/">app marketing services</a> for the full approach.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q22 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-22" id="q-22">
+                                <span class="faq-q-num" aria-hidden="true">22</span>
+                                <span class="faq-q-text">What is app user acquisition, and how do you approach it?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-22" role="region" aria-labelledby="q-22"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                App user acquisition focuses on attracting new users through channels such as paid social, search, video, display, and other <a href="/services/mobile-marketing/">mobile advertising</a> placements. Quality installs — users who engage and return — matter more than raw install volume.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q23 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-23" id="q-23">
+                                <span class="faq-q-num" aria-hidden="true">23</span>
+                                <span class="faq-q-text">How can app campaigns improve installs and user engagement?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-23" role="region" aria-labelledby="q-23"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                By combining relevant audience targeting, strong creative, clear app messaging, conversion-focused campaigns, and post-install measurement. What happens after the install matters as much as the install itself.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q24 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-24" id="q-24">
+                                <span class="faq-q-num" aria-hidden="true">24</span>
+                                <span class="faq-q-text">What is App Store Optimization, and why does it matter?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-24" role="region" aria-labelledby="q-24"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                App Store Optimization improves an app's store listing to help attract relevant users through stronger titles, descriptions, visuals, keywords, and conversion-focused messaging. It supports paid acquisition by improving what happens when a user lands on your store page.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q25 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-25" id="q-25">
+                                <span class="faq-q-num" aria-hidden="true">25</span>
+                                <span class="faq-q-text">How can businesses use social media advertising to generate leads?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-25" role="region" aria-labelledby="q-25"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                Businesses can use targeted <a href="/services/paid-social-agency/">paid social campaigns</a>, lead forms, landing pages, compelling offers, and conversion tracking to turn social media attention into qualified inquiries. The offer and the audience have to be right before the targeting matters.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q26 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-26" id="q-26">
+                                <span class="faq-q-num" aria-hidden="true">26</span>
+                                <span class="faq-q-text">What makes an effective Instagram and Facebook advertising campaign?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-26" role="region" aria-labelledby="q-26"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                Strong campaigns typically combine relevant targeting, engaging creative, clear messaging, compelling offers, appropriate placements, accurate tracking, and continuous optimization. Removing any one of those elements weakens the whole.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q27 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-27" id="q-27">
+                                <span class="faq-q-num" aria-hidden="true">27</span>
+                                <span class="faq-q-text">How can Meta Ads help increase website traffic and conversions?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-27" role="region" aria-labelledby="q-27"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                Meta Ads can reach specific audiences across Facebook and Instagram and direct them to relevant landing pages, product pages, lead forms, or other conversion points. The page experience after the click is as important as the ad itself.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q28 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-28" id="q-28">
+                                <span class="faq-q-num" aria-hidden="true">28</span>
+                                <span class="faq-q-text">What types of campaigns work well on Instagram?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-28" role="region" aria-labelledby="q-28"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                Depending on the objective, businesses can use Feed, Stories, Reels, video, carousel, lead generation, conversion, catalog, and <a href="/services/remarketing-agency/">remarketing campaigns</a>. Format selection should follow where your audience pays attention on the platform.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q29 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-29" id="q-29">
+                                <span class="faq-q-num" aria-hidden="true">29</span>
+                                <span class="faq-q-text">How can YouTube advertising support customer acquisition?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-29" role="region" aria-labelledby="q-29"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                YouTube ads can introduce products or services, build consideration, generate website visits, support lead generation, and reconnect with interested audiences through remarketing. Video is a powerful format for building trust before the click.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q30 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-30" id="q-30">
+                                <span class="faq-q-num" aria-hidden="true">30</span>
+                                <span class="faq-q-text">What types of YouTube ads can businesses use?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-30" role="region" aria-labelledby="q-30"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                Campaign options can include in-stream video, Shorts, video-focused campaigns, and other available YouTube advertising formats depending on the campaign objective. Format, audience, and creative all need to work together.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q31 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-31" id="q-31">
+                                <span class="faq-q-num" aria-hidden="true">31</span>
+                                <span class="faq-q-text">How can LinkedIn advertising help reach professional audiences?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-31" role="region" aria-labelledby="q-31"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                LinkedIn allows businesses to build campaigns around professional characteristics and business-related audience signals, making it useful for many B2B and professional marketing objectives. CPCs tend to be higher — which makes strong creative and clear offer more critical, not less.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q32 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-32" id="q-32">
+                                <span class="faq-q-num" aria-hidden="true">32</span>
+                                <span class="faq-q-text">When should a business consider TikTok advertising?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-32" role="region" aria-labelledby="q-32"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                TikTok can be considered when the target audience actively uses the platform and short-form, creative-led content fits the brand and campaign objective. Authenticity performs better than polished production on this platform.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q33 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-33" id="q-33">
+                                <span class="faq-q-num" aria-hidden="true">33</span>
+                                <span class="faq-q-text">How do you create short-form video campaigns for paid social platforms?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-33" role="region" aria-labelledby="q-33"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                We focus on strong opening hooks, concise messaging, clear value, native-looking visuals, relevant offers, and direct calls to action. The first two seconds determine whether anyone watches the next eight.
+                            </div></div></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             CATEGORY 04 — PROGRAMMATIC, DISPLAY & BEYOND  (Q34–45)
+             ============================================================ -->
+        <section class="faq-section" id="cat-programmatic" aria-label="Programmatic and display advertising">
+            <div class="wrap">
+                <div class="faq-category">
+
+                    <div class="faq-cat-label reveal">
+                        <span class="faq-cat-num">04 / Programmatic &amp; Beyond</span>
+                        <h2 class="faq-cat-title">Reaching Audiences Across Every Channel</h2>
+                        <p class="faq-cat-desc">Programmatic, display, audio, influencer, affiliate, commerce media, and mobile — and how each one can fit into a performance strategy.</p>
+                    </div>
+
+                    <div class="faq-accordion" role="list">
+
+                        <!-- Q34 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-34" id="q-34">
+                                <span class="faq-q-num" aria-hidden="true">34</span>
+                                <span class="faq-q-text">What is programmatic advertising, and how does it work?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-34" role="region" aria-labelledby="q-34"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                <a href="/services/programmatic-advertising/">Programmatic advertising</a> uses automated technology to purchase digital ad placements using audience, contextual, behavioral, and other targeting signals. It enables precise audience targeting beyond what individual platforms offer, with real-time optimization built in.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q35 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-35" id="q-35">
+                                <span class="faq-q-num" aria-hidden="true">35</span>
+                                <span class="faq-q-text">How does programmatic media buying improve audience targeting?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-35" role="region" aria-labelledby="q-35"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                It can help advertisers access large digital inventories while using data-driven targeting and automated buying to reach relevant audiences at scale. The benefit is reach without sacrificing relevance.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q36 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-36" id="q-36">
+                                <span class="faq-q-num" aria-hidden="true">36</span>
+                                <span class="faq-q-text">What is display advertising, and where can display ads appear?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-36" role="region" aria-labelledby="q-36"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                <a href="/services/display-advertising-agency/">Display advertising</a> uses visual ads across websites, apps, and digital properties. Campaigns can focus on prospecting, contextual targeting, remarketing, or other audience strategies — often as part of a broader multi-channel plan.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q37 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-37" id="q-37">
+                                <span class="faq-q-num" aria-hidden="true">37</span>
+                                <span class="faq-q-text">How can digital audio advertising reach relevant audiences?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-37" role="region" aria-labelledby="q-37"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                <a href="/services/digital-audio-advertising/">Digital audio campaigns</a> can reach listeners across streaming audio, podcasts, and digital radio using audience and contextual targeting. It's an effective channel for brands whose audience spends time in audio environments.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q38 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-38" id="q-38">
+                                <span class="faq-q-num" aria-hidden="true">38</span>
+                                <span class="faq-q-text">What is influencer marketing, and how can it support paid campaigns?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-38" role="region" aria-labelledby="q-38"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                Influencer marketing connects brands with creators whose audiences align with specific niches or interests. Creator content can also be amplified through paid media where appropriate — combining organic trust signals with paid reach.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q39 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-39" id="q-39">
+                                <span class="faq-q-num" aria-hidden="true">39</span>
+                                <span class="faq-q-text">How do you identify suitable influencers for a campaign?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-39" role="region" aria-labelledby="q-39"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                We consider audience relevance, engagement quality, content style, niche, platform, campaign goals, audience demographics, and previous campaign performance. Follower count is one signal — audience quality and alignment matter more.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q40 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-40" id="q-40">
+                                <span class="faq-q-num" aria-hidden="true">40</span>
+                                <span class="faq-q-text">What is affiliate marketing, and how can it support customer acquisition?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-40" role="region" aria-labelledby="q-40"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                <a href="/services/affiliate-marketing/">Affiliate marketing</a> allows partners to promote products or services and earn compensation based on defined actions, such as sales or qualified leads. It can extend reach through performance-based partnerships that only pay when results are delivered.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q41 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-41" id="q-41">
+                                <span class="faq-q-num" aria-hidden="true">41</span>
+                                <span class="faq-q-text">How do you measure the performance of affiliate campaigns?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-41" role="region" aria-labelledby="q-41"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                We can evaluate clicks, conversions, sales, revenue, commission costs, conversion rates, customer acquisition costs, and overall campaign profitability. The health of an affiliate program lives in its economics — not just its activity.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q42 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-42" id="q-42">
+                                <span class="faq-q-num" aria-hidden="true">42</span>
+                                <span class="faq-q-text">What is commerce media, and how can it help ecommerce brands?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-42" role="region" aria-labelledby="q-42"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                Commerce media uses advertising opportunities connected to shopping environments and consumer purchase behavior to help brands reach shoppers closer to the buying decision. It's particularly useful for products where intent and discovery overlap.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q43 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-43" id="q-43">
+                                <span class="faq-q-num" aria-hidden="true">43</span>
+                                <span class="faq-q-text">How can media buying support an ROI-driven marketing strategy?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-43" role="region" aria-labelledby="q-43"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                Strategic <a href="/services/media-buying/">media buying</a> helps businesses allocate advertising budgets according to campaign objectives, audience opportunities, performance data, and measurable outcomes. Buying smarter often matters more than buying more.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q44 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-44" id="q-44">
+                                <span class="faq-q-num" aria-hidden="true">44</span>
+                                <span class="faq-q-text">What is mobile marketing, and which channels does it include?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-44" role="region" aria-labelledby="q-44"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                <a href="/services/mobile-marketing/">Mobile marketing</a> can include mobile search, app advertising, paid social, mobile display, mobile video, in-app advertising, and mobile remarketing. Most digital touchpoints today happen on mobile — strategy should reflect that.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q45 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-45" id="q-45">
+                                <span class="faq-q-num" aria-hidden="true">45</span>
+                                <span class="faq-q-text">How can product-led marketing support customer acquisition?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-45" role="region" aria-labelledby="q-45"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                <a href="/services/product-lead-marketing/">Product-led strategies</a> use the product experience as an important part of attracting, engaging, converting, and retaining users, often supported by targeted marketing campaigns. The product itself becomes part of the acquisition funnel.
+                            </div></div></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             CATEGORY 05 — OPTIMIZATION & GETTING STARTED  (Q46–50)
+             ============================================================ -->
+        <section class="faq-section" id="cat-optimization" aria-label="Optimization and getting started">
+            <div class="wrap">
+                <div class="faq-category">
+
+                    <div class="faq-cat-label reveal">
+                        <span class="faq-cat-num">05 / Optimization &amp; Scale</span>
+                        <h2 class="faq-cat-title">From Live Campaign to Scalable Growth</h2>
+                        <p class="faq-cat-desc">What ongoing optimization looks like, when to scale, how to connect tracking — and how to start a performance-focused strategy.</p>
+                    </div>
+
+                    <div class="faq-accordion" role="list">
+
+                        <!-- Q46 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-46" id="q-46">
+                                <span class="faq-q-num" aria-hidden="true">46</span>
+                                <span class="faq-q-text">How do you optimize campaigns after they go live?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-46" role="region" aria-labelledby="q-46"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                We review performance data and test changes to audiences, creative, placements, bids, budgets, offers, and conversion paths based on what the data indicates. Launch is day one of optimization — not the finish line.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q47 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-47" id="q-47">
+                                <span class="faq-q-num" aria-hidden="true">47</span>
+                                <span class="faq-q-text">How often should paid advertising campaigns be reviewed and optimized?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-47" role="region" aria-labelledby="q-47"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                Campaigns should be monitored regularly, while major changes should be made according to available data, campaign volume, objectives, and the time needed to identify meaningful patterns. Acting on incomplete data too quickly can be as harmful as acting too slowly.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q48 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-48" id="q-48">
+                                <span class="faq-q-num" aria-hidden="true">48</span>
+                                <span class="faq-q-text">Can you help connect advertising campaigns with analytics and conversion tracking?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-48" role="region" aria-labelledby="q-48"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                Yes. Proper tracking can connect advertising activity with website actions, leads, purchases, and other conversions, giving businesses better visibility into performance. Without measurement, optimization is guesswork.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q49 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-49" id="q-49">
+                                <span class="faq-q-num" aria-hidden="true">49</span>
+                                <span class="faq-q-text">How do you determine whether an advertising campaign is ready to scale?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-49" role="region" aria-labelledby="q-49"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                We look for consistent performance, sufficient conversion data, acceptable acquisition costs, audience capacity, and reliable tracking before increasing investment. Scaling a broken campaign just spends more money on the same problem.
+                            </div></div></div>
+                        </div>
+
+                        <!-- Q50 -->
+                        <div class="faq-item" role="listitem">
+                            <button class="faq-q" aria-expanded="false" aria-controls="a-50" id="q-50">
+                                <span class="faq-q-num" aria-hidden="true">50</span>
+                                <span class="faq-q-text">How can I get started with a performance-focused advertising strategy?</span>
+                                <span class="faq-toggle" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                            </button>
+                            <div class="faq-answer" id="a-50" role="region" aria-labelledby="q-50"><div class="faq-answer-inner"><div class="faq-answer-body">
+                                Start by defining your business objective, target audience, offer, budget, and desired conversion. From there, a strategy can be built around the channels and campaign structure most relevant to those goals. <a href="/contact/">Start a conversation with Nexus</a> and we'll help you think through it.
+                            </div></div></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- /faq-more-wrap -->
+
+</div><!-- /faq-sections -->
+
+<!-- ================================================================
+     CLOSING STATEMENT
+     ================================================================ -->
+<section class="faq-closing" aria-label="Closing statement">
+    <div class="wrap">
+        <div class="faq-closing-inner">
+            <div>
+                <p class="eyebrow">Still Curious? Good.</p>
+                <h2 class="faq-closing-h2">That's How<br><em>Better Campaigns</em><br>Start.</h2>
+                <p class="faq-closing-copy">Whether you're planning your first paid campaign or looking to improve an existing strategy, these answers can help you understand what goes into building ROI-driven marketing campaigns built around measurable results.</p>
+            </div>
+            <div class="faq-closing-acts">
+                <a class="btn" href="/contact/">Start a Conversation <span class="ar">&rarr;</span></a>
+                <a class="btn ghost" href="/services/" style="color:#fff;border-color:rgba(255,255,255,.25);" onmouseover="this.style.borderColor='rgba(255,255,255,.7)'" onmouseout="this.style.borderColor='rgba(255,255,255,.25)'">See All Services <span class="ar">&rarr;</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================================
+     CTA — mirrors homepage exactly
+     ================================================================ -->
+<section class="cta" id="contact" aria-label="Ready to move">
+    <div class="wrap">
+        <span class="eyebrow">Ready to Move?</span>
+        <div class="cta-in">
+            <div>
+                <h2>Let's Build Your<br>Next Growth Move.</h2>
+                <p>Have a question we didn't answer? Start a conversation with the Nexus team and tell us what you're trying to achieve.</p>
+                <p>Whether you're launching a new campaign, scaling what's already working, or trying to understand where your marketing budget is going — we're here to help.</p>
+                <p class="strong">Let's build your next growth move.</p>
+            </div>
+            <div class="acts">
+                <a class="btn" href="/contact/">Start a Conversation <span class="ar">&rarr;</span></a>
+                <a class="btn ghost" href="/services/">See What We Do <span class="ar">&rarr;</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="ghost-type" aria-hidden="true">Next Growth Move</div>
+</section>
+
+<div style="height:40px;background:var(--paper);"></div>
+
+<div id="shared-footer"></div>
+<script src="/components/components.js"></script>
+
+<script>
+(function () {
+    'use strict';
+
+    /* =================================================================
+       ACCORDION — one open at a time
+       ================================================================= */
+    var items = document.querySelectorAll('.faq-item');
+    var currentOpen = null;
+
+    function openItem(item) {
+        item.querySelector('.faq-q').setAttribute('aria-expanded', 'true');
+        item.classList.add('open');
+    }
+
+    function closeItem(item) {
+        item.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        item.classList.remove('open');
+    }
+
+    items.forEach(function (item) {
+        var btn = item.querySelector('.faq-q');
+        if (!btn) return;
+
+        btn.addEventListener('click', function () {
+            var isOpen = item.classList.contains('open');
+            if (currentOpen && currentOpen !== item) closeItem(currentOpen);
+            if (isOpen) { closeItem(item); currentOpen = null; }
+            else { openItem(item); currentOpen = item; }
+        });
+
+        btn.addEventListener('keydown', function (e) {
+            var all = Array.from(document.querySelectorAll('.faq-q'));
+            var idx = all.indexOf(btn);
+            if (e.key === 'ArrowDown') { e.preventDefault(); if (all[idx + 1]) all[idx + 1].focus(); }
+            else if (e.key === 'ArrowUp') { e.preventDefault(); if (all[idx - 1]) all[idx - 1].focus(); }
+            else if (e.key === 'Home') { e.preventDefault(); all[0].focus(); }
+            else if (e.key === 'End') { e.preventDefault(); all[all.length - 1].focus(); }
+        });
+    });
+
+    /* =================================================================
+       VIEW MORE — reveal hidden categories
+       ================================================================= */
+    var vmBtn   = document.getElementById('faq-view-more-btn');
+    var vmRow   = document.getElementById('faq-view-more-row');
+    var vmWrap  = document.getElementById('faq-more-content');
+
+    if (vmBtn && vmWrap) {
+        vmBtn.addEventListener('click', function () {
+            vmWrap.classList.add('open');
+            vmWrap.removeAttribute('aria-hidden');
+            vmRow.classList.add('hidden');
+
+            /* scroll to the first newly revealed section */
+            var firstHidden = vmWrap.querySelector('.faq-section');
+            if (firstHidden) {
+                setTimeout(function () {
+                    firstHidden.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 60);
+            }
+
+            /* trigger reveal observers for newly exposed elements */
+            triggerReveal();
+        });
+    }
+
+    /* =================================================================
+       CATEGORY NAV — scroll-spy
+       ================================================================= */
+    var catLinks = document.querySelectorAll('.faq-cat-link');
+    var sections = document.querySelectorAll('.faq-section[id]');
+
+    window.addEventListener('scroll', function () {
+        var scrollY = window.scrollY + 160;
+        var current = '';
+        sections.forEach(function (s) {
+            if (s.offsetTop <= scrollY) current = s.id;
+        });
+        catLinks.forEach(function (l) {
+            l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+        });
+    }, { passive: true });
+
+    /* =================================================================
+       SCROLL REVEAL
+       ================================================================= */
+    function triggerReveal() {
+        var els = document.querySelectorAll('.reveal:not(.visible)');
+        if (!els.length) return;
+        var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+        els.forEach(function (el) { obs.observe(el); });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', triggerReveal);
+    } else {
+        triggerReveal();
+    }
+
+    /* stagger intro pair */
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.faq-intro-inner .reveal').forEach(function (el, i) {
+            el.style.transitionDelay = (i * 0.12) + 's';
+        });
+    });
+
+})();
+</script>
+
+</body>
+</html>

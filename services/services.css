@@ -126,6 +126,7 @@
             display: flex;
             align-items: flex-end;
             padding: 60px 0 70px;
+            top: -83px;
         }
 
         .hero-bg {
@@ -198,7 +199,7 @@
             font-weight: 800;
             font-size: clamp(22px, 3vw, 32px);
             line-height: 1.4;
-            max-width: 920px;
+            /* max-width: 920px; */
             margin: 0 0 34px;
             color: var(--ink);
         }
@@ -1100,9 +1101,35 @@
             .cta-banner{
                 border-radius: 0px;
             }
-
+            .process{
+                justify-content: center;
+            }
+            .approach,.measure,.synergy,.philosophy{
+                padding: 40px 0px;
+            }
+            .synergy-bg{
+                display: none;
+            }
+.metric-list.stack{
+    grid-template-columns: 1fr 1fr;
+}
+.optimize-grid{
+    max-width: 100%;
+}
+.cta-scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(11, 11, 11, .95) 40%, rgba(11, 11, 11, .55) 100%);
+}
         }
           .synergy-bg{
             z-index: -1;
         }
+        .intro .word {
+    display: inline;
+    will-change: color;
+}
+.intro p:not(.bold) {
+    color: #b8b8b8;
+}
   
