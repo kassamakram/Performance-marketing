@@ -25,7 +25,19 @@
         .services-section .eyebrow {
             color: #494949;
         }
-
+        .process-arrow{
+            display: none;
+        }
+        .process{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+        }
+        .process-step{
+            text-align: center;
+        }
+        .opportunity .process{
+            grid-template-columns: repeat(3,1fr);
+        }
         .services-title {
             font-family: var(--font-heading);
             font-weight: 800;
@@ -88,6 +100,29 @@
         @media (max-width: 900px) {
             .services-grid {
                 grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media(max-width:768px){
+            .intro{
+                padding-top:0px ;
+                margin-top: -20px;
+                padding-bottom: 40px;
+            }
+            .opportunity .process{
+                padding: 0px;
+            }
+            .approach-cards{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+            }
+            .approach-card h3{
+                    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 100;
+    margin: 0 0 8px;
+            }
+            .services-section{
+                padding: 40px 0px;
             }
         }
 
@@ -468,7 +503,10 @@
 </div>
 
     <div id="shared-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="/components/components.js"></script>
+<script src="/services/service-animation.js"></script>
 
 </body>
 

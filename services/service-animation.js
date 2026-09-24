@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
         console.warn("GSAP or ScrollTrigger is missing.");
@@ -16,48 +17,59 @@ document.addEventListener("DOMContentLoaded", function () {
         const words = element.innerText.trim().split(/\s+/);
 
         element.innerHTML = words
-            .map(word => `<span class="word">${word}</span>`)
+            .map(function (word) {
+                return '<span class="word">' + word + "</span>";
+            })
             .join(" ");
 
         return element.querySelectorAll(".word");
     }
 
-    function revealFromLeft(elements, options = {}) {
-        if (!elements.length) return;
+    function revealFromLeft(elements, options) {
+        options = options || {};
+
+        if (!elements || !elements.length) return;
+
+        const xValue = options.x !== undefined ? options.x : -100;
+        const scaleValue = options.scale !== undefined ? options.scale : 0.96;
+        const blurValue = options.blur || "blur(8px)";
+        const durationValue = options.duration || 0.65;
+        const staggerValue = options.stagger || 0.08;
+        const startValue = options.start || "top 85%";
 
         gsap.set(elements, {
-            x: options.x || -100,
+            x: xValue,
             opacity: 0,
-            scale: options.scale || 0.96,
-            filter: options.blur || "blur(8px)"
+            scale: scaleValue,
+            filter: blurValue
         });
 
         ScrollTrigger.batch(elements, {
-            start: options.start || "top 85%",
+            start: startValue,
             once: false,
 
-            onEnter: batch => {
+            onEnter: function (batch) {
                 gsap.to(batch, {
                     x: 0,
                     opacity: 1,
                     scale: 1,
                     filter: "blur(0px)",
-                    duration: options.duration || 0.8,
+                    duration: durationValue,
                     ease: "power3.out",
-                    stagger: options.stagger || 0.12,
+                    stagger: staggerValue,
                     overwrite: true
                 });
             },
 
-            onLeaveBack: batch => {
+            onLeaveBack: function (batch) {
                 gsap.to(batch, {
-                    x: options.x || -100,
+                    x: xValue,
                     opacity: 0,
-                    scale: options.scale || 0.96,
-                    filter: options.blur || "blur(8px)",
-                    duration: 0.4,
+                    scale: scaleValue,
+                    filter: blurValue,
+                    duration: 0.3,
                     ease: "power2.in",
-                    stagger: 0.06,
+                    stagger: 0.04,
                     overwrite: true
                 });
             }
@@ -75,20 +87,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (intro) {
         const introEyebrow = intro.querySelector(".eyebrow");
         const introParagraphs = intro.querySelectorAll("p");
-
-        /*
-         * Split the main intro paragraphs into words.
-         */
         const introWords = [];
 
-        introParagraphs.forEach(paragraph => {
-            /*
-             * Don't split the bold paragraph.
-             * It gets its own animation below.
-             */
+        introParagraphs.forEach(function (paragraph) {
             if (!paragraph.classList.contains("bold")) {
                 const words = splitIntoWords(paragraph);
-                introWords.push(...words);
+                introWords.push.apply(introWords, Array.from(words));
             }
         });
 
@@ -102,25 +106,22 @@ document.addEventListener("DOMContentLoaded", function () {
                     trigger: intro,
                     start: "top 80%",
                     end: "bottom 40%",
-                    scrub: 0.8
+                    scrub: 0.5
                 }
             });
 
             introTimeline.to(introWords, {
                 color: "#0B0B0B",
-                stagger: 0.035,
+                stagger: 0.025,
                 ease: "power1.out"
             });
         }
 
-        /*
-         * Eyebrow
-         */
         if (introEyebrow) {
             gsap.from(introEyebrow, {
                 opacity: 0,
                 y: 20,
-                duration: 0.7,
+                duration: 0.55,
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: intro,
@@ -130,9 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        /*
-         * Bold statement
-         */
         const boldIntro = intro.querySelector(".bold");
 
         if (boldIntro) {
@@ -140,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 y: 35,
                 opacity: 0,
                 filter: "blur(8px)",
-                duration: 0.9,
+                duration: 0.7,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: boldIntro,
@@ -167,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 x: -90,
                 opacity: 0,
                 filter: "blur(10px)",
-                duration: 1,
+                duration: 0.75,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: title,
@@ -182,8 +180,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 x: 90,
                 opacity: 0,
                 filter: "blur(10px)",
-                duration: 1,
-                delay: 0.1,
+                duration: 0.75,
+                delay: 0.05,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: copy,
@@ -193,54 +191,48 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        /*
-         * Process:
-         * Recruit → Activate → Track → Optimize → Scale
-         */
 
-        const processSteps = gsap.utils.toArray(".process-step");
-        const processArrows = gsap.utils.toArray(".process-arrow");
 
-        gsap.set(processSteps, {
-            y: 70,
-            opacity: 0,
-            scale: 0.9,
-            filter: "blur(8px)"
-        });
+        const process = document.querySelector(".process");
 
-        gsap.set(processArrows, {
-            opacity: 0,
-            scale: 0.5
-        });
+        if (process && processSteps.length) {
+            const processTimeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: process,
+                    start: "top 82%",
+                    end: "bottom 55%",
+                    scrub: 0.5
+                }
+            });
 
-        const processTimeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".process",
-                start: "top 82%",
-                end: "bottom 55%",
-                scrub: 0.7
-            }
-        });
+            processSteps.forEach(function (step, index) {
+                processTimeline.to(
+                    step,
+                    {
+                        y: 0,
+                        opacity: 1,
+                        scale: 1,
+                        filter: "blur(0px)",
+                        duration: 0.4,
+                        ease: "power3.out"
+                    },
+                    index * 0.42
+                );
 
-        processSteps.forEach((step, index) => {
-            processTimeline.to(step, {
-                y: 0,
-                opacity: 1,
-                scale: 1,
-                filter: "blur(0px)",
-                duration: 0.5,
-                ease: "power3.out"
-            }, index * 0.55);
-
-            if (processArrows[index]) {
-                processTimeline.to(processArrows[index], {
-                    opacity: 1,
-                    scale: 1,
-                    duration: 0.25,
-                    ease: "power2.out"
-                }, index * 0.55 + 0.25);
-            }
-        });
+                if (processArrows[index]) {
+                    processTimeline.to(
+                        processArrows[index],
+                        {
+                            opacity: 1,
+                            scale: 1,
+                            duration: 0.2,
+                            ease: "power2.out"
+                        },
+                        index * 0.42 + 0.18
+                    );
+                }
+            });
+        }
     }
 
 
@@ -261,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 opacity: 0,
                 scale: 0.95,
                 filter: "blur(12px)",
-                duration: 1,
+                duration: 0.75,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: approachTitle,
@@ -276,8 +268,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 y: 40,
                 opacity: 0,
                 filter: "blur(8px)",
-                duration: 0.9,
-                delay: 0.15,
+                duration: 0.65,
+                delay: 0.08,
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: approachCopy,
@@ -287,14 +279,10 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        /*
-         * Approach cards cascade from the left.
-         */
-
         revealFromLeft(approachCards, {
             x: -130,
-            duration: 0.8,
-            stagger: 0.16,
+            duration: 0.65,
+            stagger: 0.1,
             start: "top 88%"
         });
     }
@@ -317,7 +305,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 x: -80,
                 opacity: 0,
                 filter: "blur(10px)",
-                duration: 0.9,
+                duration: 0.7,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: measureTitle,
@@ -332,7 +320,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 y: 35,
                 opacity: 0,
                 filter: "blur(7px)",
-                duration: 0.8,
+                duration: 0.6,
+                ease: "power2.out",
                 scrollTrigger: {
                     trigger: measureCopy,
                     start: "top 85%",
@@ -341,46 +330,40 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        /*
-         * Metrics cascade upward.
-         */
+        if (metricItems.length) {
+            gsap.set(metricItems, {
+                y: 45,
+                opacity: 0,
+                filter: "blur(7px)"
+            });
 
-        gsap.set(metricItems, {
-            y: 45,
-            opacity: 0,
-            filter: "blur(7px)"
-        });
+            ScrollTrigger.batch(metricItems, {
+                start: "top 90%",
+                once: false,
 
-        ScrollTrigger.batch(metricItems, {
-            start: "top 90%",
-            once: false,
+                onEnter: function (batch) {
+                    gsap.to(batch, {
+                        y: 0,
+                        opacity: 1,
+                        filter: "blur(0px)",
+                        duration: 0.5,
+                        stagger: 0.06,
+                        ease: "power3.out",
+                        overwrite: true
+                    });
+                },
 
-            onEnter: batch => {
-                gsap.to(batch, {
-                    y: 0,
-                    opacity: 1,
-                    filter: "blur(0px)",
-                    duration: 0.65,
-                    stagger: 0.08,
-                    ease: "power3.out",
-                    overwrite: true
-                });
-            },
-
-            onLeaveBack: batch => {
-                gsap.to(batch, {
-                    y: 45,
-                    opacity: 0,
-                    filter: "blur(7px)",
-                    duration: 0.35,
-                    overwrite: true
-                });
-            }
-        });
-
-        /*
-         * Dashboard image
-         */
+                onLeaveBack: function (batch) {
+                    gsap.to(batch, {
+                        y: 45,
+                        opacity: 0,
+                        filter: "blur(7px)",
+                        duration: 0.25,
+                        overwrite: true
+                    });
+                }
+            });
+        }
 
         if (measureImage) {
             gsap.from(measureImage, {
@@ -388,7 +371,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 opacity: 0,
                 scale: 0.94,
                 filter: "blur(10px)",
-                duration: 1.1,
+                duration: 0.8,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: measureImage,
@@ -416,7 +399,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 opacity: 0,
                 scale: 0.95,
                 filter: "blur(12px)",
-                duration: 1,
+                duration: 0.75,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: title,
@@ -431,8 +414,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 x: 80,
                 opacity: 0,
                 filter: "blur(9px)",
-                duration: 1,
-                delay: 0.15,
+                duration: 0.75,
+                delay: 0.08,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: copy,
@@ -461,7 +444,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 y: 70,
                 opacity: 0,
                 filter: "blur(12px)",
-                duration: 1,
+                duration: 0.75,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: title,
@@ -476,8 +459,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 y: 45,
                 opacity: 0,
                 filter: "blur(8px)",
-                duration: 0.9,
-                delay: 0.1,
+                duration: 0.7,
+                delay: 0.05,
                 scrollTrigger: {
                     trigger: copy,
                     start: "top 85%",
@@ -486,55 +469,52 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        /*
-         * Optimization cards:
-         * 01 → 02 → 03 → 04
-         */
+        if (cards.length) {
+            gsap.set(cards, {
+                x: -100,
+                opacity: 0,
+                scale: 0.94,
+                rotate: -2,
+                filter: "blur(9px)"
+            });
 
-        gsap.set(cards, {
-            x: -100,
-            opacity: 0,
-            scale: 0.94,
-            rotate: -2,
-            filter: "blur(9px)"
-        });
+            ScrollTrigger.batch(cards, {
+                start: "top 88%",
+                once: false,
 
-        ScrollTrigger.batch(cards, {
-            start: "top 88%",
-            once: false,
+                onEnter: function (batch) {
+                    gsap.to(batch, {
+                        x: 0,
+                        opacity: 1,
+                        scale: 1,
+                        rotate: 0,
+                        filter: "blur(0px)",
+                        duration: 0.65,
+                        stagger: 0.1,
+                        ease: "power3.out",
+                        overwrite: true
+                    });
+                },
 
-            onEnter: batch => {
-                gsap.to(batch, {
-                    x: 0,
-                    opacity: 1,
-                    scale: 1,
-                    rotate: 0,
-                    filter: "blur(0px)",
-                    duration: 0.8,
-                    stagger: 0.15,
-                    ease: "power3.out",
-                    overwrite: true
-                });
-            },
-
-            onLeaveBack: batch => {
-                gsap.to(batch, {
-                    x: -100,
-                    opacity: 0,
-                    scale: 0.94,
-                    rotate: -2,
-                    filter: "blur(9px)",
-                    duration: 0.4,
-                    overwrite: true
-                });
-            }
-        });
+                onLeaveBack: function (batch) {
+                    gsap.to(batch, {
+                        x: -100,
+                        opacity: 0,
+                        scale: 0.94,
+                        rotate: -2,
+                        filter: "blur(9px)",
+                        duration: 0.3,
+                        overwrite: true
+                    });
+                }
+            });
+        }
 
         if (note) {
             gsap.from(note, {
                 y: 30,
                 opacity: 0,
-                duration: 0.7,
+                duration: 0.55,
                 scrollTrigger: {
                     trigger: note,
                     start: "top 90%",
@@ -562,7 +542,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 x: -80,
                 opacity: 0,
                 filter: "blur(10px)",
-                duration: 0.9,
+                duration: 0.7,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: title,
@@ -572,25 +552,27 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        gsap.from(heading4, {
-            y: 30,
-            opacity: 0,
-            filter: "blur(7px)",
-            duration: 0.7,
-            stagger: 0.15,
-            scrollTrigger: {
-                trigger: title,
-                start: "top 78%",
-                toggleActions: "play none none reverse"
-            }
-        });
+        if (heading4.length) {
+            gsap.from(heading4, {
+                y: 30,
+                opacity: 0,
+                filter: "blur(7px)",
+                duration: 0.55,
+                stagger: 0.1,
+                scrollTrigger: {
+                    trigger: title,
+                    start: "top 78%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        }
 
         if (copy) {
             gsap.from(copy, {
                 y: 40,
                 opacity: 0,
                 filter: "blur(8px)",
-                duration: 0.8,
+                duration: 0.65,
                 scrollTrigger: {
                     trigger: copy,
                     start: "top 88%",
@@ -605,7 +587,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 opacity: 0,
                 scale: 0.94,
                 filter: "blur(10px)",
-                duration: 1.1,
+                duration: 0.8,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: image,
@@ -642,59 +624,76 @@ document.addEventListener("DOMContentLoaded", function () {
             ctaTimeline.from(eyebrow, {
                 y: 25,
                 opacity: 0,
-                duration: 0.5,
+                duration: 0.4,
                 ease: "power2.out"
             });
         }
 
         if (title) {
-            ctaTimeline.from(title, {
-                y: 70,
-                opacity: 0,
-                scale: 0.94,
-                filter: "blur(12px)",
-                duration: 0.9,
-                ease: "power3.out"
-            }, "-=0.2");
+            ctaTimeline.from(
+                title,
+                {
+                    y: 70,
+                    opacity: 0,
+                    scale: 0.94,
+                    filter: "blur(12px)",
+                    duration: 0.7,
+                    ease: "power3.out"
+                },
+                "-=0.15"
+            );
         }
 
         if (copy) {
-            ctaTimeline.from(copy, {
-                y: 40,
-                opacity: 0,
-                filter: "blur(8px)",
-                duration: 0.8,
-                ease: "power2.out"
-            }, "-=0.45");
+            ctaTimeline.from(
+                copy,
+                {
+                    y: 40,
+                    opacity: 0,
+                    filter: "blur(8px)",
+                    duration: 0.65,
+                    ease: "power2.out"
+                },
+                "-=0.35"
+            );
         }
 
         if (buttons) {
-            ctaTimeline.from(buttons, {
-                y: 30,
-                opacity: 0,
-                duration: 0.6,
-                ease: "power2.out"
-            }, "-=0.35");
+            ctaTimeline.from(
+                buttons,
+                {
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.5,
+                    ease: "power2.out"
+                },
+                "-=0.25"
+            );
         }
 
         if (miniItems.length) {
-            ctaTimeline.from(miniItems, {
-                y: 25,
-                opacity: 0,
-                scale: 0.95,
-                duration: 0.5,
-                stagger: 0.12,
-                ease: "power2.out"
-            }, "-=0.2");
+            ctaTimeline.from(
+                miniItems,
+                {
+                    y: 25,
+                    opacity: 0,
+                    scale: 0.95,
+                    duration: 0.4,
+                    stagger: 0.08,
+                    ease: "power2.out"
+                },
+                "-=0.15"
+            );
         }
     }
 
 
     /* =========================================================
        REFRESH SCROLLTRIGGER
-       ========================================================= */
+    ========================================================= */
 
     window.addEventListener("load", function () {
         ScrollTrigger.refresh();
     });
 });
+

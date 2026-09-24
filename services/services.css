@@ -480,7 +480,7 @@
 
         .measure-image img {
             width: 100%;
-            aspect-ratio: 7/6;
+            aspect-ratio: 7/5;
             display: block;
         }
 
@@ -1094,6 +1094,9 @@
             }
             .metric-list{
                 grid-template-columns: 1fr 1fr;
+            }
+            .hero{
+                min-height: 60vh !important;
             }
             .cta-wrapper{
                 padding: 0px;
