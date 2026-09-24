@@ -1,0 +1,1437 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Contact — Nexus Performance Marketing Agency</title>
+    <meta name="description"
+        content="Tell Nexus what you want to achieve. Performance marketing, paid social, media buying, app marketing and more." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/components/header-footer.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --ink: #0b0b0b;
+            --ink-2: #141414;
+            --paper: #ffffff;
+            --panel: #f6f5f2;
+            --panel-dark: #111111;
+            --accent: #f4501b;
+            --accent-hover: #d83e0c;
+            --accent-2: #ff7a3d;
+            --muted: #6a6a6a;
+            --muted-2: #999999;
+            --line: #e4e1db;
+            --line-dark: #242424;
+            --err: #c62828;
+            --ok: #1b8a4b;
+            --max: 1240px;
+            --pad: 28px;
+            --font-display: "Bebas Neue", Impact, sans-serif;
+            --font-heading:
+                "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body:
+                "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-hand: "Caveat", cursive;
+            --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+            color-scheme: light;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font: 400 16px/1.6 var(--font-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+            cursor: pointer;
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--accent-2);
+            outline-offset: 3px;
+        }
+
+        .wrap {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 0 var(--pad);
+        }
+
+        /* NAV */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(11, 11, 11, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line-dark);
+        }
+
+        .nav .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            font: 400 30px/1 var(--font-display);
+            letter-spacing: 0.06em;
+            color: #fff;
+        }
+
+        .logo i {
+            color: var(--accent);
+            font-style: normal;
+        }
+
+        .links {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .links a {
+            color: #cfcfcf;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            position: relative;
+            transition: color 0.2s;
+        }
+
+        .links a::after {
+            content: "";
+            position: absolute;
+            left: 14px;
+            right: 14px;
+            bottom: 3px;
+            height: 2px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s var(--ease);
+        }
+
+        .links a:hover,
+        .links a[aria-current] {
+            color: #fff;
+        }
+
+        .links a:hover::after,
+        .links a[aria-current]::after {
+            transform: scaleX(1);
+        }
+
+        .links .pill {
+            background: var(--accent);
+            color: #fff;
+            margin-left: 8px;
+            transition:
+                background 0.2s,
+                transform 0.2s;
+        }
+
+        .links .pill::after {
+            display: none;
+        }
+
+        .links .pill:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        /* HERO */
+        .hero {
+            background: var(--ink);
+            color: #fff;
+            padding: 96px 0 120px;
+            position: relative;
+            overflow: hidden;
+            margin-top: -83px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            right: -160px;
+            top: -160px;
+            width: 520px;
+            height: 520px;
+            border-radius: 50%;
+            background: radial-gradient(circle,
+                    rgba(244, 80, 27, 0.35),
+                    transparent 65%);
+            pointer-events: none;
+        }
+
+        .hand {
+            font: 600 28px/1 var(--font-hand);
+            color: var(--accent-2);
+            display: block;
+            margin-bottom: 18px;
+            transform: rotate(-2deg);
+        }
+
+        .hero h1 {
+            font: 400 clamp(56px, 9.5vw, 138px)/0.92 var(--font-display);
+            letter-spacing: 0.01em;
+            margin: 0;
+            max-width: 980px;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--accent);
+        }
+
+        .hero h1 span {
+            display: block;
+            overflow: hidden;
+        }
+
+        .hero h1 span b {
+            display: block;
+            font-weight: 400;
+            animation: rise 0.9s var(--ease) both;
+        }
+
+        .hero h1 span:nth-child(2) b {
+            animation-delay: 0.12s;
+        }
+
+        .hero h1 span:nth-child(3) b {
+            animation-delay: 0.24s;
+        }
+
+        @keyframes rise {
+            from {
+                transform: translateY(105%);
+            }
+
+            to {
+                transform: none;
+            }
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: #bdbdbd;
+            font-size: 18px;
+            margin: 32px 0 0;
+        }
+
+        /* LAYOUT */
+        .main {
+            background: var(--panel);
+            padding: 70px 0 70px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 5fr 7fr;
+            gap: 40px;
+            align-items: start;
+            /* margin-top: -56px; */
+            position: relative;
+        }
+
+        .side {
+            position: sticky;
+            top: 96px;
+            display: grid;
+            gap: 16px;
+            padding-top: 56px;
+        }
+
+        .side h2 {
+            font: 400 44px/1 var(--font-display);
+            margin: 0 0 6px;
+            letter-spacing: 0.01em;
+        }
+
+        .side>p {
+            color: var(--muted);
+            margin: 0 0 10px;
+        }
+
+        .card {
+            display: block;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 20px 22px;
+            transition:
+                transform 0.3s var(--ease),
+                border-color 0.3s,
+                box-shadow 0.3s;
+        }
+
+        a.card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 14px 30px -14px rgba(244, 80, 27, 0.45);
+        }
+
+        .card small {
+            display: block;
+            color: var(--muted);
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .card strong {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .card strong svg {
+            width: 22px;
+            height: 22px;
+            transition: transform 0.3s var(--ease);
+            color: var(--accent);
+        }
+
+        a.card:hover strong svg {
+            transform: translate(4px, -4px);
+        }
+
+        .steps {
+            list-style: none;
+            margin: 6px 0 0;
+            padding: 0;
+            display: grid;
+            gap: 0;
+        }
+
+        .steps li {
+            display: grid;
+            grid-template-columns: 44px 1fr;
+            gap: 14px;
+            padding: 16px 0;
+            border-top: 1px solid var(--line);
+            transition: padding-left 0.3s var(--ease);
+        }
+
+        .steps li:hover {
+            padding-left: 8px;
+        }
+
+        .steps li:hover .n {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        .n {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1.5px solid var(--ink);
+            display: grid;
+            place-items: center;
+            font: 400 22px/1 var(--font-display);
+            transition: 0.3s;
+        }
+
+        .steps b {
+            display: block;
+        }
+
+        .steps span {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* FORM */
+        .formcard {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+        }
+
+        .prog {
+            height: 5px;
+            background: var(--line);
+        }
+
+        .prog i {
+            display: block;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            transition: width 0.5s var(--ease);
+        }
+
+        form,
+        .done {
+            padding: 40px;
+        }
+
+        .fh {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .fh h2 {
+            font: 400 38px/1 var(--font-display);
+            margin: 0;
+        }
+
+        .fh span {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--muted);
+        }
+
+        .seg {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: var(--panel);
+            border-radius: 999px;
+            padding: 5px;
+            margin-bottom: 30px;
+        }
+
+        .seg input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .seg .thumb {
+            position: absolute;
+            top: 5px;
+            bottom: 5px;
+            left: 5px;
+            width: calc(50% - 5px);
+            background: var(--ink);
+            border-radius: 999px;
+            transition: transform 0.4s var(--ease);
+        }
+
+        .seg input:nth-of-type(2):checked~.thumb {
+            transform: translateX(100%);
+        }
+
+        .seg label {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 12px 8px;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--muted);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .seg input:checked+label,
+        .seg input:checked~label:nth-of-type(1) {
+            color: inherit;
+        }
+
+        #m1:checked~label[for="m1"],
+        #m2:checked~label[for="m2"] {
+            color: #fff;
+        }
+
+        .seg input:focus-visible~.thumb {
+            outline: 3px solid var(--accent-2);
+            outline-offset: 2px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .field {
+            position: relative;
+            margin-bottom: 18px;
+        }
+
+        .field input,
+        .field textarea,
+        .field select {
+            width: 100%;
+            font: 500 16px/1.4 var(--font-body);
+            color: var(--ink);
+            background: var(--paper);
+            border: 1.5px solid var(--line);
+            border-radius: 12px;
+            padding: 24px 16px 8px;
+            transition:
+                border-color 0.2s,
+                box-shadow 0.2s,
+                background 0.2s;
+            appearance: none;
+        }
+
+        .field textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .field label {
+            position: absolute;
+            left: 17px;
+            top: 16px;
+            color: var(--muted);
+            font-weight: 500;
+            pointer-events: none;
+            transition: all 0.2s var(--ease);
+            transform-origin: left;
+        }
+
+        .field input:hover,
+        .field textarea:hover,
+        .field select:hover {
+            border-color: #bdb8ad;
+        }
+
+        .field input:focus,
+        .field textarea:focus,
+        .field select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(244, 80, 27, 0.14);
+        }
+
+        .field input:focus+label,
+        .field input:not(:placeholder-shown)+label,
+        .field textarea:focus+label,
+        .field textarea:not(:placeholder-shown)+label,
+        .field select+label {
+            top: 7px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--muted);
+        }
+
+        .field input:focus+label,
+        .field textarea:focus+label,
+        .field select:focus+label {
+            color: var(--accent);
+        }
+
+        .field.bad input,
+        .field.bad textarea {
+            border-color: var(--err);
+            background: #fff7f6;
+        }
+
+        .field.good input,
+        .field.good textarea {
+            border-color: var(--ok);
+        }
+
+        .msg {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--err);
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: 0.3s var(--ease);
+        }
+
+        .bad .msg {
+            max-height: 40px;
+            opacity: 1;
+            margin-top: 6px;
+        }
+
+        .cnt {
+            position: absolute;
+            right: 12px;
+            bottom: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--muted-2);
+        }
+
+        .cnt.max {
+            color: var(--err);
+        }
+
+        .field select {
+            padding-right: 40px;
+            background: var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' fill='none' stroke='%23F4501B' stroke-width='2'%3E%3Cpath d='m1 1 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 16px center;
+        }
+
+        .extra {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.45s var(--ease);
+        }
+
+        .extra>div {
+            overflow: hidden;
+        }
+
+        .consult .extra {
+            grid-template-rows: 1fr;
+        }
+
+        .extra .row {
+            padding-top: 2px;
+        }
+
+        fieldset {
+            border: 0;
+            margin: 0 0 24px;
+            padding: 0;
+            min-width: 0;
+        }
+
+        legend {
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 12px;
+            padding: 0;
+        }
+
+        legend small {
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .chip {
+            position: relative;
+        }
+
+        .chip input {
+            position: absolute;
+            opacity: 0;
+            inset: 0;
+            cursor: pointer;
+        }
+
+        .chip span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border: 1.5px solid var(--line);
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 600;
+            background: var(--paper);
+            transition:
+                transform 0.25s var(--ease),
+                border-color 0.2s,
+                background 0.2s,
+                color 0.2s;
+        }
+
+        .chip span::before {
+            content: "+";
+            display: grid;
+            place-items: center;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--panel);
+            font-weight: 800;
+            font-size: 14px;
+            line-height: 1;
+            transition: 0.25s var(--ease);
+        }
+
+        .chip:hover span {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .chip input:checked+span {
+            background: var(--ink);
+            border-color: var(--ink);
+            color: #fff;
+        }
+
+        .chip input:checked+span::before {
+            content: "✓";
+            background: var(--accent);
+            color: #fff;
+            transform: rotate(360deg);
+        }
+
+        .chip input:focus-visible+span {
+            outline: 3px solid var(--accent-2);
+            outline-offset: 2px;
+        }
+
+        .radios .chip span::before {
+            display: none;
+        }
+
+        .radios .chip input:checked+span {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        fieldset.bad .msg {
+            max-height: 40px;
+            opacity: 1;
+            margin-top: 8px;
+        }
+
+        .btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            overflow: hidden;
+            border: 0;
+            border-radius: 999px !important;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 800;
+            font-size: 16px;
+            padding: 8px 8px 8px 28px !important;
+            transition:
+                transform 0.25s var(--ease),
+                box-shadow 0.25s;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: var(--ink);
+            transform: translateX(-101%);
+            transition: transform 0.45s var(--ease);
+        }
+
+        .btn>* {
+            position: relative;
+        }
+
+        .btn .ar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #fff;
+            color: var(--ink);
+            display: grid;
+            place-items: center;
+            transition: transform 0.35s var(--ease);
+        }
+
+        .btn .ar svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 30px -12px rgba(244, 80, 27, 0.6);
+        }
+
+        .btn:hover::before {
+            transform: none;
+        }
+
+        .btn:hover .ar {
+            transform: rotate(-45deg);
+        }
+
+        .btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .btn[disabled] {
+            pointer-events: none;
+        }
+
+        .btn.load .ar svg {
+            display: none;
+        }
+
+        .btn.load .ar::after {
+            content: "";
+            width: 18px;
+            height: 18px;
+            border: 3px solid var(--line);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .fine {
+            color: var(--muted);
+            font-size: 13px;
+            margin: 16px 0 0;
+        }
+
+        .sub {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .done {
+            display: none;
+            text-align: center;
+            padding: 72px 40px;
+        }
+
+        .sent .done {
+            display: block;
+            animation: pop 0.6s var(--ease);
+        }
+
+        .sent form {
+            display: none;
+        }
+
+        @keyframes pop {
+            from {
+                opacity: 0;
+                transform: scale(0.96);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        .tick {
+            width: 84px;
+            height: 84px;
+            margin: 0 auto 22px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: grid;
+            place-items: center;
+        }
+
+        .tick svg {
+            width: 40px;
+            height: 40px;
+            stroke: #fff;
+            fill: none;
+            stroke-width: 3.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 40;
+            stroke-dashoffset: 40;
+            animation: draw 0.6s 0.25s var(--ease) forwards;
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .done h2 {
+            font: 400 52px/1 var(--font-display);
+            margin: 0 0 12px;
+        }
+
+        .done p {
+            color: var(--muted);
+            max-width: 440px;
+            margin: 0 auto 24px;
+        }
+
+        .link {
+            background: none;
+            border: 0;
+            color: var(--ink);
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent);
+            padding: 2px 0;
+            transition: color 0.2s;
+        }
+
+        .link:hover {
+            color: var(--accent);
+        }
+
+        /* CTA */
+        .cta {
+            background: var(--panel-dark);
+            color: #fff;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta .wrap {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 56px;
+            align-items: center;
+        }
+
+        .cta h2 {
+            font: 400 clamp(44px, 6.4vw, 92px)/0.95 var(--font-display);
+            margin: 0;
+        }
+
+        .cta h2 em {
+            font-style: normal;
+            color: var(--accent);
+        }
+
+        .cta p {
+            color: #b5b5b5;
+            margin: 0 0 28px;
+            font-size: 17px;
+        }
+
+        .cta .b {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 26px;
+            border-radius: 999px;
+            border: 1.5px solid #3a3a3a;
+            background: transparent;
+            color: #fff;
+            font-weight: 800;
+            transition: all 0.3s var(--ease);
+        }
+
+        .ghost:hover {
+            background: #fff;
+            color: var(--ink);
+            border-color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .cta .btn {
+            padding: 6px 6px 6px 24px;
+            font-size: 15px;
+        }
+
+        .cta .btn::before {
+            background: #fff;
+        }
+
+        .cta .btn:hover {
+            color: var(--ink);
+        }
+
+        footer {
+            background: var(--ink);
+            color: #8a8a8a;
+            font-size: 14px;
+            padding: 30px 0;
+            border-top: 1px solid var(--line-dark);
+        }
+
+        footer .wrap {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 940px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .side {
+                position: static;
+                padding-top: 70px;
+            }
+
+            .grid .formcard {
+                order: -1;
+            }
+
+            .side {
+                order: 2;
+                padding-top: 0;
+            }
+
+            .grid {
+                margin-top: -56px;
+            }
+
+            .cta .wrap {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            :root {
+                --pad: 18px;
+            }
+
+            .links a:not(.pill) {
+                display: none;
+            }
+
+            form,
+            .done {
+                padding: 26px 20px;
+            }
+
+            .row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .hero {
+                padding: 64px 0 96px;
+            }
+
+            .fh h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+   <div id="shared-header"></div>
+
+    <section class="hero">
+        <div class="wrap">
+            <span class="hand">say hello</span>
+            <h1>
+                <span><b>Let’s make your</b></span><span><b>marketing
+                        <em>perform</em></b></span><span><b>better.</b></span>
+            </h1>
+            <p>
+                Ready to make your marketing work harder? Tell us what you’re looking
+                to achieve and we’ll build a strategy around your priorities.
+            </p>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="wrap grid">
+            <aside class="side">
+                <h2>Let’s turn your goals into measurable results</h2>
+                <p>
+                    Every business has different goals, audiences, budgets, and
+                    challenges. That’s why we start by understanding your business
+                    before recommending a marketing approach.
+                </p>
+                <a class="card" href="mailto:hello@nexus.agency"><small>Email us</small><strong>hello@nexus.agency
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 17 17 7M8 7h9v9" />
+                        </svg></strong></a>
+                <a class="card" href="tel:+10000000000"><small>Call us</small><strong>+1 (000) 000-0000
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 17 17 7M8 7h9v9" />
+                        </svg></strong></a>
+                <ol class="steps" aria-label="What happens next">
+                    <li>
+                        <span class="n">1</span>
+                        <div>
+                            <b>We read your brief</b><span>You hear back within one business day.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="n">2</span>
+                        <div>
+                            <b>We talk it through</b><span>A short call about your goals, audience, and budget.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="n">3</span>
+                        <div>
+                            <b>You get a plan</b><span>A recommended approach with clear targets.</span>
+                        </div>
+                    </li>
+                </ol>
+            </aside>
+
+            <div class="formcard" id="contact">
+                <div class="prog" aria-hidden="true"><i id="bar"></i></div>
+
+                <form id="f" novalidate>
+                    <div class="fh">
+                        <h2>Tell us what you’re looking to achieve</h2>
+                        <span id="pct" aria-live="polite">0% complete</span>
+                    </div>
+
+                    <div class="seg" role="radiogroup" aria-label="How would you like to start?">
+                        <input type="radio" name="mode" id="m1" value="Conversation" checked />
+                        <input type="radio" name="mode" id="m2" value="Consultation" />
+                        <span class="thumb"></span>
+                        <label for="m1">Start a conversation</label>
+                        <label for="m2">Request a consultation</label>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <input id="name" name="name" autocomplete="name" placeholder=" " required /><label
+                                for="name">Full name</label><span class="msg"></span>
+                        </div>
+                        <div class="field">
+                            <input id="email" name="email" type="email" autocomplete="email" placeholder=" "
+                                required /><label for="email">Work email</label><span class="msg"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field">
+                            <input id="company" name="company" autocomplete="organization" placeholder=" "
+                                required /><label for="company">Company</label><span class="msg"></span>
+                        </div>
+                        <div class="field">
+                            <input id="site" name="website" type="url" autocomplete="url" placeholder=" " /><label
+                                for="site">Website (optional)</label>
+                        </div>
+                    </div>
+
+                    <div class="extra">
+                        <div>
+                            <div class="row">
+                                <div class="field">
+                                    <select id="day" name="day">
+                                        <option>Any weekday</option>
+                                        <option>Monday</option>
+                                        <option>Tuesday</option>
+                                        <option>Wednesday</option>
+                                        <option>Thursday</option>
+                                        <option>Friday</option>
+                                    </select><label for="day">Preferred day</label>
+                                </div>
+                                <div class="field">
+                                    <select id="time" name="time">
+                                        <option>Morning</option>
+                                        <option>Afternoon</option>
+                                        <option>Evening</option>
+                                    </select><label for="time">Preferred time</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <fieldset id="svc">
+                        <legend>
+                            What can we help with? <small>Pick all that apply</small>
+                        </legend>
+                        <div class="chips">
+                            <label class="chip"><input type="checkbox" name="svc"
+                                    value="Performance Marketing" /><span>Performance Marketing</span></label>
+                            <label class="chip"><input type="checkbox" name="svc" value="Paid Social" /><span>Paid
+                                    Social</span></label>
+                            <label class="chip"><input type="checkbox" name="svc"
+                                    value="Media Buying & Programmatic" /><span>Media Buying &amp;
+                                    Programmatic</span></label>
+                            <label class="chip"><input type="checkbox" name="svc"
+                                    value="Google, Meta, TikTok, YouTube & LinkedIn" /><span>Google, Meta, TikTok,
+                                    YouTube &amp; LinkedIn</span></label>
+                            <label class="chip"><input type="checkbox" name="svc"
+                                    value="App Marketing & ASO" /><span>App Marketing &amp; ASO</span></label>
+                            <label class="chip"><input type="checkbox" name="svc"
+                                    value="Affiliate & Influencer" /><span>Affiliate &amp; Influencer</span></label>
+                            <label class="chip"><input type="checkbox" name="svc"
+                                    value="Remarketing" /><span>Remarketing</span></label>
+                            <label class="chip"><input type="checkbox" name="svc"
+                                    value="Data Analytics & Market Insights" /><span>Data Analytics &amp; Market
+                                    Insights</span></label>
+                            <label class="chip"><input type="checkbox" name="svc"
+                                    value="Commerce Media" /><span>Commerce Media</span></label>
+                            <label class="chip"><input type="checkbox" name="svc"
+                                    value="Customer Acquisition" /><span>Customer Acquisition</span></label>
+                        </div>
+                        <span class="msg">Choose at least one area so we can point you to the right
+                            team.</span>
+                    </fieldset>
+
+                    <fieldset class="radios">
+                        <legend>Monthly ad budget <small>Optional</small></legend>
+                        <div class="chips">
+                            <label class="chip"><input type="radio" name="budget" value="Under $5k" /><span>Under
+                                    $5k</span></label>
+                            <label class="chip"><input type="radio" name="budget"
+                                    value="$5k–$15k" /><span>$5k–$15k</span></label>
+                            <label class="chip"><input type="radio" name="budget"
+                                    value="$15k–$50k" /><span>$15k–$50k</span></label>
+                            <label class="chip"><input type="radio" name="budget"
+                                    value="$50k+" /><span>$50k+</span></label>
+                            <label class="chip"><input type="radio" name="budget" value="Not sure yet" /><span>Not sure
+                                    yet</span></label>
+                        </div>
+                    </fieldset>
+
+                    <div class="field">
+                        <textarea id="message" name="message" maxlength="600" placeholder=" " required></textarea><label
+                            for="message">Your goals and challenges</label>
+                        <span class="cnt" id="cnt">0/600</span><span class="msg"></span>
+                    </div>
+
+                    <div class="sub">
+                        <button class="btn" id="go" type="submit">
+                            <span id="golbl">Start the conversation</span><span class="ar"><svg viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg></span>
+                        </button>
+                        <p class="fine" style="margin: 0">
+                            We only use your details to reply to this enquiry.
+                        </p>
+                    </div>
+                </form>
+
+                <div class="done" role="status" aria-live="polite" tabindex="-1" id="done">
+                    <div class="tick">
+                        <svg viewBox="0 0 24 24">
+                            <path d="m5 12.5 4.5 4.5L19 7.5" />
+                        </svg>
+                    </div>
+                    <h2 id="dh">Message sent</h2>
+                    <p id="dp"></p>
+                    <button class="link" id="again" type="button">
+                        Send another message
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta">
+        <div class="wrap">
+            <h2>Your next campaign starts with a <em>conversation</em></h2>
+            <div>
+                <p>
+                    Whether you’re launching a new campaign or looking to improve an
+                    existing one, Nexus is ready to help you turn advertising
+                    opportunities into measurable business results.
+                </p>
+                <div class="b">
+                    <button class="btn" type="button" data-mode="1">
+                        <span>Start the Conversation</span><span class="ar"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg></span>
+                    </button>
+                    <button class="ghost" type="button" data-mode="2">
+                        Request a Consultation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="shared-footer"></div>
+<script src="/components/components.js"></script>
+
+ 
+
+    <script>
+        const $ = (s) => document.querySelector(s),
+            $$ = (s) => [...document.querySelectorAll(s)];
+        const f = $("#f"),
+            card = $("#contact"),
+            bar = $("#bar"),
+            pct = $("#pct"),
+            msg = $("#message");
+        const rules = {
+            name: (v) => v.trim().length >= 2 || "Enter your full name.",
+            email: (v) =>
+                /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ||
+                "Enter a valid email, like name@company.com.",
+            company: (v) => v.trim().length >= 2 || "Enter your company name.",
+            message: (v) =>
+                v.trim().length >= 10 ||
+                "Add a little more detail (at least 10 characters).",
+        };
+        const svcOK = () => $$("input[name=svc]:checked").length > 0;
+        function check(el, show = true) {
+            const r = rules[el.name](el.value),
+                ok = r === true,
+                box = el.closest(".field");
+            if (show) {
+                box.classList.toggle("bad", !ok);
+                box.classList.toggle("good", ok);
+                box.querySelector(".msg").textContent = ok ? "" : r;
+                el.setAttribute("aria-invalid", !ok);
+            }
+            return ok;
+        }
+        function progress() {
+            const done =
+                Object.keys(rules).filter((k) => rules[k](f[k].value) === true)
+                    .length + (svcOK() ? 1 : 0);
+            const p = Math.round((done / 5) * 100);
+            bar.style.width = p + "%";
+            pct.textContent = p + "% complete";
+        }
+        Object.keys(rules).forEach((k) => {
+            const el = f[k];
+            el.addEventListener("blur", () => {
+                if (el.value) check(el);
+            });
+            el.addEventListener("input", () => {
+                if (el.closest(".field").classList.contains("bad")) check(el);
+                progress();
+            });
+        });
+        $$("input[name=svc]").forEach((c) =>
+            c.addEventListener("change", () => {
+                if (svcOK()) $("#svc").classList.remove("bad");
+                progress();
+            }),
+        );
+        msg.addEventListener("input", () => {
+            const c = $("#cnt");
+            c.textContent = msg.value.length + "/600";
+            c.classList.toggle("max", msg.value.length >= 600);
+        });
+
+        function setMode(n) {
+            $("#m" + n).checked = true;
+            const consult = n == 2;
+            f.classList.toggle("consult", consult);
+            $("#golbl").textContent = consult
+                ? "Request a consultation"
+                : "Start the conversation";
+        }
+        $$("input[name=mode]").forEach((r) =>
+            r.addEventListener("change", () => setMode(r.id === "m2" ? 2 : 1)),
+        );
+        $$("[data-mode]").forEach((b) =>
+            b.addEventListener("click", () => {
+                if (card.classList.contains("sent")) $("#again").click();
+                setMode(+b.dataset.mode);
+                card.scrollIntoView({ behavior: "smooth", block: "center" });
+                setTimeout(() => f.name.focus({ preventScroll: true }), 500);
+            }),
+        );
+
+        f.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const oks = Object.keys(rules).map((k) => check(f[k]));
+            const s = svcOK();
+            $("#svc").classList.toggle("bad", !s);
+            if (!s || oks.includes(false)) {
+                const first = oks.indexOf(false);
+                (first > -1
+                    ? f[Object.keys(rules)[first]]
+                    : $("input[name=svc]")
+                ).focus();
+                return;
+            }
+            const btn = $("#go"),
+                data = Object.fromEntries(new FormData(f));
+            data.services = $$("input[name=svc]:checked").map((c) => c.value);
+            btn.classList.add("load");
+            btn.disabled = true;
+            try {
+                /* Connect your backend here, e.g.
+             await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}); */
+                await new Promise((r) => setTimeout(r, 1100));
+                const consult = data.mode === "Consultation";
+                $("#dh").textContent = consult
+                    ? "Consultation requested"
+                    : "Message sent";
+                $("#dp").textContent =
+                    `Thanks, ${data.name.trim().split(" ")[0]}. We’ll email ${data.email.trim()} within one business day` +
+                    (consult
+                        ? ` to confirm a time (${data.day.toLowerCase()}, ${data.time.toLowerCase()}).`
+                        : " to talk through your goals.");
+                card.classList.add("sent");
+                $("#done").focus();
+                card.scrollIntoView({ behavior: "smooth", block: "center" });
+            } catch (err) {
+                alert(
+                    "Something went wrong sending your message. Please try again or email us directly.",
+                );
+            } finally {
+                btn.classList.remove("load");
+                btn.disabled = false;
+            }
+        });
+        $("#again").addEventListener("click", () => {
+            f.reset();
+            setMode(1);
+            card.classList.remove("sent");
+            $$(".field").forEach((x) => x.classList.remove("bad", "good"));
+            $("#cnt").textContent = "0/600";
+            progress();
+            f.name.focus();
+        });
+    </script>
+</body>
+
+</html>
