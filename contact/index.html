@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="/components/header-footer.css">
+    <link rel="stylesheet" href="/services/services.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
@@ -170,7 +171,7 @@
         }
 
         /* HERO */
-        .hero {
+        /* .hero {
             background: var(--ink);
             color: #fff;
             padding: 96px 0 120px;
@@ -247,12 +248,13 @@
             color: #bdbdbd;
             font-size: 18px;
             margin: 32px 0 0;
-        }
+        } */
 
         /* LAYOUT */
         .main {
             background: var(--panel);
             padding: 70px 0 70px;
+            margin-top: -83px;
         }
 
         .grid {
@@ -384,8 +386,9 @@
         }
 
         .prog {
-            height: 5px;
+            /* height: 5px; */
             background: var(--line);
+            
         }
 
         .prog i {
@@ -1068,17 +1071,24 @@
 <body>
    <div id="shared-header"></div>
 
-    <section class="hero">
-        <div class="wrap">
-            <span class="hand">say hello</span>
-            <h1>
-                <span><b>Let’s make your</b></span><span><b>marketing
-                        <em>perform</em></b></span><span><b>better.</b></span>
-            </h1>
-            <p>
-                Ready to make your marketing work harder? Tell us what you’re looking
-                to achieve and we’ll build a strategy around your priorities.
-            </p>
+ <section class="hero">
+        <img class="hero-bg" src="" alt="">
+        <div class="hero-scrim"></div>
+        <div class="wrap hero-inner">
+            <div class="hero-text">
+                <div class="eyebrow light">CONTACT</div>
+                <h1 class="hero-title">Questions Before You Put Your Ad Budget to Work</h1>
+                <p>Real questions deserve clear answers. Explore practical insights about paid advertising, performance marketing, audience targeting, media buying, and campaign optimization.</p>
+            </div>
+
+            <!-- <div class="hero-logos">
+                <img src="/assets/shopify.png" alt="Shopify">
+                <img src="/assets/g-ads.png" alt="Google Ads">
+                <img src="/assets/meta.png" alt="Meta">
+                <img src="/assets/youtube.png" alt="YouTube">
+                <img src="/assets/canva.png" alt="Canva">
+                <img src="/assets/hubspot.png" alt="HubSpot">
+            </div> -->
         </div>
     </section>
 

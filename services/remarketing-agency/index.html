@@ -62,12 +62,48 @@
         .cta-note { font-family: var(--font-heading); font-weight: 700; font-size: 16px; line-height: 1.5; color: #fff; margin: 0; max-width: 480px; }
 
         @media (max-width: 900px) {
-            .service-grid, .retarget, .synergy-cards { grid-template-columns: 1fr; }
+             .synergy-cards { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 768px) {
             .retarget { padding: 28px 22px; }
             .service-card { padding: 22px; }
             .optimize-grid.three { grid-template-columns: 1fr; }
+            .optimize-grid.three{
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .retarget{
+                grid-template-columns: 1fr;
+
+            }
+            .services{
+                padding: 40px 0px;
+            }
+            .approach-card.single{
+                grid-template-columns: .2fr 1fr;
+            }
+            .service-grid{
+                grid-template-columns: 1fr;
+            }
+            .process{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                padding: 0;
+                text-align: center;
+            }
+            .opportunity{
+                margin-top:-83px ;
+            }
+            
+            
+            .process-arrow{
+                display: none;
+            }
+        }
+        .approach-card.single{
+            display: flex;
+        }
+        .approach-title{
+            font-size: clamp(25px, 3.6vw, 34px);
         }
     </style>
 </head>
@@ -77,7 +113,7 @@
 
     <!-- HERO -->
     <section class="hero">
-        <img class="hero-bg" src="/assets/Affiliate Marketing Banner 1.png" alt="">
+        <img class="hero-bg" src="/assets/Service/Remarketing Agency/Banner 1.png" alt="">
         <div class="hero-scrim"></div>
         <div class="wrap hero-inner">
             <div class="hero-text">
@@ -107,13 +143,21 @@
             </div>
 
             <div class="process">
-                <div class="process-step"><div class="img-cont num">01</div>Interact</div>
+                <div class="process-step"><div class="img-cont">
+                        <img src="/assets/Service/Remarketing Agency/Icon 1.png" alt="Recruit icon">
+                    </div>Interact</div>
                 <div class="process-arrow">→</div>
-                <div class="process-step"><div class="img-cont num">02</div>Reconnect</div>
+                <div class="process-step"><div class="img-cont">
+                        <img src="/assets/Service/Remarketing Agency/Icon 2.png" alt="Recruit icon">
+                    </div>Reconnect</div>
                 <div class="process-arrow">→</div>
-                <div class="process-step"><div class="img-cont num">03</div>Re-engage</div>
+                <div class="process-step"><div class="img-cont">
+                        <img src="/assets/Service/Remarketing Agency/Icon 3.png" alt="Recruit icon">
+                    </div>Re-engage</div>
                 <div class="process-arrow">→</div>
-                <div class="process-step"><div class="img-cont num">04</div>Convert</div>
+                <div class="process-step"><div class="img-cont">
+                        <img src="/assets/Service/Remarketing Agency/Icon 4.png" alt="Recruit icon">
+                    </div>Convert</div>
             </div>
         </div>
     </section>
@@ -130,10 +174,13 @@
                 <p class="approach-copy">Someone who viewed your homepage is different from someone who added a product to their cart. That's why [Brand Name] builds audience segments around available behavioral signals.</p>
                 <div class="approach-foot">FROM “ALMOST” TO “ACTION”</div>
             </div>
-            <div class="approach-cards">
+            <div class="approach-cards grid2">
 
             <div class="approach-cards">
                 <div class="approach-card single">
+                    <div class="approach-icon-cont">
+                    <img src="/assets/Service/Remarketing Agency/Icon 5.png" alt="Recruitment icon">
+                    </div>
                     <div>
                         <h3>Know the Intent</h3>
                         <p>Identify where visitors are in their journey and respond accordingly.</p>
@@ -142,6 +189,9 @@
             </div>
             <div class="approach-cards">
                 <div class="approach-card single">
+                    <div class="approach-icon-cont">
+                    <img src="/assets/Service/Remarketing Agency/Icon 6.png" alt="Recruitment icon">
+                    </div>
                     <div>
                         <h3>Segment by Behavior</h3>
                         <p>Build audiences based on actions, interests, and engagement signals.</p>
@@ -150,6 +200,9 @@
             </div>
             <div class="approach-cards">
                 <div class="approach-card single">
+                    <div class="approach-icon-cont">
+                    <img src="/assets/Service/Remarketing Agency/Icon 7.png" alt="Recruitment icon">
+                    </div>
                     <div>
                         <h3>Personalize the Message</h3>
                         <p>Show relevant ads that match what each audience has actually done.</p>
@@ -158,6 +211,9 @@
             </div>
             <div class="approach-cards">
                 <div class="approach-card single">
+                    <div class="approach-icon-cont">
+                    <img src="/assets/Service/Remarketing Agency/Icon 8.png" alt="Recruitment icon">
+                    </div>
                     <div>
                         <h3>Turn Interest Into Action</h3>
                         <p>Re-engage high-intent visitors with messaging designed to drive conversions.</p>
@@ -194,24 +250,24 @@
                 <div class="eyebrow dark">OUR SERVICES</div>
                 <h2 class="measure-title">Remarketing Services Built Around the Customer Journey</h2>
                 <div class="metric-list">
-                    <div class="metric-item">Website Retargeting</div>
-                    <div class="metric-item">Dynamic Product Remarketing</div>
-                    <div class="metric-item">Cart Abandonment Campaigns</div>
-                    <div class="metric-item">Lead Retargeting</div>
-                    <div class="metric-item">Engagement Retargeting</div>
-                    <div class="metric-item">Cross-Channel Remarketing</div>
+                    <div class="metric-item"> <img src="/assets/Service/Remarketing Agency/Icon 11.png" alt="">  Website Retargeting</div>
+                    <div class="metric-item"> <img src="/assets/Service/Remarketing Agency/Icon 12.png" alt=""> Dynamic Product Remarketing</div>
+                    <div class="metric-item"> <img src="/assets/Service/Remarketing Agency/Icon 13.png" alt="">Cart Abandonment Campaigns</div>
+                    <div class="metric-item"> <img src="/assets/Service/Remarketing Agency/Icon 14.png" alt="">Lead Retargeting</div>
+                    <div class="metric-item"> <img src="/assets/Service/Remarketing Agency/Icon 15.png" alt="">Engagement Retargeting</div>
+                    <div class="metric-item"> <img src="/assets/Service/Remarketing Agency/Icon 16.png" alt="">Cross-Channel Remarketing</div>
                 </div>
             </div>
 
             <div class="measure-image">
-                <img src="/assets/Affiliate Marketing Banner 3.png" alt="Remarketing campaign overview">
+                <img src="/assets/Service/Remarketing Agency/Banner 2.png" alt="Remarketing campaign overview">
             </div>
         </div>
     </section>
 
     <!-- REFINE (dark, background image) -->
     <section class="optimize">
-        <img class="optimize-bg" src="/assets/Affiliate Marketing Banner 5.png" alt="">
+        <img class="optimize-bg" src="/assets/Service/Remarketing Agency/Banner 3.png" alt="">
         <div class="optimize-scrim"></div>
         <div class="wrap optimize-inner">
             <div>
@@ -220,9 +276,9 @@
                 <p class="optimize-copy">Remarketing can become annoying quickly when brands show the same message repeatedly. [Brand Name] takes a more strategic approach.</p>
 
                 <div class="optimize-grid three">
-                    <div class="optimize-card plain"><b>Frequency Matters</b></div>
-                    <div class="optimize-card plain"><b>Creative Matters</b></div>
-                    <div class="optimize-card plain"><b>Timing Matters</b></div>
+                    <div class="optimize-card plain"> <img src="/assets/icon-17.png" alt=""> <b>Frequency Matters</b></div>
+                    <div class="optimize-card plain"> <img src="/assets/icon-18.png" alt=""><b>Creative Matters</b></div>
+                    <div class="optimize-card plain"> <img src="/assets/icon-19.png" alt=""><b>Timing Matters</b></div>
                 </div>
             </div>
         </div>
@@ -308,7 +364,7 @@
             </div>
 
             <div class="phi-image">
-                <img src="/assets/Affiliate Marketing Banner 6.png" alt="Remarketing audience and performance analysis">
+                <img src="/assets/Service/Remarketing Agency/Banner 4.png" alt="Remarketing audience and performance analysis">
             </div>
         </div>
     </section>
@@ -326,7 +382,7 @@
     <!-- CTA -->
     <div class="cta-wrapper">
         <section class="cta-banner">
-            <img class="cta-bg" src="/assets/Affiliate Marketing Banner 7.png" alt="">
+            <img class="cta-bg" src="/assets/Service/Remarketing Agency/Banner 5.png" alt="">
             <div class="cta-scrim"></div>
             <div class="wrap cta-inner">
                 <div>

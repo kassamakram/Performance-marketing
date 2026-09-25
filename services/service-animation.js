@@ -191,7 +191,24 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
+        const processSteps = gsap.utils.toArray(".process-step");
+        const processArrows = gsap.utils.toArray(".process-arrow");
 
+        if (processSteps.length) {
+            gsap.set(processSteps, {
+                y: 70,
+                opacity: 0,
+                scale: 0.9,
+                filter: "blur(8px)"
+            });
+        }
+
+        if (processArrows.length) {
+            gsap.set(processArrows, {
+                opacity: 0,
+                scale: 0.5
+            });
+        }
 
         const process = document.querySelector(".process");
 

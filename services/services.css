@@ -912,13 +912,14 @@
             }
 
             .approach-card ul {
-                columns: 1;
+                columns: 2;
             }
 
             .metric-list {
                 grid-template-columns: 1fr;
             }
         }
+        
 
         /* =====================================================
            HOVER EFFECTS ONLY — no base styling changed above.

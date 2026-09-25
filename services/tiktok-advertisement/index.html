@@ -27,10 +27,30 @@
             max-width: 600px;
             margin: 0 0 34px;
         }
-        .approach-card{
+        .services-grid .approach-card{
             background-color: var(--panel);
             border: 1px solid var(--line);
 
+        }
+        .gap .approach-card{
+            background-color: var(--panel);
+            border: 1px solid var(--line);
+            align-items: center;
+
+        }
+        .gap{
+            margin-top: 20px;
+        }
+        @media(min-width:768px){
+            
+           .gap  .approach-icon-cont{
+            width: 90px;
+            height: 90px;
+           }
+           .gap  .approach-icon-cont img{
+            width: 70px;
+            height: 70px;
+           }
         }
 
         .services {
@@ -70,6 +90,15 @@
                 grid-template-columns: 1fr;
             }
         }
+        @media(max-width:768px){
+            .hero-inner{
+            margin-top: 65px !important;
+        }
+        .intro{
+            margin-top: -83px;
+            padding: 40px 0px;
+        }
+        }
     </style>
 </head>
 
@@ -78,7 +107,7 @@
 
     <!-- ============ SECTION 1 — HERO ============ -->
     <section class="hero">
-        <img class="hero-bg" src="/assets/Affiliate Marketing Banner 1.png" alt="">
+        <img class="hero-bg" src="/assets/Service/TikTok Advertising Agency/Banner 1.png" alt="">
         <div class="hero-scrim"></div>
         <div class="wrap hero-inner">
             <div class="hero-text">
@@ -123,25 +152,25 @@
 
             <div class="approach-cards">
                 <div class="approach-card">
-                    <div class="approach-icon-cont"><img src="/assets/icon-1.png" alt="Audience research icon"></div>
+                    <div class="approach-icon-cont"><img src="/assets/Service/TikTok Advertising Agency/Icon 1.png" alt="Audience research icon"></div>
                     <div>
                         <h3>Audience Research That Goes Beyond Demographics</h3>
                     </div>
                 </div>
                 <div class="approach-card">
-                    <div class="approach-icon-cont"><img src="/assets/icon-2.png" alt="Creative icon"></div>
+                    <div class="approach-icon-cont"><img src="/assets/Service/TikTok Advertising Agency/Icon 3.png" alt="Creative icon"></div>
                     <div>
                         <h3>Creative Built for the TikTok Feed</h3>
                     </div>
                 </div>
                 <div class="approach-card">
-                    <div class="approach-icon-cont"><img src="/assets/icon-3.png" alt="Testing icon"></div>
+                    <div class="approach-icon-cont"><img src="/assets/Service/TikTok Advertising Agency/Icon 4.png" alt="Testing icon"></div>
                     <div>
                         <h3>Testing That Finds What Works</h3>
                     </div>
                 </div>
                 <div class="approach-card">
-                    <div class="approach-icon-cont"><img src="/assets/icon-4.png" alt="Optimization icon"></div>
+                    <div class="approach-icon-cont"><img src="/assets/Service/TikTok Advertising Agency/Icon 5.png" alt="Optimization icon"></div>
                     <div>
                         <h3>Optimization Based on Real Data</h3>
                     </div>
@@ -161,7 +190,7 @@
 
             <div class="services-grid">
                 <div class="approach-card">
-                    <div class="approach-icon-cont"><img src="/assets/icon-5.png" alt="Paid ads strategy icon"></div>
+                    <div class="approach-icon-cont"><img src="/assets/Service/TikTok Advertising Agency/Icon 6.png" alt="Paid ads strategy icon"></div>
                     <div>
                         <h3>TikTok Paid Ads Strategy</h3>
                         <p>We develop a paid advertising strategy covering objectives, audience segments, messaging,
@@ -169,7 +198,7 @@
                     </div>
                 </div>
                 <div class="approach-card">
-                    <div class="approach-icon-cont"><img src="/assets/icon-6.png" alt="Campaign management icon">
+                    <div class="approach-icon-cont"><img src="/assets/Service/TikTok Advertising Agency/Icon 7.png" alt="Campaign management icon">
                     </div>
                     <div>
                         <h3>TikTok Campaign Management</h3>
@@ -178,7 +207,7 @@
                     </div>
                 </div>
                 <div class="approach-card">
-                    <div class="approach-icon-cont"><img src="/assets/icon-7.png" alt="Creative strategy icon"></div>
+                    <div class="approach-icon-cont"><img src="/assets/Service/TikTok Advertising Agency/Icon 8.png" alt="Creative strategy icon"></div>
                     <div>
                         <h3>TikTok Creative Strategy</h3>
                         <p>[Brand Name] develops concepts, hooks, messaging angles, and content directions designed
@@ -186,7 +215,7 @@
                     </div>
                 </div>
                 <div class="approach-card">
-                    <div class="approach-icon-cont"><img src="/assets/icon-8.png" alt="Lead generation icon"></div>
+                    <div class="approach-icon-cont"><img src="/assets/Service/TikTok Advertising Agency/Icon 9.png" alt="Lead generation icon"></div>
                     <div>
                         <h3>TikTok Lead Generation Campaigns</h3>
                         <p>[Brand Name] creates TikTok lead generation campaigns designed to move users from
@@ -195,7 +224,7 @@
                     </div>
                 </div>
                 <div class="approach-card">
-                    <div class="approach-icon-cont"><img src="/assets/icon-9.png" alt="Ecommerce advertising icon">
+                    <div class="approach-icon-cont"><img src="/assets/Service/TikTok Advertising Agency/Icon 10.png" alt="Ecommerce advertising icon">
                     </div>
                     <div>
                         <h3>TikTok Ecommerce Advertising</h3>
@@ -205,15 +234,18 @@
                     </div>
                 </div>
                 <div class="approach-card">
-                    <div class="approach-icon-cont"><img src="/assets/icon-10.png" alt="Retargeting icon"></div>
+                    <div class="approach-icon-cont"><img src="/assets/Service/TikTok Advertising Agency/Icon 11.png" alt="Retargeting icon"></div>
                     <div>
                         <h3>TikTok Retargeting</h3>
                         <p>Retargeting helps reconnect with users who have already interacted with your brand,
                             visited your website, engaged with content, or shown buying intent.</p>
                     </div>
                 </div>
-                <div class="approach-card">
-                    <div class="approach-icon-cont"><img src="/assets/icon-11.png" alt="Performance tracking icon">
+                
+            </div>
+            <div class="gap">
+            <div class="approach-card">
+                    <div class="approach-icon-cont"><img src="/assets/Service/TikTok Advertising Agency/Icon 12.png" alt="Performance tracking icon">
                     </div>
                     <div>
                         <h3>TikTok Performance Tracking &amp; Reporting</h3>
@@ -231,13 +263,13 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+                </div>
         </div>
     </section>
 
     <!-- ============ SECTION 5 — CHANNEL SYNERGY (full width banner image) ============ -->
     <section class="synergy">
-        <img class="synergy-bg" src="/assets/Affiliate Marketing Banner 4.png" alt="">
+        <img class="synergy-bg" src="/assets/Service/TikTok Advertising Agency/Banner 2.png" alt="">
         <div class="synergy-scrim"></div>
         <div class="wrap synergy-inner">
             <div>
@@ -274,7 +306,7 @@
             </div>
 
             <div class="phi-image">
-                <img src="/assets/Affiliate Marketing Banner 3.png" alt="Turning TikTok reach into measurable business results">
+                <img src="/assets/Service/TikTok Advertising Agency/Banner 3.png" alt="Turning TikTok reach into measurable business results">
             </div>
         </div>
     </section>
@@ -282,7 +314,7 @@
     <!-- ============ SECTION 7 — WORK TOGETHER (full width banner image) ============ -->
     <div class="cta-wrapper">
         <section class="cta-banner">
-            <img class="cta-bg" src="/assets/Affiliate Marketing Banner 7.png" alt="">
+            <img class="cta-bg" src="/assets/Service/TikTok Advertising Agency/Banner 4.png" alt="">
             <div class="cta-scrim"></div>
             <div class="wrap cta-inner">
                 <div>
@@ -296,9 +328,9 @@
                         <a class="btn btn-outline" href="#">Get in Touch</a>
                     </div>
                     <div class="cta-mini">
-                        <div class="cta-mini-item"><img src="/assets/icon-16.png" alt="">Creative-Led Strategy</div>
+                        <div class="cta-mini-item"><img src="/assets/icon-18.png" alt="">Creative-Led Strategy</div>
                         <div class="cta-mini-item"><img src="/assets/icon-17.png" alt="">Performance Tracked</div>
-                        <div class="cta-mini-item"><img src="/assets/icon-18.png" alt="">Built to Scale</div>
+                        <div class="cta-mini-item"><img src="/assets/icon-16.png" alt="">Built to Scale</div>
                     </div>
                 </div>
             </div>
@@ -306,7 +338,10 @@
     </div>
 
     <div id="shared-footer"></div>
-    <script src="/components/components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="/components/components.js"></script>
+<script src="/services/service-animation.js"></script>
 
 </body>
 

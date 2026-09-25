@@ -357,9 +357,12 @@ button,input{font:inherit}
   z-index:5;
   flex:1;
   display:flex;
-  flex-direction:column;
+  /* flex-direction:column; */
   justify-content:flex-end;
   padding-bottom:34px;
+  gap:50px;
+  max-width: 1400px;
+
 }
 .hero-headline-wrap{
   max-width:650px;
@@ -391,7 +394,10 @@ button,input{font:inherit}
 .hero-lede{
   font-size:14px;line-height:1.65;color:#D6D6D6;max-width:480px;margin:0 0 22px;font-weight:400;
 }
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0 20px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0 20px; margin-top: auto;}
+.hero-side{
+  display:flex;gap:14px;flex-wrap:wrap;margin:22px 0 20px; margin-top: auto; justify-content: flex-end;
+}
 .btn.ghost-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
 .btn.ghost-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
 
@@ -409,7 +415,7 @@ button,input{font:inherit}
 }
 
 /* ============ LOGOS BAR ============ */
-.logos{background:#0A0A0A;border-top:1px solid #1C1C1C;border-bottom:1px solid #1C1C1C}
+.logos{background:#0A0A0A;border-top:1px solid #1C1C1C;border-bottom:1px solid #1C1C1C; margin-top: -83px;}
 .logos-in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;overflow-x:auto;scrollbar-width:none}
 .logos-in::-webkit-scrollbar{display:none}
 .logo-item{
@@ -749,6 +755,258 @@ footer{background:#070707;color:#fff;padding:60px 0 0;position:relative;overflow
   .float .dashbox{position:static;width:100%}
   .f-grid{grid-template-columns:1fr 1fr}
 }
+/* =========================================
+   GROWTH SECTION
+========================================= */
+
+.growth-section {
+  width: min(100%, 520px);
+  padding: 30px 22px;
+
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   MAIN GLASS CARD
+========================================= */
+
+.growth-card {
+  width: 61%;
+  padding: 28px 22px 22px;
+
+  background: rgba(15, 15, 15, 0.62);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.growth-text {
+  max-width: 340px;
+
+  margin: 0 0 24px;
+
+  font-size: 21px;
+  line-height: 1.35;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+
+.growth-btn {
+  width: 100%;
+  min-height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-decoration: none;
+
+  background: rgba(241, 63, 8, 0.92);
+  color: #fff;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.growth-btn span:first-child {
+  padding-left: 28px;
+
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.growth-btn .arrow {
+  width: 78px;
+  height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 31px;
+  font-weight: 300;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.growth-btn:hover {
+  background: rgba(255, 73, 18, 0.98);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   STAT CARDS
+========================================= */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.stat-card {
+  min-height: 118px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: rgba(12, 12, 12, 0.52);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.stat-card:hover {
+  background: rgba(20, 20, 20, 0.68);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================================
+   ICONS
+========================================= */
+
+.stat-icon {
+  height: 38px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3px;
+
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 27px;
+  font-weight: 300;
+}
+
+.stat-icon span:nth-child(1) {
+  font-size: 15px;
+}
+
+.stat-icon span:nth-child(2) {
+  font-size: 23px;
+}
+
+.stat-icon span:nth-child(3) {
+  font-size: 30px;
+}
+
+.stat-icon.people {
+  align-items: center;
+  font-size: 32px;
+}
+
+
+/* =========================================
+   STAT TYPOGRAPHY
+========================================= */
+
+.stat-card h3,
+.stat-card p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.25;
+  letter-spacing: 1px;
+
+  font-weight: 600;
+
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.stat-card p {
+  margin-top: 2px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .growth-section {
+    padding: 20px 14px;
+  }
+
+  .growth-card {
+    padding: 22px 16px 16px;
+  }
+
+  .growth-text {
+    font-size: 18px;
+  }
+
+  .growth-btn {
+    min-height: 65px;
+  }
+
+  .growth-btn span:first-child {
+    padding-left: 20px;
+    font-size: 13px;
+  }
+
+  .growth-btn .arrow {
+    width: 65px;
+    height: 65px;
+  }
+
+  .stats {
+    gap: 7px;
+  }
+
+  .stat-card {
+    min-height: 100px;
+  }
+
+  .stat-card h3,
+  .stat-card p {
+    font-size: 10px;
+  }
+
+}
 </style>
 </head>
 <body>
@@ -781,10 +1039,55 @@ footer{background:#070707;color:#fff;padding:60px 0 0;position:relative;overflow
         <a class="btn ghost-light" href="#services">Explore Our Services <span class="ar">&rarr;</span></a>
       </div>
     </div>
+    <div class="hero-cta hero-side">
+       <div class="growth-card">
+
+    <p class="growth-text">
+      Performance marketing, paid media and data-driven
+      strategies to deliver measurable growth.
+    </p>
+
+    <a href="#" class="growth-btn">
+      <span>START YOUR GROWTH</span>
+      <span class="arrow">→</span>
+    </a>
+
+  </div>
+
+  <div class="stats">
+
+    <div class="stat-card">
+      <div class="stat-icon">
+        <span>▯</span>
+        <span>▯</span>
+        <span>▯</span>
+      </div>
+
+      <h3>MORE</h3>
+      <p>CUSTOMERS</p>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon people">♧</div>
+
+      <h3>STRONGER</h3>
+      <p>SHARES</p>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">↗</div>
+
+      <h3>HIGHER</h3>
+      <p>RETURNS</p>
+    </div>
+
+  </div>
+
+    </div>
   </div>
 
   <!-- Clickable overlay on the pre-rendered button in the graphic -->
-  <a href="#contact" class="hero-banner-btn-link" aria-label="Start your growth"></a>
+  <!-- <a href="#contact" class="hero-banner-btn-link" aria-label="Start your growth"></a> -->
 </header>
 
 <!-- ================= LOGOS BAR ================= -->
