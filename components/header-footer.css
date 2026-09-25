@@ -1085,3 +1085,7 @@ footer {
     font-size: 20px;
   }
 }
+.nav-dropdown-toggle a{
+      color: #e4e1db !important;
+      text-decoration: none;
+}

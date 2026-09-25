@@ -24,6 +24,12 @@
     align-items: center;
     gap: 10px;
 }
+.approach-title{
+    font-size: clamp(29px, 4.6vw, 47px)
+}
+.process{
+    justify-content: center !important;
+}
         .process-step {
             display: flex;
             flex-direction: column;
@@ -118,6 +124,39 @@
                 grid-template-columns: 1fr 1fr;
             }
         }
+        @media(max-width:768px){
+            .intro{
+                margin-top: -83px;
+                padding: 40px 0px;
+            }
+            .process{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 15px;
+                padding: 0px;
+            }
+            .process-arrow{
+                display:none;
+            }
+            .services-section{
+                padding: 40px 0px;
+            }
+            .process-step{
+                text-align: center;
+            }
+            .approach-cards{
+                gap: 10px;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+            }
+            .approach-card{
+                padding: 10px 12px;
+            }
+            .approach-card h3{
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
 
         @media (max-width: 600px) {
             .services-grid {
@@ -132,7 +171,7 @@
 
     <!-- ============ SECTION 1 — HERO ============ -->
     <section class="hero">
-        <img class="hero-bg" src="/assets/Affiliate Marketing Banner 1.png" alt="">
+        <img class="hero-bg" src="/assets/Service/Product-Led Marketing/Banner 1.png" alt="">
         <div class="hero-scrim"></div>
         <div class="wrap hero-inner">
             <div class="hero-text">
@@ -171,7 +210,7 @@
             <div class="process">
                 <div class="process-step">
                     <div class="img-cont">
-                        <img src="/assets/icon-1.png" alt="Discover icon">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 1.png" alt="Discover icon">
                     </div>
                     Discover
                 </div>
@@ -179,7 +218,7 @@
 
                 <div class="process-step">
                     <div class="img-cont">
-                        <img src="/assets/icon-2.png" alt="Experience icon">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 2.png" alt="Experience icon">
                     </div>
                     Experience
                 </div>
@@ -187,7 +226,7 @@
 
                 <div class="process-step">
                     <div class="img-cont">
-                        <img src="/assets/icon-3.png" alt="Activate icon">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 3.png" alt="Activate icon">
                     </div>
                     Activate
                 </div>
@@ -195,7 +234,7 @@
 
                 <div class="process-step">
                     <div class="img-cont">
-                        <img src="/assets/icon-4.png" alt="Adopt icon">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 4.png" alt="Adopt icon">
                     </div>
                     Adopt
                 </div>
@@ -203,7 +242,7 @@
 
                 <div class="process-step">
                     <div class="img-cont">
-                        <img src="/assets/icon-5.png" alt="Convert icon">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 5.png" alt="Convert icon">
                     </div>
                     Convert
                 </div>
@@ -211,7 +250,7 @@
 
                 <div class="process-step">
                     <div class="img-cont">
-                        <img src="/assets/icon-6.png" alt="Retain icon">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 6.png" alt="Retain icon">
                     </div>
                     Retain
                 </div>
@@ -234,7 +273,7 @@
             <div class="approach-cards">
                 <div class="approach-card">
                     <div class="approach-icon-cont">
-                        <img src="/assets/icon-6.png" alt="Testing icon">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 7.png" alt="Testing icon">
                     </div>
                     <div>
                         <h3>Paid Advertising</h3>
@@ -242,7 +281,7 @@
                 </div>
                 <div class="approach-card">
                     <div class="approach-icon-cont">
-                        <img src="/assets/icon-7.png" alt="Optimization icon">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 8.png" alt="Optimization icon">
                     </div>
                     <div>
                         <h3>Product Demos & Free Trials</h3>
@@ -250,7 +289,7 @@
                 </div>
                 <div class="approach-card">
                     <div class="approach-icon-cont">
-                        <img src="/assets/icon-8.png" alt="Funnel icon">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 9.png" alt="Funnel icon">
                     </div>
                     <div>
                         <h3>Freemium & Onboarding</h3>
@@ -258,7 +297,7 @@
                 </div>
                 <div class="approach-card">
                     <div class="approach-icon-cont">
-                        <img src="/assets/icon-9.png" alt="Data icon">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 10.png" alt="Data icon">
                     </div>
                     <div>
                         <h3>Lifecycle & Retargeting</h3>
@@ -276,32 +315,32 @@
 
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon"><img src="/assets/icon-10.png" alt=""></div>
+                    <div class="service-icon"><img src="/assets/Service/Product-Led Marketing/Icon 11.png" alt=""></div>
                     <h3>Performance Advertising for Product-Led Businesses</h3>
                     <p>Product-led companies still need acquisition. [Brand Name] can support Google Ads, Meta Ads, paid social advertising, display advertising, remarketing, and other performance marketing channels based on your audience and objectives.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><img src="/assets/icon-11.png" alt=""></div>
+                    <div class="service-icon"><img src="/assets/Service/Product-Led Marketing/Icon 12.png" alt=""></div>
                     <h3>Campaigns Built Around Meaningful Actions</h3>
                     <p>Campaigns can be built around free trials, demos, product signups, feature adoption, subscriptions, or other meaningful actions.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><img src="/assets/icon-12.png" alt=""></div>
+                    <div class="service-icon"><img src="/assets/Service/Product-Led Marketing/Icon 13.png" alt=""></div>
                     <h3>Lifecycle Marketing That Keeps the Conversation Going</h3>
                     <p>The relationship shouldn't stop after signup. Strategic lifecycle marketing can help users discover features, return to the product, complete important actions, and understand the value available to them.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><img src="/assets/icon-13.png" alt=""></div>
+                    <div class="service-icon"><img src="/assets/Service/Product-Led Marketing/Icon 14.png" alt=""></div>
                     <h3>Welcome Sequences & Activation Messaging</h3>
                     <p>Depending on your business model, campaigns may include welcome sequences, activation messaging, feature education, usage reminders, trial conversion, and re-engagement. Every message should have a purpose.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><img src="/assets/icon-14.png" alt=""></div>
+                    <div class="service-icon"><img src="/assets/Service/Product-Led Marketing/Icon 15.png" alt=""></div>
                     <h3>Bring Marketing and Product Into One Performance Strategy</h3>
                     <p>One of the biggest opportunities in product-led marketing is connecting teams and data. Our advertising team knows how users arrive. Our product team knows what users do. Our sales team knows why prospects convert—or hesitate.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><img src="/assets/icon-15.png" alt=""></div>
+                    <div class="service-icon"><img src="/assets/Service/Product-Led Marketing/Icon 16.png" alt=""></div>
                     <h3>Analytics That Connect the Dots</h3>
                     <p>[Brand Name] brings these signals together to create a more connected performance marketing strategy where acquisition and product experience support each other.</p>
                 </div>
@@ -326,7 +365,7 @@
             <div class="process">
                 <div class="process-step">
                     <div class="img-cont">
-                        <img src="/assets/icon-17.png" alt="Experience icon">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 17.png" alt="Experience icon">
                     </div>
                     We Market the Experience
                 </div>
@@ -334,7 +373,7 @@
 
                 <div class="process-step">
                     <div class="img-cont">
-                        <img src="/assets/icon-18.png" alt="Acquisition icon">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 18.png" alt="Acquisition icon">
                     </div>
                     Connect Acquisition With Activation
                 </div>
@@ -342,7 +381,7 @@
 
                 <div class="process-step">
                     <div class="img-cont">
-                        <img src="/assets/icon-19.png" alt="Data icon">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 19.png" alt="Data icon">
                     </div>
                     Use Data to Refine the Journey
                 </div>
@@ -350,7 +389,7 @@
 
                 <div class="process-step">
                     <div class="img-cont">
-                        <img src="/assets/icon-20.png" alt="Performance icon">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 20.png" alt="Performance icon">
                     </div>
                     Keep Performance at the Center
                 </div>
@@ -358,7 +397,7 @@
 
                 <div class="process-step">
                     <div class="img-cont">
-                        <img src="/assets/icon-21.png" alt="System icon">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 21.png" alt="System icon">
                     </div>
                     Build a Marketing System Around Your Product
                 </div>
@@ -368,7 +407,7 @@
 
     <!-- ============ SECTION 7 — WHO WE SUPPORT (reuses optimize pattern, dark) ============ -->
     <section class="optimize">
-        <img class="optimize-bg" src="/assets/Affiliate Marketing Banner 5.png" alt="">
+        <img class="optimize-bg" src="/assets/Service/Product-Led Marketing/Banner 2.png" alt="">
         <div class="optimize-scrim"></div>
         <div class="wrap optimize-inner">
             <div class="opt-1">
@@ -378,56 +417,56 @@
 
                 <div class="optimize-grid">
                     <div class="optimize-card">
-                        <img src="/assets/icon-24.png" alt="">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 22.png" alt="">
                         <div class="text">
                             <b>Product-Led Marketing</b>
                             <span>01</span>
                         </div>
                     </div>
                     <div class="optimize-card">
-                        <img src="/assets/icon-26.png" alt="">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 23.png" alt="">
                         <div class="text">
                             <b>Performance Advertising</b>
                             <span>02</span>
                         </div>
                     </div>
                     <div class="optimize-card">
-                        <img src="/assets/icon-30.png" alt="">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 24.png" alt="">
                         <div class="text">
                             <b>Conversion Optimization</b>
                             <span>03</span>
                         </div>
                     </div>
                     <div class="optimize-card">
-                        <img src="/assets/icon-31.png" alt="">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 25.png" alt="">
                         <div class="text">
                             <b>Lifecycle Strategy</b>
                             <span>04</span>
                         </div>
                     </div>
                     <div class="optimize-card">
-                        <img src="/assets/icon-32.png" alt="">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 26.png" alt="">
                         <div class="text">
                             <b>Product Analytics</b>
                             <span>05</span>
                         </div>
                     </div>
                     <div class="optimize-card">
-                        <img src="/assets/icon-33.png" alt="">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 27.png" alt="">
                         <div class="text">
                             <b>Acquisition & Activation</b>
                             <span>06</span>
                         </div>
                     </div>
                     <div class="optimize-card">
-                        <img src="/assets/icon-34.png" alt="">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 28.png" alt="">
                         <div class="text">
                             <b>Customer Journey</b>
                             <span>07</span>
                         </div>
                     </div>
                     <div class="optimize-card">
-                        <img src="/assets/icon-35.png" alt="">
+                        <img src="/assets/Service/Product-Led Marketing/Icon 29.png" alt="">
                         <div class="text">
                             <b>Measurable Commercial Performance</b>
                             <span>08</span>
@@ -453,17 +492,17 @@
             </div>
 
             <div class="measure-image">
-                <img src="/assets/Digital Media Advertising Banner 3.png" alt="Product-led marketing dashboard">
+                <img src="/assets/Service/Product-Led Marketing/Banner 5.png" alt="Product-led marketing dashboard">
             </div>
         </div>
     </section>
 
     <!-- ============ SECTION 9 — SCALING ============ -->
     <section class="synergy">
-        <img class="synergy-bg" src="/assets/Affiliate Marketing Banner 4.png" alt="">
+        <img class="synergy-bg" src="/assets/Service/Product-Led Marketing/Banner 3.png" alt="">
         <div class="synergy-scrim"></div>
         <div class="wrap">
-            <div style="max-width:656px;">
+            <div style="max-width:648px;">
                 <div class="eyebrow dark">PRODUCT-LED MARKETING SERVICES</div>
                 <h2 class="synergy-title">Where Product Experience Meets Performance Marketing</h2>
                 <div class="synergy-copy">
@@ -477,7 +516,7 @@
     <!-- ============ SECTION 10 — CTA BANNER ============ -->
     <div class="cta-wrapper">
         <section class="cta-banner">
-            <img class="cta-bg" src="/assets/Affiliate Marketing Banner 7.png" alt="">
+            <img class="cta-bg" src="/assets/Service/Product-Led Marketing/Banner 4.png" alt="">
             <div class="cta-scrim"></div>
             <div class="wrap cta-inner">
                 <div>
@@ -493,7 +532,10 @@
 </div>
 
     <div id="shared-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="/components/components.js"></script>
+<script src="/services/service-animation.js"></script>
 
 </body>
 
