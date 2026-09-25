@@ -170,8 +170,8 @@
                 <div class="eyebrow light">MORE THAN MARKETING</div>
                 <h1 class="hero-title">Performance Marketing Services That Turn Clicks Into Revenue</h1>
                 <div class="hero-cta">
-                    <a class="btn btn-solid" href="#">Put Every Marketing Dollar to Work <img src="" alt=""></a>
-                    <a class="btn btn-outline" href="#">See Our Approach <img src="" alt=""></a>
+                    <a class="btn btn-solid" href="#" data-popup="growth-form">Put Every Marketing Dollar to Work <img src="" alt=""></a>
+                    <a class="btn btn-outline" href="/contact/">See Our Approach <img src="" alt=""></a>
                 </div>
             </div>
         </div>
@@ -513,6 +513,876 @@
         </div>
     </section>
     </div>
+</div>
+
+<div class="nexus-popup" id="growth-form" aria-hidden="true">
+
+  <div class="nexus-popup__overlay" data-popup-close></div>
+
+  <div
+    class="nexus-popup__modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="growth-form-title"
+  >
+
+    <button
+      class="nexus-popup__close"
+      type="button"
+      aria-label="Close form"
+      data-popup-close
+    >
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nexus-popup__content">
+
+      <div class="nexus-popup__intro">
+
+        <span class="nexus-popup__eyebrow">
+          LET'S TALK GROWTH
+        </span>
+
+        <h2 id="growth-form-title">
+          Put Your Marketing
+          <span>To Work.</span>
+        </h2>
+
+        <p>
+          Tell us a little about your business and what you're
+          looking to achieve. We'll get back to you with the
+          next steps.
+        </p>
+
+        <div class="nexus-popup__points">
+          <div>
+            <span>01</span>
+            <p>Performance-focused strategy</p>
+          </div>
+
+          <div>
+            <span>02</span>
+            <p>Data-led growth opportunities</p>
+          </div>
+
+          <div>
+            <span>03</span>
+            <p>A clear path forward</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <form class="nexus-form" id="nexus-growth-form">
+
+        <div class="nexus-form__row">
+
+          <div class="nexus-form__field">
+            <label for="nexus-name">Name *</label>
+
+            <input
+              type="text"
+              id="nexus-name"
+              name="name"
+              placeholder="Your name"
+              required
+            >
+          </div>
+
+          <div class="nexus-form__field">
+            <label for="nexus-company">Company</label>
+
+            <input
+              type="text"
+              id="nexus-company"
+              name="company"
+              placeholder="Company name"
+            >
+          </div>
+
+        </div>
+
+
+        <div class="nexus-form__row">
+
+          <div class="nexus-form__field">
+            <label for="nexus-email">Email *</label>
+
+            <input
+              type="email"
+              id="nexus-email"
+              name="email"
+              placeholder="you@company.com"
+              required
+            >
+          </div>
+
+          <div class="nexus-form__field">
+            <label for="nexus-phone">Phone</label>
+
+            <input
+              type="tel"
+              id="nexus-phone"
+              name="phone"
+              placeholder="+1 000 000 0000"
+            >
+          </div>
+
+        </div>
+
+
+        <div class="nexus-form__field">
+
+          <label for="nexus-service">
+            What can we help with? *
+          </label>
+
+          <select
+            id="nexus-service"
+            name="service"
+            required
+          >
+            <option value="" selected disabled>
+              Select a service
+            </option>
+
+            <option value="paid-social">
+              Paid Social
+            </option>
+
+            <option value="programmatic">
+              Programmatic Advertising
+            </option>
+
+            <option value="customer-acquisition">
+              Customer Acquisition
+            </option>
+
+            <option value="app-marketing">
+              App Marketing & ASO
+            </option>
+
+            <option value="media-buying">
+              Media Buying
+            </option>
+
+            <option value="remarketing">
+              Remarketing
+            </option>
+
+            <option value="other">
+              Other
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="nexus-form__field">
+
+          <label for="nexus-budget">
+            Monthly marketing budget
+          </label>
+
+          <select
+            id="nexus-budget"
+            name="budget"
+          >
+            <option value="" selected disabled>
+              Select a range
+            </option>
+
+            <option value="under-5k">
+              Under $5K
+            </option>
+
+            <option value="5k-10k">
+              $5K – $10K
+            </option>
+
+            <option value="10k-25k">
+              $10K – $25K
+            </option>
+
+            <option value="25k-50k">
+              $25K – $50K
+            </option>
+
+            <option value="50k-plus">
+              $50K+
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="nexus-form__field">
+
+          <label for="nexus-message">
+            Tell us about your goals
+          </label>
+
+          <textarea
+            id="nexus-message"
+            name="message"
+            rows="4"
+            placeholder="What are you looking to improve or achieve?"
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="nexus-form__submit"
+        >
+          <span>Start a Conversation</span>
+          <span>→</span>
+        </button>
+
+        <p class="nexus-form__note">
+          We'll use your information only to respond to your inquiry.
+        </p>
+
+      </form>
+
+    </div>
+
+  </div>
+<style>
+  /* =========================================================
+   NEXUS POPUP FORM
+========================================================= */
+
+.nexus-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 28px;
+
+  visibility: hidden;
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+
+.nexus-popup.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* ---------------------------------------------------------
+   OVERLAY
+--------------------------------------------------------- */
+
+.nexus-popup__overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(11, 11, 11, 0.72);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+
+/* ---------------------------------------------------------
+   MODAL
+--------------------------------------------------------- */
+
+.nexus-popup__modal {
+  position: relative;
+
+  width: min(1100px, 100%);
+  max-height: calc(100vh - 56px);
+
+  overflow-y: auto;
+
+  background: var(--paper);
+
+  border: 1px solid var(--line);
+
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.28);
+
+  transform: translateY(30px) scale(0.97);
+
+  transition:
+    transform 0.45s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+.nexus-popup.is-open .nexus-popup__modal {
+  transform: translateY(0) scale(1);
+}
+
+
+/* ---------------------------------------------------------
+   CONTENT
+--------------------------------------------------------- */
+
+.nexus-popup__content {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
+
+/* ---------------------------------------------------------
+   INTRO
+--------------------------------------------------------- */
+
+.nexus-popup__intro {
+  padding: 56px 48px;
+
+  background: var(--ink);
+
+  color: var(--paper);
+}
+
+
+.nexus-popup__eyebrow {
+  display: block;
+
+  margin-bottom: 22px;
+
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--accent);
+}
+
+
+.nexus-popup__intro h2 {
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(48px, 5vw, 76px);
+  font-weight: 400;
+  line-height: 0.88;
+
+  text-transform: uppercase;
+}
+
+
+.nexus-popup__intro h2 span {
+  display: block;
+
+  color: var(--accent);
+}
+
+
+.nexus-popup__intro > p {
+  max-width: 420px;
+
+  margin: 28px 0 42px;
+
+  color: #c8c8c8;
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* ---------------------------------------------------------
+   POINTS
+--------------------------------------------------------- */
+
+.nexus-popup__points {
+  display: flex;
+  flex-direction: column;
+
+  border-top: 1px solid var(--line-dark);
+}
+
+
+.nexus-popup__points > div {
+  display: flex;
+  gap: 18px;
+
+  padding: 17px 0;
+
+  border-bottom: 1px solid var(--line-dark);
+}
+
+
+.nexus-popup__points span {
+  color: var(--accent);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+.nexus-popup__points p {
+  margin: 0;
+
+  color: #e7e7e7;
+
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+
+/* ---------------------------------------------------------
+   FORM
+--------------------------------------------------------- */
+
+.nexus-form {
+  padding: 56px 48px;
+
+  background: var(--paper);
+}
+
+
+.nexus-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+.nexus-form__field {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 22px;
+}
+
+
+.nexus-form__field label {
+  margin-bottom: 8px;
+
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: var(--ink);
+}
+
+
+.nexus-form__field input,
+.nexus-form__field select,
+.nexus-form__field textarea {
+
+  width: 100%;
+
+  border: 1px solid var(--line);
+
+  background: var(--panel);
+
+  color: var(--ink);
+
+  padding: 14px 15px;
+
+  outline: none;
+
+  border-radius: 0;
+
+  font-family: var(--font-body);
+  font-size: 13px;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.nexus-form__field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+
+.nexus-form__field input::placeholder,
+.nexus-form__field textarea::placeholder {
+  color: var(--muted-2);
+}
+
+
+.nexus-form__field input:focus,
+.nexus-form__field select:focus,
+.nexus-form__field textarea:focus {
+
+  border-color: var(--accent);
+
+  background: var(--paper);
+}
+
+
+/* ---------------------------------------------------------
+   SUBMIT BUTTON
+--------------------------------------------------------- */
+
+.nexus-form__submit {
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 17px 20px;
+
+  border: none;
+
+  background: var(--accent);
+  color: var(--paper);
+
+  cursor: pointer;
+
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.nexus-form__submit:hover {
+  background: var(--accent-hover);
+}
+
+
+.nexus-form__submit span:last-child {
+  font-size: 20px;
+
+  transition: transform 0.25s ease;
+}
+
+
+.nexus-form__submit:hover span:last-child {
+  transform: translateX(5px);
+}
+
+
+.nexus-form__note {
+
+  margin: 12px 0 0;
+
+  color: var(--muted);
+
+  font-size: 10px;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+   CLOSE BUTTON
+--------------------------------------------------------- */
+
+.nexus-popup__close {
+
+  position: absolute;
+
+  top: 16px;
+  right: 16px;
+
+  z-index: 5;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  background: rgba(0, 0, 0, 0.45);
+
+  cursor: pointer;
+}
+
+
+.nexus-popup__close span {
+
+  position: absolute;
+
+  width: 17px;
+  height: 1px;
+
+  background: var(--paper);
+}
+
+
+.nexus-popup__close span:first-child {
+  transform: rotate(45deg);
+}
+
+
+.nexus-popup__close span:last-child {
+  transform: rotate(-45deg);
+}
+
+
+.nexus-popup__close:hover {
+  background: var(--accent);
+}
+
+
+/* ---------------------------------------------------------
+   BODY LOCK
+--------------------------------------------------------- */
+
+body.nexus-popup-open {
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .nexus-popup {
+    padding: 12px;
+  }
+
+  .nexus-popup__modal {
+    max-height: calc(100vh - 24px);
+  }
+
+  .nexus-popup__content {
+    grid-template-columns: 1fr;
+  }
+
+  .nexus-popup__intro {
+    padding: 42px 28px 34px;
+  }
+
+  .nexus-popup__intro h2 {
+    font-size: 52px;
+  }
+
+  .nexus-popup__intro > p {
+    margin: 22px 0 28px;
+  }
+
+  .nexus-popup__points {
+    display: none;
+  }
+
+  .nexus-form {
+    padding: 32px 28px 36px;
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .nexus-popup {
+    padding: 0;
+  }
+
+  .nexus-popup__modal {
+    width: 100%;
+    max-height: 100vh;
+  }
+
+  .nexus-popup__intro {
+    padding: 38px 22px 28px;
+  }
+
+  .nexus-popup__intro h2 {
+    font-size: 46px;
+  }
+
+  .nexus-form {
+    padding: 28px 22px 32px;
+  }
+
+  .nexus-form__row {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+}
+
+</style>
+<script>
+  /* =========================================================
+   NEXUS POPUP SYSTEM
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const popup = document.getElementById("growth-form");
+
+  if (!popup) return;
+
+
+  const modal = popup.querySelector(".nexus-popup__modal");
+
+  const closeButtons = popup.querySelectorAll(
+    "[data-popup-close]"
+  );
+
+
+  /* -------------------------------------------------------
+     OPEN POPUP
+  ------------------------------------------------------- */
+
+  function openPopup() {
+
+    popup.classList.add("is-open");
+
+    popup.setAttribute("aria-hidden", "false");
+
+    document.body.classList.add("nexus-popup-open");
+
+    setTimeout(() => {
+
+      const firstInput = popup.querySelector(
+        "input, select, textarea"
+      );
+
+      if (firstInput) {
+        firstInput.focus();
+      }
+
+    }, 400);
+  }
+
+
+  /* -------------------------------------------------------
+     CLOSE POPUP
+  ------------------------------------------------------- */
+
+  function closePopup() {
+
+    popup.classList.remove("is-open");
+
+    popup.setAttribute("aria-hidden", "true");
+
+    document.body.classList.remove("nexus-popup-open");
+  }
+
+
+  /* -------------------------------------------------------
+     ANY BUTTON WITH data-popup="growth-form"
+     OPENS THE POPUP
+  ------------------------------------------------------- */
+
+  document.addEventListener("click", (event) => {
+
+    const trigger = event.target.closest(
+      '[data-popup="growth-form"]'
+    );
+
+    if (!trigger) return;
+
+    event.preventDefault();
+
+    openPopup();
+
+  });
+
+
+  /* -------------------------------------------------------
+     CLOSE BUTTON / OVERLAY
+  ------------------------------------------------------- */
+
+  closeButtons.forEach((button) => {
+
+    button.addEventListener("click", closePopup);
+
+  });
+
+
+  /* -------------------------------------------------------
+     ESC KEY
+  ------------------------------------------------------- */
+
+  document.addEventListener("keydown", (event) => {
+
+    if (
+      event.key === "Escape" &&
+      popup.classList.contains("is-open")
+    ) {
+      closePopup();
+    }
+
+  });
+
+
+  /* -------------------------------------------------------
+     PREVENT CLICK INSIDE MODAL FROM CLOSING
+  ------------------------------------------------------- */
+
+  modal.addEventListener("click", (event) => {
+
+    event.stopPropagation();
+
+  });
+
+
+  /* -------------------------------------------------------
+     FORM SUBMIT
+     
+     TEMPORARY:
+     Prevents page refresh until you connect
+     your actual form backend.
+  ------------------------------------------------------- */
+
+  const form = document.getElementById(
+    "nexus-growth-form"
+  );
+
+  if (form) {
+
+    form.addEventListener("submit", (event) => {
+
+      event.preventDefault();
+
+      console.log(
+        "Nexus form submitted:",
+        new FormData(form)
+      );
+
+      // Add your form submission service here.
+
+    });
+
+  }
+
+});
+</script>
 </div>
 
     <div id="shared-footer"></div>

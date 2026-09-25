@@ -118,8 +118,8 @@
                     performance marketing, paid advertising, creative strategy, audience targeting, and conversion
                     optimization.</p>
                 <div class="hero-cta">
-                    <a class="btn btn-solid" href="#">Let's Create Campaigns That Perform <img src="" alt=""></a>
-                    <a class="btn btn-outline" href="#">Talk to a Specialist</a>
+                    <a class="btn btn-solid" href="/contact" data-popup="growth-form">Let's Create Campaigns That Perform</a>
+                    <a class="btn btn-outline" href="/contact/" data-popup="growth-form" style="margin-left: 12px; padding: 12px 20px; background: transparent; border: 1px solid var(--ink); color: var(--ink); font-family: var(--font-heading); font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;">Get in Touch</a>
                 </div>
             </div>
         </div>
@@ -323,9 +323,9 @@
                             Scroll</span></h2>
                     <p class="cta-copy">Plan smarter. Create sharper. Test continuously. Optimize relentlessly.</p>
                     <div class="cta-buttons">
-                        <a class="btn btn-solid" href="#">Talk to [Brand Name] About Your TikTok Strategy <img
+                        <a class="btn btn-solid" href="/contact">Talk to [Brand Name] About Your TikTok Strategy <img
                                 src="" alt=""></a>
-                        <a class="btn btn-outline" href="#">Get in Touch</a>
+                        <a class="btn btn-outline" data-popup="growth-form" style="margin-left: 12px; padding: 12px 20px; background: transparent; border: 1px solid var(--ink); color: var(--ink); font-family: var(--font-heading); font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase">Get in Touch</a>
                     </div>
                     <div class="cta-mini">
                         <div class="cta-mini-item"><img src="/assets/icon-18.png" alt="">Creative-Led Strategy</div>
@@ -337,12 +337,145 @@
         </section>
     </div>
 
-    <div id="shared-footer"></div>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<div id="shared-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="/components/components.js"></script>
 <script src="/services/service-animation.js"></script>
 
+<!-- Nexus Popup Form -->
+<div class="nexus-popup" id="growth-form" aria-hidden="true">
+  <div class="nexus-popup__overlay" data-popup-close></div>
+  <div class="nexus-popup__modal" role="dialog" aria-modal="true" aria-labelledby="growth-form-title">
+    <button class="nexus-popup__close" type="button" aria-label="Close form" data-popup-close>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nexus-popup__content">
+      <div class="nexus-popup__intro">
+        <span class="nexus-popup__eyebrow">LET'S TALK GROWTH</span>
+        <h2 id="growth-form-title">Put Your Marketing <span>To Work.</span></h2>
+        <p>Tell us a little about your business and what you're looking to achieve. We'll get back to you with the next steps.</p>
+        <div class="nexus-popup__points">
+          <div><span>01</span><p>Performance-focused strategy</p></div>
+          <div><span>02</span><p>Data-led growth opportunities</p></div>
+          <div><span>03</span><p>A clear path forward</p></div>
+        </div>
+      </div>
+      <form class="nexus-form" id="nexus-growth-form">
+        <div class="nexus-form__row">
+          <div class="nexus-form__field">
+            <label for="nexus-name">Name *</label>
+            <input type="text" id="nexus-name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="nexus-form__field">
+            <label for="nexus-company">Company</label>
+            <input type="text" id="nexus-company" name="company" placeholder="Company name">
+          </div>
+        </div>
+        <div class="nexus-form__row">
+          <div class="nexus-form__field">
+            <label for="nexus-email">Email *</label>
+            <input type="email" id="nexus-email" name="email" placeholder="you@company.com" required>
+          </div>
+          <div class="nexus-form__field">
+            <label for="nexus-phone">Phone</label>
+            <input type="tel" id="nexus-phone" name="phone" placeholder="+1 000 000 0000">
+          </div>
+        </div>
+        <div class="nexus-form__field">
+          <label for="nexus-service">What can we help with? *</label>
+          <select id="nexus-service" name="service" required>
+            <option value="" selected disabled>Select a service</option>
+            <option value="paid-social">Paid Social</option>
+            <option value="programmatic">Programmatic Advertising</option>
+            <option value="customer-acquisition">Customer Acquisition</option>
+            <option value="app-marketing">App Marketing & ASO</option>
+            <option value="media-buying">Media Buying</option>
+            <option value="remarketing">Remarketing</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="nexus-form__field">
+          <label for="nexus-budget">Monthly marketing budget</label>
+          <select id="nexus-budget" name="budget">
+            <option value="" selected disabled>Select a range</option>
+            <option value="under-5k">Under $5K</option>
+            <option value="5k-10k">$5K – $10K</option>
+            <option value="10k-25k">$10K – $25K</option>
+            <option value="25k-50k">$25K – $50K</option>
+            <option value="50k-plus">$50K+</option>
+          </select>
+        </div>
+        <div class="nexus-form__field">
+          <label for="nexus-message">Tell us about your goals</label>
+          <textarea id="nexus-message" name="message" rows="4" placeholder="What are you looking to improve or achieve?"></textarea>
+        </div>
+        <button type="submit" class="nexus-form__submit">
+          <span>Start a Conversation</span><span>→</span>
+        </button>
+        <p class="nexus-form__note">We'll use your information only to respond to your inquiry.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("growth-form");
+    if (!popup) return;
+
+    const modal = popup.querySelector(".nexus-popup__modal");
+    const closeButtons = popup.querySelectorAll("[data-popup-close]");
+
+    function openPopup() {
+      popup.classList.add("is-open");
+      popup.setAttribute("aria-hidden", "false");
+      document.body.classList.add("nexus-popup-open");
+      setTimeout(() => {
+        const firstInput = popup.querySelector("input, select, textarea");
+        if (firstInput) {
+          firstInput.focus();
+        }
+      }, 400);
+    }
+
+    function closePopup() {
+      popup.classList.remove("is-open");
+      popup.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("nexus-popup-open");
+    }
+
+    document.addEventListener("click", (event) => {
+      const trigger = event.target.closest('[data-popup="growth-form"]');
+      if (!trigger) return;
+      event.preventDefault();
+      openPopup();
+    });
+
+    closeButtons.forEach((button) => {
+      button.addEventListener("click", closePopup);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && popup.classList.contains("is-open")) {
+        closePopup();
+      }
+    });
+
+    modal.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+
+    const form = document.getElementById("nexus-growth-form");
+    if (form) {
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        console.log("Nexus form submitted:", new FormData(form));
+      });
+    }
+  });
+</script>
 </body>
 
 </html>
