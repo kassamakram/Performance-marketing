@@ -48,6 +48,12 @@
         .service-icon img { width: 22px; height: 22px; }
         .service-card h3 { font-family: var(--font-heading); font-size: 16.5px; font-weight: 700; margin: 0 0 8px; }
         .service-card p { font-size: 13.5px; line-height: 1.65; color: var(--muted); margin: 0; }
+        .hero-text{
+          max-width: 600px;
+        }
+        .optimize .process{
+          padding: 18px;
+        }
         @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr 1fr; } }
 
         @media(max-width:768px){
@@ -60,7 +66,7 @@
           }
           .process{
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
           }
           .process-arrow{
             display: none;
@@ -92,6 +98,14 @@
                 <div class="hero-cta solo">
                     <a class="btn btn-solid" href="#" data-popup="growth-form">Build My Commerce Media Strategy</a>
                 </div>
+            </div>
+            <div class="hero-logos">
+                <img src="/assets/shopify.png" alt="Shopify">
+                <img src="/assets/g-ads.png" alt="Google Ads">
+                <img src="/assets/meta.png" alt="Meta">
+                <img src="/assets/youtube.png" alt="YouTube">
+                <img src="/assets/canva.png" alt="Canva">
+                <img src="/assets/hubspot.png" alt="HubSpot">
             </div>
         </div>
     </section>
@@ -183,7 +197,7 @@
                     <div class="metric-item">Average order value</div>
                     <div class="metric-item">Customer lifetime value (LTV)</div>
                     <div class="metric-item">Click-through rate</div>
-                    <div class="metric-item">Repeat purchase rate</div>
+                    <div class="metric-item none">Repeat purchase rate</div>
                 </div>
 
                 <p class="measure-copy" style="margin:28px 0 12px;">We don't chase metrics simply because they look

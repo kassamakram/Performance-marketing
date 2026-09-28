@@ -42,9 +42,20 @@
             align-items: center; justify-content: center; border: 1px solid var(--line); margin-bottom: 18px;
         }
         .service-icon img { width: 22px; height: 22px; }
+        .hero-text{
+          max-width: 545px;
+        }
         .service-card h3 { font-family: var(--font-heading); font-size: 16.5px; font-weight: 700; margin: 0 0 8px; }
         .service-card p { font-size: 13.5px; line-height: 1.65; color: var(--muted); margin: 0; }
         @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+        @media(max-width:768px){
+          .metric-list.stack{
+            grid-template-columns: 1fr 1fr;
+          }
+          .cta-buttons{
+            flex-wrap: nowrap;
+          }
+        }
         @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -62,6 +73,14 @@
                 <div class="hero-cta solo">
                     <a class="btn btn-solid" href="/contact" data-popup="growth-form">Build My Audio Advertising Strategy</a>
                 </div>
+            </div>
+            <div class="hero-logos">
+                <img src="/assets/shopify.png" alt="Shopify">
+                <img src="/assets/g-ads.png" alt="Google Ads">
+                <img src="/assets/meta.png" alt="Meta">
+                <img src="/assets/youtube.png" alt="YouTube">
+                <img src="/assets/canva.png" alt="Canva">
+                <img src="/assets/hubspot.png" alt="HubSpot">
             </div>
         </div>
     </section>
@@ -217,7 +236,7 @@
                     <div class="metric-item"><div><b>Relevant</b><span>The message should fit the listener and context.</span></div></div>
                     <div class="metric-item"><div><b>Memorable</b><span>Strong ideas are easier to remember.</span></div></div>
                     <div class="metric-item"><div><b>Actionable</b><span>Give listeners a clear next step.</span></div></div>
-                    <div class="metric-item"><div><b>On-brand</b><span>Performance shouldn't come at the cost of brand identity.</span></div></div>
+                    <div class="metric-item none"><div><b>On-brand</b><span>Performance shouldn't come at the cost of brand identity.</span></div></div>
                 </div>
             </div>
 
@@ -257,14 +276,17 @@
                 
                 <div class="cta-buttons">
                         <a class="btn btn-solid" href="/contact">Put Your Brand in the Right Ears?</a>
-                        <a class="btn btn-outline" data-popup="growth-form" style="margin-left: 12px; padding: 12px 20px; background: transparent; border: 1px solid var(--ink); color: var(--ink); font-family: var(--font-heading); font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;">Get in Touch</a>
+                        <a class="btn btn-outline" data-popup="growth-form" >Get in Touch</a>
                     </div></h4>
             </div>
         </div>
     </section>
     </div>
         <div id="shared-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="/components/components.js"></script>
+<script src="/services/service-animation.js"></script>
 
 <!-- Nexus Popup Form -->
     <div class="nexus-popup" id="growth-form" aria-hidden="true">

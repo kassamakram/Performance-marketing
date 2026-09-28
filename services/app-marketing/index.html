@@ -98,6 +98,9 @@
         .optimize-grid{
             max-width: 56%;
         }
+        .hero-text{
+          max-width: 600px !important;
+        }
 
         @media (max-width: 900px) {
             .services-grid {
@@ -110,6 +113,9 @@
             }
             .hero{
                 padding-bottom: 60px;
+            }
+            .metric-list.stack{
+              grid-template-columns: 1fr 1fr;
             }
         }
 
@@ -136,6 +142,14 @@
                 <div class="hero-cta solo">
                     <a class="btn btn-solid" href="#" data-popup="growth-form">Grow My App</a>
                 </div>
+            </div>
+            <div class="hero-logos">
+                <img src="/assets/shopify.png" alt="Shopify">
+                <img src="/assets/g-ads.png" alt="Google Ads">
+                <img src="/assets/meta.png" alt="Meta">
+                <img src="/assets/youtube.png" alt="YouTube">
+                <img src="/assets/canva.png" alt="Canva">
+                <img src="/assets/hubspot.png" alt="HubSpot">
             </div>
         </div>
     </section>
@@ -165,6 +179,7 @@
                     ad clicks to installs, engagement, conversions, and retention—to ensure your acquisition spend
                     attracts valuable users and delivers measurable returns.</p>
             </div>
+            
         </div>
     </section>
 
@@ -208,12 +223,13 @@
                     <p>Track CAC, conversion rates, ROAS, revenue, retention, and customer lifetime value to guide
                         smarter decisions.</p>
                 </div>
-                <div class="service-card">
+                
+            </div>
+            <div class="service-card last">
                     <div class="service-icon"><img src="/assets/Service/App-Marketing/Icon 7.png" alt=""></div>
                     <h3>Conversion & Funnel Optimization</h3>
                     <p>We examine the journey from ad → install → activation → conversion to identify friction and improve the points that matter most.</p>
                 </div>
-            </div>
         </div>
     </section>
 
@@ -239,7 +255,7 @@
                     <div class="metric-item">
                         <div><b>Offers</b><span>What creates action?</span></div>
                     </div>
-                    <div class="metric-item">
+                    <div class="metric-item none">
                         <div><b>Landing experiences</b><span>What removes friction?</span></div>
                     </div>
                 </div>

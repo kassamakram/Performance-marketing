@@ -97,6 +97,12 @@
             margin: 0;
         }
 
+        .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
         @media (max-width: 900px) {
             .services-grid {
                 grid-template-columns: 1fr 1fr;
@@ -105,6 +111,16 @@
         @media(max-width:768px){
             .hero{
                 min-height: 59vh;
+            }
+            .processes{
+              display: none;
+            }
+            .hero-cta{
+              flex-wrap: nowrap;
+            }
+            .btn{
+              padding: 15px 17px;
+              font-size: 12px;
             }
             .intro{
                 padding-top:0px ;
@@ -135,6 +151,14 @@
                     <a class="btn btn-solid" href="#" data-popup="growth-form">Build a Meta Ads Strategy <img src="" alt=""></a>
                     <a class="btn btn-outline" href="/contact/">See Our Approach <img src="" alt=""></a>
                 </div>
+            </div>
+            <div class="hero-logos">
+                <img src="/assets/shopify.png" alt="Shopify">
+                <img src="/assets/g-ads.png" alt="Google Ads">
+                <img src="/assets/meta.png" alt="Meta">
+                <img src="/assets/youtube.png" alt="YouTube">
+                <img src="/assets/canva.png" alt="Canva">
+                <img src="/assets/hubspot.png" alt="HubSpot">
             </div>
         </div>
     </section>
