@@ -974,27 +974,11 @@ footer {
     counter-increment: svc;
   }
 
-  /* Number box */
-  .site-header .nav-dropdown-menu a:not(:first-child)::before {
-    content: counter(svc, decimal-leading-zero);
-
-    flex: 0 0 44px;
-    width: 44px;
-    height: 44px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    border-radius: 12px;
-
-    color: #bdbdbd;
-    font-size: 12px;
-    font-weight: 700;
-
-    transition: all 0.2s ease;
+  .nav-dropdown-menu img{
+    width: 25px;
+    height: 25px;
   }
+
 
   .site-header .nav-dropdown-menu a:not(:first-child):hover {
     background: rgba(255, 255, 255, 0.07);

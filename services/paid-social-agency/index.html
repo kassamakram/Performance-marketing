@@ -51,7 +51,21 @@
                 padding: 40px 0px;
             }
         }
+@media (max-width: 768px) {
+    .process {
+        display: grid;
+        padding: 23px;
+    }
+}
 
+      @media (max-width: 768px) {
+    .hero-inner {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        margin-top: 40px;
+    }
+}
     </style>
 </head>
 
@@ -67,8 +81,16 @@
                 <h1 class="hero-title">#1 Paid Social Agency for Scalable Growth &amp; Measurable ROI</h1>
                 <div class="hero-cta">
                     <a class="btn btn-solid" href="/contact" data-popup="growth-form">Turn Social Ad Spend Into Measurable Business Growth →</a>
-                    <a class="btn btn-outline" href="/contact/" data-popup="growth-form" style="margin-left: 12px; padding: 12px 20px; background: transparent; border: 1px solid var(--ink); color: var(--ink); font-family: var(--font-heading); font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;">Get in Touch</a>
+                    <!-- <a class="btn btn-outline" href="/contact/" data-popup="growth-form" style="margin-left: 12px; padding: 12px 20px; background: transparent; border: 1px solid var(--ink); color: var(--ink); font-family: var(--font-heading); font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;">Get in Touch</a> -->
                 </div>
+            </div>
+              <div class="hero-logos">
+                <img src="/assets/shopify.png" alt="Shopify">
+                <img src="/assets/g-ads.png" alt="Google Ads">
+                <img src="/assets/meta.png" alt="Meta">
+                <img src="/assets/youtube.png" alt="YouTube">
+                <img src="/assets/canva.png" alt="Canva">
+                <img src="/assets/hubspot.png" alt="HubSpot">
             </div>
 
             <!-- <div class="hero-logos">
@@ -321,7 +343,7 @@
 <script src="/services/service-animation.js"></script>
 
 <!-- Nexus Popup Form -->
-<div class="nexus-popup" id="growth-form" aria-hidden="true">
+<!-- <div class="nexus-popup" id="growth-form" aria-hidden="true">
   <div class="nexus-popup__overlay" data-popup-close></div>
   <div class="nexus-popup__modal" role="dialog" aria-modal="true" aria-labelledby="growth-form-title">
     <button class="nexus-popup__close" type="button" aria-label="Close form" data-popup-close>
@@ -395,7 +417,7 @@
       </form>
     </div>
   </div>
-</div>
+</div> -->
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {

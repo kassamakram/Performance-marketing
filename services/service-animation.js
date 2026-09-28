@@ -191,8 +191,8 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        const processSteps = gsap.utils.toArray(".process-step");
-        const processArrows = gsap.utils.toArray(".process-arrow");
+        // const processSteps = gsap.utils.toArray(".process-step");
+        // const processArrows = gsap.utils.toArray(".process-arrow");
 
         if (processSteps.length) {
             gsap.set(processSteps, {

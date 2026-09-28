@@ -13,6 +13,35 @@
     <link rel="stylesheet" href="/services/services.css">
     <link rel="stylesheet" href="/components/header-footer.css">
     <style>
+
+  @media (max-width: 768px) {
+    .hero-inner {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+      .phi-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 30px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.phi-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.phi-list li img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
         /* Only new rule needed: this page's hero includes supporting copy,
            which the reference hero markup didn't have a class for. */
         .hero-sub {
@@ -75,6 +104,14 @@
 
 
         }
+
+        
+.optimize-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
+}
     </style>
 </head>
 
@@ -98,6 +135,14 @@
                     <a class="btn btn-solid" href="#" data-popup="growth-form">Launch Your LinkedIn Campaign <img src="" alt=""></a>
                     <a class="btn btn-outline" href="/contact/">Talk to a Specialist <img src="" alt=""></a>
                 </div>
+            </div>
+              <div class="hero-logos">
+                <img src="/assets/shopify.png" alt="Shopify">
+                <img src="/assets/g-ads.png" alt="Google Ads">
+                <img src="/assets/meta.png" alt="Meta">
+                <img src="/assets/youtube.png" alt="YouTube">
+                <img src="/assets/canva.png" alt="Canva">
+                <img src="/assets/hubspot.png" alt="HubSpot">
             </div>
         </div>
     </section>
@@ -379,7 +424,7 @@
                     <li><img src="/assets/icon-36.png" alt="">Audience targeting</li>
                     <li><img src="/assets/icon-37.png" alt="">Creative testing</li>
                     <li><img src="/assets/icon-38.png" alt="">Conversion tracking</li>
-                    <li><img src="/assets/icon-39.png" alt="">ROI-focused optimization</li>
+                    <!-- <li><img src="/assets/icon-39.png" alt="">ROI-focused optimization</li> -->
                 </ul>
             </div>
 
