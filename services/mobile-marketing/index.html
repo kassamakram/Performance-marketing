@@ -48,6 +48,12 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
+        .grid{
+            display: grid;
+            margin-top: 20px;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+        }
 
         .service-card {
             background: #fff;
@@ -121,6 +127,11 @@
         @media (max-width: 900px) {
             .services-grid {
                 grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media(max-width:768px){
+            .grid{
+                grid-template-columns: 1fr;
             }
         }
 
@@ -311,7 +322,10 @@
                     <h3>Mobile Display Advertising</h3>
                     <p>Reach users across mobile apps and sites with display campaigns built for visibility and action.</p>
                 </div>
-                <div class="service-card">
+                
+            </div>
+            <div class="grid">
+            <div class="service-card">
                     <div class="service-icon"><img src="/assets/Service/Mobile Marketing Agency/Icon 16.png" alt=""></div>
                     <h3>Mobile Video Advertising</h3>
                     <p>Use video to capture attention, tell your story, and drive mobile conversions.</p>
@@ -321,7 +335,7 @@
                     <h3>Mobile Remarketing</h3>
                     <p>Reconnect with mobile users who showed interest but didn't convert, and bring them back.</p>
                 </div>
-            </div>
+                </div>
         </div>
     </section>
 
@@ -1362,7 +1376,8 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<div id="shared-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="/components/components.js"></script>
 <script src="/services/service-animation.js"></script>

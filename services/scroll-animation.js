@@ -67,19 +67,19 @@ document.addEventListener("DOMContentLoaded", function () {
        1. HERO
     ========================================================= */
 
-    const heroHeading = document.querySelector(".hero-heading");
-    const heroBtnCont = document.querySelector(".hero-section .btn-cont");
+    // const heroHeading = document.querySelector(".hero-heading");
+    // const heroBtnCont = document.querySelector(".hero-section .btn-cont");
 
-    fadeFrom(heroHeading, { y: 50, opacity: 0, filter: "blur(10px)", duration: 0.9, scrollTrigger: { trigger: ".hero-section", start: "top top", toggleActions: "play none none none" } });
-    if (heroBtnCont) {
-        gsap.from(heroBtnCont, {
-            y: 30,
-            opacity: 0,
-            duration: 0.7,
-            delay: 0.25,
-            ease: "power2.out"
-        });
-    }
+    // fadeFrom(heroHeading, { y: 50, opacity: 0, filter: "blur(10px)", duration: 0.9, scrollTrigger: { trigger: ".hero-section", start: "top top", toggleActions: "play none none none" } });
+    // if (heroBtnCont) {
+    //     gsap.from(heroBtnCont, {
+    //         y: 30,
+    //         opacity: 0,
+    //         duration: 0.7,
+    //         delay: 0.25,
+    //         ease: "power2.out"
+    //     });
+    // }
 
     /* =========================================================
        2. LOGOS BAR

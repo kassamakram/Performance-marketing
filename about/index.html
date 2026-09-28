@@ -27,7 +27,7 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/components/header-footer.css">
-  <link rel="stylesheet" href="/about/about.css">
+  <!-- <link rel="stylesheet" href="/about/about.css"> -->
 
   <style>
     /* =========================================================
@@ -149,115 +149,7 @@ button, input { font: inherit; }
 .btn.ghost .ar::before,
 .btn.ghost-light .ar::before { background: rgba(0,0,0,.2); }
 
-/* =========================================================
-   HEADER
-   ========================================================= */
-.site-header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
-  background: rgba(7,7,7,.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid #1F1F1F;
-  height: 64px;
-}
-.header-inner {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 var(--pad);
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-.site-logo {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-  gap: 1px;
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 13px;
-  letter-spacing: .22em;
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
-  flex: none;
-}
-.main-navigation {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  margin-left: auto;
-}
-.nav-link {
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: #BDBDBD;
-  transition: color .2s ease;
-  text-decoration: none;
-}
-.nav-link:hover, .nav-link.active { color: #fff; }
-.header-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--accent);
-  color: #fff;
-  border-radius: 2px;
-  padding: 10px 18px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  transition: background .2s ease;
-  text-decoration: none;
-  margin-left: 10px;
-}
-.header-cta:hover { background: var(--accent-hover); }
-.nav-dropdown { position: relative; }
-.nav-dropdown-toggle {
-  background: none;
-  border: none;
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: #BDBDBD;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 0;
-  transition: color .2s ease;
-}
-.nav-dropdown-toggle:hover { color: #fff; }
-.dropdown-arrow { font-size: 10px; }
-.nav-dropdown-menu {
-  display: none;
-  position: absolute;
-  top: calc(100% + 16px);
-  left: 0;
-  background: #111;
-  border: 1px solid #222;
-  border-radius: 6px;
-  padding: 8px 0;
-  min-width: 240px;
-  z-index: 100;
-}
-.nav-dropdown:hover .nav-dropdown-menu { display: block; }
-.nav-dropdown-menu a {
-  display: block;
-  padding: 8px 18px;
-  font-size: 11.5px;
-  color: #BDBDBD;
-  transition: color .2s ease, background .2s ease;
-}
-.nav-dropdown-menu a:hover { color: #fff; background: rgba(255,255,255,.05); }
-.mobile-menu-toggle { display: none; }
+
 
 /* =========================================================
    01 — HERO
@@ -1538,6 +1430,10 @@ footer.nexus-footer {
   .btn { width: 100%; justify-content: center; }
   .data-pills { gap: 7px; }
   .data-pill { padding: 6px 12px; font-size: 10.5px; }
+}
+
+.site-header{
+  background-color: #0B0B0B;
 }
 
   </style>

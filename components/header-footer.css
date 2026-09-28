@@ -909,10 +909,7 @@ footer {
     position: static !important;
   }
 
-  .f-news {
-    display: none;
-  }
-
+ 
   /* ---------- Panel ---------- */
   .site-header .nav-dropdown-menu {
     position: absolute !important;

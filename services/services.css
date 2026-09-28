@@ -8,8 +8,8 @@
             --accent: #F4501B;
             --accent-hover: #D83E0C;
             --accent-2: #FF7A3D;
-            --muted: #6A6A6A;
-            --muted-2: #999999;
+            --muted: #a7a7a7;
+            --muted-2: #d2d2d2;
             --line: #E4E1DB;
             --line-dark: #242424;
             --max: 1320px;
@@ -61,7 +61,7 @@
             gap: 10px;
             font-family: var(--font-heading);
             font-weight: 800;
-            font-size: 13px;
+            font-size: 15px;
             letter-spacing: .2em;
             margin-bottom: 18px;
         }
@@ -141,7 +141,7 @@
         .hero-scrim {
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(11, 11, 11, .35) 0%, rgba(11, 11, 11, .55) 45%, rgba(11, 11, 11, .92) 100%);
+            /* background: linear-gradient(180deg, rgba(11, 11, 11, .35) 0%, rgba(11, 11, 11, .55) 45%, rgba(11, 11, 11, .92) 100%); */
         }
 
         .hero-inner {

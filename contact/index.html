@@ -250,6 +250,10 @@
             margin: 32px 0 0;
         } */
 
+        .hero{
+            min-height: 85vh;
+        }
+
         /* LAYOUT */
         .main {
             background: var(--panel);
@@ -980,24 +984,7 @@
             color: var(--ink);
         }
 
-        footer {
-            background: var(--ink);
-            color: #8a8a8a;
-            font-size: 14px;
-            padding: 30px 0;
-            border-top: 1px solid var(--line-dark);
-        }
-
-        footer .wrap {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        footer a:hover {
-            color: var(--accent);
-        }
+     
 
         @media (max-width: 940px) {
             .grid {
@@ -1030,6 +1017,12 @@
         @media (max-width: 640px) {
             :root {
                 --pad: 18px;
+            }
+            .main{
+                padding-bottom:40px ;
+            }
+            .cta{
+                padding: 40px 0px;
             }
 
             .links a:not(.pill) {
@@ -1072,7 +1065,7 @@
    <div id="shared-header"></div>
 
  <section class="hero">
-        <img class="hero-bg" src="" alt="">
+        <img class="hero-bg" src="/assets/Contact Banner.png" alt="">
         <div class="hero-scrim"></div>
         <div class="wrap hero-inner">
             <div class="hero-text">
