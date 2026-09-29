@@ -68,6 +68,11 @@
         button, input { font: inherit; }
         :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
+        #shared-header {
+            position: relative;
+            z-index: 1002;
+        }
+
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after { animation: none !important; transition: none !important; }
         }
@@ -166,6 +171,7 @@
             top: 0;
             left: 0;
             background: url(/assets/FAQs\ Banner.png) no-repeat center center/cover;
+            pointer-events: none;
         }
 
         .faq-hero::after {
@@ -698,11 +704,16 @@
         @media (max-width: 760px) {
             :root { --pad: 18px; }
 
-            .faq-hero { padding: 52px 0 48px; height: 64vh;
+            .site-header {
+                position: relative;
+                z-index: 1001;
+            }
+
+            .faq-hero { padding: 52px 0 48px; height: auto; min-height: 320px;
             
             }
             .faq-hero-inner{
-                top: 40px;
+                top: 0;
             }
 
             .faq-intro { padding: 50px 0 42px; }
@@ -732,32 +743,8 @@
         }
     </style>
 
-    <!-- FAQ Structured Data — FAQPage schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type":"Question","name":"What is performance marketing, and how can it help my business?","acceptedAnswer":{"@type":"Answer","text":"Performance marketing focuses on measurable actions such as leads, sales, conversions, and customer acquisition. It helps businesses connect advertising spend with trackable results."}},
-        {"@type":"Question","name":"How do you create a performance marketing strategy?","acceptedAnswer":{"@type":"Answer","text":"We start with your business goals, audience, offer, funnel, budget, and existing data. We then select relevant channels, build campaigns, establish tracking, and optimize based on performance."}},
-        {"@type":"Question","name":"What types of businesses can benefit from paid advertising?","acceptedAnswer":{"@type":"Answer","text":"Ecommerce brands, SaaS companies, apps, professional services, B2B businesses, local companies, and many other organizations can use paid advertising to reach relevant audiences and generate measurable actions."}},
-        {"@type":"Question","name":"How do you identify the right audience for an advertising campaign?","acceptedAnswer":{"@type":"Answer","text":"We analyze demographics, interests, behaviors, search intent, customer data, website activity, and funnel signals to develop audience segments aligned with campaign goals."}},
-        {"@type":"Question","name":"Which advertising platforms do you manage?","acceptedAnswer":{"@type":"Answer","text":"Depending on the strategy, campaigns can include Google Ads, Meta Ads, Instagram, Facebook, YouTube, LinkedIn, TikTok, display, programmatic, digital audio, and other relevant paid media channels."}},
-        {"@type":"Question","name":"How do you measure the success of a digital advertising campaign?","acceptedAnswer":{"@type":"Answer","text":"We track metrics such as conversions, cost per lead, CPA, CAC, conversion rate, revenue, ROAS, CTR, and lead quality based on the campaign objective."}},
-        {"@type":"Question","name":"What is the difference between performance marketing and traditional advertising?","acceptedAnswer":{"@type":"Answer","text":"Performance marketing emphasizes measurable actions and ongoing optimization. Instead of focusing primarily on exposure, campaigns are evaluated using data connected to specific business objectives."}},
-        {"@type":"Question","name":"How can paid ads help generate more qualified leads?","acceptedAnswer":{"@type":"Answer","text":"Paid campaigns can target specific audiences, match messaging to their needs, and direct prospects toward conversion-focused landing pages or lead forms."}},
-        {"@type":"Question","name":"How do you improve return on ad spend (ROAS)?","acceptedAnswer":{"@type":"Answer","text":"We analyze audience, creative, placements, offers, bidding, landing pages, and conversion data to identify areas that can improve campaign efficiency and revenue."}},
-        {"@type":"Question","name":"What does your customer acquisition strategy include?","acceptedAnswer":{"@type":"Answer","text":"It can include audience research, paid advertising, creative testing, landing-page optimization, remarketing, conversion tracking, and ongoing performance analysis."}},
-        {"@type":"Question","name":"How do you know which marketing channels are delivering results?","acceptedAnswer":{"@type":"Answer","text":"We use conversion tracking and analytics to compare channels based on relevant metrics such as leads, sales, CPA, CAC, revenue, and ROAS."}},
-        {"@type":"Question","name":"Can you manage campaigns across multiple advertising platforms?","acceptedAnswer":{"@type":"Answer","text":"Yes. A multi-channel strategy can combine platforms such as Google Ads, Meta Ads, LinkedIn, TikTok, YouTube, display, and programmatic advertising when they align with your objectives."}},
-        {"@type":"Question","name":"How do you test different ads and creative concepts?","acceptedAnswer":{"@type":"Answer","text":"We can test hooks, headlines, visuals, video formats, offers, CTAs, messaging, audiences, and placements to identify combinations that generate stronger performance."}},
-        {"@type":"Question","name":"What role does data analytics play in your marketing strategy?","acceptedAnswer":{"@type":"Answer","text":"Analytics helps us understand audience behavior, campaign performance, conversion paths, acquisition costs, and revenue so marketing decisions are based on evidence rather than assumptions."}},
-        {"@type":"Question","name":"What is remarketing, and when should a business use it?","acceptedAnswer":{"@type":"Answer","text":"Remarketing reconnects with people who have previously interacted with your business. It can be useful for bringing back website visitors, engaged users, or potential customers who haven't converted."}},
-        {"@type":"Question","name":"What is programmatic advertising, and how does it work?","acceptedAnswer":{"@type":"Answer","text":"Programmatic advertising uses automated technology to purchase digital ad placements using audience, contextual, behavioral, and other targeting signals."}},
-        {"@type":"Question","name":"How do I get started with a performance-focused advertising strategy?","acceptedAnswer":{"@type":"Answer","text":"Start by defining your business objective, target audience, offer, budget, and desired conversion. From there, a strategy can be built around the channels and campaign structure most relevant to those goals."}}
-      ]
-    }
-    </script>
+
+      
 </head>
 
 <body>
