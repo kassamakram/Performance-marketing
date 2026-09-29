@@ -489,10 +489,19 @@
    MOBILE
    ========================================================= */
 
+   .nav-dropdown-toggle a{
+      color: #e4e1db ;
+      text-decoration: none;
+}
+
 @media (max-width: 768px) {
   .site-header {
     position: relative;
   }
+  .nav-dropdown-toggle a,.nav-link{
+    color: #141414;
+  }
+
 
   .header-inner {
     width: calc(100% - 32px);
@@ -1070,7 +1079,9 @@ footer {
     font-size: 20px;
   }
 }
-.nav-dropdown-toggle a{
-      color: #e4e1db !important;
-      text-decoration: none;
+.socials img{
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
 }
+

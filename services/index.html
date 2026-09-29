@@ -598,7 +598,7 @@ align-items: flex-end;
     .cta-card {
       background-image:  url('/assets/Service/Banner 3 (1).png');
       background-size: cover;
-      background-position: center;
+      background-position: center center;
       border-radius: 16px;
       padding: 60px;
       color: #FFFFFF;
@@ -621,8 +621,8 @@ align-items: flex-end;
       .value-layout, .stats-layout, .social-layout, .growth-layout {
         grid-template-columns: 1fr;
       }
-      .services-grid, .features-grid {
-        grid-template-columns: 1fr;
+       .features-grid {
+        grid-template-columns: 1fr 1fr;
       }
     }
     /* Container to hold the elements in a row */
@@ -701,6 +701,46 @@ align-items: flex-end;
     font-size: 11px;
     color: #858585 !important;
     text-decoration: none;
+}
+@media(max-width:768px){
+  .logo-item img{
+    filter: invert(1);
+    
+  }
+  .logos-section{
+    margin-top: -83px;
+  }
+  .hero-section .btn{
+    display: none;
+  }
+  .hero-section{
+    min-height: 50vh;
+  }
+  .hero-title{
+    font-size: 35px;
+  }
+      .services-grid{
+        grid-template-columns: 1fr;
+      }
+      .connected-section{
+        background-image: none;
+        background: #141414;
+      }
+      .cta-card{
+        padding: 20px 18px;
+      }
+      .cta-title{
+        font-size: 25px;
+      }
+      .cta-card .btn{
+        font-size: 10px;
+      }
+      .growth-section,.connected-section,.social-section,.action-stats-section,.services-section,.value-section{
+        padding:40px 0px;
+      }
+      .cta-banner-section{
+        padding-bottom: 40px;
+      }
 }
  </style>
 

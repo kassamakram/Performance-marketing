@@ -488,6 +488,7 @@ body {
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  justify-content: space-between;
   padding: 4px 0;
 }
 
@@ -1324,6 +1325,7 @@ body {
 
   .blog-hero {
     padding: 50px 0 40px;
+    min-height: 50vh;
   }
 
   .blog-hero-heading {
