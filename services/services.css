@@ -9,7 +9,7 @@
             --accent-hover: #D83E0C;
             --accent-2: #FF7A3D;
             --muted: #a7a7a7;
-            --muted-2: #d2d2d2;
+            --muted-2: #e7e7e7;
             --line: #E4E1DB;
             --line-dark: #242424;
             --max: 1320px;
@@ -135,7 +135,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: .9;
+            /* opacity: .9; */
         }
 
         .hero-scrim {
@@ -241,11 +241,19 @@
         }
 
         .opp-copy p {
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.7;
             color: var(--muted);
             margin: 0 0 14px;
         }
+
+        measure-copy {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0 0 28px;
+    max-width: 480px;
+}
 
         .img-cont {
             width: 60px;
@@ -266,7 +274,7 @@
             border-radius: 20px;
             padding: 26px 30px;
             flex-wrap: wrap;
-            gap: 18px;
+            /* gap: 18px; */
         }
 
         .process-step {
@@ -340,7 +348,7 @@
         }
 
         .approach-copy {
-            color: var(--muted-2);
+            color: #dbdbdb;
             font-size: 18px;
             line-height: 1.7;
             max-width: 420px;
@@ -663,7 +671,7 @@
         }
 
         .optimize-copy {
-            color: #dcdbdb;;
+            color: #fff;;
             font-size: 15.5px;
             line-height: 1.7;
             margin: 0 0 30px;
@@ -865,7 +873,7 @@
         }
 
         .cta-copy {
-            color: var(--muted-2);
+            color: #fff;
             font-size: 15.5px;
             line-height: 1.7;
             margin: 0 0 30px;
@@ -1109,6 +1117,9 @@
             }
             .hero{
                 min-height: 60vh !important;
+            }
+            .optimize-inner{
+                grid-template-columns: 1fr;
             }
             .cta-wrapper{
                 padding: 0px;

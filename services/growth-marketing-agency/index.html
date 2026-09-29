@@ -17,6 +17,12 @@
          card grid larger than the 4-card approach layout comfortably fits.
          Reuses existing tokens (colors, radius, spacing, hover language). -->
     <style>
+
+      .measure-image img {
+    width: 100%;
+  
+    display: block;
+}
         .services-section {
             background: var(--panel);
             padding: 70px 0;
@@ -96,6 +102,17 @@
             color: var(--muted);
             margin: 0;
         }
+        .optimize-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1320px;
+    display: grid;
+    grid-template-columns: .5fr .6fr;
+}
+.optimize-grid{
+  max-width: 70%;
+  grid-template-columns: 1fr 1fr;
+}
 
         @media (max-width: 900px) {
             .services-grid {
@@ -107,6 +124,13 @@
                 padding-top:0px ;
                 margin-top: -20px;
                 padding-bottom: 40px;
+            }
+            .optimize-inner{
+              grid-template-columns: 1fr;
+
+            }
+            .optimize-grid{
+              max-width: 100%;
             }
             .opportunity .process{
                 padding: 0px;
@@ -414,7 +438,21 @@
             </div>
         </div>
     </section>
+  <section class="measure">
+        <div class="wrap measure-grid">
+            <div>
+                <div ><h2 class="eyebrow dark">SCALING WHAT WORKS</h2></div>
+                <h2 class="measure-title">From Small Wins to Scalable Growth.</h2>
+                <p class="measure-copy">Not every successful campaign should immediately receive a bigger budget. First, we look for repeatable signals. When the fundamentals make sense, we can explore opportunities to scale through: More Reach · New Audiences · New Channels · Stronger Creative · Better Conversion · Smarter Retention.
+That creates a more sustainable approach to ROI-driven marketing instead of chasing short-term spikes.</p>
 
+            </div>
+
+            <div class="measure-image">
+                <img src="/assets/Service/Growth Marketing/image (4) (1).png" alt="Performance metrics dashboard">
+            </div>
+        </div>
+    </section>
     <!-- ============ SECTION 7 — CREATIVE TESTING (reuses optimize pattern, dark) ============ -->
     <section class="optimize">
         <img class="optimize-bg" src="/assets/Service/Growth Marketing/Banner 2.png" alt="">
@@ -474,9 +512,8 @@
             <div>
                 <div class="eyebrow dark"></div>
                 <h2 class="measure-title">ROI Is the Scoreboard. Everything Else Is a Clue.</h2>
-                <p class="measure-copy">Growth marketing should ultimately connect back to business performance.</p>
-                <p class="measure-copy">A campaign generating 10,000 clicks isn't automatically successful.</p>
-                <p class="measure-copy">If those clicks don't create meaningful business outcomes, there's another question to answer.</p>
+                <p class="measure-copy">Growth marketing should ultimately connect back to business performance. A campaign generating 10,000 clicks isn't automatically successful.If those clicks don't create meaningful business outcomes, there's another question to answer.</p>
+               
                 <a class="btn btn-solid" href="">We focus on what happens after the click.</a>
 
             </div>
@@ -488,24 +525,7 @@
     </section>
 
     <!-- ============ SECTION 9 — SCALING (reuses synergy pattern, single column) ============ -->
-    <section class="synergy">
-        <!-- <img class="synergy-bg" src="/assets/Service/Growth Marketing/Banner 4.png" alt=""> -->
-        <div class="synergy-scrim"></div>
-        <div class="wrap">
-            <div style="max-width:760px;">
-                <div class="eyebrow dark">SCALING WHAT WORKS</div>
-                <h2 class="synergy-title">From Small Wins to Scalable Growth</h2>
-                <div class="synergy-copy">
-                    <p>Not every successful campaign should immediately receive a bigger budget. First, we look for
-                        repeatable signals. When the fundamentals make sense, we can explore opportunities to scale
-                        through: More Reach · New Audiences · New Channels · Stronger Creative · Better Conversion ·
-                        Smarter Retention.</p>
-                    <p>That creates a more sustainable approach to ROI-driven marketing instead of chasing short-term
-                        spikes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
     <!-- ============ SECTION 10 — CTA BANNER ============ -->
      <div class="cta-wrapper">

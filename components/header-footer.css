@@ -184,7 +184,7 @@
   opacity: 1;
   visibility: visible;
 
-  transform: translate(-50%, 0);
+  /* transform: translate(-50%, 0); */
 }
 
 .nav-dropdown:hover .dropdown-arrow,
@@ -607,6 +607,10 @@
   .nav-dropdown-menu::before {
     display: none;
   }
+  .nav-dropdown-menu a img{
+   display: none;
+  }
+
 
   .nav-dropdown-menu a {
     padding: 12px 15px;

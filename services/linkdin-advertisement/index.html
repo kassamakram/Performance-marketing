@@ -22,6 +22,10 @@
         margin-top: 40px;
     }
 }
+
+.optimize-inner{
+  grid-template-columns: 1fr 1fr;
+}
       .phi-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -41,6 +45,34 @@
     width: 30px;
     height: 30px;
     object-fit: contain;
+}
+
+.synergy-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: clamp(28px, 3.6vw, 41px);
+    line-height: 1.15;
+    margin: 0 0 20px;
+}
+
+.synergy-copy p {
+    color: var(--muted);
+    font-size: 15.5px;
+    line-height: 1.7;
+    margin: 0 0 14px;
+    max-width: 460px;
+}
+
+.process {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--paper);
+    /* border: 1px solid var(--line); */
+    border-radius: 20px;
+    padding: 26px 50px;
+    flex-wrap: wrap;
+    gap: 19px;
 }
         /* Only new rule needed: this page's hero includes supporting copy,
            which the reference hero markup didn't have a class for. */
@@ -237,12 +269,7 @@
                         <h3>Campaign Strategy With a Clear Business Goal</h3>
                     </div>
                 </div>
-                <div class="approach-card">
-                    <div class="approach-icon-cont"><img src="/assets/Service/LinkedIn Advertising Agency/Icon 9.png" alt="Creative icon"></div>
-                    <div>
-                        <h3>Creative That Speaks Business</h3>
-                    </div>
-                </div>
+                
                 <div class="approach-card">
                     <div class="approach-icon-cont"><img src="/assets/Service/LinkedIn Advertising Agency/Icon 10.png" alt="Campaign management icon"></div>
                     <div>

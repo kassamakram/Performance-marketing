@@ -191,8 +191,8 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        // const processSteps = gsap.utils.toArray(".process-step");
-        // const processArrows = gsap.utils.toArray(".process-arrow");
+        const processSteps = gsap.utils.toArray(".process-step");
+        const processArrows = gsap.utils.toArray(".process-arrow");
 
         if (processSteps.length) {
             gsap.set(processSteps, {
@@ -254,55 +254,128 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================================================
-       APPROACH
-    ========================================================= */
+   APPROACH
+========================================================= */
 
-    const approach = document.querySelector(".approach");
+const approach = document.querySelector(".approach");
 
-    if (approach) {
-        const approachTitle = approach.querySelector(".approach-title");
-        const approachCopy = approach.querySelector(".approach-copy");
-        const approachCards = gsap.utils.toArray(".approach-card");
+if (approach) {
 
-        if (approachTitle) {
-            gsap.from(approachTitle, {
-                y: 70,
-                opacity: 0,
-                scale: 0.95,
-                filter: "blur(12px)",
-                duration: 0.75,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: approachTitle,
-                    start: "top 82%",
-                    toggleActions: "play none none reverse"
-                }
-            });
-        }
+    const approachTitle = approach.querySelector(".approach-title");
+    const approachCopy = approach.querySelector(".approach-copy");
+    const approachCards = gsap.utils.toArray(
+        ".approach .approach-card"
+    );
 
-        if (approachCopy) {
-            gsap.from(approachCopy, {
-                y: 40,
-                opacity: 0,
-                filter: "blur(8px)",
-                duration: 0.65,
-                delay: 0.08,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: approachCopy,
-                    start: "top 85%",
-                    toggleActions: "play none none reverse"
-                }
-            });
-        }
+    /* -----------------------------------------
+       APPROACH TITLE
+    ----------------------------------------- */
 
-        revealFromLeft(approachCards, {
-            x: -130,
-            duration: 0.65,
-            stagger: 0.1,
-            start: "top 88%"
+    if (approachTitle) {
+        gsap.from(approachTitle, {
+            y: 70,
+            opacity: 0,
+            scale: 0.95,
+            filter: "blur(12px)",
+            duration: 0.75,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: approachTitle,
+                start: "top 82%",
+                toggleActions: "play none none reverse"
+            }
         });
     }
+
+
+    /* -----------------------------------------
+       APPROACH COPY
+    ----------------------------------------- */
+
+    if (approachCopy) {
+        gsap.from(approachCopy, {
+            y: 40,
+            opacity: 0,
+            filter: "blur(8px)",
+            duration: 0.65,
+            delay: 0.08,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: approachCopy,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    }
+
+
+    /* -----------------------------------------
+       APPROACH CARDS
+       Same animation as your STEP CARDS
+    ----------------------------------------- */
+
+    const approachList = approach.querySelector(".approach-cards");
+
+    if (approachList && approachCards.length) {
+
+        const approachTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: approachList,
+                start: "top 85%",
+                end: "bottom 65%",
+                scrub: 0.7,
+                // markers: true
+            }
+        });
+
+        approachCards.forEach(function (card, i) {
+
+            const heading = card.querySelector("h3");
+
+            /* Card reveal */
+            approachTimeline.fromTo(
+                card,
+                {
+                    x: 170,
+                    opacity: 0,
+                    scale: 0.93,
+                    rotate: 3,
+                    filter: "blur(6px)"
+                },
+                {
+                    x: 0,
+                    opacity: 1,
+                    scale: 1,
+                    rotate: 0,
+                    filter: "blur(0px)",
+                    duration: 0.6,
+                    ease: "power2.out"
+                },
+                i * 0.6
+            );
+
+
+            /* Heading reveal */
+            if (heading) {
+                approachTimeline.fromTo(
+                    heading,
+                    {
+                        x: 50,
+                        opacity: 0
+                    },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.45,
+                        ease: "power2.out"
+                    },
+                    i * 0.6 + 0.12
+                );
+            }
+
+        });
+    }
+}
 
 
     /* =========================================================

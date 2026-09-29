@@ -127,7 +127,7 @@
     /* Section 1: Hero Banner */
     .hero-section {
       position: relative;
-      background-image:  url('/assets/Service/Banner\ 1.png');
+      background-image:  url('/assets/Service/Banner 1 (5) (1).png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -135,13 +135,15 @@
       padding: 120px 0 100px;
       min-height: 90vh;
       display: flex;
-      /* top: -83px; */
+      top: -83px;
       align-items: center;
       padding-bottom: 0px;
     }
     .site-header{
-      background: rgba(7, 7, 7) !important;
+      /* background: rgba(7, 7, 7) !important; */
     }
+
+    
 
     .hero-content {
 display: flex; 
@@ -162,15 +164,21 @@ align-items: flex-end;
       margin-bottom: 16px;
       display: block;
     }
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+}
 
+/* Desktop only */
+@media (min-width: 1024px) {
     .hero-title {
-      font-family: var(--font-heading);
-      font-size: 39px;
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 28px;
-      text-transform: uppercase;
+        white-space: nowrap;
     }
+}
 
     .hero-title span {
       color: var(--accent);
@@ -588,7 +596,7 @@ align-items: flex-end;
     }
 
     .cta-card {
-      background-image:  url('/assets/Service/Banner\ 3.png');
+      background-image:  url('/assets/Service/Banner 3 (1).png');
       background-size: cover;
       background-position: center;
       border-radius: 16px;
@@ -708,9 +716,12 @@ align-items: flex-end;
       <div class="hero-content">
         <div class="hero-heading">
         <span class="hero-subtitle">Data-Driven Performance Agency</span>
-        <h1 class="hero-title">
-          Performance Marketing Services That Make <span>Every Click Work Harder</span>
-        </h1>
+       <h1 class="hero-title">
+    Performance Marketing<br>
+    Services That Make<br>
+    <span>Every Click Work</span><br>
+    <span>Harder</span>
+</h1>
         </div>
         <div class="btn-cont">
         <a href="#" class="btn" data-popup="growth-form">Track Your Growth &rarr;</a>

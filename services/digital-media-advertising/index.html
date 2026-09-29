@@ -14,19 +14,37 @@
     <link rel="stylesheet" href="/components/header-footer.css">
     <style>
 
-      .process {
+   
+
+.process-step {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background: var(--paper);
-    /* border: 1px solid var(--line); */
-    border-radius: 20px;
-    padding: 26px 30px;
-    flex-wrap: wrap;
-    gap: 38px;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.process-arrow {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .process {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+      .process {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.process-arrow{
+  display: none;
 }
 .synergy .process{
   flex-wrap: nowrap;
+}
+.optimize-inner{
+  grid-template-columns: 1fr 1fr;
 }
         @media(max-width:768px){
             .approach-icon-cont{
@@ -54,6 +72,39 @@
                 grid-template-columns: 1fr 1fr;
             }
         }
+@media (min-width: 1024px) {
+
+        .hero-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.08;
+    letter-spacing: -.01em;
+    margin: 0 0 30px;
+    max-width: 631px;
+}
+
+}
+
+.approach-copy {
+    color: #dbdbdb;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 420px;
+    margin-bottom: 24px;
+}
+
+.opp-copy p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0 0 14px;
+}
+
+.optimize-note {
+    color: #dcdbdb;
+    font-size: 15.5px;
+}
     </style>
 
 </head>
@@ -62,7 +113,7 @@
 <div id="shared-header"></div>
     <!-- ============ SECTION 1 — HERO ============ -->
     <section class="hero">
-        <img class="hero-bg" src="/assets/Service/Digital Media Advertising/image (6).png" alt="">
+        <img class="hero-bg" src="/assets/Service/Digital Media Advertising/Banner 1 (1).png" alt="">
         <div class="hero-scrim"></div>
         <div class="wrap hero-inner">
             <div class="hero-text">
@@ -226,22 +277,7 @@
                         <h3>Programmatic Advertising</h3>
                     </div>
                 </div>
-                <div class="approach-card">
-                    <div class="approach-icon-cont">
-                        <img src="/assets/Service/Digital Media Advertising/Icon 13.png" alt="Video Advertising icon">
-                    </div>
-                    <div>
-                        <h3>Video Advertising</h3>
-                    </div>
-                </div>
-                <div class="approach-card">
-                    <div class="approach-icon-cont">
-                        <img src="/assets/Service/Digital Media Advertising/Icon 14.png" alt="Remarketing icon">
-                    </div>
-                    <div>
-                        <h3>Remarketing</h3>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -293,7 +329,7 @@
                 </div>
             </div>
 
-            <div class="process" style="background:transparent;padding:0;">
+            <div class="process" style="background:transparent;padding:30px;">
                 <div class="process-step">
                     <div class="img-cont">
                         <img src="/assets/Service/Digital Media Advertising/Icon 25.png" alt="Awareness icon">
@@ -378,27 +414,8 @@
                             <span>04</span>
                         </div>
                     </div>
-                    <div class="optimize-card">
-                        <img src="/assets/Service/Digital Media Advertising/Icon 34.png" alt="">
-                        <div class="text">
-                            <b>Audience Targeting</b>
-                            <span>05</span>
-                        </div>
-                    </div>
-                    <div class="optimize-card">
-                        <img src="/assets/Service/Digital Media Advertising/Icon 35.png" alt="">
-                        <div class="text">
-                            <b>Analytics</b>
-                            <span>06</span>
-                        </div>
-                    </div>
-                    <div class="optimize-card none">
-                        <img src="/assets/Service/Digital Media Advertising/Icon 36.png" alt="">
-                        <div class="text">
-                            <b>Conversion Optimization</b>
-                            <span>07</span>
-                        </div>
-                    </div>
+                 
+                   
                 </div>
                 <p class="optimize-note">The result is a connected approach designed to turn digital attention into
                     measurable business opportunities.</p>

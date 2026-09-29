@@ -15,6 +15,18 @@
 
     <!-- Small additions for this page. Move into /services/services.css if you reuse them on other service pages. -->
     <style>
+      @media (min-width: 1024px) {
+
+.cta-banner {
+    position: relative;
+    /* background: var(--ink); */
+    color: #fff;
+    padding: 80px 0;
+    overflow: hidden;
+}
+      }
+
+      
         .hero-cta.solo { margin-bottom: 0; }
         .opportunity.roomy { padding: 70px 0; }
         .optimize-inner.full { grid-template-columns: 1fr; }
@@ -31,6 +43,9 @@
         .services-section {
             background: var(--panel);
             padding: 70px 0;
+        }
+        .measure-copy{
+          max-width: 100%;
         }
 
         .services-section .eyebrow {
@@ -110,6 +125,9 @@
         @media(max-width:768px){
             .intro,.opportunity.roomy,.services-section{
                 padding: 40px 0px;
+            }
+            .optimize-grid{
+              max-width: 100%;
             }
             .hero{
                 padding-bottom: 60px;
