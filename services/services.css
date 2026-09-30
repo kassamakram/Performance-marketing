@@ -297,6 +297,7 @@
         .process-arrow {
             color: var(--muted-2);
             font-size: 18px;
+            display: none;
         }
 
         /* ============ SECTION 4 — APPROACH ============ */
