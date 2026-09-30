@@ -247,7 +247,7 @@
             margin: 0 0 14px;
         }
 
-        measure-copy {
+        .measure-copy {
     color: var(--muted);
     font-size: 14px;
     line-height: 1.7;
@@ -272,8 +272,9 @@
             background: var(--paper);
             /* border: 1px solid var(--line); */
             border-radius: 20px;
+            gap: 10px;
             padding: 26px 30px;
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
             /* gap: 18px; */
         }
 

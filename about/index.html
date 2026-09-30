@@ -51,7 +51,7 @@ Twitter Meta
   --muted-2:      #999999;
   --line:         #E4E1DB;
   --line-dark:    #242424;
-  --max:          1240px;
+  --max:          1320px;
   --pad:          28px;
   --font-display: 'Bebas Neue', Impact, sans-serif;
   --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -891,6 +891,7 @@ button, input { font: inherit; }
   margin-left: auto;
   max-width: 340px;
   width: 100%;
+  display: none;
   transition: transform .3s ease, border-color .3s ease;
 }
 .data-stat-box:hover { transform: translateY(-4px); border-color: #3a3a3a; }
@@ -1487,6 +1488,9 @@ footer.nexus-footer {
   .data-pills { gap: 7px; }
   .data-pill { padding: 6px 12px; font-size: 10.5px; }
 }
+.black img{
+  filter: brightness(0);
+}
 
 /* .site-header{
   background-color: #0B0B0B;
@@ -1642,7 +1646,7 @@ footer.nexus-footer {
                 <div class="lbl">Campaigns</div>
               </div>
             </div>
-            <div class="who-metric-card">
+            <div class="who-metric-card black">
               <img src="/assets/About Page assets/Icon 11.png" alt="" class="ic">
               <div>
                 <div class="num">35+</div>

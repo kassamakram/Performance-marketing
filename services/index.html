@@ -139,9 +139,7 @@
       align-items: center;
       padding-bottom: 0px;
     }
-    .site-header{
-      /* background: rgba(7, 7, 7) !important; */
-    }
+   
 
     
 
@@ -412,6 +410,7 @@ align-items: flex-end;
         width: 20px;
         height: 20px;
         object-fit: cover;
+        filter: invert(100%);
     }
 
     .service-card:hover .service-arrow-btn {
@@ -703,10 +702,7 @@ align-items: flex-end;
     text-decoration: none;
 }
 @media(max-width:768px){
-  .logo-item img{
-    filter: invert(1);
-    
-  }
+ 
   .logos-section{
     margin-top: -83px;
   }
@@ -741,6 +737,19 @@ align-items: flex-end;
       .cta-banner-section{
         padding-bottom: 40px;
       }
+}
+ .logo-item img{
+    filter: invert(1);
+    
+  }
+  .icon-placeholder {
+    transition: filter 0.3s ease;
+}
+
+.social-item:hover .icon-placeholder {
+    filter: brightness(0) saturate(100%) 
+            invert(36%) sepia(99%) saturate(2074%) 
+            hue-rotate(357deg) brightness(101%) contrast(101%);
 }
  </style>
 
@@ -813,7 +822,7 @@ align-items: flex-end;
             <div class="feature-title">Paid Social Ads</div>
           </div>
           <div class="feature-card">
-            <div class="badge-icon"><img src="/assets/Service/Icon 2.png" alt="" class="icon-placeholder" /></div>
+            <div class="badge-icon"><img src="/assets/sreach-icon.png" alt="" class="icon-placeholder" /></div>
             <div class="feature-num">02</div>
             <div class="feature-title">Search & Intent</div>
           </div>
@@ -828,7 +837,7 @@ align-items: flex-end;
             <div class="feature-title">Ott & CTV</div>
           </div>
           <div class="feature-card">
-            <div class="badge-icon"><img src="/assets/Service/Icon 5.png" alt="" class="icon-placeholder" /></div>
+            <div class="badge-icon"><img src="/assets/Service/programmatic.png" alt="" class="icon-placeholder" /></div>
             <div class="feature-num">05</div>
             <div class="feature-title">Programmatic Media</div>
           </div>
@@ -864,7 +873,7 @@ align-items: flex-end;
             <h3 class="service-card-title">Affiliate Marketing</h3>
             <p class="service-card-desc">Scale your partnership channel with targeted outreach, robust attribution, and optimized tracking models.</p>
           </div>
-          <a href="/services/affiliate-marketing/" class="service-arrow-btn"><img src="/assets/Service/right-arrow.png" alt="" class="icon-placeholder" /></a>
+          <a href="/services/affiliate-marketing/" class="service-arrow-btn"><img src="/assets/Service/arrow-small-right.png" alt="" class="icon-placeholder" /></a>
         </div>
 
         <div class="service-card">
@@ -873,7 +882,7 @@ align-items: flex-end;
             <h3 class="service-card-title">App Marketing</h3>
             <p class="service-card-desc">Drive high-intent user acquisition and retention with data-driven mobile app performance strategies.</p>
           </div>
-          <a href="/services/app-marketing/" class="service-arrow-btn"><img src="/assets/Service/right-arrow.png" alt="" class="icon-placeholder" /></a>
+          <a href="/services/app-marketing/" class="service-arrow-btn"><img src="/assets/Service/arrow-small-right.png" alt="" class="icon-placeholder" /></a>
         </div>
 
         <div class="service-card">
@@ -882,7 +891,7 @@ align-items: flex-end;
             <h3 class="service-card-title">Commerce Media</h3>
             <p class="service-card-desc">Capture shoppers at key buying moments with retail media optimization and shopping campaigns.</p>
           </div>
-          <a href="/services/commerce-media-agency/" class="service-arrow-btn"><img src="/assets/Service/right-arrow.png" alt="" class="icon-placeholder" /></a>
+          <a href="/services/commerce-media-agency/" class="service-arrow-btn"><img src="/assets/Service/arrow-small-right.png" alt="" class="icon-placeholder" /></a>
         </div>
 
         <div class="service-card">
@@ -891,7 +900,7 @@ align-items: flex-end;
             <h3 class="service-card-title">Digital Audio Advertising</h3>
             <p class="service-card-desc">Reach engaged listeners across podcast and streaming platforms with precise audience targeting.</p>
           </div>
-          <a href="/services/digital-audio-advertising/" class="service-arrow-btn"><img src="/assets/Service/right-arrow.png" alt="" class="icon-placeholder" /></a>
+          <a href="/services/digital-audio-advertising/" class="service-arrow-btn"><img src="/assets/Service/arrow-small-right.png" alt="" class="icon-placeholder" /></a>
         </div>
 
         <div class="service-card">
@@ -900,7 +909,7 @@ align-items: flex-end;
             <h3 class="service-card-title">Digital Media Advertising</h3>
             <p class="service-card-desc">Execute multi-channel digital strategies designed to maximize cross-channel ROAS.</p>
           </div>
-          <a href="/services/digital-media-advertising/" class="service-arrow-btn"><img src="/assets/Service/right-arrow.png" alt="" class="icon-placeholder" /></a>
+          <a href="/services/digital-media-advertising/" class="service-arrow-btn"><img src="/assets/Service/arrow-small-right.png" alt="" class="icon-placeholder" /></a>
         </div>
 
         <div class="service-card">
@@ -909,7 +918,7 @@ align-items: flex-end;
             <h3 class="service-card-title">Display Advertising</h3>
             <p class="service-card-desc">Engage high-value segments through targeted visual ads across premium publisher networks.</p>
           </div>
-          <a href="/services/display-advertising-agency/" class="service-arrow-btn"><img src="/assets/Service/right-arrow.png" alt="" class="icon-placeholder" /></a>
+          <a href="/services/display-advertising-agency/" class="service-arrow-btn"><img src="/assets/Service/arrow-small-right.png" alt="" class="icon-placeholder" /></a>
         </div>
       </div>
     </div>
@@ -997,7 +1006,7 @@ align-items: flex-end;
 
           <div class="social-item">
             <div class="social-item-left">
-              <img src="/assets/Service/twitter.png" alt="" class="icon-placeholder" />
+              <img src="/assets/Service/twitter-alt.png" alt="" class="icon-placeholder" />
               <div>
                 <div class="social-name">X (Twitter) Advertising</div>
                 <div class="social-desc">Engage real-time conversations</div>
@@ -1008,7 +1017,7 @@ align-items: flex-end;
 
           <div class="social-item">
             <div class="social-item-left">
-              <img src="/assets/Service/tiktok.png" alt="" class="icon-placeholder" />
+              <img src="/assets/Service/tik-tok.png" alt="" class="icon-placeholder" />
               <div>
                 <div class="social-name">TikTok Advertising</div>
                 <div class="social-desc">Drive viral product discovery</div>
