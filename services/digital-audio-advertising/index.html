@@ -19,7 +19,7 @@
       
         .hero-cta.solo { margin-bottom: 0; }
         .opportunity.roomy { padding: 70px 0; }
-        .opportunity .process.full { grid-column: 1 / -1; margin-top: 20px; }
+        .opportunity .process.full { margin-top: 20px; }
         .metric-list.stack { grid-template-columns: 1fr; }
         .metric-item div { display: flex; flex-direction: column; gap: 2px; }
         .metric-item span { font-weight: 500; font-size: 13.5px; color: var(--muted); }
@@ -64,6 +64,10 @@
           }
         }
         @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } }
+
+        .roomy .wrap {
+          grid-template-columns: 1fr 1fr;
+        }
     </style>
 </head>
 
@@ -151,14 +155,15 @@
                     <div class="eyebrow dark">OUR STRATEGY</div>
                     <h2 class="opp-title">We Don't Treat Audio Like a Guessing Game</h2>
                 </div>
-            </div>
-            <div class="opp-copy">
+                <div class="opp-copy">
                 <p style="font-weight:700;color:var(--ink);">Effective digital audio advertising starts before the
                     campaign launches.</p>
                 <p>We look at audience data, market conditions, campaign objectives, creative direction, and conversion
                     goals to build a media strategy with a clear purpose.</p>
                 <p style="font-weight:700;color:var(--ink);">Then we test and refine.</p>
             </div>
+            </div>
+            
 
             <div class="process full">
                 <div class="process-step"><div class="img-cont"><img src="/assets/Service/digital-audio-advertising/Icon 7.png" alt=""></div>Audience</div>
@@ -278,7 +283,7 @@
         <div class="wrap cta-inner">
             <div>
                 <div class="eyebrow light">LET'S WORK TOGETHER</div>
-                <h2 class="cta-title">Ready to Put Your Brand<span class="accent"> in the Right Ears?</span></h2>
+                <h2 class="cta-title">Ready to Put Your Brand <br><span class="accent"> in the Right Ears?</span></h2>
                 <p class="cta-copy">[Brand Name] can create a digital audio advertising strategy built around your goals. From podcast advertising and streaming audio to programmatic audio, retargeting, paid media, and performance analytics, we turn listening moments into measurable marketing opportunities.</p>
                 
                 <div class="cta-buttons">

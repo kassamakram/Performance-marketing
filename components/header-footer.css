@@ -76,7 +76,7 @@
 .main-navigation {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .nav-link,

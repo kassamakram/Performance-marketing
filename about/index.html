@@ -198,6 +198,14 @@ button, input { font: inherit; }
   z-index: 1;
   transform: scale(1.08);
 }
+.about-hero-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.18);
+    z-index: 2;
+    pointer-events: none;
+}
 
 .about-hero-gradient {
   position: absolute;
@@ -1491,6 +1499,47 @@ footer.nexus-footer {
 .black img{
   filter: brightness(0);
 }
+.img-cont{
+      position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+     inset: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.img-cont::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0)
+    );
+    z-index: 2;
+    pointer-events: none;
+}
+
+.about-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+    z-index: 1;
+    transform: scale(1.08);
+}
+
+
+
+
 
 /* .site-header{
   background-color: #0B0B0B;
@@ -1554,6 +1603,7 @@ footer.nexus-footer {
     <!-- ================= 01 — HERO ================= -->
     <header class="about-hero" id="top">
       <!-- Background image -->
+       <div class="img-cont">
       <img
         class="about-hero-bg"
         src="/assets/About Page assets/Banner 1.png"
@@ -1561,6 +1611,7 @@ footer.nexus-footer {
         aria-hidden="true"
         loading="eager"
       >
+      </div>
       <!-- Gradient overlay -->
       <div class="about-hero-gradient"></div>
 
