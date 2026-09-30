@@ -51,6 +51,50 @@ function initHeader() {
 
     if (!header) return;
 
+    //     /*
+    //  * Smart sticky header
+    //  *
+    //  * Scroll down = hide
+    //  * Scroll up = show
+    //  */
+    // let lastScrollY = window.scrollY;
+    // let ticking = false;
+
+    // function updateHeader() {
+
+    //     const currentScrollY = window.scrollY;
+
+    //     // Always show header near the top
+    //     if (currentScrollY <= 80) {
+    //         header.classList.remove("header-hidden");
+    //         lastScrollY = currentScrollY;
+    //         ticking = false;
+    //         return;
+    //     }
+
+    //     // Scrolling down
+    //     if (currentScrollY > lastScrollY) {
+    //         header.classList.add("header-hidden");
+    //     }
+
+    //     // Scrolling up
+    //     else if (currentScrollY < lastScrollY) {
+    //         header.classList.remove("header-hidden");
+    //     }
+
+    //     lastScrollY = currentScrollY;
+    //     ticking = false;
+    // }
+
+    // window.addEventListener("scroll", () => {
+
+    //     if (!ticking) {
+    //         window.requestAnimationFrame(updateHeader);
+    //         ticking = true;
+    //     }
+
+    // }, { passive: true });
+
 
     const menuToggle =
         header.querySelector(".mobile-menu-toggle");
@@ -153,6 +197,36 @@ function initHeader() {
             }
         }
     });
+
+
+    /*
+ * Back to top button
+ */
+const backToTop = document.querySelector("#backToTop");
+
+if (backToTop) {
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 500) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+
+    }, { passive: true });
+
+
+    backToTop.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
 
 
     /*
